@@ -1,0 +1,23 @@
+{
+  "name": "hebrew-reader",
+  "main": "src/worker/index.ts",
+  "compatibility_date": "2025-04-01",
+  "compatibility_flags": ["nodejs_compat"],
+  // The built client is served from dist/client. Only /api/* runs the Worker first;
+  // everything else is a static asset, with unknown paths falling back to index.html.
+  "assets": {
+    "directory": "./dist/client",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "account_id": "ddf8edfc3dfd489567fe3c5b28b51aca",
+  "routes": [{ "pattern": "learning.402.app", "custom_domain": true }],
+  "kv_namespaces": [{ "binding": "CACHE", "id": "61b3e9fad5d747d38fc4150ed47d4e32" }],
+  "observability": { "enabled": true },
+  "vars": {
+    "LOOKUP_MODEL": "google/gemini-3.7-flash",
+    "DAILY_MODEL_CALLS": "3000"
+  }
+  // Secret: OPENROUTER_API_KEY (local: .dev.vars; deployed: wrangler secret put).
+}

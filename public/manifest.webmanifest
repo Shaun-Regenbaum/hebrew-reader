@@ -1,0 +1,10 @@
+{
+  "name": "Read Hebrew",
+  "short_name": "Read Hebrew",
+  "description": "Read real Hebrew. Tap a word. It becomes a flashcard.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF8F3",
+  "theme_color": "#FAF8F3",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

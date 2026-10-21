@@ -2,7 +2,10 @@
 
 A reader for learning modern Hebrew. You read real texts, tap any word you don't know, and the app turns your lookups into flashcards.
 
-Status: just started. Right now the repo holds the starter texts, the script that prepares them, and the plan. There is no app yet.
+Status: first working version, live at https://learning.402.app
+
+Done: the library (Books and Articles), the reader, tap a word for its meaning, translate a sentence, saved lookups, and My words with a Known toggle.
+Stubbed: Review (flashcards), the quiz, and the landing page. Lookups are already saved for them.
 
 ## The idea
 
@@ -19,6 +22,18 @@ Status: just started. Right now the repo holds the starter texts, the script tha
 - `scripts/build_texts.py` turns it into the JSON the reader loads (`public/texts/`, not committed).
 - `docs/plan.md` has the build plan.
 - `DATA.md` has the licenses and credits for the texts.
+
+## Run it
+
+```bash
+pnpm install
+pnpm texts          # builds public/texts from data/raw
+echo 'OPENROUTER_API_KEY=...' > .dev.vars
+pnpm dev
+pnpm test
+```
+
+Deploy (account that owns 402.app): `CLOUDFLARE_ACCOUNT_ID=ddf8edfc3dfd489567fe3c5b28b51aca pnpm build && wrangler deploy`
 
 ## Get the texts
 

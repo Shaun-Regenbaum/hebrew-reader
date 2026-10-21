@@ -27,11 +27,11 @@ An installable phone app (a PWA, added to the home screen). It also works on a l
 
 0. **Model test.** DONE (2026-10-21). 9 models, 30 words, 10 sentences, 360 calls, $0.35. Results in `data/model-test/`; rerun with `python3 -B scripts/model_test.py`. Findings: all the strong and cheap models translate sentences about equally well, so one model can do both calls. DeepSeek flash and Qwen flash took 15 to 80 seconds and often returned nothing (they spent all 4,000 tokens thinking). Picked `google/gemini-3.7-flash` for both calls, `anthropic/claude-haiku-5.5` as fallback. Still to do: fix the prompt so binyan always comes back as qal, nifal, piel, pual, hifil, hufal or hitpael (models mixed English, Hebrew and spellings), and read the 15 words nobody has checked.
 1. **Texts to JSON.** DONE. `python3 -I scripts/build_texts.py` writes `public/texts/` (27 texts, 6,467 paragraphs). Each paragraph keeps its text plus word offsets, in sections of about 1,200 words so long books load in pieces.
-2. **Reader.** Right-to-left view, font size, mobile layout, Books and Articles shelves.
-3. **Tap a word.** Popup backed by the API route and a cache. Each lookup saves to localStorage with the word, sentence, text and time.
-4. **Translate a selection.** Select a sentence or paragraph and get natural English.
+2. **Reader.** DONE. Right-to-left view, font size, mobile layout, Books and Articles shelves.
+3. **Tap a word.** DONE, saves to IndexedDB. Popup backed by the API route and a cache. Each lookup saves to localStorage with the word, sentence, text and time.
+4. **Translate a selection.** DONE, as a Translate sentence button in the word sheet. Select a sentence or paragraph and get natural English.
 5. **Flashcards.** Cards come from lookups. Review uses the SM-2 schedule.
-6. **My words.** Lookups by how often and by text. Mark a word as known.
+6. **My words.** DONE (list, bars, Known toggle). Lookups by how often and by text. Mark a word as known.
 7. **Quiz.** The 10 words looked up most in a chapter become a 5-question quiz.
 8. **Landing page and deploy.** One line explaining the idea and a Start reading button. Put a rate limit and a spend cap on the public translate route.
 
