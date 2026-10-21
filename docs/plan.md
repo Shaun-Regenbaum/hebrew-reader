@@ -25,7 +25,7 @@ An installable phone app (a PWA, added to the home screen). It also works on a l
 
 ## Build order
 
-0. **Model test.** About 30 words and 10 sentences from our texts, run through 4 or 5 OpenRouter models. Pick one per call type. Needs a new capped OpenRouter key.
+0. **Model test.** DONE (2026-10-21). 9 models, 30 words, 10 sentences, 360 calls, $0.35. Results in `data/model-test/`; rerun with `python3 -B scripts/model_test.py`. Findings: all the strong and cheap models translate sentences about equally well, so one model can do both calls. DeepSeek flash and Qwen flash took 15 to 80 seconds and often returned nothing (they spent all 4,000 tokens thinking). Picked `google/gemini-3.7-flash` for both calls, `anthropic/claude-haiku-5.5` as fallback. Still to do: fix the prompt so binyan always comes back as qal, nifal, piel, pual, hifil, hufal or hitpael (models mixed English, Hebrew and spellings), and read the 15 words nobody has checked.
 1. **Texts to JSON.** DONE. `python3 -I scripts/build_texts.py` writes `public/texts/` (27 texts, 6,467 paragraphs). Each paragraph keeps its text plus word offsets, in sections of about 1,200 words so long books load in pieces.
 2. **Reader.** Right-to-left view, font size, mobile layout, Books and Articles shelves.
 3. **Tap a word.** Popup backed by the API route and a cache. Each lookup saves to localStorage with the word, sentence, text and time.

@@ -1,0 +1,5529 @@
+[
+ {
+  "text": "{\"lemma\": \"סכין\", \"meaning\": \"knives\", \"root\": \"סכ\\\"ן\", \"pos\": \"noun\", \"binyan\": null, \"say\": \"sa-KHIN-im\", \"note\": \"Masculine plural of סכין (knife) formed with the suffix -ים; no prefix attached.\"}",
+  "secs": 1.85,
+  "cost": 8.11e-05,
+  "out_tokens": 100,
+  "kind": "word",
+  "item": 0,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "סכין",
+   "meaning": "knives",
+   "root": "סכ\"ן",
+   "pos": "noun",
+   "binyan": null,
+   "say": "sa-KHIN-im",
+   "note": "Masculine plural of סכין (knife) formed with the suffix -ים; no prefix attached."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"סכין\",\n  \"meaning\": \"knives\",\n  \"root\": \"סכן\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"sa-ki-NIM\",\n  \"note\": \"The word is the plural form of the feminine noun סכין, which takes the masculine plural suffix -im.\"\n}",
+  "secs": 2.08,
+  "cost": 0.00039475,
+  "out_tokens": 229,
+  "kind": "word",
+  "item": 0,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "סכין",
+   "meaning": "knives",
+   "root": "סכן",
+   "pos": "noun",
+   "binyan": null,
+   "say": "sa-ki-NIM",
+   "note": "The word is the plural form of the feminine noun סכין, which takes the masculine plural suffix -im."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"סכין\",\"meaning\":\"knives\",\"root\":\"סכן\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"sakinÍM\",\"note\":\"Masculine plural of סכין (knife; the noun is grammatically feminine in the singular but takes the -ים plural), here in the construct-like phrase 'האין סכינים' (are there no knives).\"}",
+  "secs": 2.59,
+  "cost": 0.001842,
+  "out_tokens": 122,
+  "kind": "word",
+  "item": 0,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "סכין",
+   "meaning": "knives",
+   "root": "סכן",
+   "pos": "noun",
+   "binyan": null,
+   "say": "sakinÍM",
+   "note": "Masculine plural of סכין (knife; the noun is grammatically feminine in the singular but takes the -ים plural), here in the construct-like phrase 'האין סכינים' (are there no knives)."
+  }
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"סכין\",\n  \"meaning\": \"knives\",\n  \"root\": \"סכן\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"sakkiNIM\",\n  \"note\": \"Plural form of the noun סכין (knife).\"\n}\n```",
+  "secs": 2.8,
+  "cost": 0.0004575,
+  "out_tokens": 81,
+  "kind": "word",
+  "item": 0,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "סכין",
+   "meaning": "knives",
+   "root": "סכן",
+   "pos": "noun",
+   "binyan": null,
+   "say": "sakkiNIM",
+   "note": "Plural form of the noun סכין (knife)."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"סכין\",\"meaning\":\"knives\",\"root\":null,\"pos\":\"noun\",\"binyan\":null,\"say\":\"sa-ki-NIM\",\"note\":\"Plural form.\"}",
+  "secs": 1.82,
+  "cost": 0.000948,
+  "out_tokens": 44,
+  "kind": "word",
+  "item": 0,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "סכין",
+   "meaning": "knives",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "sa-ki-NIM",
+   "note": "Plural form."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"סכין\",\"meaning\":\"knives\",\"root\":\"סכן\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"sakiním\",\"note\":\"Masculine plural of סכין; no attached prefix.\"}",
+  "secs": 4.96,
+  "cost": 0.00033237,
+  "out_tokens": 431,
+  "kind": "word",
+  "item": 0,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "סכין",
+   "meaning": "knives",
+   "root": "סכן",
+   "pos": "noun",
+   "binyan": null,
+   "say": "sakiním",
+   "note": "Masculine plural of סכין; no attached prefix."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"חמישי\",\n  \"meaning\": \"the fifth\",\n  \"root\": \"חמש\",\n  \"pos\": \"adjective\",\n  \"binyan\": null,\n  \"say\": \"ha-cha-mi-SHI\",\n  \"note\": \"The prefix ה (the) is attached to the ordinal number.\"\n}",
+  "secs": 1.62,
+  "cost": 0.00036975,
+  "out_tokens": 213,
+  "kind": "word",
+  "item": 1,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "חמישי",
+   "meaning": "the fifth",
+   "root": "חמש",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "ha-cha-mi-SHI",
+   "note": "The prefix ה (the) is attached to the ordinal number."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"חמישי\", \"meaning\": \"the fifth (here, \\\"the fifth [day]\\\")\", \"root\": \"ח.מ.ש\", \"pos\": \"adjective\", \"binyan\": null, \"say\": \"ha-chamishi (ha-cha-mi-SHI)\", \"note\": \"The prefix ה- means \\\"the\\\" and agrees with the masculine noun יום, so the adjective takes the definite form חמישי.\"}",
+  "secs": 1.62,
+  "cost": 0.0001016,
+  "out_tokens": 142,
+  "kind": "word",
+  "item": 1,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "חמישי",
+   "meaning": "the fifth (here, \"the fifth [day]\")",
+   "root": "ח.מ.ש",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "ha-chamishi (ha-cha-mi-SHI)",
+   "note": "The prefix ה- means \"the\" and agrees with the masculine noun יום, so the adjective takes the definite form חמישי."
+  }
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"חמישי\",\n  \"meaning\": \"the fifth\",\n  \"root\": \"חמש\",\n  \"pos\": \"adjective\",\n  \"binyan\": null,\n  \"say\": \"ha-khami-SHI\",\n  \"note\": \"Prefixed with the definite article ה־ (ha-).\"\n}\n```",
+  "secs": 2.19,
+  "cost": 0.0004695,
+  "out_tokens": 85,
+  "kind": "word",
+  "item": 1,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "חמישי",
+   "meaning": "the fifth",
+   "root": "חמש",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "ha-khami-SHI",
+   "note": "Prefixed with the definite article ה־ (ha-)."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"חמישי\",\"meaning\":\"the fifth\",\"root\":\"חמש\",\"pos\":\"adjective\",\"binyan\":null,\"say\":\"ha-cha-mi-SHI\",\"note\":\"Includes the definite article ה.\"}",
+  "secs": 5.09,
+  "cost": 0.000285795,
+  "out_tokens": 471,
+  "kind": "word",
+  "item": 1,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "חמישי",
+   "meaning": "the fifth",
+   "root": "חמש",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "ha-cha-mi-SHI",
+   "note": "Includes the definite article ה."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"חמישי\",\"meaning\":\"the fifth\",\"root\":\"חמש\",\"pos\":\"adjective\",\"binyan\":null,\"say\":\"kha-mi-SHI\",\"note\":\"The prefix ה־ is the definite article, “the.”\"}",
+  "secs": 1.72,
+  "cost": 0.001076,
+  "out_tokens": 55,
+  "kind": "word",
+  "item": 1,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "חמישי",
+   "meaning": "the fifth",
+   "root": "חמש",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "kha-mi-SHI",
+   "note": "The prefix ה־ is the definite article, “the.”"
+  }
+ },
+ {
+  "text": "{\"lemma\":\"חמישי\",\"meaning\":\"the fifth (here: Thursday, 'the fifth day')\",\"root\":\"חמש\",\"pos\":\"adjective\",\"binyan\":null,\"say\":\"ha-kha-mi-SHI\",\"note\":\"The prefix ה (the) is attached to חמישי; in the sentence it refers to the fifth day of the week, Thursday.\"}",
+  "secs": 2.02,
+  "cost": 0.001842,
+  "out_tokens": 123,
+  "kind": "word",
+  "item": 1,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "חמישי",
+   "meaning": "the fifth (here: Thursday, 'the fifth day')",
+   "root": "חמש",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "ha-kha-mi-SHI",
+   "note": "The prefix ה (the) is attached to חמישי; in the sentence it refers to the fifth day of the week, Thursday."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"סכין\",\n  \"meaning\": \"knives\",\n  \"root\": \"סכן\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"sakinim\",\n  \"note\": \"plural form of סכין\"\n}",
+  "secs": 12.02,
+  "cost": 0.0012021,
+  "out_tokens": 676,
+  "kind": "word",
+  "item": 0,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "סכין",
+   "meaning": "knives",
+   "root": "סכן",
+   "pos": "noun",
+   "binyan": null,
+   "say": "sakinim",
+   "note": "plural form of סכין"
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"חמישי\",\n  \"meaning\": \"the fifth\",\n  \"root\": \"חמש\",\n  \"pos\": \"adjective\",\n  \"binyan\": null,\n  \"say\": \"ha-khamishi\",\n  \"note\": \"The prefix ה is the definite article 'the'.\"\n}",
+  "secs": 7.47,
+  "cost": 0.0012288,
+  "out_tokens": 695,
+  "kind": "word",
+  "item": 1,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "חמישי",
+   "meaning": "the fifth",
+   "root": "חמש",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "ha-khamishi",
+   "note": "The prefix ה is the definite article 'the'."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"רמבם\",\n  \"meaning\": \"Maimonides\",\n  \"root\": null,\n  \"pos\": \"name\",\n  \"binyan\": null,\n  \"say\": \"ha-RAM-bam\",\n  \"note\": \"The word includes the definite article prefix 'ה' (the) attached to the acronym 'רמב\\\"ם' (Rabbi Moshe ben Maimon).\"\n}",
+  "secs": 1.77,
+  "cost": 0.00042875,
+  "out_tokens": 246,
+  "kind": "word",
+  "item": 2,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "רמבם",
+   "meaning": "Maimonides",
+   "root": null,
+   "pos": "name",
+   "binyan": null,
+   "say": "ha-RAM-bam",
+   "note": "The word includes the definite article prefix 'ה' (the) attached to the acronym 'רמב\"ם' (Rabbi Moshe ben Maimon)."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"חמישי\",\n  \"meaning\": \"fifth\",\n  \"root\": \"חמש\",\n  \"pos\": \"adjective\",\n  \"binyan\": null,\n  \"say\": \"ha-khamiSHI\",\n  \"note\": \"With definite article ה-\"\n}",
+  "secs": 16.26,
+  "cost": 0.00083825,
+  "out_tokens": 1831,
+  "kind": "word",
+  "item": 1,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "חמישי",
+   "meaning": "fifth",
+   "root": "חמש",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "ha-khamiSHI",
+   "note": "With definite article ה-"
+  }
+ },
+ {
+  "text": "{\"lemma\":\"רמב\\\"ם\",\"meaning\":\"Maimonides\",\"root\":null,\"pos\":\"name\",\"binyan\":null,\"say\":\"ha-RAM-bam\",\"note\":\"ה is the definite article; the form is part of the acronym for Rabbi Moshe ben Maimon.\"}",
+  "secs": 10.72,
+  "cost": 0.00034552,
+  "out_tokens": 734,
+  "kind": "word",
+  "item": 2,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "רמב\"ם",
+   "meaning": "Maimonides",
+   "root": null,
+   "pos": "name",
+   "binyan": null,
+   "say": "ha-RAM-bam",
+   "note": "ה is the definite article; the form is part of the acronym for Rabbi Moshe ben Maimon."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"רמב\\\"ם\", \"meaning\": \"Maimonides (the Rambam)\", \"root\": null, \"pos\": \"name\", \"binyan\": null, \"say\": \"rahm-BAHM\", \"note\": \"The ה prefix means 'the', and this is an acronym for רבי משה בן מיימון, written with gershayim, so the word is cut off in your extraction.\"}",
+  "secs": 4.43,
+  "cost": 0.0002835,
+  "out_tokens": 494,
+  "kind": "word",
+  "item": 2,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "רמב\"ם",
+   "meaning": "Maimonides (the Rambam)",
+   "root": null,
+   "pos": "name",
+   "binyan": null,
+   "say": "rahm-BAHM",
+   "note": "The ה prefix means 'the', and this is an acronym for רבי משה בן מיימון, written with gershayim, so the word is cut off in your extraction."
+  }
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"רמב\\\"ם\",\n  \"meaning\": \"the Rambam (Maimonides)\",\n  \"root\": null,\n  \"pos\": \"name\",\n  \"binyan\": null,\n  \"say\": \"ha-ram-BAM\",\n  \"note\": \"An acronym (רבי משה בן מימון) with the definite article הַ־ attached (cut off by quotation mark).\"\n}\n```",
+  "secs": 2.95,
+  "cost": 0.0009105,
+  "out_tokens": 195,
+  "kind": "word",
+  "item": 2,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "רמב\"ם",
+   "meaning": "the Rambam (Maimonides)",
+   "root": null,
+   "pos": "name",
+   "binyan": null,
+   "say": "ha-ram-BAM",
+   "note": "An acronym (רבי משה בן מימון) with the definite article הַ־ attached (cut off by quotation mark)."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"רמב\\\"ם\",\"meaning\":\"the Rambam (Maimonides), Rabbi Moshe ben Maimon\",\"root\":null,\"pos\":\"name\",\"binyan\":null,\"say\":\"ha-rambám\",\"note\":\"The word is cut off at the quotation mark; the full acronym is הרמב\\\"ם, with the definite article ה attached to רמב\\\"ם.\"}",
+  "secs": 2.14,
+  "cost": 0.00202,
+  "out_tokens": 129,
+  "kind": "word",
+  "item": 2,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "רמב\"ם",
+   "meaning": "the Rambam (Maimonides), Rabbi Moshe ben Maimon",
+   "root": null,
+   "pos": "name",
+   "binyan": null,
+   "say": "ha-rambám",
+   "note": "The word is cut off at the quotation mark; the full acronym is הרמב\"ם, with the definite article ה attached to רמב\"ם."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"רמב\\\"ם\",\"meaning\":\"Maimonides (the Rambam)\",\"root\":null,\"pos\":\"name\",\"binyan\":null,\"say\":\"ha-ram-BÁM\",\"note\":\"The prefix ה means “the”; רמב״ם is an acronym for רבי משה בן מימון.\"}",
+  "secs": 3.12,
+  "cost": 0.001896,
+  "out_tokens": 119,
+  "kind": "word",
+  "item": 2,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "רמב\"ם",
+   "meaning": "Maimonides (the Rambam)",
+   "root": null,
+   "pos": "name",
+   "binyan": null,
+   "say": "ha-ram-BÁM",
+   "note": "The prefix ה means “the”; רמב״ם is an acronym for רבי משה בן מימון."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"סכין\",\n  \"meaning\": \"knives\",\n  \"root\": \"סכן\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"sakiním\",\n  \"note\": \"Plural form with suffix ים.\"\n}",
+  "secs": 26.34,
+  "cost": 0.0006102,
+  "out_tokens": 1324,
+  "kind": "word",
+  "item": 0,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "סכין",
+   "meaning": "knives",
+   "root": "סכן",
+   "pos": "noun",
+   "binyan": null,
+   "say": "sakiním",
+   "note": "Plural form with suffix ים."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"יום\",\n  \"meaning\": \"the day\",\n  \"root\": \"יומ\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"ve-ha-YOM\",\n  \"note\": \"Prefixes: ו (and) + ה (the)\"\n}",
+  "secs": 16.83,
+  "cost": 9.338e-05,
+  "out_tokens": 221,
+  "kind": "word",
+  "item": 3,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "יום",
+   "meaning": "the day",
+   "root": "יומ",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ve-ha-YOM",
+   "note": "Prefixes: ו (and) + ה (the)"
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"יום\",\n  \"meaning\": \"and the day\",\n  \"root\": \"ימם\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"ve-ha-YOM\",\n  \"note\": \"The word includes the conjunction 'ו' (and) and the definite article 'ה' (the) attached to the noun 'יום'.\"\n}",
+  "secs": 1.96,
+  "cost": 0.00039225,
+  "out_tokens": 225,
+  "kind": "word",
+  "item": 3,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "יום",
+   "meaning": "and the day",
+   "root": "ימם",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ve-ha-YOM",
+   "note": "The word includes the conjunction 'ו' (and) and the definite article 'ה' (the) attached to the noun 'יום'."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"רמב\\\"ם\",\n  \"meaning\": \"Maimonides\",\n  \"root\": null,\n  \"pos\": \"name\",\n  \"binyan\": null,\n  \"say\": \"ha-ram-BA\",\n  \"note\": \"Part of acronym הרמב\\\"ם (Maimonides); prefixed with definite article ה\"\n}",
+  "secs": 22.17,
+  "cost": 0.003012,
+  "out_tokens": 1864,
+  "kind": "word",
+  "item": 2,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "רמב\"ם",
+   "meaning": "Maimonides",
+   "root": null,
+   "pos": "name",
+   "binyan": null,
+   "say": "ha-ram-BA",
+   "note": "Part of acronym הרמב\"ם (Maimonides); prefixed with definite article ה"
+  }
+ },
+ {
+  "text": "{\"lemma\": \"יום\", \"meaning\": \"and the day (\\\"and today\\\" in other contexts; here \\\"and the day\\\" referring back to the day)\", \"root\": \"י.ו.ם\", \"pos\": \"noun\", \"binyan\": null, \"say\": \"ve-ha-YOM\", \"note\": \"The prefix ו (and) and the definite article ה attach to יום, giving 'and the day'.\"}",
+  "secs": 1.82,
+  "cost": 9.73e-05,
+  "out_tokens": 127,
+  "kind": "word",
+  "item": 3,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "יום",
+   "meaning": "and the day (\"and today\" in other contexts; here \"and the day\" referring back to the day)",
+   "root": "י.ו.ם",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ve-ha-YOM",
+   "note": "The prefix ו (and) and the definite article ה attach to יום, giving 'and the day'."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"יום\",\"meaning\":\"and the day\",\"root\":\"יום\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"vehayóm\",\"note\":\"Prefixes ו (and) and ה (the) attached to יום.\"}",
+  "secs": 19.1,
+  "cost": 0.001938478,
+  "out_tokens": 2675,
+  "kind": "word",
+  "item": 3,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "יום",
+   "meaning": "and the day",
+   "root": "יום",
+   "pos": "noun",
+   "binyan": null,
+   "say": "vehayóm",
+   "note": "Prefixes ו (and) and ה (the) attached to יום."
+  }
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"יום\",\n  \"meaning\": \"and the day\",\n  \"root\": \"יום\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"ve-ha-YOM\",\n  \"note\": \"Includes the conjunction וְ־ (and) and the definite article הַ־ (the).\"\n}\n```",
+  "secs": 2.69,
+  "cost": 0.00049425,
+  "out_tokens": 88,
+  "kind": "word",
+  "item": 3,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "יום",
+   "meaning": "and the day",
+   "root": "יום",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ve-ha-YOM",
+   "note": "Includes the conjunction וְ־ (and) and the definite article הַ־ (the)."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"יום\",\"meaning\":\"and the day (and that day)\",\"root\":null,\"pos\":\"noun\",\"binyan\":null,\"say\":\"vehaYOM\",\"note\":\"Prefixed with ו (and) and the definite article ה; here it begins the phrase 'והיום ההוא' meaning 'and that day'.\"}",
+  "secs": 1.93,
+  "cost": 0.001736,
+  "out_tokens": 106,
+  "kind": "word",
+  "item": 3,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "יום",
+   "meaning": "and the day (and that day)",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "vehaYOM",
+   "note": "Prefixed with ו (and) and the definite article ה; here it begins the phrase 'והיום ההוא' meaning 'and that day'."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"יום\",\"meaning\":\"and the day\",\"root\":\"יום\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"ve-ha-YOM\",\"note\":\"ו is “and” and ה is the definite article; היום ההוא means “that day.”\"}",
+  "secs": 1.77,
+  "cost": 0.001158,
+  "out_tokens": 59,
+  "kind": "word",
+  "item": 3,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "יום",
+   "meaning": "and the day",
+   "root": "יום",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ve-ha-YOM",
+   "note": "ו is “and” and ה is the definite article; היום ההוא means “that day.”"
+  }
+ },
+ {
+  "text": "{\"lemma\":\"חמישי\",\"meaning\":\"the fifth\",\"root\":\"חמש\",\"pos\":\"adjective\",\"binyan\":null,\"say\":\"ha-kha-MEE-shee\",\"note\":\"Prefixed with ה (the); masculine singular ordinal form.\"}",
+  "secs": 47.31,
+  "cost": 0.00084678,
+  "out_tokens": 1719,
+  "kind": "word",
+  "item": 1,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": {
+   "lemma": "חמישי",
+   "meaning": "the fifth",
+   "root": "חמש",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "ha-kha-MEE-shee",
+   "note": "Prefixed with ה (the); masculine singular ordinal form."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"פקח\",\"meaning\":\"opened (her eyes)\",\"root\":\"פקח\",\"pos\":\"verb\",\"binyan\":\"pa'al\",\"say\":\"pakḥá\",\"note\":\"Pa'al 3rd person feminine singular past; no attached prefix.\"}",
+  "secs": 5.81,
+  "cost": 0.00076674,
+  "out_tokens": 600,
+  "kind": "word",
+  "item": 4,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "פקח",
+   "meaning": "opened (her eyes)",
+   "root": "פקח",
+   "pos": "verb",
+   "binyan": "pa'al",
+   "say": "pakḥá",
+   "note": "Pa'al 3rd person feminine singular past; no attached prefix."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"יום\",\n  \"meaning\": \"day\",\n  \"root\": \"יום\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"ve-ha-YOM\",\n  \"note\": \"with prefixed ו (and) and ה (the)\"\n}",
+  "secs": 11.03,
+  "cost": 0.00192,
+  "out_tokens": 1145,
+  "kind": "word",
+  "item": 3,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "יום",
+   "meaning": "day",
+   "root": "יום",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ve-ha-YOM",
+   "note": "with prefixed ו (and) and ה (the)"
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"פקח\",\n  \"meaning\": \"opened\",\n  \"root\": \"פ-ק-ח\",\n  \"pos\": \"verb\",\n  \"binyan\": \"pa'al\",\n  \"say\": \"pa-k-HA\",\n  \"note\": \"The suffix 'ה' indicates third-person feminine singular past tense.\"\n}",
+  "secs": 1.82,
+  "cost": 0.00038175,
+  "out_tokens": 219,
+  "kind": "word",
+  "item": 4,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "פקח",
+   "meaning": "opened",
+   "root": "פ-ק-ח",
+   "pos": "verb",
+   "binyan": "pa'al",
+   "say": "pa-k-HA",
+   "note": "The suffix 'ה' indicates third-person feminine singular past tense."
+  }
+ },
+ {
+  "text": "",
+  "secs": 55.75,
+  "cost": 0.00191915,
+  "out_tokens": 4000,
+  "kind": "word",
+  "item": 0,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": null
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"פקח\",\n  \"meaning\": \"opened (eyes)\",\n  \"root\": \"פקח\",\n  \"pos\": \"verb\",\n  \"binyan\": \"pa'al\",\n  \"say\": \"pakḥÁ\",\n  \"note\": \"Past tense, third-person feminine singular form.\"\n}\n```",
+  "secs": 2.08,
+  "cost": 0.0004635,
+  "out_tokens": 81,
+  "kind": "word",
+  "item": 4,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "פקח",
+   "meaning": "opened (eyes)",
+   "root": "פקח",
+   "pos": "verb",
+   "binyan": "pa'al",
+   "say": "pakḥÁ",
+   "note": "Past tense, third-person feminine singular form."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"פקח\",\"meaning\":\"she opened (her eyes)\",\"root\":\"פקח\",\"pos\":\"verb\",\"binyan\":\"pi'el\",\"say\":\"pi-KE-ḥa\",\"note\":\"Past tense 3rd person feminine singular; פקח את עיניה means 'opened her eyes'.\"}",
+  "secs": 1.98,
+  "cost": 0.001698,
+  "out_tokens": 104,
+  "kind": "word",
+  "item": 4,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "פקח",
+   "meaning": "she opened (her eyes)",
+   "root": "פקח",
+   "pos": "verb",
+   "binyan": "pi'el",
+   "say": "pi-KE-ḥa",
+   "note": "Past tense 3rd person feminine singular; פקח את עיניה means 'opened her eyes'."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"פקח\", \"meaning\": \"she opened (her eyes)\", \"root\": \"פ.ק.ח\", \"pos\": \"verb\", \"binyan\": \"qal\", \"say\": \"pa-KHA\", \"note\": \"Past tense, 3rd person feminine singular, of the qal verb פָּקַח 'to open'; the 'ה' is part of the feminine ending, not a prefix.\"}",
+  "secs": 4.52,
+  "cost": 0.0002234,
+  "out_tokens": 381,
+  "kind": "word",
+  "item": 4,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "פקח",
+   "meaning": "she opened (her eyes)",
+   "root": "פ.ק.ח",
+   "pos": "verb",
+   "binyan": "qal",
+   "say": "pa-KHA",
+   "note": "Past tense, 3rd person feminine singular, of the qal verb פָּקַח 'to open'; the 'ה' is part of the feminine ending, not a prefix."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"פקח\",\"meaning\":\"opened\",\"root\":\"פקח\",\"pos\":\"verb\",\"binyan\":\"פעל\",\"say\":\"pakchá\",\"note\":\"Past-tense feminine singular: “she opened.”\"}",
+  "secs": 5.08,
+  "cost": 0.001996,
+  "out_tokens": 129,
+  "kind": "word",
+  "item": 4,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "פקח",
+   "meaning": "opened",
+   "root": "פקח",
+   "pos": "verb",
+   "binyan": "פעל",
+   "say": "pakchá",
+   "note": "Past-tense feminine singular: “she opened.”"
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"פקח\",\n  \"meaning\": \"opened\",\n  \"root\": \"פקח\",\n  \"pos\": \"verb\",\n  \"binyan\": \"pa'al\",\n  \"say\": \"pak'CHAH\",\n  \"note\": null\n}",
+  "secs": 8.67,
+  "cost": 0.0014322,
+  "out_tokens": 821,
+  "kind": "word",
+  "item": 4,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "פקח",
+   "meaning": "opened",
+   "root": "פקח",
+   "pos": "verb",
+   "binyan": "pa'al",
+   "say": "pak'CHAH",
+   "note": null
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"יום\",\n  \"meaning\": \"day\",\n  \"root\": \"יום\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"v'ha-YOM\",\n  \"note\": \"Prefixed with ו 'and' and ה 'the'; here it means 'the day', not 'today'.\"\n}",
+  "secs": 43.58,
+  "cost": 0.00159849,
+  "out_tokens": 3312,
+  "kind": "word",
+  "item": 3,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": {
+   "lemma": "יום",
+   "meaning": "day",
+   "root": "יום",
+   "pos": "noun",
+   "binyan": null,
+   "say": "v'ha-YOM",
+   "note": "Prefixed with ו 'and' and ה 'the'; here it means 'the day', not 'today'."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"יצא\",\n  \"meaning\": \"in her leaving / when she left\",\n  \"root\": \"יצא\",\n  \"pos\": \"verb\",\n  \"binyan\": \"pa'al\",\n  \"say\": \"be-tse-tah\",\n  \"note\": \"The word consists of the preposition 'ב' (in/when) attached to the infinitive construct 'צאת' (leaving) with the suffix 'ה' (her).\"\n}",
+  "secs": 1.87,
+  "cost": 0.000416,
+  "out_tokens": 240,
+  "kind": "word",
+  "item": 5,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "יצא",
+   "meaning": "in her leaving / when she left",
+   "root": "יצא",
+   "pos": "verb",
+   "binyan": "pa'al",
+   "say": "be-tse-tah",
+   "note": "The word consists of the preposition 'ב' (in/when) attached to the infinitive construct 'צאת' (leaving) with the suffix 'ה' (her)."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"פקח\",\"meaning\":\"she opened (her eyes)\",\"root\":\"פקח\",\"pos\":\"verb\",\"binyan\":\"pa'al\",\"say\":\"pak-KHA\",\"note\":\"Past tense, 3rd person feminine singular of פָּקַח.\"}",
+  "secs": 27.51,
+  "cost": 0.000406042,
+  "out_tokens": 2080,
+  "kind": "word",
+  "item": 4,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "פקח",
+   "meaning": "she opened (her eyes)",
+   "root": "פקח",
+   "pos": "verb",
+   "binyan": "pa'al",
+   "say": "pak-KHA",
+   "note": "Past tense, 3rd person feminine singular of פָּקַח."
+  }
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"יציאה\",\n  \"meaning\": \"when she left / upon her departure\",\n  \"root\": \"יצא\",\n  \"pos\": \"verb\",\n  \"binyan\": \"pa'al\",\n  \"say\": \"be-tze-TAH\",\n  \"note\": \"Infinitive construct (שם הפועל / מקור נטוי) of the verb יצא with preposition ב־ and 3rd person feminine singular suffix.\"\n}\n```",
+  "secs": 2.04,
+  "cost": 0.0005955,
+  "out_tokens": 114,
+  "kind": "word",
+  "item": 5,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "יציאה",
+   "meaning": "when she left / upon her departure",
+   "root": "יצא",
+   "pos": "verb",
+   "binyan": "pa'al",
+   "say": "be-tze-TAH",
+   "note": "Infinitive construct (שם הפועל / מקור נטוי) of the verb יצא with preposition ב־ and 3rd person feminine singular suffix."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"יצא\", \"meaning\": \"when she left (going out)\", \"root\": \"י-צ-א\", \"pos\": \"verb\", \"binyan\": \"qal\", \"say\": \"b'tzei-TAH\", \"note\": \"The prefix ב means 'when/upon,' and צאתה is the infinitive construct 'going out' with the feminine suffix ה 'her'.\"}",
+  "secs": 4.85,
+  "cost": 0.0002479,
+  "out_tokens": 426,
+  "kind": "word",
+  "item": 5,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "יצא",
+   "meaning": "when she left (going out)",
+   "root": "י-צ-א",
+   "pos": "verb",
+   "binyan": "qal",
+   "say": "b'tzei-TAH",
+   "note": "The prefix ב means 'when/upon,' and צאתה is the infinitive construct 'going out' with the feminine suffix ה 'her'."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"יצא\",\"meaning\":\"when she left / upon her leaving\",\"root\":\"יצא\",\"pos\":\"verb\",\"binyan\":\"paal\",\"say\":\"be-tzetá-h\",\"note\":\"Prefix ב ('when/upon') + infinitive construct צאת ('leaving') + ־ה ('her'), i.e. 'upon her leaving'.\"}",
+  "secs": 2.68,
+  "cost": 0.001898,
+  "out_tokens": 120,
+  "kind": "word",
+  "item": 5,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "יצא",
+   "meaning": "when she left / upon her leaving",
+   "root": "יצא",
+   "pos": "verb",
+   "binyan": "paal",
+   "say": "be-tzetá-h",
+   "note": "Prefix ב ('when/upon') + infinitive construct צאת ('leaving') + ־ה ('her'), i.e. 'upon her leaving'."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"רמב\\\"ם\",\n  \"meaning\": \"Maimonides\",\n  \"root\": null,\n  \"pos\": \"name\",\n  \"binyan\": null,\n  \"say\": \"ha-ram-BAM\",\n  \"note\": \"The prefix ה is the definite article; the word is an acronym for Rabbi Moses ben Maimon.\"\n}",
+  "secs": 70.71,
+  "cost": 0.00046648,
+  "out_tokens": 1546,
+  "kind": "word",
+  "item": 2,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "רמב\"ם",
+   "meaning": "Maimonides",
+   "root": null,
+   "pos": "name",
+   "binyan": null,
+   "say": "ha-ram-BAM",
+   "note": "The prefix ה is the definite article; the word is an acronym for Rabbi Moses ben Maimon."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"יצא\",\"meaning\":\"when she left\",\"root\":\"יצא\",\"pos\":\"verb\",\"binyan\":\"qal\",\"say\":\"be-tse-TAH\",\"note\":\"ב + infinitive construct צאת + 3fs suffix ה; temporal clause.\"}",
+  "secs": 19.52,
+  "cost": 0.002907,
+  "out_tokens": 2359,
+  "kind": "word",
+  "item": 5,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "יצא",
+   "meaning": "when she left",
+   "root": "יצא",
+   "pos": "verb",
+   "binyan": "qal",
+   "say": "be-tse-TAH",
+   "note": "ב + infinitive construct צאת + 3fs suffix ה; temporal clause."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"יצא\",\"meaning\":\"when she left\",\"root\":\"יצא\",\"pos\":\"verb\",\"binyan\":\"קל\",\"say\":\"bə-tzetÁH\",\"note\":\"ב־ is attached to the infinitive construct צאת with the 3rd-feminine-singular suffix ־ה.\"}",
+  "secs": 4.63,
+  "cost": 0.002354,
+  "out_tokens": 158,
+  "kind": "word",
+  "item": 5,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "יצא",
+   "meaning": "when she left",
+   "root": "יצא",
+   "pos": "verb",
+   "binyan": "קל",
+   "say": "bə-tzetÁH",
+   "note": "ב־ is attached to the infinitive construct צאת with the 3rd-feminine-singular suffix ־ה."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"צאת\",\n  \"meaning\": \"when she went out\",\n  \"root\": \"יצא\",\n  \"pos\": \"verb\",\n  \"binyan\": \"pa'al\",\n  \"say\": \"b'tzeiTAH\",\n  \"note\": \"Prefix ב (when) + infinitive construct of יצא + suffix ה (her)\"\n}",
+  "secs": 9.83,
+  "cost": 0.0017022,
+  "out_tokens": 998,
+  "kind": "word",
+  "item": 5,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "צאת",
+   "meaning": "when she went out",
+   "root": "יצא",
+   "pos": "verb",
+   "binyan": "pa'al",
+   "say": "b'tzeiTAH",
+   "note": "Prefix ב (when) + infinitive construct of יצא + suffix ה (her)"
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"עצלה\",\n  \"meaning\": \"lazy (feminine)\",\n  \"root\": \"עצל\",\n  \"pos\": \"adjective\",\n  \"binyan\": null,\n  \"say\": \"atz-LAH\",\n  \"note\": \"This is the feminine singular form of the adjective 'atzlan' or 'atzel'.\"\n}",
+  "secs": 1.44,
+  "cost": 0.0003835,
+  "out_tokens": 222,
+  "kind": "word",
+  "item": 6,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "עצלה",
+   "meaning": "lazy (feminine)",
+   "root": "עצל",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "atz-LAH",
+   "note": "This is the feminine singular form of the adjective 'atzlan' or 'atzel'."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"עצל\",\"meaning\":\"lazy (feminine)\",\"root\":\"עצל\",\"pos\":\"adjective\",\"binyan\":null,\"say\":\"a-tze-LA\",\"note\":\"Feminine singular adjective agreeing with the subject; no prefix.\"}",
+  "secs": 6.87,
+  "cost": 0.0017502,
+  "out_tokens": 1400,
+  "kind": "word",
+  "item": 6,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "עצל",
+   "meaning": "lazy (feminine)",
+   "root": "עצל",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "a-tze-LA",
+   "note": "Feminine singular adjective agreeing with the subject; no prefix."
+  }
+ },
+ {
+  "text": "",
+  "secs": 80.18,
+  "cost": 0.0019247,
+  "out_tokens": 4000,
+  "kind": "word",
+  "item": 2,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": null
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"עצל\",\n  \"meaning\": \"lazy\",\n  \"root\": \"עצל\",\n  \"pos\": \"adjective\",\n  \"binyan\": null,\n  \"say\": \"atze-LAH\",\n  \"note\": \"Feminine singular form of the adjective.\"\n}\n```",
+  "secs": 3.01,
+  "cost": 0.0008265,
+  "out_tokens": 180,
+  "kind": "word",
+  "item": 6,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "עצל",
+   "meaning": "lazy",
+   "root": "עצל",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "atze-LAH",
+   "note": "Feminine singular form of the adjective."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"עצל\", \"meaning\": \"became lazy / grew slack (she was lazy)\", \"root\": \"עצל\", \"pos\": \"verb\", \"binyan\": \"pa'al\", \"say\": \"atz-LAH\", \"note\": \"This is the feminine past form of the stative verb 'to be lazy' (pa'al), used here in a literary register rather than as the adjective 'lazy' (עצלה/עַצְלָנִית).\"}",
+  "secs": 7.6,
+  "cost": 0.0004515,
+  "out_tokens": 840,
+  "kind": "word",
+  "item": 6,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "עצל",
+   "meaning": "became lazy / grew slack (she was lazy)",
+   "root": "עצל",
+   "pos": "verb",
+   "binyan": "pa'al",
+   "say": "atz-LAH",
+   "note": "This is the feminine past form of the stative verb 'to be lazy' (pa'al), used here in a literary register rather than as the adjective 'lazy' (עצלה/עַצְלָנִית)."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"עצל\",\"meaning\":\"lazy (feminine), i.e. she was lazy / a lazy woman\",\"root\":\"עצל\",\"pos\":\"adjective\",\"binyan\":null,\"say\":\"atséla\",\"note\":\"Feminine singular form of עצל (atsél) with the ־ה ending; here it describes the woman as lazy.\"}",
+  "secs": 2.18,
+  "cost": 0.00176,
+  "out_tokens": 113,
+  "kind": "word",
+  "item": 6,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "עצל",
+   "meaning": "lazy (feminine), i.e. she was lazy / a lazy woman",
+   "root": "עצל",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "atséla",
+   "note": "Feminine singular form of עצל (atsél) with the ־ה ending; here it describes the woman as lazy."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"עצל\",\"meaning\":\"lazy\",\"root\":\"עצל\",\"pos\":\"adjective\",\"binyan\":null,\"say\":\"ats-LA\",\"note\":\"Feminine singular form of the adjective.\"}",
+  "secs": 3.33,
+  "cost": 0.002196,
+  "out_tokens": 148,
+  "kind": "word",
+  "item": 6,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "עצל",
+   "meaning": "lazy",
+   "root": "עצל",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "ats-LA",
+   "note": "Feminine singular form of the adjective."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"עצלה\",\n  \"meaning\": \"laziness\",\n  \"root\": \"עצל\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"atz-LAH\",\n  \"note\": null\n}",
+  "secs": 5.79,
+  "cost": 0.0012228,
+  "out_tokens": 691,
+  "kind": "word",
+  "item": 6,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "עצלה",
+   "meaning": "laziness",
+   "root": "עצל",
+   "pos": "noun",
+   "binyan": null,
+   "say": "atz-LAH",
+   "note": null
+  }
+ },
+ {
+  "text": "{\"lemma\":\"עין\",\"meaning\":\"to the eye\",\"root\":\"עין\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"la'áyin\",\"note\":\"ל preposition attached to עין\"}",
+  "secs": 3.77,
+  "cost": 0.00082927,
+  "out_tokens": 649,
+  "kind": "word",
+  "item": 7,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "עין",
+   "meaning": "to the eye",
+   "root": "עין",
+   "pos": "noun",
+   "binyan": null,
+   "say": "la'áyin",
+   "note": "ל preposition attached to עין"
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"עין\",\n  \"meaning\": \"to the eye (visible)\",\n  \"root\": \"עין\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"la-A-yin\",\n  \"note\": \"The prefix ל (to) is attached to the noun עין (eye).\"\n}",
+  "secs": 1.56,
+  "cost": 0.00037575,
+  "out_tokens": 211,
+  "kind": "word",
+  "item": 7,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "עין",
+   "meaning": "to the eye (visible)",
+   "root": "עין",
+   "pos": "noun",
+   "binyan": null,
+   "say": "la-A-yin",
+   "note": "The prefix ל (to) is attached to the noun עין (eye)."
+  }
+ },
+ {
+  "text": "",
+  "secs": 45.56,
+  "cost": 0.000755937,
+  "out_tokens": 4000,
+  "kind": "word",
+  "item": 5,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": null
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"עין\",\n  \"meaning\": \"to the eye\",\n  \"root\": \"עין\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"la'A-yin\",\n  \"note\": \"Combined with the preposition לְ־ with a definite article; 'נראה לעין' is an idiom meaning 'plain to see' or 'apparent'.\"\n}\n```",
+  "secs": 2.51,
+  "cost": 0.0005565,
+  "out_tokens": 101,
+  "kind": "word",
+  "item": 7,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "עין",
+   "meaning": "to the eye",
+   "root": "עין",
+   "pos": "noun",
+   "binyan": null,
+   "say": "la'A-yin",
+   "note": "Combined with the preposition לְ־ with a definite article; 'נראה לעין' is an idiom meaning 'plain to see' or 'apparent'."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"עין\", \"meaning\": \"visibly, apparently (lit. 'to the eye')\", \"root\": \"עין\", \"pos\": \"noun\", \"binyan\": null, \"say\": \"le-AYN\", \"note\": \"The prefix ל ('to/for') attaches to עין ('eye'); together לעין is an idiom meaning 'visibly' or 'in appearance'.\"}",
+  "secs": 4.51,
+  "cost": 0.0002573,
+  "out_tokens": 441,
+  "kind": "word",
+  "item": 7,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "עין",
+   "meaning": "visibly, apparently (lit. 'to the eye')",
+   "root": "עין",
+   "pos": "noun",
+   "binyan": null,
+   "say": "le-AYN",
+   "note": "The prefix ל ('to/for') attaches to עין ('eye'); together לעין is an idiom meaning 'visibly' or 'in appearance'."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"עין\",\"meaning\":\"to the eye (נראה לעין = visible, evident to the eye)\",\"root\":\"עין\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"la-ʻÁyin\",\"note\":\"The prefix ל (to) is attached to עין (eye); in the phrase נראה לעין it means 'visibly, plainly'.\"}",
+  "secs": 4.31,
+  "cost": 0.001936,
+  "out_tokens": 120,
+  "kind": "word",
+  "item": 7,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "עין",
+   "meaning": "to the eye (נראה לעין = visible, evident to the eye)",
+   "root": "עין",
+   "pos": "noun",
+   "binyan": null,
+   "say": "la-ʻÁyin",
+   "note": "The prefix ל (to) is attached to עין (eye); in the phrase נראה לעין it means 'visibly, plainly'."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"עין\",\"meaning\":\"eye; visibly\",\"root\":null,\"pos\":\"noun\",\"binyan\":null,\"say\":\"le-Á-yin\",\"note\":\"The prefix ל means “to,” in the phrase נראה לעין, “is evident/visible.”\"}",
+  "secs": 4.29,
+  "cost": 0.00211,
+  "out_tokens": 136,
+  "kind": "word",
+  "item": 7,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "עין",
+   "meaning": "eye; visibly",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "le-Á-yin",
+   "note": "The prefix ל means “to,” in the phrase נראה לעין, “is evident/visible.”"
+  }
+ },
+ {
+  "text": "",
+  "secs": 52.4,
+  "cost": 0.0019223,
+  "out_tokens": 4000,
+  "kind": "word",
+  "item": 5,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": null
+ },
+ {
+  "text": "{\n  \"lemma\": \"עצל\",\n  \"meaning\": \"lazy\",\n  \"root\": \"עצל\",\n  \"pos\": \"adjective\",\n  \"binyan\": null,\n  \"say\": \"atZLAH\",\n  \"note\": \"Feminine singular form of the adjective עצל; no prefixes.\"\n}",
+  "secs": 35.06,
+  "cost": 0.00120994,
+  "out_tokens": 2492,
+  "kind": "word",
+  "item": 6,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": {
+   "lemma": "עצל",
+   "meaning": "lazy",
+   "root": "עצל",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "atZLAH",
+   "note": "Feminine singular form of the adjective עצל; no prefixes."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"עין\",\n  \"meaning\": \"visibly\",\n  \"root\": \"ע-י-נ\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"la'áyin\",\n  \"note\": \"Prefix ל attached to noun עין; used in phrase 'נראה לעין' meaning 'appears visibly'.\"\n}",
+  "secs": 24.18,
+  "cost": 0.00047894,
+  "out_tokens": 1589,
+  "kind": "word",
+  "item": 7,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "עין",
+   "meaning": "visibly",
+   "root": "ע-י-נ",
+   "pos": "noun",
+   "binyan": null,
+   "say": "la'áyin",
+   "note": "Prefix ל attached to noun עין; used in phrase 'נראה לעין' meaning 'appears visibly'."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"עין\",\n  \"meaning\": \"to the eye\",\n  \"root\": \"עין\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"la-a-YIN\",\n  \"note\": \"Prefixed with ל (to).\"\n}",
+  "secs": 13.87,
+  "cost": 0.0020757,
+  "out_tokens": 1238,
+  "kind": "word",
+  "item": 7,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "עין",
+   "meaning": "to the eye",
+   "root": "עין",
+   "pos": "noun",
+   "binyan": null,
+   "say": "la-a-YIN",
+   "note": "Prefixed with ל (to)."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"מוות\",\n  \"meaning\": \"her death\",\n  \"root\": \"מות\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"mo-TAH\",\n  \"note\": \"The word is the noun 'mavet' (death) with the possessive suffix 'ah' (her).\"\n}",
+  "secs": 1.6,
+  "cost": 0.000379,
+  "out_tokens": 217,
+  "kind": "word",
+  "item": 8,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "מוות",
+   "meaning": "her death",
+   "root": "מות",
+   "pos": "noun",
+   "binyan": null,
+   "say": "mo-TAH",
+   "note": "The word is the noun 'mavet' (death) with the possessive suffix 'ah' (her)."
+  }
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"מוות\",\n  \"meaning\": \"her death\",\n  \"root\": \"מות\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"mo-TAH\",\n  \"note\": \"Noun in construct/suffixed form with the 3rd person feminine singular possessive suffix.\"\n}\n```",
+  "secs": 3.07,
+  "cost": 0.000483,
+  "out_tokens": 86,
+  "kind": "word",
+  "item": 8,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "מוות",
+   "meaning": "her death",
+   "root": "מות",
+   "pos": "noun",
+   "binyan": null,
+   "say": "mo-TAH",
+   "note": "Noun in construct/suffixed form with the 3rd person feminine singular possessive suffix."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"מוות\", \"meaning\": \"her death\", \"root\": \"מות\", \"pos\": \"noun\", \"binyan\": null, \"say\": \"mo-TAH\", \"note\": \"The construct form מות takes the feminine possessive suffix ־ה, meaning 'her'.\"}",
+  "secs": 5.46,
+  "cost": 0.0001712,
+  "out_tokens": 278,
+  "kind": "word",
+  "item": 8,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "מוות",
+   "meaning": "her death",
+   "root": "מות",
+   "pos": "noun",
+   "binyan": null,
+   "say": "mo-TAH",
+   "note": "The construct form מות takes the feminine possessive suffix ־ה, meaning 'her'."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"מוות\",\"meaning\":\"her death\",\"root\":\"מות\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"mo-TAH\",\"note\":\"The ending ה- is the possessive suffix 'her' on מוות (construct form מות-), so מותה means 'her death'.\"}",
+  "secs": 2.67,
+  "cost": 0.001604,
+  "out_tokens": 96,
+  "kind": "word",
+  "item": 8,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "מוות",
+   "meaning": "her death",
+   "root": "מות",
+   "pos": "noun",
+   "binyan": null,
+   "say": "mo-TAH",
+   "note": "The ending ה- is the possessive suffix 'her' on מוות (construct form מות-), so מותה means 'her death'."
+  }
+ },
+ {
+  "text": "",
+  "secs": 50.07,
+  "cost": 0.000754026,
+  "out_tokens": 4000,
+  "kind": "word",
+  "item": 6,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": null
+ },
+ {
+  "text": "{\"lemma\":\"מוות\",\"meaning\":\"her death\",\"root\":\"מות\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"mo-TAH\",\"note\":\"The suffix ־ה means “her,” so מותה is “her death.”\"}",
+  "secs": 1.9,
+  "cost": 0.001106,
+  "out_tokens": 56,
+  "kind": "word",
+  "item": 8,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "מוות",
+   "meaning": "her death",
+   "root": "מות",
+   "pos": "noun",
+   "binyan": null,
+   "say": "mo-TAH",
+   "note": "The suffix ־ה means “her,” so מותה is “her death.”"
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"מות\",\n  \"meaning\": \"her death\",\n  \"root\": \"מ-ו-ת\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"motáh\",\n  \"note\": \"With 3rd person feminine singular possessive suffix\"\n}",
+  "secs": 16.97,
+  "cost": 0.00028348,
+  "out_tokens": 774,
+  "kind": "word",
+  "item": 8,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "מות",
+   "meaning": "her death",
+   "root": "מ-ו-ת",
+   "pos": "noun",
+   "binyan": null,
+   "say": "motáh",
+   "note": "With 3rd person feminine singular possessive suffix"
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"מות\",\n  \"meaning\": \"her death\",\n  \"root\": \"מות\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"mota\",\n  \"note\": \"possessive suffix ה (her)\"\n}",
+  "secs": 9.58,
+  "cost": 0.0013878,
+  "out_tokens": 795,
+  "kind": "word",
+  "item": 8,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "מות",
+   "meaning": "her death",
+   "root": "מות",
+   "pos": "noun",
+   "binyan": null,
+   "say": "mota",
+   "note": "possessive suffix ה (her)"
+  }
+ },
+ {
+  "text": "",
+  "secs": 83.83,
+  "cost": 0.00192065,
+  "out_tokens": 4000,
+  "kind": "word",
+  "item": 4,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": null
+ },
+ {
+  "text": "{\n  \"lemma\": \"חצי\",\n  \"meaning\": \"half\",\n  \"root\": \"חצי\",\n  \"pos\": \"adverb\",\n  \"binyan\": null,\n  \"say\": \"le-cha-tza-ÍM\",\n  \"note\": \"The word includes the prefix 'ל' (to/for) and the plural suffix 'אין' used adverbially.\"\n}",
+  "secs": 1.47,
+  "cost": 0.000393,
+  "out_tokens": 228,
+  "kind": "word",
+  "item": 9,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "חצי",
+   "meaning": "half",
+   "root": "חצי",
+   "pos": "adverb",
+   "binyan": null,
+   "say": "le-cha-tza-ÍM",
+   "note": "The word includes the prefix 'ל' (to/for) and the plural suffix 'אין' used adverbially."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"חצאין\",\"meaning\":\"half, partly (here: half an orphan)\",\"root\":\"ח-צ-י\",\"pos\":\"adverb\",\"binyan\":null,\"say\":\"le-khatz-a'IN\",\"note\":\"The prefix ל- ('to/for') is part of an idiom: לחצאין means 'by halves' or 'partly'.\"}",
+  "secs": 3.85,
+  "cost": 0.0002681,
+  "out_tokens": 473,
+  "kind": "word",
+  "item": 9,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "חצאין",
+   "meaning": "half, partly (here: half an orphan)",
+   "root": "ח-צ-י",
+   "pos": "adverb",
+   "binyan": null,
+   "say": "le-khatz-a'IN",
+   "note": "The prefix ל- ('to/for') is part of an idiom: לחצאין means 'by halves' or 'partly'."
+  }
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"חצאין\",\n  \"meaning\": \"partially / by halves\",\n  \"root\": \"חצה\",\n  \"pos\": \"adverb\",\n  \"binyan\": null,\n  \"say\": \"le-khatza'IN\",\n  \"note\": \"Rabbinic Hebrew plural form of חֵצִי with the preposition לְ־ forming an adverb.\"\n}\n```",
+  "secs": 4.6,
+  "cost": 0.00125925,
+  "out_tokens": 295,
+  "kind": "word",
+  "item": 9,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "חצאין",
+   "meaning": "partially / by halves",
+   "root": "חצה",
+   "pos": "adverb",
+   "binyan": null,
+   "say": "le-khatza'IN",
+   "note": "Rabbinic Hebrew plural form of חֵצִי with the preposition לְ־ forming an adverb."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"חצי\",\"meaning\":\"in halves, partially (half-wise)\",\"root\":\"חצה\",\"pos\":\"adverb\",\"binyan\":null,\"say\":\"lakhatsa'IN\",\"note\":\"Prefix ל (to/in) + חצאין, an archaic dual/plural form of חצי 'half'; the idiom 'לחצאין' means 'by halves, only partly'.\"}",
+  "secs": 1.96,
+  "cost": 0.001932,
+  "out_tokens": 130,
+  "kind": "word",
+  "item": 9,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "חצי",
+   "meaning": "in halves, partially (half-wise)",
+   "root": "חצה",
+   "pos": "adverb",
+   "binyan": null,
+   "say": "lakhatsa'IN",
+   "note": "Prefix ל (to/in) + חצאין, an archaic dual/plural form of חצי 'half'; the idiom 'לחצאין' means 'by halves, only partly'."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"לחצאין\",\"meaning\":\"halfway; only in part\",\"root\":null,\"pos\":\"adverb\",\"binyan\":null,\"say\":\"la-cha-TSA-yin\",\"note\":\"An adverb meaning 'in halves' or 'only partially'.\"}",
+  "secs": 1.92,
+  "cost": 0.001156,
+  "out_tokens": 61,
+  "kind": "word",
+  "item": 9,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "לחצאין",
+   "meaning": "halfway; only in part",
+   "root": null,
+   "pos": "adverb",
+   "binyan": null,
+   "say": "la-cha-TSA-yin",
+   "note": "An adverb meaning 'in halves' or 'only partially'."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"חצי\",\n  \"meaning\": \"half\",\n  \"root\": \"חצה\",\n  \"pos\": \"adverb\",\n  \"binyan\": null,\n  \"say\": \"lakhatsa'in\",\n  \"note\": \"Prefix ל + plural of חצי, meaning 'by halves'\"\n}",
+  "secs": 16.14,
+  "cost": 0.0025287,
+  "out_tokens": 1561,
+  "kind": "word",
+  "item": 9,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "חצי",
+   "meaning": "half",
+   "root": "חצה",
+   "pos": "adverb",
+   "binyan": null,
+   "say": "lakhatsa'in",
+   "note": "Prefix ל + plural of חצי, meaning 'by halves'"
+  }
+ },
+ {
+  "text": "",
+  "secs": 6.68,
+  "cost": 0.00044167,
+  "out_tokens": 652,
+  "kind": "word",
+  "item": 10,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": null
+ },
+ {
+  "text": "{\"lemma\":\"מוות\",\"meaning\":\"her death\",\"root\":\"מות\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"moTAH\",\"note\":\"Final ה is a 3fs possessive suffix, not the definite article.\"}",
+  "secs": 44.62,
+  "cost": 0.000387243,
+  "out_tokens": 2418,
+  "kind": "word",
+  "item": 8,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "מוות",
+   "meaning": "her death",
+   "root": "מות",
+   "pos": "noun",
+   "binyan": null,
+   "say": "moTAH",
+   "note": "Final ה is a 3fs possessive suffix, not the definite article."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"גולל\",\n  \"meaning\": \"will roll/wallow\",\n  \"root\": \"ג-ל-ל\",\n  \"pos\": \"verb\",\n  \"binyan\": \"hitpael\",\n  \"say\": \"yit-go-LÉL\",\n  \"note\": \"The prefix 'י' indicates third-person masculine future tense.\"\n}",
+  "secs": 1.48,
+  "cost": 0.00039525,
+  "out_tokens": 228,
+  "kind": "word",
+  "item": 10,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "גולל",
+   "meaning": "will roll/wallow",
+   "root": "ג-ל-ל",
+   "pos": "verb",
+   "binyan": "hitpael",
+   "say": "yit-go-LÉL",
+   "note": "The prefix 'י' indicates third-person masculine future tense."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"התגולל\", \"meaning\": \"will wallow or roll around (in, here 'in the screens')\", \"root\": \"גלל\", \"pos\": \"verb\", \"binyan\": \"hitpolel\", \"say\": \"yit-go-LEL\", \"note\": \"This is the rare hitpolel (reflexive intensive) form of the geminate root ג.ל.ל, with the vav marking the vowel.\"}",
+  "secs": 5.04,
+  "cost": 0.0003854,
+  "out_tokens": 706,
+  "kind": "word",
+  "item": 10,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "התגולל",
+   "meaning": "will wallow or roll around (in, here 'in the screens')",
+   "root": "גלל",
+   "pos": "verb",
+   "binyan": "hitpolel",
+   "say": "yit-go-LEL",
+   "note": "This is the rare hitpolel (reflexive intensive) form of the geminate root ג.ל.ל, with the vav marking the vowel."
+  }
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"התגולל\",\n  \"meaning\": \"will wallow / will lounge\",\n  \"root\": \"גלל\",\n  \"pos\": \"verb\",\n  \"binyan\": \"hitpa'el\",\n  \"say\": \"yitgoLEL\",\n  \"note\": \"Third-person masculine singular future form of the verb.\"\n}\n```",
+  "secs": 2.51,
+  "cost": 0.000501,
+  "out_tokens": 91,
+  "kind": "word",
+  "item": 10,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "התגולל",
+   "meaning": "will wallow / will lounge",
+   "root": "גלל",
+   "pos": "verb",
+   "binyan": "hitpa'el",
+   "say": "yitgoLEL",
+   "note": "Third-person masculine singular future form of the verb."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"עין\",\n  \"meaning\": \"to the eye\",\n  \"root\": \"עין\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"le-Ayin\",\n  \"note\": \"The prefix ל means 'to'; the base word is עין 'eye'.\"\n}",
+  "secs": 74.09,
+  "cost": 0.00132968,
+  "out_tokens": 2734,
+  "kind": "word",
+  "item": 7,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": {
+   "lemma": "עין",
+   "meaning": "to the eye",
+   "root": "עין",
+   "pos": "noun",
+   "binyan": null,
+   "say": "le-Ayin",
+   "note": "The prefix ל means 'to'; the base word is עין 'eye'."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"התגולל\",\n  \"meaning\": \"wallow\",\n  \"root\": \"גלל\",\n  \"pos\": \"verb\",\n  \"binyan\": \"hitpa'el\",\n  \"say\": \"yitgolél\",\n  \"note\": \"Hitpa'el future, 3rd person masculine singular\"\n}",
+  "secs": 29.62,
+  "cost": 0.00042904,
+  "out_tokens": 1622,
+  "kind": "word",
+  "item": 10,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "התגולל",
+   "meaning": "wallow",
+   "root": "גלל",
+   "pos": "verb",
+   "binyan": "hitpa'el",
+   "say": "yitgolél",
+   "note": "Hitpa'el future, 3rd person masculine singular"
+  }
+ },
+ {
+  "text": "{\"lemma\":\"התגולל\",\"meaning\":\"will wallow / roll about (he will loiter around)\",\"root\":\"גלל\",\"pos\":\"verb\",\"binyan\":\"hitpael\",\"say\":\"yitgoLEL\",\"note\":\"Future 3rd person masculine singular (י-prefix) of התגולל, with the usual hitpael ה dropped; the ת is the hitpael marker, and the root is ג-ל-ל (to roll).\"}",
+  "secs": 2.86,
+  "cost": 0.002088,
+  "out_tokens": 144,
+  "kind": "word",
+  "item": 10,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "התגולל",
+   "meaning": "will wallow / roll about (he will loiter around)",
+   "root": "גלל",
+   "pos": "verb",
+   "binyan": "hitpael",
+   "say": "yitgoLEL",
+   "note": "Future 3rd person masculine singular (י-prefix) of התגולל, with the usual hitpael ה dropped; the ת is the hitpael marker, and the root is ג-ל-ל (to roll)."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"להתגולל\",\"meaning\":\"will roll around / wallow\",\"root\":\"גלל\",\"pos\":\"verb\",\"binyan\":\"התפעל\",\"say\":\"yitgolel\",\"note\":\"Future tense, third-person masculine singular.\"}",
+  "secs": 2.93,
+  "cost": 0.001952,
+  "out_tokens": 126,
+  "kind": "word",
+  "item": 10,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "להתגולל",
+   "meaning": "will roll around / wallow",
+   "root": "גלל",
+   "pos": "verb",
+   "binyan": "התפעל",
+   "say": "yitgolel",
+   "note": "Future tense, third-person masculine singular."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"מות\",\n  \"meaning\": \"her death\",\n  \"root\": \"מות\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"mavéta\",\n  \"note\": \"noun מות with 3rd fem. sg. possessive suffix -ה\"\n}",
+  "secs": 58.93,
+  "cost": 0.00118149,
+  "out_tokens": 2427,
+  "kind": "word",
+  "item": 8,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": {
+   "lemma": "מות",
+   "meaning": "her death",
+   "root": "מות",
+   "pos": "noun",
+   "binyan": null,
+   "say": "mavéta",
+   "note": "noun מות with 3rd fem. sg. possessive suffix -ה"
+  }
+ },
+ {
+  "text": "{\"lemma\":\"שכור\",\"meaning\":\"drunk\",\"root\":\"שכר\",\"pos\":\"adjective\",\"binyan\":null,\"say\":\"shikór\",\"note\":null}",
+  "secs": 5.36,
+  "cost": 0.000365054,
+  "out_tokens": 477,
+  "kind": "word",
+  "item": 11,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "שכור",
+   "meaning": "drunk",
+   "root": "שכר",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "shikór",
+   "note": null
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"שכור\",\n  \"meaning\": \"drunk\",\n  \"root\": \"שכר\",\n  \"pos\": \"adjective\",\n  \"binyan\": null,\n  \"say\": \"sha-KOR\",\n  \"note\": \"This is an adjective derived from the passive participle form of the verb 'to get drunk'.\"\n}",
+  "secs": 1.47,
+  "cost": 0.00036125,
+  "out_tokens": 207,
+  "kind": "word",
+  "item": 11,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "שכור",
+   "meaning": "drunk",
+   "root": "שכר",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "sha-KOR",
+   "note": "This is an adjective derived from the passive participle form of the verb 'to get drunk'."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"התבולל\",\n  \"meaning\": \"wallows\",\n  \"root\": \"גלל\",\n  \"pos\": \"verb\",\n  \"binyan\": \"hitpa'el\",\n  \"say\": \"yitgolel\",\n  \"note\": \"Future tense, 3ms.\"\n}",
+  "secs": 13.73,
+  "cost": 0.0022581,
+  "out_tokens": 1374,
+  "kind": "word",
+  "item": 10,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "התבולל",
+   "meaning": "wallows",
+   "root": "גלל",
+   "pos": "verb",
+   "binyan": "hitpa'el",
+   "say": "yitgolel",
+   "note": "Future tense, 3ms."
+  }
+ },
+ {
+  "text": "",
+  "secs": 54.6,
+  "cost": 0.0048702,
+  "out_tokens": 4000,
+  "kind": "word",
+  "item": 9,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": null
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"שיכור\",\n  \"meaning\": \"drunk\",\n  \"root\": \"שכר\",\n  \"pos\": \"adjective\",\n  \"binyan\": null,\n  \"say\": \"shi-KHOR\",\n  \"note\": \"Written here in defective spelling (חסר) without the yod.\"\n}\n```",
+  "secs": 1.72,
+  "cost": 0.0004635,
+  "out_tokens": 83,
+  "kind": "word",
+  "item": 11,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "שיכור",
+   "meaning": "drunk",
+   "root": "שכר",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "shi-KHOR",
+   "note": "Written here in defective spelling (חסר) without the yod."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"שכור\", \"meaning\": \"drunk\", \"root\": \"שכר\", \"pos\": \"adjective\", \"binyan\": null, \"say\": \"shi-KOR\", \"note\": \"Without nikud this spelling is ambiguous; here it is the adjective 'drunk' (שִׁכּוֹר), not the noun 'hired worker' (שָׂכִיר).\"}",
+  "secs": 3.7,
+  "cost": 0.0002248,
+  "out_tokens": 387,
+  "kind": "word",
+  "item": 11,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "שכור",
+   "meaning": "drunk",
+   "root": "שכר",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "shi-KOR",
+   "note": "Without nikud this spelling is ambiguous; here it is the adjective 'drunk' (שִׁכּוֹר), not the noun 'hired worker' (שָׂכִיר)."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"שכור\",\"meaning\":\"drunk\",\"root\":\"שכר\",\"pos\":\"adjective\",\"binyan\":null,\"say\":\"shaKHUR\",\"note\":\"Adjective from the root ש-כ-ר (to get drunk), here describing the subject 'he' who returns drunk, with no attached prefix.\"}",
+  "secs": 2.02,
+  "cost": 0.001676,
+  "out_tokens": 105,
+  "kind": "word",
+  "item": 11,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "שכור",
+   "meaning": "drunk",
+   "root": "שכר",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "shaKHUR",
+   "note": "Adjective from the root ש-כ-ר (to get drunk), here describing the subject 'he' who returns drunk, with no attached prefix."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"שכור\", \"meaning\": \"drunk\", \"root\": \"שכר\", \"pos\": \"adjective\", \"binyan\": null, \"say\": \"shi-KOR\", \"note\": null}",
+  "secs": 5.28,
+  "cost": 0.0010383,
+  "out_tokens": 568,
+  "kind": "word",
+  "item": 11,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "שכור",
+   "meaning": "drunk",
+   "root": "שכר",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "shi-KOR",
+   "note": null
+  }
+ },
+ {
+  "text": "{\"lemma\":\"שיכור\",\"meaning\":\"drunk\",\"root\":\"שכר\",\"pos\":\"adjective\",\"binyan\":null,\"say\":\"shi-KHOR\",\"note\":\"The unpointed spelling שכור here means שיכור, “drunk.”\"}",
+  "secs": 4.4,
+  "cost": 0.00245,
+  "out_tokens": 169,
+  "kind": "word",
+  "item": 11,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "שיכור",
+   "meaning": "drunk",
+   "root": "שכר",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "shi-KHOR",
+   "note": "The unpointed spelling שכור here means שיכור, “drunk.”"
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"חצאין\",\n  \"meaning\": \"partially\",\n  \"root\": \"חצא\",\n  \"pos\": \"adverb\",\n  \"binyan\": null,\n  \"say\": \"le-che-tsa-EEN\",\n  \"note\": \"Prefix ל attached to Aramaic plural noun meaning 'half'; the expression means 'partially'.\"\n}",
+  "secs": 63.22,
+  "cost": 0.000357504,
+  "out_tokens": 1720,
+  "kind": "word",
+  "item": 9,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "חצאין",
+   "meaning": "partially",
+   "root": "חצא",
+   "pos": "adverb",
+   "binyan": null,
+   "say": "le-che-tsa-EEN",
+   "note": "Prefix ל attached to Aramaic plural noun meaning 'half'; the expression means 'partially'."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"שכח\",\n  \"meaning\": \"that I forgot\",\n  \"root\": \"שכח\",\n  \"pos\": \"verb\",\n  \"binyan\": \"pa'al\",\n  \"say\": \"she-sha-cha-CHTI\",\n  \"note\": \"The word consists of the relative pronoun 'ש' (that) attached to the verb 'שכחתי' (I forgot).\"\n}",
+  "secs": 1.62,
+  "cost": 0.00043625,
+  "out_tokens": 251,
+  "kind": "word",
+  "item": 12,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "שכח",
+   "meaning": "that I forgot",
+   "root": "שכח",
+   "pos": "verb",
+   "binyan": "pa'al",
+   "say": "she-sha-cha-CHTI",
+   "note": "The word consists of the relative pronoun 'ש' (that) attached to the verb 'שכחתי' (I forgot)."
+  }
+ },
+ {
+  "text": "",
+  "secs": 63.24,
+  "cost": 0.0019196,
+  "out_tokens": 4000,
+  "kind": "word",
+  "item": 9,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": null
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"שכח\",\n  \"meaning\": \"that I forgot\",\n  \"root\": \"שכח\",\n  \"pos\": \"verb\",\n  \"binyan\": \"pa'al\",\n  \"say\": \"she-sha-KHAH-ti\",\n  \"note\": \"Prefix שֶׁ־ (that) attached to past tense 1st person singular.\"\n}\n```",
+  "secs": 1.56,
+  "cost": 0.000543,
+  "out_tokens": 97,
+  "kind": "word",
+  "item": 12,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "שכח",
+   "meaning": "that I forgot",
+   "root": "שכח",
+   "pos": "verb",
+   "binyan": "pa'al",
+   "say": "she-sha-KHAH-ti",
+   "note": "Prefix שֶׁ־ (that) attached to past tense 1st person singular."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"שכור\",\n  \"meaning\": \"drunk\",\n  \"root\": \"שכר\",\n  \"pos\": \"adjective\",\n  \"binyan\": null,\n  \"say\": \"shakhór\",\n  \"note\": \"No attached prefix; adjective meaning drunk.\"\n}",
+  "secs": 20.79,
+  "cost": 0.00039276,
+  "out_tokens": 753,
+  "kind": "word",
+  "item": 11,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": {
+   "lemma": "שכור",
+   "meaning": "drunk",
+   "root": "שכר",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "shakhór",
+   "note": "No attached prefix; adjective meaning drunk."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"שכח\", \"meaning\": \"that I forgot\", \"root\": \"ש-כ-ח\", \"pos\": \"verb\", \"binyan\": \"paal (קל)\", \"say\": \"she-sha-khach-TI\", \"note\": \"The prefix ש means 'that/which' (a relative clause), and the verb is first-person singular past of שכח (to forget).\"}",
+  "secs": 4.05,
+  "cost": 0.0002591,
+  "out_tokens": 444,
+  "kind": "word",
+  "item": 12,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "שכח",
+   "meaning": "that I forgot",
+   "root": "ש-כ-ח",
+   "pos": "verb",
+   "binyan": "paal (קל)",
+   "say": "she-sha-khach-TI",
+   "note": "The prefix ש means 'that/which' (a relative clause), and the verb is first-person singular past of שכח (to forget)."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"שכח\",\"meaning\":\"that I forgot\",\"root\":\"שכח\",\"pos\":\"verb\",\"binyan\":\"paal\",\"say\":\"she-shakhákhti\",\"note\":\"Prefix ש (that/which) attached to the 1st person singular past form שכחתי ('I forgot'), introducing a relative clause modifying 'the thing'.\"}",
+  "secs": 1.83,
+  "cost": 0.001902,
+  "out_tokens": 116,
+  "kind": "word",
+  "item": 12,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "שכח",
+   "meaning": "that I forgot",
+   "root": "שכח",
+   "pos": "verb",
+   "binyan": "paal",
+   "say": "she-shakhákhti",
+   "note": "Prefix ש (that/which) attached to the 1st person singular past form שכחתי ('I forgot'), introducing a relative clause modifying 'the thing'."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"שכור\",\"meaning\":\"drunk\",\"root\":\"שכר\",\"pos\":\"adjective\",\"binyan\":null,\"say\":\"shi-KOR\",\"note\":\"No prefix; masculine singular adjective, commonly spelled שיכור.\"}",
+  "secs": 26.81,
+  "cost": 0.00056386,
+  "out_tokens": 1881,
+  "kind": "word",
+  "item": 11,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "שכור",
+   "meaning": "drunk",
+   "root": "שכר",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "shi-KOR",
+   "note": "No prefix; masculine singular adjective, commonly spelled שיכור."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"שכח\",\n  \"meaning\": \"forget\",\n  \"root\": \"שכח\",\n  \"pos\": \"verb\",\n  \"binyan\": \"pa'al\",\n  \"say\": \"she-shachach'ti\",\n  \"note\": \"Prefix ש meaning 'that' attached to first person singular past of שכח\"\n}",
+  "secs": 13.96,
+  "cost": 9.76332e-05,
+  "out_tokens": 468,
+  "kind": "word",
+  "item": 12,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "שכח",
+   "meaning": "forget",
+   "root": "שכח",
+   "pos": "verb",
+   "binyan": "pa'al",
+   "say": "she-shachach'ti",
+   "note": "Prefix ש meaning 'that' attached to first person singular past of שכח"
+  }
+ },
+ {
+  "text": "{\"lemma\":\"שכח\",\"meaning\":\"that I forgot\",\"root\":\"שכח\",\"pos\":\"verb\",\"binyan\":\"פעל\",\"say\":\"she-sha-KH-ti\",\"note\":\"The prefix ש־ means “that/which,” attached to the 1st-person singular past form.\"}",
+  "secs": 2.92,
+  "cost": 0.001904,
+  "out_tokens": 119,
+  "kind": "word",
+  "item": 12,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "שכח",
+   "meaning": "that I forgot",
+   "root": "שכח",
+   "pos": "verb",
+   "binyan": "פעל",
+   "say": "she-sha-KH-ti",
+   "note": "The prefix ש־ means “that/which,” attached to the 1st-person singular past form."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"לחש\",\n  \"meaning\": \"the whisper / the incantation\",\n  \"root\": \"ל-ח-ש\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"ha-la-CHASH\",\n  \"note\": \"The word includes the definite article prefix 'ה' (the).\"\n}",
+  "secs": 1.56,
+  "cost": 0.0004035,
+  "out_tokens": 230,
+  "kind": "word",
+  "item": 13,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "לחש",
+   "meaning": "the whisper / the incantation",
+   "root": "ל-ח-ש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ha-la-CHASH",
+   "note": "The word includes the definite article prefix 'ה' (the)."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"לחש\", \"meaning\": \"the incantation (spell, charm)\", \"root\": \"ל-ח-ש\", \"pos\": \"noun\", \"binyan\": null, \"say\": \"ha-la-KHASH\", \"note\": \"The prefix ה- is the definite article 'the', so the base word is לחש, 'incantation' or 'spell'.\"}",
+  "secs": 4.59,
+  "cost": 0.0002271,
+  "out_tokens": 381,
+  "kind": "word",
+  "item": 13,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "לחש",
+   "meaning": "the incantation (spell, charm)",
+   "root": "ל-ח-ש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ha-la-KHASH",
+   "note": "The prefix ה- is the definite article 'the', so the base word is לחש, 'incantation' or 'spell'."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"לחש\",\"meaning\":\"the incantation\",\"root\":\"ל-ח-ש\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"ha-LA-chash\",\"note\":\"The prefix ה is the definite article attached to the noun לחש.\"}",
+  "secs": 6.5,
+  "cost": 0.0013446,
+  "out_tokens": 1054,
+  "kind": "word",
+  "item": 13,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "לחש",
+   "meaning": "the incantation",
+   "root": "ל-ח-ש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ha-LA-chash",
+   "note": "The prefix ה is the definite article attached to the noun לחש."
+  }
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"לחש\",\n  \"meaning\": \"the incantation / whisper\",\n  \"root\": \"לחש\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"ha-LA-chash\",\n  \"note\": \"Includes the definite article ה־ (ha-) attached to the masculine singular noun.\"\n}\n```",
+  "secs": 2.03,
+  "cost": 0.00050925,
+  "out_tokens": 89,
+  "kind": "word",
+  "item": 13,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "לחש",
+   "meaning": "the incantation / whisper",
+   "root": "לחש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ha-LA-chash",
+   "note": "Includes the definite article ה־ (ha-) attached to the masculine singular noun."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"לחש\",\"meaning\":\"the spell / incantation (the whispered formula)\",\"root\":\"לחש\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"ha-LAKH-esh\",\"note\":\"The prefix ה is the definite article 'the'; לחש (lákhash) is a segolate noun, and with the article it takes the form הלחש (haLÁkhash).\"}",
+  "secs": 2.18,
+  "cost": 0.002022,
+  "out_tokens": 129,
+  "kind": "word",
+  "item": 13,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "לחש",
+   "meaning": "the spell / incantation (the whispered formula)",
+   "root": "לחש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ha-LAKH-esh",
+   "note": "The prefix ה is the definite article 'the'; לחש (lákhash) is a segolate noun, and with the article it takes the form הלחש (haLÁkhash)."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"שכח\",\n  \"meaning\": \"I forgot\",\n  \"root\": \"שכח\",\n  \"pos\": \"verb\",\n  \"binyan\": \"pa'al\",\n  \"say\": \"shakhaKHti\",\n  \"note\": \"Prefixed with ש (that).\"\n}",
+  "secs": 16.72,
+  "cost": 0.0023679,
+  "out_tokens": 1431,
+  "kind": "word",
+  "item": 12,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "שכח",
+   "meaning": "I forgot",
+   "root": "שכח",
+   "pos": "verb",
+   "binyan": "pa'al",
+   "say": "shakhaKHti",
+   "note": "Prefixed with ש (that)."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"לחש\",\"meaning\":\"the incantation\",\"root\":\"לחש\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"ha-la-KHÁSH\",\"note\":\"ה is the definite article.\"}",
+  "secs": 3.96,
+  "cost": 0.001984,
+  "out_tokens": 126,
+  "kind": "word",
+  "item": 13,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "לחש",
+   "meaning": "the incantation",
+   "root": "לחש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ha-la-KHÁSH",
+   "note": "ה is the definite article."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"לחש\",\n  \"meaning\": \"whisper, incantation\",\n  \"root\": \"לחש\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"ha-láḥash\",\n  \"note\": \"With definite article prefix ה\"\n}",
+  "secs": 16.89,
+  "cost": 0.00036843,
+  "out_tokens": 1179,
+  "kind": "word",
+  "item": 13,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "לחש",
+   "meaning": "whisper, incantation",
+   "root": "לחש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ha-láḥash",
+   "note": "With definite article prefix ה"
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"לחש\",\n  \"meaning\": \"spell, incantation\",\n  \"root\": \"לחשׁ\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"ha-láchash\",\n  \"note\": \"Definite article ה attached to the noun.\"\n}",
+  "secs": 9.65,
+  "cost": 0.00044234736,
+  "out_tokens": 372,
+  "kind": "word",
+  "item": 13,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "לחש",
+   "meaning": "spell, incantation",
+   "root": "לחשׁ",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ha-láchash",
+   "note": "Definite article ה attached to the noun."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"מזיק\",\n  \"meaning\": \"harmful things/creatures\",\n  \"root\": \"נזק\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"ma-zi-KIM\",\n  \"note\": \"The word is the plural form of the noun 'mazik'.\"\n}",
+  "secs": 1.55,
+  "cost": 0.0004115,
+  "out_tokens": 233,
+  "kind": "word",
+  "item": 14,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "מזיק",
+   "meaning": "harmful things/creatures",
+   "root": "נזק",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ma-zi-KIM",
+   "note": "The word is the plural form of the noun 'mazik'."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"מזיק\", \"meaning\": \"harmful thing, damager (plural: harmful creatures/dangers)\", \"root\": \"זיק\", \"pos\": \"noun\", \"binyan\": null, \"say\": \"mazi-KIM\", \"note\": \"The מ- prefix is part of the noun pattern (miqtal-type), and the plural ending -ים gives 'of all kinds of harmful things'.\"}",
+  "secs": 1.83,
+  "cost": 0.0001049,
+  "out_tokens": 133,
+  "kind": "word",
+  "item": 14,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "מזיק",
+   "meaning": "harmful thing, damager (plural: harmful creatures/dangers)",
+   "root": "זיק",
+   "pos": "noun",
+   "binyan": null,
+   "say": "mazi-KIM",
+   "note": "The מ- prefix is part of the noun pattern (miqtal-type), and the plural ending -ים gives 'of all kinds of harmful things'."
+  }
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"מזיק\",\n  \"meaning\": \"harmful spirits / pests / damagers\",\n  \"root\": \"נזק\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"mezi-KIM\",\n  \"note\": \"Masculine plural form, originally the present participle of the Hif'il verb, often used in Jewish literature to mean demons or malevolent forces.\"\n}\n```",
+  "secs": 2.67,
+  "cost": 0.000591,
+  "out_tokens": 108,
+  "kind": "word",
+  "item": 14,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "מזיק",
+   "meaning": "harmful spirits / pests / damagers",
+   "root": "נזק",
+   "pos": "noun",
+   "binyan": null,
+   "say": "mezi-KIM",
+   "note": "Masculine plural form, originally the present participle of the Hif'il verb, often used in Jewish literature to mean demons or malevolent forces."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"שכח\",\"meaning\":\"that I forgot\",\"root\":\"שכח\",\"pos\":\"verb\",\"binyan\":\"pa'al\",\"say\":\"she-shakhákhti\",\"note\":\"Prefix ש- means 'that/which'; base is שכחתי, pa'al past 1st person singular.\"}",
+  "secs": 36.36,
+  "cost": 0.000341872,
+  "out_tokens": 2096,
+  "kind": "word",
+  "item": 12,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "שכח",
+   "meaning": "that I forgot",
+   "root": "שכח",
+   "pos": "verb",
+   "binyan": "pa'al",
+   "say": "she-shakhákhti",
+   "note": "Prefix ש- means 'that/which'; base is שכחתי, pa'al past 1st person singular."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"מזיק\",\n  \"meaning\": \"harmful thing, pest, evil spirit\",\n  \"root\": \"נזק\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"mazikím\",\n  \"note\": \"Plural form of 'מזיק' (harmful thing). The 'מ' is part of the noun pattern, not a preposition; the root is נזק.\"\n}",
+  "secs": 13.87,
+  "cost": 0.000296387,
+  "out_tokens": 1460,
+  "kind": "word",
+  "item": 14,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "מזיק",
+   "meaning": "harmful thing, pest, evil spirit",
+   "root": "נזק",
+   "pos": "noun",
+   "binyan": null,
+   "say": "mazikím",
+   "note": "Plural form of 'מזיק' (harmful thing). The 'מ' is part of the noun pattern, not a preposition; the root is נזק."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"מזיק\",\"meaning\":\"harmful beings, demons, pests (as in 'harmful spirits')\",\"root\":\"נזק\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"mazikím\",\"note\":\"Masculine plural of מזיק, literally 'those that cause harm' (a hif'il participle used as a noun); here it refers to harmful spirits or dangers.\"}",
+  "secs": 2.28,
+  "cost": 0.002058,
+  "out_tokens": 129,
+  "kind": "word",
+  "item": 14,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "מזיק",
+   "meaning": "harmful beings, demons, pests (as in 'harmful spirits')",
+   "root": "נזק",
+   "pos": "noun",
+   "binyan": null,
+   "say": "mazikím",
+   "note": "Masculine plural of מזיק, literally 'those that cause harm' (a hif'il participle used as a noun); here it refers to harmful spirits or dangers."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"מזיק\",\"meaning\":\"harmful beings; pests\",\"root\":\"נזק\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"mazikÍm\",\"note\":\"Plural masculine form.\"}",
+  "secs": 2.17,
+  "cost": 0.001068,
+  "out_tokens": 48,
+  "kind": "word",
+  "item": 14,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "מזיק",
+   "meaning": "harmful beings; pests",
+   "root": "נזק",
+   "pos": "noun",
+   "binyan": null,
+   "say": "mazikÍm",
+   "note": "Plural masculine form."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"מזיק\",\"meaning\":\"harmful things/agents\",\"root\":\"נזק\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"mazikím\",\"note\":\"Plural of מזיק; initial מ is the hif'il participle prefix, not an attached preposition.\"}",
+  "secs": 16.83,
+  "cost": 0.0009504,
+  "out_tokens": 1689,
+  "kind": "word",
+  "item": 14,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "מזיק",
+   "meaning": "harmful things/agents",
+   "root": "נזק",
+   "pos": "noun",
+   "binyan": null,
+   "say": "mazikím",
+   "note": "Plural of מזיק; initial מ is the hif'il participle prefix, not an attached preposition."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"מזיק\",\n  \"meaning\": \"harmful spirit\",\n  \"root\": \"נזק\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"mazikim\",\n  \"note\": \"plural of מזיק\"\n}",
+  "secs": 10.11,
+  "cost": 0.0016767,
+  "out_tokens": 963,
+  "kind": "word",
+  "item": 14,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "מזיק",
+   "meaning": "harmful spirit",
+   "root": "נזק",
+   "pos": "noun",
+   "binyan": null,
+   "say": "mazikim",
+   "note": "plural of מזיק"
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"רגל\",\n  \"meaning\": \"your feet\",\n  \"root\": \"רגל\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"rag-LE-cha\",\n  \"note\": \"The word is the plural noun 'regel' (foot) with the suffix 'cha' (your, masculine singular).\"\n}",
+  "secs": 1.55,
+  "cost": 0.000376,
+  "out_tokens": 216,
+  "kind": "word",
+  "item": 15,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "רגל",
+   "meaning": "your feet",
+   "root": "רגל",
+   "pos": "noun",
+   "binyan": null,
+   "say": "rag-LE-cha",
+   "note": "The word is the plural noun 'regel' (foot) with the suffix 'cha' (your, masculine singular)."
+  }
+ },
+ {
+  "text": "",
+  "secs": 76.54,
+  "cost": 0.00192095,
+  "out_tokens": 4000,
+  "kind": "word",
+  "item": 10,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": null
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"רגל\",\n  \"meaning\": \"your feet / your legs\",\n  \"root\": \"רגל\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"ragLEKHA\",\n  \"note\": \"Dual/plural noun רגליים with the 2nd person masculine singular possessive suffix ךָ-.\"\n}\n```",
+  "secs": 1.87,
+  "cost": 0.00051225,
+  "out_tokens": 95,
+  "kind": "word",
+  "item": 15,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "רגל",
+   "meaning": "your feet / your legs",
+   "root": "רגל",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ragLEKHA",
+   "note": "Dual/plural noun רגליים with the 2nd person masculine singular possessive suffix ךָ-."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"רגל\", \"meaning\": \"your (m. sing.) feet/legs\", \"root\": \"ר-ג-ל\", \"pos\": \"noun\", \"binyan\": null, \"say\": \"ragleykha (rag-LAYKH)\", \"note\": \"Plural noun רגלַיִם takes the masculine singular 'your' suffix -ֶיךָ/-ַיִךְ, giving רגליך; there is no prefix.\"}",
+  "secs": 3.96,
+  "cost": 0.0002306,
+  "out_tokens": 397,
+  "kind": "word",
+  "item": 15,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "רגל",
+   "meaning": "your (m. sing.) feet/legs",
+   "root": "ר-ג-ל",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ragleykha (rag-LAYKH)",
+   "note": "Plural noun רגלַיִם takes the masculine singular 'your' suffix -ֶיךָ/-ַיִךְ, giving רגליך; there is no prefix."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"רגל\",\"meaning\":\"your feet (legs)\",\"root\":\"רגל\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"rag-LEI-kha\",\"note\":\"Plural form 'raglayim' with the 2nd person masculine singular possessive suffix ־ך (your); the preposition על is separate.\"}",
+  "secs": 1.95,
+  "cost": 0.001732,
+  "out_tokens": 109,
+  "kind": "word",
+  "item": 15,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "רגל",
+   "meaning": "your feet (legs)",
+   "root": "רגל",
+   "pos": "noun",
+   "binyan": null,
+   "say": "rag-LEI-kha",
+   "note": "Plural form 'raglayim' with the 2nd person masculine singular possessive suffix ־ך (your); the preposition על is separate."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"רגל\",\"meaning\":\"your legs\",\"root\":\"רגל\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"raglékha\",\"note\":\"The suffix ך means “your” (masculine singular).\"}",
+  "secs": 3.69,
+  "cost": 0.001626,
+  "out_tokens": 99,
+  "kind": "word",
+  "item": 15,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "רגל",
+   "meaning": "your legs",
+   "root": "רגל",
+   "pos": "noun",
+   "binyan": null,
+   "say": "raglékha",
+   "note": "The suffix ך means “your” (masculine singular)."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"רגל\",\"meaning\":\"your feet\",\"root\":\"רגל\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"ragLEkha\",\"note\":\"Second-person masculine singular possessive suffix on the plural/dual form of רגל.\"}",
+  "secs": 16.25,
+  "cost": 0.00090261,
+  "out_tokens": 1611,
+  "kind": "word",
+  "item": 15,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "רגל",
+   "meaning": "your feet",
+   "root": "רגל",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ragLEkha",
+   "note": "Second-person masculine singular possessive suffix on the plural/dual form of רגל."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"לחש\",\"meaning\":\"the incantation\",\"root\":\"לחש\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"ha-lá-hash\",\"note\":\"The attached ה is the definite article.\"}",
+  "secs": 45.99,
+  "cost": 0.00125892,
+  "out_tokens": 2586,
+  "kind": "word",
+  "item": 13,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": {
+   "lemma": "לחש",
+   "meaning": "the incantation",
+   "root": "לחש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ha-lá-hash",
+   "note": "The attached ה is the definite article."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"מזיק\",\n  \"meaning\": \"pests / harmful things\",\n  \"root\": \"נזק\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"mazikím\",\n  \"note\": \"Plural of מזיק; the initial מ is part of the form, not a prefix.\"\n}",
+  "secs": 34.7,
+  "cost": 0.00109507,
+  "out_tokens": 2231,
+  "kind": "word",
+  "item": 14,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": {
+   "lemma": "מזיק",
+   "meaning": "pests / harmful things",
+   "root": "נזק",
+   "pos": "noun",
+   "binyan": null,
+   "say": "mazikím",
+   "note": "Plural of מזיק; the initial מ is part of the form, not a prefix."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"תום\",\n  \"meaning\": \"innocence\",\n  \"root\": \"תממ\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"v'tom\",\n  \"note\": \"The prefix 'ו' (and) is attached to the noun 'תום'.\"\n}",
+  "secs": 1.78,
+  "cost": 0.0003655,
+  "out_tokens": 209,
+  "kind": "word",
+  "item": 16,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "תום",
+   "meaning": "innocence",
+   "root": "תממ",
+   "pos": "noun",
+   "binyan": null,
+   "say": "v'tom",
+   "note": "The prefix 'ו' (and) is attached to the noun 'תום'."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"תום\", \"meaning\": \"innocence, sincerity (here: and sincerely/innocently)\", \"root\": \"ת.ו.ם\", \"pos\": \"noun\", \"binyan\": null, \"say\": \"ve-TOM\", \"note\": \"The prefix ו means 'and'; the noun is used adverbially here, so 'with' is implied without a ב.\"}",
+  "secs": 4.66,
+  "cost": 0.0003094,
+  "out_tokens": 555,
+  "kind": "word",
+  "item": 16,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "תום",
+   "meaning": "innocence, sincerity (here: and sincerely/innocently)",
+   "root": "ת.ו.ם",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ve-TOM",
+   "note": "The prefix ו means 'and'; the noun is used adverbially here, so 'with' is implied without a ב."
+  }
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"תום\",\n  \"meaning\": \"and sincerity / innocence\",\n  \"root\": \"תמם\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"ve-TOM\",\n  \"note\": \"Includes the conjunction prefix 'ו' (and) attached to the noun תום.\"\n}\n```",
+  "secs": 2.22,
+  "cost": 0.00048225,
+  "out_tokens": 87,
+  "kind": "word",
+  "item": 16,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "תום",
+   "meaning": "and sincerity / innocence",
+   "root": "תמם",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ve-TOM",
+   "note": "Includes the conjunction prefix 'ו' (and) attached to the noun תום."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"רגל\",\n  \"meaning\": \"your feet\",\n  \"root\": \"רגל\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"ragleCHA\",\n  \"note\": \"Dual form with second-person masculine singular possessive suffix.\"\n}",
+  "secs": 22.75,
+  "cost": 0.0049764,
+  "out_tokens": 1487,
+  "kind": "word",
+  "item": 15,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "רגל",
+   "meaning": "your feet",
+   "root": "רגל",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ragleCHA",
+   "note": "Dual form with second-person masculine singular possessive suffix."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"תום\",\"meaning\":\"and innocence, sincerity (naivety)\",\"root\":\"תמם\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"ve-TOM\",\"note\":\"The prefix ו (and) is attached to תום; here it joins 'קשט' (truth/earnestness) and 'תום' (innocence) in the phrase 'in earnest and innocence'.\"}",
+  "secs": 2.18,
+  "cost": 0.001938,
+  "out_tokens": 130,
+  "kind": "word",
+  "item": 16,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "תום",
+   "meaning": "and innocence, sincerity (naivety)",
+   "root": "תמם",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ve-TOM",
+   "note": "The prefix ו (and) is attached to תום; here it joins 'קשט' (truth/earnestness) and 'תום' (innocence) in the phrase 'in earnest and innocence'."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"תום\",\"meaning\":\"innocence, sincerity\",\"root\":\"תמם\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"vetóm\",\"note\":\"Contains prefix ו 'and' attached to the noun תום.\"}",
+  "secs": 21.17,
+  "cost": 0.000327327,
+  "out_tokens": 1651,
+  "kind": "word",
+  "item": 16,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "תום",
+   "meaning": "innocence, sincerity",
+   "root": "תמם",
+   "pos": "noun",
+   "binyan": null,
+   "say": "vetóm",
+   "note": "Contains prefix ו 'and' attached to the noun תום."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"תום\",\"meaning\":\"innocence\",\"root\":\"תמם\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"ve-TOM\",\"note\":\"The prefix ו means “and.”\"}",
+  "secs": 3.41,
+  "cost": 0.001598,
+  "out_tokens": 97,
+  "kind": "word",
+  "item": 16,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "תום",
+   "meaning": "innocence",
+   "root": "תמם",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ve-TOM",
+   "note": "The prefix ו means “and.”"
+  }
+ },
+ {
+  "text": "{\"lemma\":\"מחמד\",\"meaning\":\"his cherished desire/precious thing\",\"root\":\"חמד\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"makh-ma-DO\",\"note\":\"The suffix וֹ means 'his'; literally 'his desire/precious thing'.\"}",
+  "secs": 9.84,
+  "cost": 0.0001702792,
+  "out_tokens": 892,
+  "kind": "word",
+  "item": 17,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "מחמד",
+   "meaning": "his cherished desire/precious thing",
+   "root": "חמד",
+   "pos": "noun",
+   "binyan": null,
+   "say": "makh-ma-DO",
+   "note": "The suffix וֹ means 'his'; literally 'his desire/precious thing'."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"תום\",\n  \"meaning\": \"and innocence\",\n  \"root\": \"תמם\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"ve-TOM\",\n  \"note\": \"The prefixed ו is the conjunction 'and'.\"\n}",
+  "secs": 23.8,
+  "cost": 0.0010609144,
+  "out_tokens": 1072,
+  "kind": "word",
+  "item": 16,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "תום",
+   "meaning": "and innocence",
+   "root": "תמם",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ve-TOM",
+   "note": "The prefixed ו is the conjunction 'and'."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"מחמד\",\"meaning\":\"his cherished desire/delight\",\"root\":\"חמד\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"makh-ma-DO\",\"note\":\"Final ו is the 3ms possessive suffix; the initial מ is part of the noun pattern, not a preposition.\"}",
+  "secs": 20.37,
+  "cost": 0.000197389,
+  "out_tokens": 1155,
+  "kind": "word",
+  "item": 17,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "מחמד",
+   "meaning": "his cherished desire/delight",
+   "root": "חמד",
+   "pos": "noun",
+   "binyan": null,
+   "say": "makh-ma-DO",
+   "note": "Final ו is the 3ms possessive suffix; the initial מ is part of the noun pattern, not a preposition."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"מחמד\", \"meaning\": \"his desire, his heart's delight (the thing he longed for)\", \"root\": \"ח-מ-ד\", \"pos\": \"noun\", \"binyan\": null, \"say\": \"makhmadó\", \"note\": \"The initial מ is part of the noun pattern מַחְמַד, not a separable prefix, and the ו suffix means 'his'.\"}",
+  "secs": 4.49,
+  "cost": 0.0002633,
+  "out_tokens": 463,
+  "kind": "word",
+  "item": 17,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "מחמד",
+   "meaning": "his desire, his heart's delight (the thing he longed for)",
+   "root": "ח-מ-ד",
+   "pos": "noun",
+   "binyan": null,
+   "say": "makhmadó",
+   "note": "The initial מ is part of the noun pattern מַחְמַד, not a separable prefix, and the ו suffix means 'his'."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"תום\",\"meaning\":\"innocence, sincerity\",\"root\":\"תמם\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"veTOM\",\"note\":\"ו is the conjunction 'and'.\"}",
+  "secs": 45.86,
+  "cost": 0.00054378,
+  "out_tokens": 2900,
+  "kind": "word",
+  "item": 16,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "תום",
+   "meaning": "innocence, sincerity",
+   "root": "תמם",
+   "pos": "noun",
+   "binyan": null,
+   "say": "veTOM",
+   "note": "ו is the conjunction 'and'."
+  }
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"מחמד\",\n  \"meaning\": \"his darling / his cherished\",\n  \"root\": \"חמד\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"makhmaDO\",\n  \"note\": \"Noun with a 3rd person masculine singular possessive suffix (ו-).\"\n}\n```",
+  "secs": 2.29,
+  "cost": 0.00048225,
+  "out_tokens": 87,
+  "kind": "word",
+  "item": 17,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "מחמד",
+   "meaning": "his darling / his cherished",
+   "root": "חמד",
+   "pos": "noun",
+   "binyan": null,
+   "say": "makhmaDO",
+   "note": "Noun with a 3rd person masculine singular possessive suffix (ו-)."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"רגל\",\n  \"meaning\": \"your feet\",\n  \"root\": \"רגל\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"ragleCHA\",\n  \"note\": \"The יך ending is a 2nd-person masculine singular possessive suffix meaning 'your'.\"\n}",
+  "secs": 65.9,
+  "cost": 0.00176959,
+  "out_tokens": 6183,
+  "kind": "word",
+  "item": 15,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "רגל",
+   "meaning": "your feet",
+   "root": "רגל",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ragleCHA",
+   "note": "The יך ending is a 2nd-person masculine singular possessive suffix meaning 'your'."
+  }
+ },
+ {
+  "text": "",
+  "secs": 62.0,
+  "cost": 0.00192005,
+  "out_tokens": 4000,
+  "kind": "word",
+  "item": 15,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": null
+ },
+ {
+  "text": "{\n  \"lemma\": \"חמד\",\n  \"meaning\": \"his delight / his desire\",\n  \"root\": \"חמד\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"mach-ma-DO\",\n  \"note\": \"The word is a noun (chemed) with the suffix 'o' meaning 'his'.\"\n}",
+  "secs": 11.62,
+  "cost": 0.000394,
+  "out_tokens": 228,
+  "kind": "word",
+  "item": 17,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "חמד",
+   "meaning": "his delight / his desire",
+   "root": "חמד",
+   "pos": "noun",
+   "binyan": null,
+   "say": "mach-ma-DO",
+   "note": "The word is a noun (chemed) with the suffix 'o' meaning 'his'."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"מחמד\",\"meaning\":\"his desire, his heart's delight (חלום מחמדו = his most cherished dream)\",\"root\":\"חמד\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"machmadó\",\"note\":\"Prefix מ is part of the noun (not 'from'); the ending ־ו means 'his', and the construct חלום מחמדו means 'his most cherished dream'.\"}",
+  "secs": 1.87,
+  "cost": 0.001996,
+  "out_tokens": 136,
+  "kind": "word",
+  "item": 17,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "מחמד",
+   "meaning": "his desire, his heart's delight (חלום מחמדו = his most cherished dream)",
+   "root": "חמד",
+   "pos": "noun",
+   "binyan": null,
+   "say": "machmadó",
+   "note": "Prefix מ is part of the noun (not 'from'); the ending ־ו means 'his', and the construct חלום מחמדו means 'his most cherished dream'."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"שכח\",\"meaning\":\"that I forgot\",\"root\":\"שכח\",\"pos\":\"verb\",\"binyan\":\"pa'al\",\"say\":\"she-shakháxti\",\"note\":\"ש is the relative particle 'that/which' attached to the 1cs past of שכח",
+  "secs": 107.48,
+  "cost": 0.00192455,
+  "out_tokens": 4000,
+  "kind": "word",
+  "item": 12,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": null
+ },
+ {
+  "text": "{\"lemma\":\"מחמד\",\"meaning\":\"his cherished desire\",\"root\":\"חמד\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"maḥmaDÓ\",\"note\":\"The suffix ו means “his”; here it means his cherished wish.\"}",
+  "secs": 4.45,
+  "cost": 0.002072,
+  "out_tokens": 137,
+  "kind": "word",
+  "item": 17,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "מחמד",
+   "meaning": "his cherished desire",
+   "root": "חמד",
+   "pos": "noun",
+   "binyan": null,
+   "say": "maḥmaDÓ",
+   "note": "The suffix ו means “his”; here it means his cherished wish."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"גלה\",\n  \"meaning\": \"to reveal it\",\n  \"root\": \"ג-ל-ה\",\n  \"pos\": \"verb\",\n  \"binyan\": \"Pa'al\",\n  \"say\": \"le-ga-lo-to\",\n  \"note\": \"The word consists of the prefix 'ל' (to), the verb 'גלה' (reveal), and the suffix 'תו' (it/him).\"\n}",
+  "secs": 2.43,
+  "cost": 0.00040475,
+  "out_tokens": 236,
+  "kind": "word",
+  "item": 18,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "גלה",
+   "meaning": "to reveal it",
+   "root": "ג-ל-ה",
+   "pos": "verb",
+   "binyan": "Pa'al",
+   "say": "le-ga-lo-to",
+   "note": "The word consists of the prefix 'ל' (to), the verb 'גלה' (reveal), and the suffix 'תו' (it/him)."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"מחמד\",\n  \"meaning\": \"his desire\",\n  \"root\": \"חמד\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"machmaDO\",\n  \"note\": \"possessive suffix ו meaning 'his'\"\n}",
+  "secs": 10.05,
+  "cost": 0.0016617,
+  "out_tokens": 980,
+  "kind": "word",
+  "item": 17,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "מחמד",
+   "meaning": "his desire",
+   "root": "חמד",
+   "pos": "noun",
+   "binyan": null,
+   "say": "machmaDO",
+   "note": "possessive suffix ו meaning 'his'"
+  }
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"גילה\",\n  \"meaning\": \"to reveal it\",\n  \"root\": \"ג-ל-ה\",\n  \"pos\": \"verb\",\n  \"binyan\": \"piel\",\n  \"say\": \"lega-LO-to\",\n  \"note\": \"Infinitive form with the preposition לְ and a 3rd person masculine singular object suffix.\"\n}\n```",
+  "secs": 3.56,
+  "cost": 0.00113475,
+  "out_tokens": 262,
+  "kind": "word",
+  "item": 18,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "גילה",
+   "meaning": "to reveal it",
+   "root": "ג-ל-ה",
+   "pos": "verb",
+   "binyan": "piel",
+   "say": "lega-LO-to",
+   "note": "Infinitive form with the preposition לְ and a 3rd person masculine singular object suffix."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"לגלות\", \"meaning\": \"to reveal it / to disclose it\", \"root\": \"גלה\", \"pos\": \"verb\", \"binyan\": \"kal\", \"say\": \"lig-lo-TO\", \"note\": \"This is the infinitive לגלות with the object suffix -ו ('it'), so the ל is part of the infinitive, not a separate prefix.\"}",
+  "secs": 5.48,
+  "cost": 0.0003855,
+  "out_tokens": 708,
+  "kind": "word",
+  "item": 18,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "לגלות",
+   "meaning": "to reveal it / to disclose it",
+   "root": "גלה",
+   "pos": "verb",
+   "binyan": "kal",
+   "say": "lig-lo-TO",
+   "note": "This is the infinitive לגלות with the object suffix -ו ('it'), so the ל is part of the infinitive, not a separate prefix."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"לגלות\",\"meaning\":\"to reveal it / to disclose it (ל = to; ־ו = it/him)\",\"root\":\"גלה\",\"pos\":\"verb\",\"binyan\":\"פיעל\",\"say\":\"legaloTO\",\"note\":\"Infinitive with prefix ל and the literary suffix ־ו meaning 'it/him' (to reveal it); the full form is לְגַלּוֹתוֹ.\"}",
+  "secs": 2.31,
+  "cost": 0.00203,
+  "out_tokens": 140,
+  "kind": "word",
+  "item": 18,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "לגלות",
+   "meaning": "to reveal it / to disclose it (ל = to; ־ו = it/him)",
+   "root": "גלה",
+   "pos": "verb",
+   "binyan": "פיעל",
+   "say": "legaloTO",
+   "note": "Infinitive with prefix ל and the literary suffix ־ו meaning 'it/him' (to reveal it); the full form is לְגַלּוֹתוֹ."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"מחמד\",\n  \"meaning\": \"his delight; his cherished thing\",\n  \"root\": \"חמד\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"makhmadó\",\n  \"note\": \"Possessive suffix ו ('his') attached to מחמד.\"\n}",
+  "secs": 32.97,
+  "cost": 0.00092931,
+  "out_tokens": 1893,
+  "kind": "word",
+  "item": 17,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": {
+   "lemma": "מחמד",
+   "meaning": "his delight; his cherished thing",
+   "root": "חמד",
+   "pos": "noun",
+   "binyan": null,
+   "say": "makhmadó",
+   "note": "Possessive suffix ו ('his') attached to מחמד."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"גילה\",\"meaning\":\"to reveal it\",\"root\":\"גלה\",\"pos\":\"verb\",\"binyan\":\"פיעל\",\"say\":\"le-ga-LOT-o\",\"note\":\"ל־ marks the infinitive, and ־ו is the object suffix “it”.\"}",
+  "secs": 5.11,
+  "cost": 0.00316,
+  "out_tokens": 228,
+  "kind": "word",
+  "item": 18,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "גילה",
+   "meaning": "to reveal it",
+   "root": "גלה",
+   "pos": "verb",
+   "binyan": "פיעל",
+   "say": "le-ga-LOT-o",
+   "note": "ל־ marks the infinitive, and ־ו is the object suffix “it”."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"גילה\",\"meaning\":\"to reveal it\",\"root\":\"ג-ל-ה\",\"pos\":\"verb\",\"binyan\":\"פיעל\",\"say\":\"l'galotó\",\"note\":\"ל + infinitive construct of גילה + 3ms object suffix וֹ.\"}",
+  "secs": 15.33,
+  "cost": 0.0032364,
+  "out_tokens": 3537,
+  "kind": "word",
+  "item": 18,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "גילה",
+   "meaning": "to reveal it",
+   "root": "ג-ל-ה",
+   "pos": "verb",
+   "binyan": "פיעל",
+   "say": "l'galotó",
+   "note": "ל + infinitive construct of גילה + 3ms object suffix וֹ."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"הרגשה\",\n  \"meaning\": \"feelings\",\n  \"root\": \"ר-ג-ש\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"be-har-ga-SHOT\",\n  \"note\": \"The word includes the preposition 'ב' (in/with) attached to the plural noun 'הרגשות'.\"\n}",
+  "secs": 1.32,
+  "cost": 0.00040075,
+  "out_tokens": 232,
+  "kind": "word",
+  "item": 19,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "הרגשה",
+   "meaning": "feelings",
+   "root": "ר-ג-ש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "be-har-ga-SHOT",
+   "note": "The word includes the preposition 'ב' (in/with) attached to the plural noun 'הרגשות'."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"הרגשה\", \"meaning\": \"with (the) feelings, in the sense of 'with mixed feelings'\", \"root\": \"רגש\", \"pos\": \"noun\", \"binyan\": null, \"say\": \"be-har-ga-SHOT\", \"note\": \"The attached ב (with/in) and ה (the) are prefixes on the plural noun הרגשות, 'feelings'.\"}",
+  "secs": 3.99,
+  "cost": 0.0002772,
+  "out_tokens": 489,
+  "kind": "word",
+  "item": 19,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "הרגשה",
+   "meaning": "with (the) feelings, in the sense of 'with mixed feelings'",
+   "root": "רגש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "be-har-ga-SHOT",
+   "note": "The attached ב (with/in) and ה (the) are prefixes on the plural noun הרגשות, 'feelings'."
+  }
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"הרגשה\",\n  \"meaning\": \"with feelings\",\n  \"root\": \"רגש\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"be-hargashOT\",\n  \"note\": \"Prefix בְּ־ (with/in) attached to the feminine plural noun.\"\n}\n```",
+  "secs": 2.24,
+  "cost": 0.00048825,
+  "out_tokens": 88,
+  "kind": "word",
+  "item": 19,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "הרגשה",
+   "meaning": "with feelings",
+   "root": "רגש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "be-hargashOT",
+   "note": "Prefix בְּ־ (with/in) attached to the feminine plural noun."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"הרגשה\",\n  \"meaning\": \"feelings\",\n  \"root\": \"רגש\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"behargaSHOT\",\n  \"note\": \"ב prefix meaning 'in/with'; plural of הרגשה.\"\n}",
+  "secs": 14.92,
+  "cost": 0.0037632,
+  "out_tokens": 3075,
+  "kind": "word",
+  "item": 19,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "הרגשה",
+   "meaning": "feelings",
+   "root": "רגש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "behargaSHOT",
+   "note": "ב prefix meaning 'in/with'; plural of הרגשה."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"הרגשה\",\n  \"meaning\": \"with feelings\",\n  \"root\": \"רגש\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"be-har-ga-SHOT\",\n  \"note\": \"Prefix ב meaning 'with', plural of הרגשה\"\n}",
+  "secs": 6.91,
+  "cost": 0.0013143,
+  "out_tokens": 746,
+  "kind": "word",
+  "item": 19,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "הרגשה",
+   "meaning": "with feelings",
+   "root": "רגש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "be-har-ga-SHOT",
+   "note": "Prefix ב meaning 'with', plural of הרגשה"
+  }
+ },
+ {
+  "text": "{\"lemma\":\"הרגשה\",\"meaning\":\"in feelings/sensations (ב- 'in' + plural of feeling)\",\"root\":\"רגש\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"b'hargashót\",\"note\":\"Prefix ב ('in') attached to הרגשות, the plural of הרגשה; here it likely follows 'בחירת דוד' as 'David's choice in/of feelings'.\"}",
+  "secs": 2.27,
+  "cost": 0.002054,
+  "out_tokens": 140,
+  "kind": "word",
+  "item": 19,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "הרגשה",
+   "meaning": "in feelings/sensations (ב- 'in' + plural of feeling)",
+   "root": "רגש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "b'hargashót",
+   "note": "Prefix ב ('in') attached to הרגשות, the plural of הרגשה; here it likely follows 'בחירת דוד' as 'David's choice in/of feelings'."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"גילה\",\n  \"meaning\": \"to reveal it\",\n  \"root\": \"ג-ל-ה\",\n  \"pos\": \"verb\",\n  \"binyan\": \"pi'el\",\n  \"say\": \"le-ga-lo-TO\",\n  \"note\": \"ל is the infinitive preposition; attached ו is a 3rd-person masculine singular object suffix ('it').\"\n}",
+  "secs": 32.97,
+  "cost": 0.0006864494,
+  "out_tokens": 3724,
+  "kind": "word",
+  "item": 18,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "גילה",
+   "meaning": "to reveal it",
+   "root": "ג-ל-ה",
+   "pos": "verb",
+   "binyan": "pi'el",
+   "say": "le-ga-lo-TO",
+   "note": "ל is the infinitive preposition; attached ו is a 3rd-person masculine singular object suffix ('it')."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"הרגשה\",\"meaning\":\"feelings\",\"root\":\"רגש\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"be-har-ga-SHOT\",\"note\":\"The prefix ב means “with/in”; this is the plural form.\"}",
+  "secs": 3.94,
+  "cost": 0.002412,
+  "out_tokens": 165,
+  "kind": "word",
+  "item": 19,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "הרגשה",
+   "meaning": "feelings",
+   "root": "רגש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "be-har-ga-SHOT",
+   "note": "The prefix ב means “with/in”; this is the plural form."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"גלה\",\n  \"meaning\": \"to reveal it\",\n  \"root\": \"גלה\",\n  \"pos\": \"verb\",\n  \"binyan\": \"pa'al\",\n  \"say\": \"legaloto\",\n  \"note\": \"Infinitive construct with preposition ל and object suffix ו\"\n}",
+  "secs": 29.17,
+  "cost": 0.002058,
+  "out_tokens": 875,
+  "kind": "word",
+  "item": 18,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "גלה",
+   "meaning": "to reveal it",
+   "root": "גלה",
+   "pos": "verb",
+   "binyan": "pa'al",
+   "say": "legaloto",
+   "note": "Infinitive construct with preposition ל and object suffix ו"
+  }
+ },
+ {
+  "text": "",
+  "secs": 83.66,
+  "cost": 0.0019205,
+  "out_tokens": 4000,
+  "kind": "word",
+  "item": 16,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": null
+ },
+ {
+  "text": "{\n  \"lemma\": \"אינטראקציה\",\n  \"meaning\": \"interaction\",\n  \"root\": null,\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"le-in-ter-AK-tsya\",\n  \"note\": \"The word includes the prefix ל (to/for) attached to the loanword אינטראקציה.\"\n}",
+  "secs": 2.04,
+  "cost": 0.00039175,
+  "out_tokens": 224,
+  "kind": "word",
+  "item": 20,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "אינטראקציה",
+   "meaning": "interaction",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "le-in-ter-AK-tsya",
+   "note": "The word includes the prefix ל (to/for) attached to the loanword אינטראקציה."
+  }
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"אינטראקציה\",\n  \"meaning\": \"for interaction\",\n  \"root\": null,\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"le-inter'aktzya\",\n  \"note\": \"Includes the prepositional prefix ל- (to/for) attached to a loanword.\"\n}\n```",
+  "secs": 2.62,
+  "cost": 0.00050475,
+  "out_tokens": 90,
+  "kind": "word",
+  "item": 20,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "אינטראקציה",
+   "meaning": "for interaction",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "le-inter'aktzya",
+   "note": "Includes the prepositional prefix ל- (to/for) attached to a loanword."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"אינטראקציה\", \"meaning\": \"for interaction\", \"root\": null, \"pos\": \"noun\", \"binyan\": null, \"say\": \"in-te-rak-TSYA\", \"note\": \"The prefix ל ('to/for') is attached to the loanword אינטראקציה from English 'interaction'.\"}",
+  "secs": 4.67,
+  "cost": 0.0002138,
+  "out_tokens": 360,
+  "kind": "word",
+  "item": 20,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "אינטראקציה",
+   "meaning": "for interaction",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "in-te-rak-TSYA",
+   "note": "The prefix ל ('to/for') is attached to the loanword אינטראקציה from English 'interaction'."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"אינטראקציה\",\"meaning\":\"interaction\",\"root\":null,\"pos\":\"noun\",\"binyan\":null,\"say\":\"le-inter-AK-tsya\",\"note\":\"The prefix ל (to/for) is attached to the noun אינטראקציה, a loanword with no Hebrew root.\"}",
+  "secs": 1.7,
+  "cost": 0.001706,
+  "out_tokens": 103,
+  "kind": "word",
+  "item": 20,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "אינטראקציה",
+   "meaning": "interaction",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "le-inter-AK-tsya",
+   "note": "The prefix ל (to/for) is attached to the noun אינטראקציה, a loanword with no Hebrew root."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"אינטראקציה\",\"meaning\":\"for interaction\",\"root\":null,\"pos\":\"noun\",\"binyan\":null,\"say\":\"le-in-te-RAK-tsya\",\"note\":\"The prefix ל means “for.”\"}",
+  "secs": 3.42,
+  "cost": 0.002208,
+  "out_tokens": 146,
+  "kind": "word",
+  "item": 20,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "אינטראקציה",
+   "meaning": "for interaction",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "le-in-te-RAK-tsya",
+   "note": "The prefix ל means “for.”"
+  }
+ },
+ {
+  "text": "",
+  "secs": 50.33,
+  "cost": 0.0019193,
+  "out_tokens": 4000,
+  "kind": "word",
+  "item": 18,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": null
+ },
+ {
+  "text": "{\n  \"lemma\": \"אינטראקציה\",\n  \"meaning\": \"interaction\",\n  \"root\": null,\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"le-interáktzya\",\n  \"note\": \"Prefix ל meaning 'to/for'.\"\n}",
+  "secs": 15.92,
+  "cost": 0.002463,
+  "out_tokens": 1504,
+  "kind": "word",
+  "item": 20,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "אינטראקציה",
+   "meaning": "interaction",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "le-interáktzya",
+   "note": "Prefix ל meaning 'to/for'."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"אינטראקציה\",\"meaning\":\"interaction\",\"root\":null,\"pos\":\"noun\",\"binyan\":null,\"say\":\"le-interáktsya\",\"note\":\"ל prefix means 'to/for'; loanword with no Hebrew root.\"}",
+  "secs": 24.5,
+  "cost": 0.000221906,
+  "out_tokens": 1307,
+  "kind": "word",
+  "item": 20,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "אינטראקציה",
+   "meaning": "interaction",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "le-interáktsya",
+   "note": "ל prefix means 'to/for'; loanword with no Hebrew root."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"אינטראקציה\",\n  \"meaning\": \"interaction\",\n  \"root\": null,\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"le'interaktziYA\",\n  \"note\": \"The word has the prefix ל (preposition 'to/for').\"\n}",
+  "secs": 26.47,
+  "cost": 0.00041515,
+  "out_tokens": 1495,
+  "kind": "word",
+  "item": 20,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "אינטראקציה",
+   "meaning": "interaction",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "le'interaktziYA",
+   "note": "The word has the prefix ל (preposition 'to/for')."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"מצא\",\n  \"meaning\": \"the one who finds him\",\n  \"root\": \"מצ\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"ha-mo-tze-o\",\n  \"note\": \"The word consists of the definite article 'ה', the participle 'מוצא' (finding), and the suffix 'ו' (him).\"\n}",
+  "secs": 1.81,
+  "cost": 0.00042975,
+  "out_tokens": 249,
+  "kind": "word",
+  "item": 21,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "מצא",
+   "meaning": "the one who finds him",
+   "root": "מצ",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ha-mo-tze-o",
+   "note": "The word consists of the definite article 'ה', the participle 'מוצא' (finding), and the suffix 'ו' (him)."
+  }
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"מצא\",\n  \"meaning\": \"the one who finds him\",\n  \"root\": \"מצא\",\n  \"pos\": \"verb\",\n  \"binyan\": \"pa'al\",\n  \"say\": \"hamotze'O\",\n  \"note\": \"Present participle (מוצא) with definite article ה and 3rd person masculine singular pronominal suffix ו.\"\n}\n```",
+  "secs": 2.1,
+  "cost": 0.00052875,
+  "out_tokens": 96,
+  "kind": "word",
+  "item": 21,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "מצא",
+   "meaning": "the one who finds him",
+   "root": "מצא",
+   "pos": "verb",
+   "binyan": "pa'al",
+   "say": "hamotze'O",
+   "note": "Present participle (מוצא) with definite article ה and 3rd person masculine singular pronominal suffix ו."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"מצא\", \"meaning\": \"the one who finds him, whoever finds him\", \"root\": \"מצא\", \"pos\": \"verb\", \"binyan\": \"qal\", \"say\": \"ha-motzé-o\", \"note\": \"The prefix ה makes the participle 'the one who finds', and the suffix ו means 'him'.\"}",
+  "secs": 7.26,
+  "cost": 0.0004147,
+  "out_tokens": 760,
+  "kind": "word",
+  "item": 21,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "מצא",
+   "meaning": "the one who finds him, whoever finds him",
+   "root": "מצא",
+   "pos": "verb",
+   "binyan": "qal",
+   "say": "ha-motzé-o",
+   "note": "The prefix ה makes the participle 'the one who finds', and the suffix ו means 'him'."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"מצא\",\n  \"meaning\": \"the one who finds it\",\n  \"root\": \"מצא\",\n  \"pos\": \"verb\",\n  \"binyan\": \"פָּעַל\",\n  \"say\": \"ha-mo-tze-'O\",\n  \"note\": \"ה definite article + participle מוצא + ו 3ms object suffix.\"\n}",
+  "secs": 13.95,
+  "cost": 0.002748,
+  "out_tokens": 2225,
+  "kind": "word",
+  "item": 21,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "מצא",
+   "meaning": "the one who finds it",
+   "root": "מצא",
+   "pos": "verb",
+   "binyan": "פָּעַל",
+   "say": "ha-mo-tze-'O",
+   "note": "ה definite article + participle מוצא + ו 3ms object suffix."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"אינטראקציה\",\n  \"meaning\": \"for interaction\",\n  \"root\": null,\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"la-int-raak-TSI-ya\",\n  \"note\": \"Prefixed ל- to the loanword אינטראקציה.\"\n}",
+  "secs": 31.21,
+  "cost": 0.0005521,
+  "out_tokens": 1085,
+  "kind": "word",
+  "item": 20,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": {
+   "lemma": "אינטראקציה",
+   "meaning": "for interaction",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "la-int-raak-TSI-ya",
+   "note": "Prefixed ל- to the loanword אינטראקציה."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"מצא\",\"meaning\":\"the one who finds him (whoever finds it)\",\"root\":\"מצא\",\"pos\":\"verb\",\"binyan\":\"קל\",\"say\":\"ha-motz'O\",\"note\":\"The prefix ה is the definite article forming a substantive participle (המוצא, 'the finder'), and the suffix ו means 'him/it' as the object, so המוצאו means 'the one who finds it'.\"}",
+  "secs": 1.93,
+  "cost": 0.002064,
+  "out_tokens": 137,
+  "kind": "word",
+  "item": 21,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "מצא",
+   "meaning": "the one who finds him (whoever finds it)",
+   "root": "מצא",
+   "pos": "verb",
+   "binyan": "קל",
+   "say": "ha-motz'O",
+   "note": "The prefix ה is the definite article forming a substantive participle (המוצא, 'the finder'), and the suffix ו means 'him/it' as the object, so המוצאו means 'the one who finds it'."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"למצוא\",\"meaning\":\"the one who finds it\",\"root\":\"מצא\",\"pos\":\"verb\",\"binyan\":\"פעל\",\"say\":\"ha-mots-Ó\",\"note\":\"ה־ is the definite article, and ־ו is the object suffix “it.”\"}",
+  "secs": 4.59,
+  "cost": 0.003194,
+  "out_tokens": 228,
+  "kind": "word",
+  "item": 21,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "למצוא",
+   "meaning": "the one who finds it",
+   "root": "מצא",
+   "pos": "verb",
+   "binyan": "פעל",
+   "say": "ha-mots-Ó",
+   "note": "ה־ is the definite article, and ־ו is the object suffix “it.”"
+  }
+ },
+ {
+  "text": "{\"lemma\":\"סיכון\",\"meaning\":\"risk\",\"root\":\"סכן\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"si-KUN\",\"note\":null}",
+  "secs": 3.21,
+  "cost": 0.000302255,
+  "out_tokens": 386,
+  "kind": "word",
+  "item": 22,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "סיכון",
+   "meaning": "risk",
+   "root": "סכן",
+   "pos": "noun",
+   "binyan": null,
+   "say": "si-KUN",
+   "note": null
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"מוצא\",\n  \"meaning\": \"finder\",\n  \"root\": \"מצא\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"ha-motz-O\",\n  \"note\": \"Definite article + Qal participle + 3ms suffix\"\n}",
+  "secs": 10.48,
+  "cost": 0.0020622,
+  "out_tokens": 1235,
+  "kind": "word",
+  "item": 21,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "מוצא",
+   "meaning": "finder",
+   "root": "מצא",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ha-motz-O",
+   "note": "Definite article + Qal participle + 3ms suffix"
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"סיכון\",\n  \"meaning\": \"risk\",\n  \"root\": \"ס-כ-ן\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"si-KUN\",\n  \"note\": \"This is a noun derived from the Pi'el verb form of the root.\"\n}",
+  "secs": 1.88,
+  "cost": 0.00037175,
+  "out_tokens": 211,
+  "kind": "word",
+  "item": 22,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "סיכון",
+   "meaning": "risk",
+   "root": "ס-כ-ן",
+   "pos": "noun",
+   "binyan": null,
+   "say": "si-KUN",
+   "note": "This is a noun derived from the Pi'el verb form of the root."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"סיכון\", \"meaning\": \"risk\", \"root\": \"סכן\", \"pos\": \"noun\", \"binyan\": null, \"say\": \"si-KHOON\", \"note\": \"Here it is the noun 'risk' (in the phrase סיכון מוגבר, 'increased risk'); no prefix is attached.\"}",
+  "secs": 1.4,
+  "cost": 8.7e-05,
+  "out_tokens": 106,
+  "kind": "word",
+  "item": 22,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "סיכון",
+   "meaning": "risk",
+   "root": "סכן",
+   "pos": "noun",
+   "binyan": null,
+   "say": "si-KHOON",
+   "note": "Here it is the noun 'risk' (in the phrase סיכון מוגבר, 'increased risk'); no prefix is attached."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"סיכון\",\n  \"meaning\": \"risk\",\n  \"root\": \"סכן\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"see-KOON\",\n  \"note\": null\n}",
+  "secs": 8.05,
+  "cost": 0.0001547,
+  "out_tokens": 438,
+  "kind": "word",
+  "item": 22,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "סיכון",
+   "meaning": "risk",
+   "root": "סכן",
+   "pos": "noun",
+   "binyan": null,
+   "say": "see-KOON",
+   "note": null
+  }
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"סיכון\",\n  \"meaning\": \"risk\",\n  \"root\": \"סכן\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"si-KUN\",\n  \"note\": null\n}\n```",
+  "secs": 2.22,
+  "cost": 0.000417,
+  "out_tokens": 67,
+  "kind": "word",
+  "item": 22,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "סיכון",
+   "meaning": "risk",
+   "root": "סכן",
+   "pos": "noun",
+   "binyan": null,
+   "say": "si-KUN",
+   "note": null
+  }
+ },
+ {
+  "text": "{\"lemma\":\"סיכון\",\"meaning\":\"risk\",\"root\":\"סכן\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"si-KUN\",\"note\":null}",
+  "secs": 1.46,
+  "cost": 0.00091,
+  "out_tokens": 39,
+  "kind": "word",
+  "item": 22,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "סיכון",
+   "meaning": "risk",
+   "root": "סכן",
+   "pos": "noun",
+   "binyan": null,
+   "say": "si-KUN",
+   "note": null
+  }
+ },
+ {
+  "text": "{\"lemma\":\"סיכון\",\"meaning\":\"risk\",\"root\":\"סכן\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"sikkún\",\"note\":\"Masculine noun of the pattern קִטּוּל, derived from the root ס-כ-ן (danger); here modified by the adjective מוגבר (increased).\"}",
+  "secs": 1.87,
+  "cost": 0.00177,
+  "out_tokens": 109,
+  "kind": "word",
+  "item": 22,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "סיכון",
+   "meaning": "risk",
+   "root": "סכן",
+   "pos": "noun",
+   "binyan": null,
+   "say": "sikkún",
+   "note": "Masculine noun of the pattern קִטּוּל, derived from the root ס-כ-ן (danger); here modified by the adjective מוגבר (increased)."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"סיכון\", \"meaning\": \"risk\", \"root\": \"סכן\", \"pos\": \"noun\", \"binyan\": null, \"say\": \"sikun\", \"note\": null}",
+  "secs": 5.92,
+  "cost": 0.0011451,
+  "out_tokens": 626,
+  "kind": "word",
+  "item": 22,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "סיכון",
+   "meaning": "risk",
+   "root": "סכן",
+   "pos": "noun",
+   "binyan": null,
+   "say": "sikun",
+   "note": null
+  }
+ },
+ {
+  "text": "{\"lemma\": \"הרגשה\", \"meaning\": \"feelings\", \"root\": \"רגש\", \"pos\": \"noun\", \"binyan\": null, \"say\": \"be-hergashót\", \"note\": \"Prefix ב (in/with) attached to plural noun הרגשות (feelings).\"}",
+  "secs": 68.4,
+  "cost": 0.00084741,
+  "out_tokens": 2883,
+  "kind": "word",
+  "item": 19,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "הרגשה",
+   "meaning": "feelings",
+   "root": "רגש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "be-hergashót",
+   "note": "Prefix ב (in/with) attached to plural noun הרגשות (feelings)."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"נעוץ\",\n  \"meaning\": \"embedded / rooted / stuck\",\n  \"root\": \"נ-ע-ץ\",\n  \"pos\": \"adjective\",\n  \"binyan\": null,\n  \"say\": \"ne-u-TZAH\",\n  \"note\": \"This is the feminine singular form of the adjective/participle.\"\n}",
+  "secs": 1.57,
+  "cost": 0.0003695,
+  "out_tokens": 211,
+  "kind": "word",
+  "item": 23,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "נעוץ",
+   "meaning": "embedded / rooted / stuck",
+   "root": "נ-ע-ץ",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "ne-u-TZAH",
+   "note": "This is the feminine singular form of the adjective/participle."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"נעוץ\", \"meaning\": \"rooted\", \"root\": \"נעץ\", \"pos\": \"adjective\", \"binyan\": null, \"say\": \"ne'u-TZAH\", \"note\": \"Feminine singular form of נעוץ; followed by ב meaning 'rooted in'.\"}",
+  "secs": 9.05,
+  "cost": 0.0001164436,
+  "out_tokens": 596,
+  "kind": "word",
+  "item": 23,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "נעוץ",
+   "meaning": "rooted",
+   "root": "נעץ",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "ne'u-TZAH",
+   "note": "Feminine singular form of נעוץ; followed by ב meaning 'rooted in'."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"נעוץ\", \"meaning\": \"is rooted in / lies in (embedded in, based on)\", \"root\": \"נ-ע-ץ\", \"pos\": \"verb\", \"binyan\": \"nifal\", \"say\": \"ne-u-TSA\", \"note\": \"This is the feminine singular nifal participle, agreeing with הסיבה (the cause).\"}",
+  "secs": 4.52,
+  "cost": 0.0002443,
+  "out_tokens": 423,
+  "kind": "word",
+  "item": 23,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "נעוץ",
+   "meaning": "is rooted in / lies in (embedded in, based on)",
+   "root": "נ-ע-ץ",
+   "pos": "verb",
+   "binyan": "nifal",
+   "say": "ne-u-TSA",
+   "note": "This is the feminine singular nifal participle, agreeing with הסיבה (the cause)."
+  }
+ },
+ {
+  "text": "",
+  "secs": 71.7,
+  "cost": 0.00192035,
+  "out_tokens": 4000,
+  "kind": "word",
+  "item": 19,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": null
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"נעוץ\",\n  \"meaning\": \"lies (is rooted/embedded)\",\n  \"root\": \"נעץ\",\n  \"pos\": \"verb\",\n  \"binyan\": \"pa'al\",\n  \"say\": \"ne'uTSA\",\n  \"note\": \"Feminine singular passive participle (pa'ul form) of the pa'al binyan.\"\n}\n```",
+  "secs": 2.52,
+  "cost": 0.0005265,
+  "out_tokens": 98,
+  "kind": "word",
+  "item": 23,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "נעוץ",
+   "meaning": "lies (is rooted/embedded)",
+   "root": "נעץ",
+   "pos": "verb",
+   "binyan": "pa'al",
+   "say": "ne'uTSA",
+   "note": "Feminine singular passive participle (pa'ul form) of the pa'al binyan."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"מצא\",\n  \"meaning\": \"whoever finds it\",\n  \"root\": \"מצא\",\n  \"pos\": \"noun\",\n  \"binyan\": \"pa'al\",\n  \"say\": \"ha-motseó\",\n  \"note\": \"The word consists of the definite article ה, the present participle מוצא of the verb מצא, and the object suffix ו meaning 'him'.\"\n}",
+  "secs": 41.13,
+  "cost": 0.00175935,
+  "out_tokens": 3875,
+  "kind": "word",
+  "item": 21,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "מצא",
+   "meaning": "whoever finds it",
+   "root": "מצא",
+   "pos": "noun",
+   "binyan": "pa'al",
+   "say": "ha-motseó",
+   "note": "The word consists of the definite article ה, the present participle מוצא of the verb מצא, and the object suffix ו meaning 'him'."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"נעוץ\",\"meaning\":\"rooted, anchored (in); lying (in)\",\"root\":\"נעץ\",\"pos\":\"adjective\",\"binyan\":null,\"say\":\"ne'utzá\",\"note\":\"Feminine singular passive participle (בניין נפעל) of נעץ, used with ב- in the sense 'is rooted in'; agrees with הסיבה.\"}",
+  "secs": 2.29,
+  "cost": 0.001916,
+  "out_tokens": 126,
+  "kind": "word",
+  "item": 23,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "נעוץ",
+   "meaning": "rooted, anchored (in); lying (in)",
+   "root": "נעץ",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "ne'utzá",
+   "note": "Feminine singular passive participle (בניין נפעל) of נעץ, used with ב- in the sense 'is rooted in'; agrees with הסיבה."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"סיכון\",\n  \"meaning\": \"risk\",\n  \"root\": \"סכן\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"siKUN\",\n  \"note\": \"Noun without attached prefixes.\"\n}",
+  "secs": 20.2,
+  "cost": 0.00030537,
+  "out_tokens": 561,
+  "kind": "word",
+  "item": 22,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": {
+   "lemma": "סיכון",
+   "meaning": "risk",
+   "root": "סכן",
+   "pos": "noun",
+   "binyan": null,
+   "say": "siKUN",
+   "note": "Noun without attached prefixes."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"לנעוץ\",\"meaning\":\"is rooted\",\"root\":\"נעץ\",\"pos\":\"verb\",\"binyan\":\"נפעל\",\"say\":\"ne-u-TSA\",\"note\":\"Feminine singular form agreeing with הסיבה.\"}",
+  "secs": 4.99,
+  "cost": 0.003004,
+  "out_tokens": 214,
+  "kind": "word",
+  "item": 23,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "לנעוץ",
+   "meaning": "is rooted",
+   "root": "נעץ",
+   "pos": "verb",
+   "binyan": "נפעל",
+   "say": "ne-u-TSA",
+   "note": "Feminine singular form agreeing with הסיבה."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"אלקטרודינמיקה\",\n  \"meaning\": \"electrodynamics\",\n  \"root\": null,\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"ha-elektrodinámika\",\n  \"note\": \"The prefix 'ה' (the) is attached to the loanword 'אלקטרודינמיקה'.\"\n}",
+  "secs": 1.99,
+  "cost": 0.000413,
+  "out_tokens": 236,
+  "kind": "word",
+  "item": 24,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "אלקטרודינמיקה",
+   "meaning": "electrodynamics",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "ha-elektrodinámika",
+   "note": "The prefix 'ה' (the) is attached to the loanword 'אלקטרודינמיקה'."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"אלקטרודינמיקה\", \"meaning\": \"electrodynamics (the ה prefix is the definite article 'the')\", \"root\": null, \"pos\": \"noun\", \"binyan\": null, \"say\": \"ha-elektrodinamika\", \"note\": \"The ה prefix is the definite article; the word is a loanword from Greek/European roots, so it has no Semitic root.\"}",
+  "secs": 1.46,
+  "cost": 9.99e-05,
+  "out_tokens": 128,
+  "kind": "word",
+  "item": 24,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "אלקטרודינמיקה",
+   "meaning": "electrodynamics (the ה prefix is the definite article 'the')",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "ha-elektrodinamika",
+   "note": "The ה prefix is the definite article; the word is a loanword from Greek/European roots, so it has no Semitic root."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"נעוץ\",\"meaning\":\"rooted (in), lies (in)\",\"root\":\"נעץ\",\"pos\":\"adjective\",\"binyan\":null,\"say\":\"ne'utzá\",\"note\":\"Feminine singular passive participle of נעץ (pa'al), used predicatively; no prefixes.\"}",
+  "secs": 19.91,
+  "cost": 0.0035571,
+  "out_tokens": 2904,
+  "kind": "word",
+  "item": 23,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "נעוץ",
+   "meaning": "rooted (in), lies (in)",
+   "root": "נעץ",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "ne'utzá",
+   "note": "Feminine singular passive participle of נעץ (pa'al), used predicatively; no prefixes."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"אלקטרודינמיקה\",\n  \"meaning\": \"electrodynamics\",\n  \"root\": null,\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"ha-elek-tro-di-na-mi-KA\",\n  \"note\": \"With definite article prefix ה\"\n}",
+  "secs": 8.6,
+  "cost": 0.0002086,
+  "out_tokens": 622,
+  "kind": "word",
+  "item": 24,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "אלקטרודינמיקה",
+   "meaning": "electrodynamics",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "ha-elek-tro-di-na-mi-KA",
+   "note": "With definite article prefix ה"
+  }
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"אלקטרודינמיקה\",\n  \"meaning\": \"the electrodynamics\",\n  \"root\": null,\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"ha-elektrodinamika\",\n  \"note\": \"Includes the definite article ה (ha-) prefixed to a loanword from Greek/German.\"\n}\n```",
+  "secs": 2.01,
+  "cost": 0.000522,
+  "out_tokens": 92,
+  "kind": "word",
+  "item": 24,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "אלקטרודינמיקה",
+   "meaning": "the electrodynamics",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "ha-elektrodinamika",
+   "note": "Includes the definite article ה (ha-) prefixed to a loanword from Greek/German."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"אלקטרודינמיקה\",\"meaning\":\"the electrodynamics (electrodynamics)\",\"root\":null,\"pos\":\"noun\",\"binyan\":null,\"say\":\"ha-elektrodinámika\",\"note\":\"The prefix ה (the definite article) is attached to the noun אלקטרודינמיקה, a loanword with no Hebrew root.\"}",
+  "secs": 1.93,
+  "cost": 0.001948,
+  "out_tokens": 123,
+  "kind": "word",
+  "item": 24,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "אלקטרודינמיקה",
+   "meaning": "the electrodynamics (electrodynamics)",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "ha-elektrodinámika",
+   "note": "The prefix ה (the definite article) is attached to the noun אלקטרודינמיקה, a loanword with no Hebrew root."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"אלקטרודינמיקה\",\"meaning\":\"the electrodynamics\",\"root\":null,\"pos\":\"noun\",\"binyan\":null,\"say\":\"ha-elektrodinámika\",\"note\":\"The prefix ה is the definite article “the”.\"}",
+  "secs": 3.26,
+  "cost": 0.001694,
+  "out_tokens": 101,
+  "kind": "word",
+  "item": 24,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "אלקטרודינמיקה",
+   "meaning": "the electrodynamics",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "ha-elektrodinámika",
+   "note": "The prefix ה is the definite article “the”."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"תאוריה\", \"meaning\": \"theory\", \"root\": null, \"pos\": \"noun\", \"binyan\": null, \"say\": \"ve-ha-te-o-RYA\", \"note\": \"The word is תאוריה with the definite article ה and the conjunction ו attached.\"}",
+  "secs": 5.59,
+  "cost": 8.19546e-05,
+  "out_tokens": 396,
+  "kind": "word",
+  "item": 25,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "תאוריה",
+   "meaning": "theory",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "ve-ha-te-o-RYA",
+   "note": "The word is תאוריה with the definite article ה and the conjunction ו attached."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"נעוץ\",\n  \"meaning\": \"rooted\",\n  \"root\": \"נ-ע-ץ\",\n  \"pos\": \"adjective\",\n  \"binyan\": null,\n  \"say\": \"ne'u-TZAH\",\n  \"note\": \"feminine singular passive participle of לנעוץ\"\n}",
+  "secs": 17.66,
+  "cost": 0.002058,
+  "out_tokens": 1243,
+  "kind": "word",
+  "item": 23,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "נעוץ",
+   "meaning": "rooted",
+   "root": "נ-ע-ץ",
+   "pos": "adjective",
+   "binyan": null,
+   "say": "ne'u-TZAH",
+   "note": "feminine singular passive participle of לנעוץ"
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"תאוריה\",\n  \"meaning\": \"and the theory\",\n  \"root\": null,\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"ve-ha-te-o-R-ya\",\n  \"note\": \"The word includes the conjunction 'ו' (and) and the definite article 'ה' (the) attached to the loanword 'תאוריה'.\"\n}",
+  "secs": 1.77,
+  "cost": 0.00043625,
+  "out_tokens": 251,
+  "kind": "word",
+  "item": 25,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "תאוריה",
+   "meaning": "and the theory",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "ve-ha-te-o-R-ya",
+   "note": "The word includes the conjunction 'ו' (and) and the definite article 'ה' (the) attached to the loanword 'תאוריה'."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"אלקטרודינמיקה\",\n  \"meaning\": \"electrodynamics\",\n  \"root\": null,\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"ha-elektrodinámika\",\n  \"note\": \"Prefixed with definite article ה (the).\"\n}",
+  "secs": 11.08,
+  "cost": 0.0013584,
+  "out_tokens": 758,
+  "kind": "word",
+  "item": 24,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "אלקטרודינמיקה",
+   "meaning": "electrodynamics",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "ha-elektrodinámika",
+   "note": "Prefixed with definite article ה (the)."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"אלקטרודינמיקה\",\n  \"meaning\": \"electrodynamics\",\n  \"root\": null,\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"el-ek-tro-di-na-MI-ka\",\n  \"note\": \"The definite article ה is prefixed to the loanword אלקטרודינמיקה.\"\n}",
+  "secs": 18.18,
+  "cost": 0.0004915,
+  "out_tokens": 950,
+  "kind": "word",
+  "item": 24,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": {
+   "lemma": "אלקטרודינמיקה",
+   "meaning": "electrodynamics",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "el-ek-tro-di-na-MI-ka",
+   "note": "The definite article ה is prefixed to the loanword אלקטרודינמיקה."
+  }
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"תאוריה\",\n  \"meaning\": \"and the theory\",\n  \"root\": null,\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"ve-ha-te'OR-ya\",\n  \"note\": \"Includes the conjunction וְ־ (and) and the definite article הַ־ (the); loanword from Greek.\"\n}\n```",
+  "secs": 1.67,
+  "cost": 0.000543,
+  "out_tokens": 97,
+  "kind": "word",
+  "item": 25,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "תאוריה",
+   "meaning": "and the theory",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "ve-ha-te'OR-ya",
+   "note": "Includes the conjunction וְ־ (and) and the definite article הַ־ (the); loanword from Greek."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"תאוריה\", \"meaning\": \"theory\", \"root\": null, \"pos\": \"noun\", \"binyan\": null, \"say\": \"te-o-RYA\", \"note\": \"The prefix ו means 'and' and ה means 'the'; תאוריה is a loanword from Greek, so it has no clear shoresh.\"}",
+  "secs": 3.92,
+  "cost": 0.0001783,
+  "out_tokens": 284,
+  "kind": "word",
+  "item": 25,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "תאוריה",
+   "meaning": "theory",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "te-o-RYA",
+   "note": "The prefix ו means 'and' and ה means 'the'; תאוריה is a loanword from Greek, so it has no clear shoresh."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"תאוריה\",\"meaning\":\"and the theory\",\"root\":null,\"pos\":\"noun\",\"binyan\":null,\"say\":\"veha-te'oRYa\",\"note\":\"Prefixed with ו (and) and ה (the); the noun תאוריה (theory) is a loanword with no Hebrew root, feminine singular.\",\"extra\":null}",
+  "secs": 1.92,
+  "cost": 0.001876,
+  "out_tokens": 115,
+  "kind": "word",
+  "item": 25,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "תאוריה",
+   "meaning": "and the theory",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "veha-te'oRYa",
+   "note": "Prefixed with ו (and) and ה (the); the noun תאוריה (theory) is a loanword with no Hebrew root, feminine singular.",
+   "extra": null
+  }
+ },
+ {
+  "text": "{\"lemma\":\"תאוריה\",\"meaning\":\"and the theory\",\"root\":null,\"pos\":\"noun\",\"binyan\":null,\"say\":\"ve-ha-te-o-RYA\",\"note\":\"ו is the conjunction “and” and ה is the definite article “the”.\"}",
+  "secs": 1.73,
+  "cost": 0.001202,
+  "out_tokens": 60,
+  "kind": "word",
+  "item": 25,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "תאוריה",
+   "meaning": "and the theory",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "ve-ha-te-o-RYA",
+   "note": "ו is the conjunction “and” and ה is the definite article “the”."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"תאוריה\",\"meaning\":\"and the theory\",\"root\":null,\"pos\":\"noun\",\"binyan\":null,\"say\":\"ve-ha-te-OR-ya\",\"note\":\"Prefixes ו (and) + ה (the) are attached to תאוריה.\"}",
+  "secs": 10.98,
+  "cost": 0.00130645,
+  "out_tokens": 1931,
+  "kind": "word",
+  "item": 25,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "תאוריה",
+   "meaning": "and the theory",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "ve-ha-te-OR-ya",
+   "note": "Prefixes ו (and) + ה (the) are attached to תאוריה."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"תאוריה\",\n  \"meaning\": \"theory\",\n  \"root\": null,\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"ve-ha-te-o-RYA\",\n  \"note\": \"Prefixed with ו (and) and ה (the).\"\n}",
+  "secs": 6.06,
+  "cost": 0.0017301,
+  "out_tokens": 1007,
+  "kind": "word",
+  "item": 25,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "תאוריה",
+   "meaning": "theory",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "ve-ha-te-o-RYA",
+   "note": "Prefixed with ו (and) and ה (the)."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"אלקטרודינמיקה\",\"meaning\":\"electrodynamics\",\"root\":null,\"pos\":\"noun\",\"binyan\":null,\"say\":\"ha-e-lek-tro-di-NA-mi-ka\",\"note\":\"ה is the definite article; the base is a loanword.\"}",
+  "secs": 25.93,
+  "cost": 0.000272272,
+  "out_tokens": 1632,
+  "kind": "word",
+  "item": 24,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "אלקטרודינמיקה",
+   "meaning": "electrodynamics",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "ha-e-lek-tro-di-NA-mi-ka",
+   "note": "ה is the definite article; the base is a loanword."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"כותרת\",\n  \"meaning\": \"title / headline\",\n  \"root\": \"כ ת ר\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"be-ko-TÉ-ret\",\n  \"note\": \"The word includes the preposition 'ב' (in) attached to the noun 'כותרת'.\"\n}",
+  "secs": 1.59,
+  "cost": 0.00038775,
+  "out_tokens": 218,
+  "kind": "word",
+  "item": 26,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "כותרת",
+   "meaning": "title / headline",
+   "root": "כ ת ר",
+   "pos": "noun",
+   "binyan": null,
+   "say": "be-ko-TÉ-ret",
+   "note": "The word includes the preposition 'ב' (in) attached to the noun 'כותרת'."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"כותרת\", \"meaning\": \"in the title (of)\", \"root\": \"כ.ו.ר\", \"pos\": \"noun\", \"binyan\": null, \"say\": \"be-khoteret\", \"note\": \"The prefix ב (in/at) is attached to כותרת (title), which takes the construct-like form with the ב prefix.\"}",
+  "secs": 1.56,
+  "cost": 9.22e-05,
+  "out_tokens": 110,
+  "kind": "word",
+  "item": 26,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "כותרת",
+   "meaning": "in the title (of)",
+   "root": "כ.ו.ר",
+   "pos": "noun",
+   "binyan": null,
+   "say": "be-khoteret",
+   "note": "The prefix ב (in/at) is attached to כותרת (title), which takes the construct-like form with the ב prefix."
+  }
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"כותרת\",\n  \"meaning\": \"in the title / headline\",\n  \"root\": \"כתר\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"bekho-TE-ret\",\n  \"note\": \"Construct form of 'כותרת' prefixed with the preposition 'בְּ־' (in).\"\n}\n```",
+  "secs": 1.56,
+  "cost": 0.0005385,
+  "out_tokens": 95,
+  "kind": "word",
+  "item": 26,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "כותרת",
+   "meaning": "in the title / headline",
+   "root": "כתר",
+   "pos": "noun",
+   "binyan": null,
+   "say": "bekho-TE-ret",
+   "note": "Construct form of 'כותרת' prefixed with the preposition 'בְּ־' (in)."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"כותרת\",\"meaning\":\"in the title / heading (of the article)\",\"root\":\"כתר\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"bikho-TE-ret\",\"note\":\"The prefix ב ('in') is attached to כותרת ('title, heading'), which is a feminine noun here in the construct state before המאמר ('the article').\"}",
+  "secs": 2.19,
+  "cost": 0.001944,
+  "out_tokens": 120,
+  "kind": "word",
+  "item": 26,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "כותרת",
+   "meaning": "in the title / heading (of the article)",
+   "root": "כתר",
+   "pos": "noun",
+   "binyan": null,
+   "say": "bikho-TE-ret",
+   "note": "The prefix ב ('in') is attached to כותרת ('title, heading'), which is a feminine noun here in the construct state before המאמר ('the article')."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"כותרת\",\"meaning\":\"in the title\",\"root\":\"כתר\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"be-kho-TÉ-ret\",\"note\":\"The prefix ב means “in.”\"}",
+  "secs": 1.87,
+  "cost": 0.0011,
+  "out_tokens": 51,
+  "kind": "word",
+  "item": 26,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "כותרת",
+   "meaning": "in the title",
+   "root": "כתר",
+   "pos": "noun",
+   "binyan": null,
+   "say": "be-kho-TÉ-ret",
+   "note": "The prefix ב means “in.”"
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"כותרת\",\n  \"meaning\": \"title\",\n  \"root\": \"כתר\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"bakotéret\",\n  \"note\": \"Prefix ב meaning 'in'.\"\n}",
+  "secs": 6.54,
+  "cost": 0.0013974,
+  "out_tokens": 781,
+  "kind": "word",
+  "item": 26,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "כותרת",
+   "meaning": "title",
+   "root": "כתר",
+   "pos": "noun",
+   "binyan": null,
+   "say": "bakotéret",
+   "note": "Prefix ב meaning 'in'."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"גישה\",\"meaning\":\"approach (philosophical)\",\"root\":\"ג-י-ש\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"gi-SHA\",\"note\":null}",
+  "secs": 10.13,
+  "cost": 0.00027776,
+  "out_tokens": 836,
+  "kind": "word",
+  "item": 27,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "גישה",
+   "meaning": "approach (philosophical)",
+   "root": "ג-י-ש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "gi-SHA",
+   "note": null
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"כותרת\",\n  \"meaning\": \"in the title\",\n  \"root\": \"כתר\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"be-kotéret\",\n  \"note\": \"The preposition בְּ is attached to the noun כותרת, meaning 'in'.\"\n}",
+  "secs": 20.14,
+  "cost": 0.00069108,
+  "out_tokens": 1374,
+  "kind": "word",
+  "item": 26,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": {
+   "lemma": "כותרת",
+   "meaning": "in the title",
+   "root": "כתר",
+   "pos": "noun",
+   "binyan": null,
+   "say": "be-kotéret",
+   "note": "The preposition בְּ is attached to the noun כותרת, meaning 'in'."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"גישה\",\n  \"meaning\": \"approach\",\n  \"root\": \"נ-ג-ש\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"gi-SHAH\",\n  \"note\": \"The word is a feminine noun derived from the root נ-ג-ש.\"\n}",
+  "secs": 1.53,
+  "cost": 0.00036325,
+  "out_tokens": 201,
+  "kind": "word",
+  "item": 27,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "גישה",
+   "meaning": "approach",
+   "root": "נ-ג-ש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "gi-SHAH",
+   "note": "The word is a feminine noun derived from the root נ-ג-ש."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"גישה\",\"meaning\":\"approach, attitude, or school of thought (here: 'approach' in the sense of a philosophical position)\",\"root\":\"נגש\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"gi-SHA\",\"note\":\"Feminine noun from the root נ-ג-ש (to approach), with the construct-style ending -ה and no prefix attached.\"}",
+  "secs": 1.77,
+  "cost": 0.0001012,
+  "out_tokens": 127,
+  "kind": "word",
+  "item": 27,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "גישה",
+   "meaning": "approach, attitude, or school of thought (here: 'approach' in the sense of a philosophical position)",
+   "root": "נגש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "gi-SHA",
+   "note": "Feminine noun from the root נ-ג-ש (to approach), with the construct-style ending -ה and no prefix attached."
+  }
+ },
+ {
+  "text": "",
+  "secs": 56.32,
+  "cost": 0.0019205,
+  "out_tokens": 4000,
+  "kind": "word",
+  "item": 23,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": null
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"גישה\",\n  \"meaning\": \"approach\",\n  \"root\": \"נגש\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"gi-SHAH\",\n  \"note\": \"Feminine singular noun.\"\n}\n```",
+  "secs": 2.24,
+  "cost": 0.000459,
+  "out_tokens": 73,
+  "kind": "word",
+  "item": 27,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "גישה",
+   "meaning": "approach",
+   "root": "נגש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "gi-SHAH",
+   "note": "Feminine singular noun."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"גישה\",\n  \"meaning\": \"approach\",\n  \"root\": \"גשש\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"gi-shá\",\n  \"note\": \"Singular feminine noun; no prefixes attached.\"\n}",
+  "secs": 5.75,
+  "cost": 0.00020707,
+  "out_tokens": 341,
+  "kind": "word",
+  "item": 27,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": {
+   "lemma": "גישה",
+   "meaning": "approach",
+   "root": "גשש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "gi-shá",
+   "note": "Singular feminine noun; no prefixes attached."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"כותרת\",\"meaning\":\"in the title\",\"root\":\"כתר\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"ba-koTEret\",\"note\":\"Prefix בְּ 'in' attached; definite sense comes from the following construct noun המאמר.\"}",
+  "secs": 27.32,
+  "cost": 0.000329477,
+  "out_tokens": 2010,
+  "kind": "word",
+  "item": 26,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "כותרת",
+   "meaning": "in the title",
+   "root": "כתר",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ba-koTEret",
+   "note": "Prefix בְּ 'in' attached; definite sense comes from the following construct noun המאמר."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"גישה\",\"meaning\":\"approach; viewpoint\",\"root\":\"נגש\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"gi-SHA\",\"note\":null}",
+  "secs": 1.75,
+  "cost": 0.000988,
+  "out_tokens": 41,
+  "kind": "word",
+  "item": 27,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "גישה",
+   "meaning": "approach; viewpoint",
+   "root": "נגש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "gi-SHA",
+   "note": null
+  }
+ },
+ {
+  "text": "{\"lemma\":\"גישה\",\"meaning\":\"approach, attitude (a way of thinking about something)\",\"root\":\"נגש\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"gishá\",\"note\":\"Feminine noun with stress on the last syllable; in the sentence it appears in 'גישה פילוסופית' (a philosophical approach) and 'גישה זו' (this approach).\"}",
+  "secs": 2.17,
+  "cost": 0.002034,
+  "out_tokens": 128,
+  "kind": "word",
+  "item": 27,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "גישה",
+   "meaning": "approach, attitude (a way of thinking about something)",
+   "root": "נגש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "gishá",
+   "note": "Feminine noun with stress on the last syllable; in the sentence it appears in 'גישה פילוסופית' (a philosophical approach) and 'גישה זו' (this approach)."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"גישה\",\n  \"meaning\": \"approach\",\n  \"root\": \"נגש\",\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"gishá\",\n  \"note\": null\n}",
+  "secs": 6.86,
+  "cost": 0.0013953,
+  "out_tokens": 776,
+  "kind": "word",
+  "item": 27,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "גישה",
+   "meaning": "approach",
+   "root": "נגש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "gishá",
+   "note": null
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"קאפה\",\n  \"meaning\": \"in Kaffa (a region in Ethiopia)\",\n  \"root\": null,\n  \"pos\": \"name\",\n  \"binyan\": null,\n  \"say\": \"ba-KA-fa\",\n  \"note\": \"The letter ב (bet) is a prefix meaning 'in'.\"\n}",
+  "secs": 1.58,
+  "cost": 0.00038325,
+  "out_tokens": 222,
+  "kind": "word",
+  "item": 28,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "קאפה",
+   "meaning": "in Kaffa (a region in Ethiopia)",
+   "root": null,
+   "pos": "name",
+   "binyan": null,
+   "say": "ba-KA-fa",
+   "note": "The letter ב (bet) is a prefix meaning 'in'."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"תאוריה\",\n  \"meaning\": \"and the theory\",\n  \"root\": null,\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"ve-ha-te-OR-ya\",\n  \"note\": \"Prefixed with ו- 'and' and ה- 'the'.\"\n}",
+  "secs": 46.26,
+  "cost": 0.00078713,
+  "out_tokens": 1579,
+  "kind": "word",
+  "item": 25,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": {
+   "lemma": "תאוריה",
+   "meaning": "and the theory",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "ve-ha-te-OR-ya",
+   "note": "Prefixed with ו- 'and' and ה- 'the'."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"קאפה\", \"meaning\": \"Kaffa (a region in Ethiopia), with ב meaning 'in'\", \"root\": null, \"pos\": \"name\", \"binyan\": null, \"say\": \"be-KAF-fa\", \"note\": \"The ב prefix means 'in'; קאפה is the Kaffa region, where coffee is traditionally said to have originated, and the word is related to the source word קפה.\"}",
+  "secs": 5.92,
+  "cost": 0.0003636,
+  "out_tokens": 665,
+  "kind": "word",
+  "item": 28,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "קאפה",
+   "meaning": "Kaffa (a region in Ethiopia), with ב meaning 'in'",
+   "root": null,
+   "pos": "name",
+   "binyan": null,
+   "say": "be-KAF-fa",
+   "note": "The ב prefix means 'in'; קאפה is the Kaffa region, where coffee is traditionally said to have originated, and the word is related to the source word קפה."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"גישה\",\"meaning\":\"approach\",\"root\":\"ג-י-ש\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"giSHA\",\"note\":\"No attached prefix; feminine singular noun.\"}",
+  "secs": 28.02,
+  "cost": 0.001711125,
+  "out_tokens": 3098,
+  "kind": "word",
+  "item": 27,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "גישה",
+   "meaning": "approach",
+   "root": "ג-י-ש",
+   "pos": "noun",
+   "binyan": null,
+   "say": "giSHA",
+   "note": "No attached prefix; feminine singular noun."
+  }
+ },
+ {
+  "text": "",
+  "secs": 95.39,
+  "cost": 0.00192275,
+  "out_tokens": 4000,
+  "kind": "word",
+  "item": 21,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": null
+ },
+ {
+  "text": "{\"lemma\":\"קאפה\",\"meaning\":\"in Kaffa (a region in southwestern Ethiopia)\",\"root\":null,\"pos\":\"name\",\"binyan\":null,\"say\":\"b'KAfa\",\"note\":\"The prefix ב ('in') is attached to the place name Kaffa (קאפה).\"}",
+  "secs": 1.65,
+  "cost": 0.001642,
+  "out_tokens": 102,
+  "kind": "word",
+  "item": 28,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "קאפה",
+   "meaning": "in Kaffa (a region in southwestern Ethiopia)",
+   "root": null,
+   "pos": "name",
+   "binyan": null,
+   "say": "b'KAfa",
+   "note": "The prefix ב ('in') is attached to the place name Kaffa (קאפה)."
+  }
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"קאפה\",\n  \"meaning\": \"in Kaffa\",\n  \"root\": null,\n  \"pos\": \"name\",\n  \"binyan\": null,\n  \"say\": \"be-KA-fa\",\n  \"note\": \"Proper name of a region in Ethiopia, prefixed with the preposition ב־ (in).\"\n}\n```",
+  "secs": 3.29,
+  "cost": 0.0009645,
+  "out_tokens": 217,
+  "kind": "word",
+  "item": 28,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "קאפה",
+   "meaning": "in Kaffa",
+   "root": null,
+   "pos": "name",
+   "binyan": null,
+   "say": "be-KA-fa",
+   "note": "Proper name of a region in Ethiopia, prefixed with the preposition ב־ (in)."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"קאפה\",\n  \"meaning\": \"Kaffa (region in Ethiopia)\",\n  \"root\": null,\n  \"pos\": \"name\",\n  \"binyan\": null,\n  \"say\": \"b'Káfa\",\n  \"note\": \"The prefix ב means 'in'.\"\n}",
+  "secs": 14.7,
+  "cost": 0.00072,
+  "out_tokens": 1568,
+  "kind": "word",
+  "item": 28,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "קאפה",
+   "meaning": "Kaffa (region in Ethiopia)",
+   "root": null,
+   "pos": "name",
+   "binyan": null,
+   "say": "b'Káfa",
+   "note": "The prefix ב means 'in'."
+  }
+ },
+ {
+  "text": "{\"lemma\": \"כותרת\", \"meaning\": \"title/heading\", \"root\": \"כתר\", \"pos\": \"noun\", \"binyan\": null, \"say\": \"bekhotéret\", \"note\": \"Prefixed ב ('in'); together it means 'in the title'.\"}",
+  "secs": 43.29,
+  "cost": 0.000750022,
+  "out_tokens": 3956,
+  "kind": "word",
+  "item": 26,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "כותרת",
+   "meaning": "title/heading",
+   "root": "כתר",
+   "pos": "noun",
+   "binyan": null,
+   "say": "bekhotéret",
+   "note": "Prefixed ב ('in'); together it means 'in the title'."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"קיסר\",\n  \"meaning\": \"emperor\",\n  \"root\": null,\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"kei-SAR\",\n  \"note\": \"This is a loanword from Latin 'Caesar'.\"\n}",
+  "secs": 1.5,
+  "cost": 0.0004025,
+  "out_tokens": 229,
+  "kind": "word",
+  "item": 29,
+  "model": "google/gemini-3.1-flash-lite",
+  "parsed": {
+   "lemma": "קיסר",
+   "meaning": "emperor",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "kei-SAR",
+   "note": "This is a loanword from Latin 'Caesar'."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"קאפה\",\"meaning\":\"in Kaffa\",\"root\":null,\"pos\":\"name\",\"binyan\":null,\"say\":\"be-KA-fa\",\"note\":\"The prefix ב means “in.”\"}",
+  "secs": 3.66,
+  "cost": 0.001984,
+  "out_tokens": 130,
+  "kind": "word",
+  "item": 28,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "קאפה",
+   "meaning": "in Kaffa",
+   "root": null,
+   "pos": "name",
+   "binyan": null,
+   "say": "be-KA-fa",
+   "note": "The prefix ב means “in.”"
+  }
+ },
+ {
+  "text": "{\"lemma\": \"קיסר\", \"meaning\": \"emperor (Emperor of Ethiopia, here 'קיסר אתיופיה')\", \"root\": \"קסר\", \"pos\": \"noun\", \"binyan\": null, \"say\": \"ki-SAR\", \"note\": \"Borrowed from Latin 'Caesar'; the word has no prefix here and is in its base form, used as the subject of 'הגיש'.\"}",
+  "secs": 1.86,
+  "cost": 0.0001038,
+  "out_tokens": 136,
+  "kind": "word",
+  "item": 29,
+  "model": "anthropic/claude-haiku-5.5",
+  "parsed": {
+   "lemma": "קיסר",
+   "meaning": "emperor (Emperor of Ethiopia, here 'קיסר אתיופיה')",
+   "root": "קסר",
+   "pos": "noun",
+   "binyan": null,
+   "say": "ki-SAR",
+   "note": "Borrowed from Latin 'Caesar'; the word has no prefix here and is in its base form, used as the subject of 'הגיש'."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"קפה\",\n  \"meaning\": \"in coffee\",\n  \"root\": null,\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"bekaFE\",\n  \"note\": \"The prefix ב means 'in', and קאפה is a variant spelling of קפה (coffee).\"\n}",
+  "secs": 8.26,
+  "cost": 0.0016746,
+  "out_tokens": 991,
+  "kind": "word",
+  "item": 28,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "קפה",
+   "meaning": "in coffee",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "bekaFE",
+   "note": "The prefix ב means 'in', and קאפה is a variant spelling of קפה (coffee)."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"קיסר\",\"meaning\":\"emperor\",\"root\":null,\"pos\":\"noun\",\"binyan\":null,\"say\":\"KEI-sar\",\"note\":\"Loanword from Latin Caesar; no Hebrew root and no attached prefix.\"}",
+  "secs": 5.63,
+  "cost": 0.00044287,
+  "out_tokens": 603,
+  "kind": "word",
+  "item": 29,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "קיסר",
+   "meaning": "emperor",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "KEI-sar",
+   "note": "Loanword from Latin Caesar; no Hebrew root and no attached prefix."
+  }
+ },
+ {
+  "text": "```json\n{\n  \"lemma\": \"קיסר\",\n  \"meaning\": \"emperor\",\n  \"root\": null,\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"kei-SAR\",\n  \"note\": \"Construct form (smikhut) is identical to the absolute form here: קיסר אתיופיה (Emperor of Ethiopia).\"\n}\n```",
+  "secs": 2.87,
+  "cost": 0.0005295,
+  "out_tokens": 94,
+  "kind": "word",
+  "item": 29,
+  "model": "google/gemini-3.7-flash",
+  "parsed": {
+   "lemma": "קיסר",
+   "meaning": "emperor",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "kei-SAR",
+   "note": "Construct form (smikhut) is identical to the absolute form here: קיסר אתיופיה (Emperor of Ethiopia)."
+  }
+ },
+ {
+  "text": "{\"lemma\":\"קיסר\",\"meaning\":\"emperor\",\"root\":null,\"pos\":\"noun\",\"binyan\":null,\"say\":\"KEI-sar\",\"note\":null}",
+  "secs": 1.74,
+  "cost": 0.000976,
+  "out_tokens": 41,
+  "kind": "word",
+  "item": 29,
+  "model": "openai/gpt-5.6-terra",
+  "parsed": {
+   "lemma": "קיסר",
+   "meaning": "emperor",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "KEI-sar",
+   "note": null
+  }
+ },
+ {
+  "text": "{\"lemma\":\"קיסר\",\"meaning\":\"emperor\",\"root\":\"קסר\",\"pos\":\"noun\",\"binyan\":null,\"say\":\"KAI-sar\",\"note\":\"In construct form (סמיכות) with אתיופיה: 'emperor of Ethiopia'; the word is a loanword from Latin Caesar, so the root is only nominal.\"}",
+  "secs": 2.72,
+  "cost": 0.001876,
+  "out_tokens": 116,
+  "kind": "word",
+  "item": 29,
+  "model": "anthropic/claude-sonnet-5.5",
+  "parsed": {
+   "lemma": "קיסר",
+   "meaning": "emperor",
+   "root": "קסר",
+   "pos": "noun",
+   "binyan": null,
+   "say": "KAI-sar",
+   "note": "In construct form (סמיכות) with אתיופיה: 'emperor of Ethiopia'; the word is a loanword from Latin Caesar, so the root is only nominal."
+  }
+ },
+ {
+  "text": "{\n  \"lemma\": \"קיסר\",\n  \"meaning\": \"emperor\",\n  \"root\": null,\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"kesar\",\n  \"note\": null\n}",
+  "secs": 5.25,
+  "cost": 0.0014058,
+  "out_tokens": 792,
+  "kind": "word",
+  "item": 29,
+  "model": "deepseek/deepseek-v4-pro",
+  "parsed": {
+   "lemma": "קיסר",
+   "meaning": "emperor",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "kesar",
+   "note": null
+  }
+ },
+ {
+  "text": "And if you desire a sweet death – buy yourself a rope of honey, and if you desire the death of the righteous, hang yourself from the candelabra facing the Holy Ark.",
+  "secs": 1.35,
+  "cost": 0.00036975,
+  "out_tokens": 235,
+  "kind": "sentence",
+  "item": 0,
+  "model": "google/gemini-3.1-flash-lite"
+ },
+ {
+  "text": "{\n  \"lemma\": \"קיסר\",\n  \"meaning\": \"emperor\",\n  \"root\": null,\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"Késar\",\n  \"note\": \"Loanword from Latin 'Caesar'; used as title for emperor.\"\n}",
+  "secs": 12.49,
+  "cost": 0.0005286,
+  "out_tokens": 1139,
+  "kind": "word",
+  "item": 29,
+  "model": "deepseek/deepseek-v4-flash",
+  "parsed": {
+   "lemma": "קיסר",
+   "meaning": "emperor",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "Késar",
+   "note": "Loanword from Latin 'Caesar'; used as title for emperor."
+  }
+ },
+ {
+  "text": "If you desire a sweet death, buy yourself a rope of honey; and if you wish to die the death of the upright, hang yourself from the lamp opposite the Ark of the Covenant.",
+  "secs": 1.97,
+  "cost": 4.26e-05,
+  "out_tokens": 62,
+  "kind": "sentence",
+  "item": 0,
+  "model": "anthropic/claude-haiku-5.5"
+ },
+ {
+  "text": "And if you desire a sweet death—buy yourself a rope of honey, and if the death of the righteous, hang yourself from the menorah opposite the Holy Ark.",
+  "secs": 1.74,
+  "cost": 0.00017925,
+  "out_tokens": 34,
+  "kind": "sentence",
+  "item": 0,
+  "model": "google/gemini-3.7-flash"
+ },
+ {
+  "text": "{\"lemma\":\"קפה\",\"meaning\":\"in Kaffa\",\"root\":null,\"pos\":\"name\",\"binyan\":null,\"say\":\"be-KA-fa\",\"note\":\"ב prefix meaning 'in'; the form קאפה is a variant spelling of קפה.\"}",
+  "secs": 28.18,
+  "cost": 0.002857035,
+  "out_tokens": 3962,
+  "kind": "word",
+  "item": 28,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "parsed": {
+   "lemma": "קפה",
+   "meaning": "in Kaffa",
+   "root": null,
+   "pos": "name",
+   "binyan": null,
+   "say": "be-KA-fa",
+   "note": "ב prefix meaning 'in'; the form קאפה is a variant spelling of קפה."
+  }
+ },
+ {
+  "text": "And if you desire a sweet death, buy yourself a rope of honey; and if you desire the death of the upright, hang yourself on the lampstand opposite the holy ark.",
+  "secs": 7.56,
+  "cost": 0.00083383,
+  "out_tokens": 1253,
+  "kind": "sentence",
+  "item": 0,
+  "model": "deepseek/deepseek-v4.1-flash"
+ },
+ {
+  "text": "{\n  \"lemma\": \"קיסר\",\n  \"meaning\": \"emperor\",\n  \"root\": null,\n  \"pos\": \"noun\",\n  \"binyan\": null,\n  \"say\": \"kei-SAR\",\n  \"note\": \"No attached prefixes; construct noun with אתיופיה.\"\n}",
+  "secs": 14.85,
+  "cost": 0.00046129,
+  "out_tokens": 887,
+  "kind": "word",
+  "item": 29,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": {
+   "lemma": "קיסר",
+   "meaning": "emperor",
+   "root": null,
+   "pos": "noun",
+   "binyan": null,
+   "say": "kei-SAR",
+   "note": "No attached prefixes; construct noun with אתיופיה."
+  }
+ },
+ {
+  "text": "And if you desire a sweet death, buy yourself a rope of honey; and if you wish to die the death of the righteous, hang yourself from the menorah before the Ark.",
+  "secs": 1.56,
+  "cost": 0.000792,
+  "out_tokens": 56,
+  "kind": "sentence",
+  "item": 0,
+  "model": "anthropic/claude-sonnet-5.5"
+ },
+ {
+  "text": "And if you desire a sweet death, buy yourself a rope of honeycomb; and if you seek the death of the righteous, hang yourself from the menorah opposite the Holy Ark.",
+  "secs": 3.51,
+  "cost": 0.001756,
+  "out_tokens": 134,
+  "kind": "sentence",
+  "item": 0,
+  "model": "openai/gpt-5.6-terra"
+ },
+ {
+  "text": "Her whole face is yellow as wax, foam will burst from between her teeth, her throat will moan like flutes, and her last breath will struggle with the bitterness of death.",
+  "secs": 1.63,
+  "cost": 0.00041975,
+  "out_tokens": 268,
+  "kind": "sentence",
+  "item": 1,
+  "model": "google/gemini-3.1-flash-lite"
+ },
+ {
+  "text": "All their faces yellow as wax, from between her teeth the foam will burst, her throat will moan like flutes, her last breath will wrestle with the bitterness of death.",
+  "secs": 1.33,
+  "cost": 3.99e-05,
+  "out_tokens": 55,
+  "kind": "sentence",
+  "item": 1,
+  "model": "anthropic/claude-haiku-5.5"
+ },
+ {
+  "text": "And if you desire a sweet death, buy yourself a rope of honeycomb; and if the death of the righteous, hang yourself on the menorah facing the holy ark.",
+  "secs": 10.14,
+  "cost": 0.0015564,
+  "out_tokens": 992,
+  "kind": "sentence",
+  "item": 0,
+  "model": "deepseek/deepseek-v4-pro"
+ },
+ {
+  "text": "Her whole face was as yellow as wax, foam burst from between her teeth, her throat rattled like flutes, and her last breath struggled against the bitterness of death.",
+  "secs": 2.25,
+  "cost": 0.00018075,
+  "out_tokens": 34,
+  "kind": "sentence",
+  "item": 1,
+  "model": "google/gemini-3.7-flash"
+ },
+ {
+  "text": "Her whole face is yellow as wax, foam will burst from between her teeth, her throat will roar like flutes, and the last breath will struggle with the bitterness of death.",
+  "secs": 9.93,
+  "cost": 0.000181727,
+  "out_tokens": 921,
+  "kind": "sentence",
+  "item": 1,
+  "model": "deepseek/deepseek-v4-flash"
+ },
+ {
+  "text": "Her whole face is yellow as wax, foam bursts from between her teeth, her throat moans like flutes, and her last breath wrestles with the bitterness of death.",
+  "secs": 1.78,
+  "cost": 0.000798,
+  "out_tokens": 55,
+  "kind": "sentence",
+  "item": 1,
+  "model": "anthropic/claude-sonnet-5.5"
+ },
+ {
+  "text": "And if you desire a sweet death, buy yourself a rope of honey; and if you desire the death of the righteous, hang yourself on the menorah opposite the Holy Ark.",
+  "secs": 20.2,
+  "cost": 0.0001361248,
+  "out_tokens": 786,
+  "kind": "sentence",
+  "item": 0,
+  "model": "deepseek/deepseek-v4-flash"
+ },
+ {
+  "text": "Her whole face is yellow as wax, foam will burst from between her teeth, her throat will moan like flutes, her last breath will struggle with the bitterness of death.",
+  "secs": 12.92,
+  "cost": 0.000124902,
+  "out_tokens": 764,
+  "kind": "sentence",
+  "item": 1,
+  "model": "deepseek/deepseek-v4.1-flash"
+ },
+ {
+  "text": "Her whole face will be yellow as wax, foam will burst from between her teeth, her throat will moan like flutes, and her final breath will struggle against the bitterness of death.",
+  "secs": 4.64,
+  "cost": 0.002216,
+  "out_tokens": 172,
+  "kind": "sentence",
+  "item": 1,
+  "model": "openai/gpt-5.6-terra"
+ },
+ {
+  "text": "They say that in his drunkenness he beats her, the wretched orphan; they say that he seizes the locks of her hair and measures graves upon her body…",
+  "secs": 3.9,
+  "cost": 0.00084175,
+  "out_tokens": 697,
+  "kind": "sentence",
+  "item": 2,
+  "model": "deepseek/deepseek-v4.1-flash"
+ },
+ {
+  "text": "They say that in his drunkenness he beats her, the unfortunate orphan; they say he seizes her by the locks of her hair and measures her body against the graves…",
+  "secs": 1.25,
+  "cost": 3.85e-05,
+  "out_tokens": 52,
+  "kind": "sentence",
+  "item": 2,
+  "model": "anthropic/claude-haiku-5.5"
+ },
+ {
+  "text": "They say that in his drunkenness he beats her, the wretched orphan; they say that he grabs her by her locks of hair and measures the graves with her body…",
+  "secs": 1.69,
+  "cost": 0.00047725,
+  "out_tokens": 306,
+  "kind": "sentence",
+  "item": 2,
+  "model": "google/gemini-3.1-flash-lite"
+ },
+ {
+  "text": "Her whole face is yellow as wax,\nFoam bursts from between her teeth,\nHer throat moans like flutes,\nThe last breath struggles with the bitterness of death.",
+  "secs": 8.36,
+  "cost": 0.0012669,
+  "out_tokens": 799,
+  "kind": "sentence",
+  "item": 1,
+  "model": "deepseek/deepseek-v4-pro"
+ },
+ {
+  "text": "They say that in his drunkenness he beats her, the poor orphan; they say he seizes her by the braids of her hair and measures the graves with her body…",
+  "secs": 1.76,
+  "cost": 0.00074,
+  "out_tokens": 49,
+  "kind": "sentence",
+  "item": 2,
+  "model": "anthropic/claude-sonnet-5.5"
+ },
+ {
+  "text": "They say that in his drunkenness he beats her, the wretched orphan; they say he seizes her by the braids of her hair and measures the graves with her body…",
+  "secs": 1.81,
+  "cost": 0.00018225,
+  "out_tokens": 34,
+  "kind": "sentence",
+  "item": 2,
+  "model": "google/gemini-3.7-flash"
+ },
+ {
+  "text": "They say that when he is drunk, he beats her, the poor orphan; they say that he grabs her by the hair and measures graves upon her body…",
+  "secs": 1.43,
+  "cost": 0.000588,
+  "out_tokens": 36,
+  "kind": "sentence",
+  "item": 2,
+  "model": "openai/gpt-5.6-terra"
+ },
+ {
+  "text": "They say that in his drunkenness he beats her, the poor orphan; they say that he seizes her by the hair and measures the graves with her body.",
+  "secs": 9.6,
+  "cost": 0.00044645,
+  "out_tokens": 975,
+  "kind": "sentence",
+  "item": 2,
+  "model": "deepseek/deepseek-v4-flash"
+ },
+ {
+  "text": "They say that in his drunkenness he beats her, the wretched orphan; they say that he seizes her by the tresses of her hair and measures the graves upon her body…",
+  "secs": 6.01,
+  "cost": 0.0009645,
+  "out_tokens": 598,
+  "kind": "sentence",
+  "item": 2,
+  "model": "deepseek/deepseek-v4-pro"
+ },
+ {
+  "text": "“A precious thing, Sandril, something our lives depend on; may no obstacle come of it, and may we have peace.”",
+  "secs": 2.67,
+  "cost": 0.00091075,
+  "out_tokens": 596,
+  "kind": "sentence",
+  "item": 3,
+  "model": "google/gemini-3.1-flash-lite"
+ },
+ {
+  "text": "\"Dear one, Sandril, something our lives depend on. I hope nothing will stand in the way of this, and that we will have peace.\"",
+  "secs": 1.35,
+  "cost": 3.38e-05,
+  "out_tokens": 44,
+  "kind": "sentence",
+  "item": 3,
+  "model": "anthropic/claude-haiku-5.5"
+ },
+ {
+  "text": "",
+  "secs": 55.59,
+  "cost": 0.00191855,
+  "out_tokens": 4000,
+  "kind": "word",
+  "item": 28,
+  "model": "qwen/qwen3.8-flash",
+  "parsed": null
+ },
+ {
+  "text": "\"A precious thing, Senderil, something our very lives depend on; and may it bring us no harm, and may peace be with us.\"",
+  "secs": 2.22,
+  "cost": 0.00016275,
+  "out_tokens": 30,
+  "kind": "sentence",
+  "item": 3,
+  "model": "google/gemini-3.7-flash"
+ },
+ {
+  "text": "\"It's a precious thing, Sandril, something our lives depend on, and I only hope no obstacle ever comes to us from it, and that we may have peace.\"",
+  "secs": 1.6,
+  "cost": 0.000746,
+  "out_tokens": 51,
+  "kind": "sentence",
+  "item": 3,
+  "model": "anthropic/claude-sonnet-5.5"
+ },
+ {
+  "text": "“A precious thing, Sandril—a thing our lives depend on. May no harm come to us from it, and may we have peace.”",
+  "secs": 1.54,
+  "cost": 0.000522,
+  "out_tokens": 32,
+  "kind": "sentence",
+  "item": 3,
+  "model": "openai/gpt-5.6-terra"
+ },
+ {
+  "text": "– A precious thing, Sanderil, something our lives depend on, and may no obstacle come to us from it, and may we have peace.",
+  "secs": 14.54,
+  "cost": 0.0007208,
+  "out_tokens": 1585,
+  "kind": "sentence",
+  "item": 3,
+  "model": "deepseek/deepseek-v4-flash"
+ },
+ {
+  "text": "– A precious thing, Sanderil, something our lives depend on. May no obstacle come to us from it, and may we have peace.",
+  "secs": 5.44,
+  "cost": 0.0009513,
+  "out_tokens": 591,
+  "kind": "sentence",
+  "item": 3,
+  "model": "deepseek/deepseek-v4-pro"
+ },
+ {
+  "text": "– A precious thing, Sandril, something our lives depend on, and may no obstacle come to us from it, and may we have peace.",
+  "secs": 15.95,
+  "cost": 0.000140188,
+  "out_tokens": 200,
+  "kind": "sentence",
+  "item": 3,
+  "model": "deepseek/deepseek-v4.1-flash"
+ },
+ {
+  "text": "Her entire face is yellow as wax; foam will burst from between her teeth; her throat will roar like pipes; her last breath will struggle with the bitterness of death.",
+  "secs": 35.22,
+  "cost": 0.00109911,
+  "out_tokens": 2298,
+  "kind": "sentence",
+  "item": 1,
+  "model": "qwen/qwen3.8-flash"
+ },
+ {
+  "text": "Upon the arrival of Litvak and his family, they greeted them with reverent awe, and Friedrich seemed to see that the bow with which the Litvak family returned the greeting was more forced than sincere.",
+  "secs": 1.29,
+  "cost": 4.82e-05,
+  "out_tokens": 68,
+  "kind": "sentence",
+  "item": 4,
+  "model": "anthropic/claude-haiku-5.5"
+ },
+ {
+  "text": "At the sight of Litvak and his family arriving, they greeted them with awe, and Friedrich fancied he saw that the bow the Litvak family returned was more out of compulsion than affection.",
+  "secs": 1.85,
+  "cost": 0.00048475,
+  "out_tokens": 309,
+  "kind": "sentence",
+  "item": 4,
+  "model": "google/gemini-3.1-flash-lite"
+ },
+ {
+  "text": "At the sight of Litvak and his family arriving, they greeted them with reverent awe, and Friedrich thought he saw that the bow the Litvak family returned was more forced than affectionate.",
+  "secs": 6.02,
+  "cost": 0.000590892,
+  "out_tokens": 810,
+  "kind": "sentence",
+  "item": 4,
+  "model": "deepseek/deepseek-v4.1-flash"
+ },
+ {
+  "text": "Upon seeing Litvak and his family arrive, they bowed in reverent awe, and Friedrich could tell that the bow the Litvak family returned was more out of compulsion than affection.",
+  "secs": 7.6,
+  "cost": 0.0001372,
+  "out_tokens": 446,
+  "kind": "sentence",
+  "item": 4,
+  "model": "deepseek/deepseek-v4-flash"
+ },
+ {
+  "text": "At the sight of Litvak's arrival, his family greeted them with reverent awe, and Friedrich thought he perceived that the bow returned by the Litvak family was born more of compulsion than of affection.",
+  "secs": 2.77,
+  "cost": 0.00022125,
+  "out_tokens": 42,
+  "kind": "sentence",
+  "item": 4,
+  "model": "google/gemini-3.7-flash"
+ },
+ {
+  "text": "At the sight of Litvak and his family coming, they greeted them with reverent awe, and Friedrich thought he saw that the bow with which Litvak's family returned the greeting was more out of compulsion than out of affection.",
+  "secs": 1.78,
+  "cost": 0.001004,
+  "out_tokens": 72,
+  "kind": "sentence",
+  "item": 4,
+  "model": "anthropic/claude-sonnet-5.5"
+ },
+ {
+  "text": "In addition to guides for cat breeders, guides intended for veterinarians and caretakers were also published to improve the welfare of the cats under their care.",
+  "secs": 4.76,
+  "cost": 6.0255e-05,
+  "out_tokens": 331,
+  "kind": "sentence",
+  "item": 5,
+  "model": "deepseek/deepseek-v4.1-flash"
+ },
+ {
+  "text": "In addition to guides for cat breeders, guides have also been published for veterinarians and caregivers to improve the welfare of the cats in their care.",
+  "secs": 6.01,
+  "cost": 0.0001021384,
+  "out_tokens": 539,
+  "kind": "sentence",
+  "item": 5,
+  "model": "deepseek/deepseek-v4-flash"
+ },
+ {
+  "text": "When Litvak and his family arrived, they were greeted with reverential awe, and Friedrich thought he could see that the bow the Litvak family returned was more forced than affectionate.",
+  "secs": 7.18,
+  "cost": 0.003292,
+  "out_tokens": 260,
+  "kind": "sentence",
+  "item": 4,
+  "model": "openai/gpt-5.6-terra"
+ },
+ {
+  "text": "In addition to guides for cat owners, manuals aimed at veterinarians and caregivers have also been published to improve the welfare of the cats under their care.",
+  "secs": 1.73,
+  "cost": 0.00047725,
+  "out_tokens": 306,
+  "kind": "sentence",
+  "item": 5,
+  "model": "google/gemini-3.1-flash-lite"
+ },
+ {
+  "text": "Besides guides for cat breeders, guides were also published for veterinarians and caregivers to improve the welfare of the cats under their care.",
+  "secs": 2.58,
+  "cost": 3.53e-05,
+  "out_tokens": 45,
+  "kind": "sentence",
+  "item": 5,
+  "model": "anthropic/claude-haiku-5.5"
+ },
+ {
+  "text": "In addition to guides for cat owners, guides aimed at veterinarians and caretakers have also been published to improve the well-being of the cats in their care.",
+  "secs": 2.53,
+  "cost": 0.00017475,
+  "out_tokens": 32,
+  "kind": "sentence",
+  "item": 5,
+  "model": "google/gemini-3.7-flash"
+ },
+ {
+  "text": "In addition to guides for cat breeders, guides have also been published for veterinarians and caretakers on improving the welfare of the cats in their care.",
+  "secs": 2.33,
+  "cost": 0.000726,
+  "out_tokens": 47,
+  "kind": "sentence",
+  "item": 5,
+  "model": "anthropic/claude-sonnet-5.5"
+ },
+ {
+  "text": "At the sight of Litvak’s arrival and his family kneeling in reverent awe, Friedrich fancied that the bow returned by the Litvak family was more out of compulsion than affection.",
+  "secs": 19.73,
+  "cost": 0.00076674,
+  "out_tokens": 1587,
+  "kind": "sentence",
+  "item": 4,
+  "model": "qwen/qwen3.8-flash"
+ },
+ {
+  "text": "When Litvak and his family came into view, they were greeted with reverent awe, and Friedrich fancied he saw that the bow the Litvak family returned was more forced than affectionate.",
+  "secs": 15.78,
+  "cost": 0.0007272,
+  "out_tokens": 432,
+  "kind": "sentence",
+  "item": 4,
+  "model": "deepseek/deepseek-v4-pro"
+ },
+ {
+  "text": "In addition to guides for cat breeders, guides for veterinarians and caregivers have also been published to improve the welfare of the cats they treat.",
+  "secs": 5.08,
+  "cost": 0.0007971,
+  "out_tokens": 484,
+  "kind": "sentence",
+  "item": 5,
+  "model": "deepseek/deepseek-v4-pro"
+ },
+ {
+  "text": "In 1921, he visited the United States for the first time, together with Dr. Chaim Weizmann, with the main goal of raising funds for the establishment of the Hebrew University in Jerusalem.",
+  "secs": 1.71,
+  "cost": 0.00032435,
+  "out_tokens": 253,
+  "kind": "sentence",
+  "item": 6,
+  "model": "deepseek/deepseek-v4.1-flash"
+ },
+ {
+  "text": "In addition to guides for cat breeders, guides have also been published for veterinarians and caregivers to improve the welfare of the cats in their care.",
+  "secs": 3.08,
+  "cost": 0.000548,
+  "out_tokens": 33,
+  "kind": "sentence",
+  "item": 5,
+  "model": "openai/gpt-5.6-terra"
+ },
+ {
+  "text": "In 1921, he visited the United States for the first time with Dr. Chaim Weizmann, with the primary goal of raising funds for the establishment of the Hebrew University of Jerusalem.",
+  "secs": 1.75,
+  "cost": 0.00056375,
+  "out_tokens": 362,
+  "kind": "sentence",
+  "item": 6,
+  "model": "google/gemini-3.1-flash-lite"
+ },
+ {
+  "text": "In 1921, he first visited the United States together with Dr. Chaim Weizmann, with the main goal of raising funds for the establishment of the Hebrew University in Jerusalem.",
+  "secs": 1.37,
+  "cost": 4.48e-05,
+  "out_tokens": 61,
+  "kind": "sentence",
+  "item": 6,
+  "model": "anthropic/claude-haiku-5.5"
+ },
+ {
+  "text": "They say that in his drunkenness he beats her, the wretched orphan; they say that he seizes the curls of her hair and measures the graves upon her body…",
+  "secs": 44.93,
+  "cost": 0.00090483,
+  "out_tokens": 1884,
+  "kind": "sentence",
+  "item": 2,
+  "model": "qwen/qwen3.8-flash"
+ },
+ {
+  "text": "In 1921, he visited the United States for the first time alongside Dr. Chaim Weizmann, with the primary goal of raising funds for the establishment of the Hebrew University of Jerusalem.",
+  "secs": 2.29,
+  "cost": 0.00021975,
+  "out_tokens": 42,
+  "kind": "sentence",
+  "item": 6,
+  "model": "google/gemini-3.7-flash"
+ },
+ {
+  "text": "In 1921, he visited the United States for the first time together with Dr. Chaim Weizmann, with the main goal of raising funds for the establishment of the Hebrew University of Jerusalem.",
+  "secs": 1.52,
+  "cost": 0.000926,
+  "out_tokens": 64,
+  "kind": "sentence",
+  "item": 6,
+  "model": "anthropic/claude-sonnet-5.5"
+ },
+ {
+  "text": "In 1921, he made his first visit to the United States with Dr. Chaim Weizmann, primarily to raise funds for the establishment of the Hebrew University in Jerusalem.",
+  "secs": 5.7,
+  "cost": 0.00017811,
+  "out_tokens": 333,
+  "kind": "sentence",
+  "item": 6,
+  "model": "qwen/qwen3.8-flash"
+ },
+ {
+  "text": "In 1921, he visited the United States for the first time together with Dr. Chaim Weizmann, with the primary aim of raising funds for the establishment of the Hebrew University of Jerusalem.",
+  "secs": 1.26,
+  "cost": 0.000704,
+  "out_tokens": 45,
+  "kind": "sentence",
+  "item": 6,
+  "model": "openai/gpt-5.6-terra"
+ },
+ {
+  "text": "In 1921, he visited the United States for the first time together with Dr. Chaim Weizmann, his main purpose being to raise funds for the establishment of the Hebrew University in Jerusalem.",
+  "secs": 9.95,
+  "cost": 0.00023864,
+  "out_tokens": 1062,
+  "kind": "sentence",
+  "item": 6,
+  "model": "deepseek/deepseek-v4-flash"
+ },
+ {
+  "text": "Until then, the only accepted theory in theoretical physics was Newtonian mechanics, according to which time advances uniformly at every point in the universe.",
+  "secs": 2.77,
+  "cost": 8.26e-05,
+  "out_tokens": 164,
+  "kind": "sentence",
+  "item": 7,
+  "model": "deepseek/deepseek-v4.1-flash"
+ },
+ {
+  "text": "In 1921, he visited the United States for the first time together with Dr. Chaim Weizmann, his main purpose being to raise funds for the establishment of the Hebrew University in Jerusalem.",
+  "secs": 7.01,
+  "cost": 0.0006822,
+  "out_tokens": 405,
+  "kind": "sentence",
+  "item": 6,
+  "model": "deepseek/deepseek-v4-pro"
+ },
+ {
+  "text": "Until then, only Newton's theory of mechanics was accepted in theoretical physics, according to which time advances uniformly at every point in the universe.",
+  "secs": 1.25,
+  "cost": 3.67e-05,
+  "out_tokens": 48,
+  "kind": "sentence",
+  "item": 7,
+  "model": "anthropic/claude-haiku-5.5"
+ },
+ {
+  "text": "Until then, the only accepted theory in theoretical physics was Newtonian mechanics, according to which time progresses at the same rate at every point in the universe.",
+  "secs": 1.54,
+  "cost": 0.0004025,
+  "out_tokens": 257,
+  "kind": "sentence",
+  "item": 7,
+  "model": "google/gemini-3.1-flash-lite"
+ },
+ {
+  "text": "Until then, only Newtonian mechanics was accepted in theoretical physics, according to which time advances uniformly at every point in the universe.",
+  "secs": 5.12,
+  "cost": 0.00016255,
+  "out_tokens": 305,
+  "kind": "sentence",
+  "item": 7,
+  "model": "qwen/qwen3.8-flash"
+ },
+ {
+  "text": "Until then, the only theory accepted in theoretical physics was Newtonian mechanics, according to which time advances uniformly at every point in the universe.",
+  "secs": 1.68,
+  "cost": 0.000744,
+  "out_tokens": 49,
+  "kind": "sentence",
+  "item": 7,
+  "model": "anthropic/claude-sonnet-5.5"
+ },
+ {
+  "text": "Until then, only Newtonian mechanics was accepted in theoretical physics, according to which time progresses equally at every point in the universe.",
+  "secs": 2.08,
+  "cost": 0.00014475,
+  "out_tokens": 25,
+  "kind": "sentence",
+  "item": 7,
+  "model": "google/gemini-3.7-flash"
+ },
+ {
+  "text": "Until then, only Newton's theory of mechanics was accepted in theoretical physics, according to which time progresses uniformly at every point in the universe.",
+  "secs": 6.48,
+  "cost": 8.232e-05,
+  "out_tokens": 258,
+  "kind": "sentence",
+  "item": 7,
+  "model": "deepseek/deepseek-v4-flash"
+ },
+ {
+  "text": "Until then, theoretical physics had recognized only Newton’s theory of mechanics, according to which time progresses uniformly at every point in the universe.",
+  "secs": 1.36,
+  "cost": 0.00052,
+  "out_tokens": 31,
+  "kind": "sentence",
+  "item": 7,
+  "model": "openai/gpt-5.6-terra"
+ },
+ {
+  "text": "Another theory is that the name originates from the Kingdom of Kaffa in Ethiopia, which is probably the origin of the coffee plant.",
+  "secs": 1.27,
+  "cost": 0.0003708,
+  "out_tokens": 286,
+  "kind": "sentence",
+  "item": 8,
+  "model": "deepseek/deepseek-v4.1-flash"
+ },
+ {
+  "text": "Another theory is that the name originates from the Kingdom of Kaffa in Ethiopia, which is likely the birthplace of the coffee plant.",
+  "secs": 1.38,
+  "cost": 0.00034975,
+  "out_tokens": 223,
+  "kind": "sentence",
+  "item": 8,
+  "model": "google/gemini-3.1-flash-lite"
+ },
+ {
+  "text": "Another view holds that the name originates in the Kingdom of Kaffa in Ethiopia, which is apparently the origin of the coffee plant.",
+  "secs": 1.24,
+  "cost": 3.55e-05,
+  "out_tokens": 49,
+  "kind": "sentence",
+  "item": 8,
+  "model": "anthropic/claude-haiku-5.5"
+ },
+ {
+  "text": "Another theory is that the name originates from the Kingdom of Kaffa in Ethiopia, which is believed to be the birthplace of the coffee plant.",
+  "secs": 1.97,
+  "cost": 0.00015075,
+  "out_tokens": 28,
+  "kind": "sentence",
+  "item": 8,
+  "model": "google/gemini-3.7-flash"
+ },
+ {
+  "text": "And if you desire a sweet death—buy yourself a rope of honey; and if the death of the upright, hang yourself from the menorah opposite the Holy Ark.",
+  "secs": 77.48,
+  "cost": 0.00177749,
+  "out_tokens": 3742,
+  "kind": "sentence",
+  "item": 0,
+  "model": "qwen/qwen3.8-flash"
+ },
+ {
+  "text": "Another theory is that the name originates from the Kingdom of Kaffa in Ethiopia, which is probably the source of the coffee plant.",
+  "secs": 4.74,
+  "cost": 8.876e-05,
+  "out_tokens": 284,
+  "kind": "sentence",
+  "item": 8,
+  "model": "deepseek/deepseek-v4-flash"
+ },
+ {
+  "text": "Another theory is that the name originated in the Kingdom of Kaffa in Ethiopia, which is probably the birthplace of the coffee plant.",
+  "secs": 1.64,
+  "cost": 0.00049,
+  "out_tokens": 30,
+  "kind": "sentence",
+  "item": 8,
+  "model": "openai/gpt-5.6-terra"
+ },
+ {
+  "text": "Another theory holds that the name originates from the Kingdom of Kaffa in Ethiopia, which is probably also the origin of the coffee plant.",
+  "secs": 2.1,
+  "cost": 0.00072,
+  "out_tokens": 50,
+  "kind": "sentence",
+  "item": 8,
+  "model": "anthropic/claude-sonnet-5.5"
+ },
+ {
+  "text": "Another theory is that the name originates from the Kingdom of Kaffa in Ethiopia, which is probably the origin of the coffee plant.",
+  "secs": 5.1,
+  "cost": 0.000205201854,
+  "out_tokens": 219,
+  "kind": "sentence",
+  "item": 8,
+  "model": "deepseek/deepseek-v4-pro"
+ },
+ {
+  "text": "Sleep reduces blood pressure to levels lower than those during wakefulness, because the substances released in the body during sleep slow the heart rate and thereby lower blood pressure.",
+  "secs": 2.48,
+  "cost": 0.000201938,
+  "out_tokens": 265,
+  "kind": "sentence",
+  "item": 9,
+  "model": "deepseek/deepseek-v4.1-flash"
+ },
+ {
+  "text": "Until then, only Newton's theory of mechanics was accepted in theoretical physics, according to which time advances uniformly at every point in the universe.",
+  "secs": 10.99,
+  "cost": 0.000735,
+  "out_tokens": 314,
+  "kind": "sentence",
+  "item": 7,
+  "model": "deepseek/deepseek-v4-pro"
+ },
+ {
+  "text": "Sleep reduces blood pressure to levels lower than those during wakefulness, as a result of the substances secreted in the body during sleep slowing the heart rate and thereby lowering blood pressure.",
+  "secs": 4.41,
+  "cost": 0.0002454,
+  "out_tokens": 526,
+  "kind": "sentence",
+  "item": 9,
+  "model": "deepseek/deepseek-v4-flash"
+ },
+ {
+  "text": "Sleep lowers blood pressure to levels below those seen during wakefulness, because the substances the body releases during sleep slow the heart rate, and in doing so reduce blood pressure.",
+  "secs": 1.91,
+  "cost": 4.7e-05,
+  "out_tokens": 62,
+  "kind": "sentence",
+  "item": 9,
+  "model": "anthropic/claude-haiku-5.5"
+ },
+ {
+  "text": "Sleep lowers blood pressure to levels below those during wakefulness, as the substances released in the body during sleep slow the heart rate, thereby reducing blood pressure.",
+  "secs": 3.31,
+  "cost": 0.0004265,
+  "out_tokens": 269,
+  "kind": "sentence",
+  "item": 9,
+  "model": "google/gemini-3.1-flash-lite"
+ },
+ {
+  "text": "Sleep reduces blood pressure to levels lower than when awake, because substances released in the body during sleep slow the heart rate, thereby lowering blood pressure.",
+  "secs": 2.57,
+  "cost": 0.00017775,
+  "out_tokens": 29,
+  "kind": "sentence",
+  "item": 9,
+  "model": "google/gemini-3.7-flash"
+ },
+ {
+  "text": "Sleep lowers blood pressure to levels below those during wakefulness, because substances released in the body during sleep slow the heart rate and thereby reduce blood pressure.",
+  "secs": 1.47,
+  "cost": 0.000588,
+  "out_tokens": 34,
+  "kind": "sentence",
+  "item": 9,
+  "model": "openai/gpt-5.6-terra"
+ },
+ {
+  "text": "Sleep lowers blood pressure to levels below those seen while awake, because the substances released in the body during sleep slow the heart rate and thereby reduce blood pressure.",
+  "secs": 1.88,
+  "cost": 0.00089,
+  "out_tokens": 57,
+  "kind": "sentence",
+  "item": 9,
+  "model": "anthropic/claude-sonnet-5.5"
+ },
+ {
+  "text": "Sleep lowers blood pressure to levels below those during wakefulness, because substances secreted in the body during sleep slow the heart rate and thereby reduce blood pressure.",
+  "secs": 4.5,
+  "cost": 0.0007275,
+  "out_tokens": 428,
+  "kind": "sentence",
+  "item": 9,
+  "model": "deepseek/deepseek-v4-pro"
+ },
+ {
+  "text": "In addition to guides for cat breeders, guides intended for veterinarians and caregivers were also published to improve the welfare of the cats being treated.",
+  "secs": 35.57,
+  "cost": 0.00082634,
+  "out_tokens": 1717,
+  "kind": "sentence",
+  "item": 5,
+  "model": "qwen/qwen3.8-flash"
+ },
+ {
+  "text": "A precious matter, Cinderella, a matter upon which our lives depend; and may no obstacle come to us from it, and may peace be ours.",
+  "secs": 62.16,
+  "cost": 0.00133618,
+  "out_tokens": 2804,
+  "kind": "sentence",
+  "item": 3,
+  "model": "qwen/qwen3.8-flash"
+ },
+ {
+  "text": "Sleep lowers blood pressure to levels below those during wakefulness, because the substances the body releases during sleep slow the heart rate and thereby reduce blood pressure.",
+  "secs": 12.79,
+  "cost": 0.00022415,
+  "out_tokens": 430,
+  "kind": "sentence",
+  "item": 9,
+  "model": "qwen/qwen3.8-flash"
+ },
+ {
+  "text": "Another theory is that the name comes from the Kingdom of Kaffa in Ethiopia, which is likely the origin of the coffee plant.",
+  "secs": 31.0,
+  "cost": 0.00084898,
+  "out_tokens": 1769,
+  "kind": "sentence",
+  "item": 8,
+  "model": "qwen/qwen3.8-flash"
+ }
+]
