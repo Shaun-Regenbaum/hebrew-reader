@@ -58,7 +58,8 @@ a { color: inherit; text-decoration: none; }
 .rtop .aa { font: 400 20px Newsreader, serif; color: var(--ink2); background: none; border: 0; padding: 4px 8px; }
 .read { padding: 18px 28px 0; font-size: var(--read); line-height: 2.05; }
 .read p { margin: 0 0 20px; }
-.read p.hd { font-weight: 600; font-size: 0.9em; margin-top: 30px; color: var(--ink2); }
+.read p.hd, .pcols p.hd { font-weight: 600; font-size: 0.9em; margin-top: 30px; color: var(--ink2); }
+.read, .pcols { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
 .w { cursor: pointer; border-radius: 7px; }
 .w.seen { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 1.5px; text-underline-offset: 9px; }
 .w.tap { background: var(--hl); padding: 2px 5px; margin: 0 -1px; }
@@ -97,3 +98,18 @@ a { color: inherit; text-decoration: none; }
 .group { padding: 22px 24px 6px; }
 .empty { padding: 60px 32px; text-align: center; color: var(--ink2); line-height: 1.55; }
 .empty .serif { font-size: 26px; color: var(--ink); margin-bottom: 8px; }
+
+/* page view (Kindle style) */
+.pagemode { height: 100dvh; display: flex; flex-direction: column; overflow: hidden; }
+.pagemode .rtop { position: static; }
+.pview { flex: 1; min-height: 0; position: relative; padding: 6px 28px 0; }
+.pclip { height: 100%; overflow: hidden; }
+.pcols { height: 100%; column-fill: auto; column-gap: 0; font-size: var(--read); line-height: 2.05; transition: transform 0.28s ease; }
+.pcols p { margin: 0 0 20px; }
+.pfoot { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 14px calc(12px + env(safe-area-inset-bottom)); font: 400 12.5px Inter; color: var(--ink3); }
+.pfoot .mid { flex: 1; text-align: center; line-height: 1.5; font-size: 12px; }
+.pfoot .mid a { text-decoration: underline; }
+.pfoot button { background: none; border: 0; padding: 8px 6px; font: 400 22px Inter; color: var(--ink2); }
+.pfoot button[disabled] { opacity: 0.25; }
+.rtop .tools { display: flex; align-items: center; gap: 4px; }
+.rtop .tools .iconbtn { padding: 6px; margin: 0; }

@@ -13,8 +13,10 @@ interface Env {
   ASSETS: Fetcher;
   OPENROUTER_API_KEY: string;
   LOOKUP_MODEL: string;
+  /** Faster model for sentence translation. Falls back to LOOKUP_MODEL. */
+  TRANSLATE_MODEL?: string;
   CACHE?: KVNamespace;
-  /** Model calls allowed per day across all visitors. Cache hits do not count. Default 3000. */
+  /** Model calls allowed per day across all visitors. Cache hits do not count. Default 6000. */
   DAILY_MODEL_CALLS?: string;
 }
 
@@ -38,7 +40,7 @@ function tooMany(ip: string): boolean {
 /** Count one model call against today's cap. KV is not atomic, so this is a soft limit. */
 async function withinDailyCap(env: Env): Promise<boolean> {
   if (!env.CACHE) return true;
-  const cap = Number(env.DAILY_MODEL_CALLS) || 3000;
+  const cap = Number(env.DAILY_MODEL_CALLS) || 6000;
   const key = `cap:${new Date().toISOString().slice(0, 10)}`;
   const used = Number(await env.CACHE.get(key)) || 0;
   if (used >= cap) return false;
@@ -51,7 +53,7 @@ async function sha(s: string): Promise<string> {
   return [...new Uint8Array(d)].map((b) => b.toString(16).padStart(2, '0')).join('');
 }
 
-async function askModel(env: Env, system: string, user: string): Promise<string> {
+async function askModel(env: Env, model: string, system: string, user: string): Promise<string> {
   // No max_tokens: models spend part of it thinking, and a cap cuts the answer off mid-sentence.
   const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
     method: 'POST',
@@ -61,8 +63,10 @@ async function askModel(env: Env, system: string, user: string): Promise<string>
       'X-Title': 'hebrew-reader',
     },
     body: JSON.stringify({
-      model: env.LOOKUP_MODEL,
+      model,
       temperature: 0.2,
+      // Thinking is what made answers slow: default thinking took 6 to 10 s, low takes about 2 s.
+      reasoning: { effort: 'low' },
       messages: [
         { role: 'system', content: system },
         { role: 'user', content: user },
@@ -92,7 +96,7 @@ app.post('/api/lookup', async (c) => {
 
   if (!(await withinDailyCap(c.env))) return c.json({ error: 'The daily limit for lookups is used up. Try again tomorrow.' }, 429);
   try {
-    const raw = await askModel(c.env, LOOKUP_SYSTEM, `Word: ${word}\nSentence: ${sentence}\nFrom: ${title}`);
+    const raw = await askModel(c.env, c.env.LOOKUP_MODEL, LOOKUP_SYSTEM, `Word: ${word}\nSentence: ${sentence}\nFrom: ${title}`);
     const lookup = parseLookup(raw);
     if (!lookup) return c.json({ error: 'The model gave an answer we could not read' }, 502);
     await c.env.CACHE?.put(key, JSON.stringify(lookup));
@@ -108,13 +112,14 @@ app.post('/api/translate', async (c) => {
   const text = clean(body?.text, MAX_TEXT);
   if (!text) return c.json({ error: 'text is required' }, 400);
 
-  const key = `translate:v1:${c.env.LOOKUP_MODEL}:${await sha(text)}`;
+  const model = c.env.TRANSLATE_MODEL || c.env.LOOKUP_MODEL;
+  const key = `translate:v1:${model}:${await sha(text)}`;
   const hit = await c.env.CACHE?.get(key);
   if (hit) return c.json({ translation: hit, cached: true });
 
   if (!(await withinDailyCap(c.env))) return c.json({ error: 'The daily limit for translations is used up. Try again tomorrow.' }, 429);
   try {
-    const translation = await askModel(c.env, TRANSLATE_SYSTEM, text);
+    const translation = await askModel(c.env, model, TRANSLATE_SYSTEM, text);
     if (!translation) return c.json({ error: 'Empty translation' }, 502);
     await c.env.CACHE?.put(key, translation);
     return c.json({ translation, cached: false });

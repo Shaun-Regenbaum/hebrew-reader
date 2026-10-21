@@ -9,12 +9,12 @@ type Route =
   | { name: 'home' }
   | { name: 'words' }
   | { name: 'review' }
-  | { name: 'read'; kind: TextKind; id: string; section: number };
+  | { name: 'read'; kind: TextKind; id: string; section: number; end: boolean };
 
 function parse(hash: string): Route {
   const p = hash.replace(/^#\/?/, '').split('/');
   if (p[0] === 'read' && (p[1] === 'books' || p[1] === 'articles') && p[2]) {
-    return { name: 'read', kind: p[1], id: p[2], section: Math.max(0, Number(p[3]) || 0) };
+    return { name: 'read', kind: p[1], id: p[2], section: Math.max(0, Number(p[3]) || 0), end: p[4] === 'end' };
   }
   if (p[0] === 'words') return { name: 'words' };
   if (p[0] === 'review') return { name: 'review' };
@@ -46,7 +46,7 @@ export function App() {
         <Match when={route().name === 'review'}>
           <Review />
         </Match>
-        <Match when={readRoute()}>{(r) => <Reader kind={r().kind} id={r().id} section={r().section} />}</Match>
+        <Match when={readRoute()}>{(r) => <Reader kind={r().kind} id={r().id} section={r().section} end={r().end} />}</Match>
       </Switch>
     </div>
   );

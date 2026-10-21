@@ -17,7 +17,8 @@
   "observability": { "enabled": true },
   "vars": {
     "LOOKUP_MODEL": "google/gemini-3.7-flash",
-    "DAILY_MODEL_CALLS": "3000"
+    "TRANSLATE_MODEL": "google/gemini-3.1-flash-lite",
+    "DAILY_MODEL_CALLS": "6000"
   }
   // Secret: OPENROUTER_API_KEY (local: .dev.vars; deployed: wrangler secret put).
 }

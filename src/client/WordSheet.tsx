@@ -42,6 +42,13 @@ export function WordSheet(props: {
   const [attempt, setAttempt] = createSignal(0);
   const [view, setView] = createSignal<'word' | 'sentence'>('word');
   const [tr, setTr] = createSignal<{ state: 'loading' | 'done' | 'error'; text: string }>({ state: 'loading', text: '' });
+  // Start translating the sentence right away, so it is usually ready by the time the learner asks.
+  const startTranslation = () =>
+    post<{ translation: string }>('/api/translate', { text: props.sheet.sentence.text }).then(
+      (r) => setTr({ state: 'done', text: r.translation }),
+      (e) => setTr({ state: 'error', text: e instanceof Error ? e.message : 'Translation failed' }),
+    );
+  void startTranslation();
 
   const [lookup] = createResource(
     () => attempt(),
@@ -57,13 +64,9 @@ export function WordSheet(props: {
   async function translate() {
     setView('sentence');
     props.onRange({ p: props.sheet.p, start: props.sheet.sentence.start, end: props.sheet.sentence.end });
-    if (tr().state === 'done') return;
-    setTr({ state: 'loading', text: '' });
-    try {
-      const r = await post<{ translation: string }>('/api/translate', { text: props.sheet.sentence.text });
-      setTr({ state: 'done', text: r.translation });
-    } catch (e) {
-      setTr({ state: 'error', text: e instanceof Error ? e.message : 'Translation failed' });
+    if (tr().state === 'error') {
+      setTr({ state: 'loading', text: '' });
+      await startTranslation();
     }
   }
 
