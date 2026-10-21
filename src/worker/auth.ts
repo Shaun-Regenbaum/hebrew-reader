@@ -2,7 +2,7 @@
  * Sign in by email link, no password.
  *   POST /api/auth/request  { email }  -> emails a one-time link (always answers ok, so it never reveals who has an account)
  *   POST /api/auth/verify   { token }  -> the page behind the link calls this; sets the session cookie
- *   GET  /api/auth/me                  -> { email } or 401
+ *   GET  /api/auth/me                  -> { email }, with email null when nobody is signed in
  *   POST /api/auth/logout
  * The link opens a page that asks for a click, instead of signing in on a plain GET, so mail scanners that
  * open links do not use the link up.
@@ -137,7 +137,7 @@ auth.post('/verify', async (c) => {
 
 auth.get('/me', async (c) => {
   const user = await sessionUser(c);
-  return user ? c.json({ email: user.email }) : c.json({ error: 'Not signed in' }, 401);
+  return c.json({ email: user?.email ?? null });
 });
 
 auth.post('/logout', async (c) => {
