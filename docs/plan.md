@@ -2,7 +2,7 @@
 
 ## Goal
 
-A phone-friendly web app. A learner of modern Hebrew reads real texts and gets help with the words they do not know. What they look up becomes what they review.
+An installable phone app (a PWA, added to the home screen). It also works on a laptop. A learner of modern Hebrew reads real texts and gets help with the words they do not know. What they look up becomes what they review.
 
 ## Decisions so far
 
@@ -11,6 +11,10 @@ A phone-friendly web app. A learner of modern Hebrew reads real texts and gets h
 - The texts are public domain books (Project Ben-Yehuda) and Hebrew Wikipedia articles.
 - Word help comes from a language model, called from a small API route. It gets the word, its sentence and the title, and returns the meaning in context, the root, the part of speech and how to say it.
 - Cache every lookup by word plus sentence, so the same lookup never costs twice.
+- Phone first: design at 390px wide, test on a real phone. Wrap with Capacitor for the App Store later, only if wanted.
+- Word help opens in a bottom sheet. Sentence translation uses a Translate button on each paragraph, not long-press, which clashes with system selection.
+- Data lives in IndexedDB, not localStorage, because Safari can clear a site's storage after a week unused. Build Export and Import early.
+- Flashcards use FSRS (the `ts-fsrs` library), one card per dictionary form, with the four Again, Hard, Good, Easy buttons and a daily cap on new cards.
 - Stack: Vite, Solid and TypeScript. The API route is a Cloudflare Worker that also serves the built app.
 
 ## Known problems with the texts
@@ -21,7 +25,8 @@ A phone-friendly web app. A learner of modern Hebrew reads real texts and gets h
 
 ## Build order
 
-1. **Texts to JSON.** A script turns each raw file into paragraphs and words. Output goes in `data/books/` and `data/articles/`.
+0. **Model test.** About 30 words and 10 sentences from our texts, run through 4 or 5 OpenRouter models. Pick one per call type. Needs a new capped OpenRouter key.
+1. **Texts to JSON.** DONE. `python3 -I scripts/build_texts.py` writes `public/texts/` (27 texts, 6,467 paragraphs). Each paragraph keeps its text plus word offsets, in sections of about 1,200 words so long books load in pieces.
 2. **Reader.** Right-to-left view, font size, mobile layout, Books and Articles shelves.
 3. **Tap a word.** Popup backed by the API route and a cache. Each lookup saves to localStorage with the word, sentence, text and time.
 4. **Translate a selection.** Select a sentence or paragraph and get natural English.

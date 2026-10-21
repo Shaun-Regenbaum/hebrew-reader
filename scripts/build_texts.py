@@ -1,0 +1,104 @@
+"""Turn data/raw into the JSON the reader loads, in public/texts.
+
+Run: python3 -I scripts/build_texts.py
+
+Output:
+  public/texts/index.json            the two shelves (books, articles)
+  public/texts/<kind>/<id>/meta.json title, author, credit, section list
+  public/texts/<kind>/<id>/<n>.json  one section: paragraphs with word offsets
+"""
+import csv, json, re, shutil
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+RAW, OUT = ROOT / 'data' / 'raw', ROOT / 'public' / 'texts'
+SECTION_WORDS = 1200
+
+# Hebrew marks: cantillation and nikud, except the maqaf (U+05BE), which joins words.
+MARKS = re.compile('[֑-ֽֿׁ-ׇ]')
+WORD = re.compile(r'[א-ת]+(?:["\'׳״][א-ת]+)*|[A-Za-z]+|\d+')
+HEADING_STOP = {'ראו גם', 'קישורים חיצוניים', 'הערות שוליים', 'לקריאה נוספת', 'מקורות', 'ביבליוגרפיה'}
+
+BYP_CREDIT = {'name': 'Project Ben-Yehuda volunteers', 'url': 'https://benyehuda.org',
+              'license': 'Public domain'}
+
+
+def clean(s):
+    s = MARKS.sub('', s).replace('־', '-')
+    return re.sub(r'[ \t ]+', ' ', s).strip()
+
+
+def paragraph(text, heading=False):
+    words = [[m.start(), m.end()] for m in WORD.finditer(text)]
+    return {'t': text, 'w': words, **({'h': 1} if heading else {})}
+
+
+def is_heading(line):
+    return len(line.split()) <= 6 and not re.search(r'[.:?!,;]$', line)
+
+
+def sections(paras):
+    out, cur, n = [], [], 0
+    for p in paras:
+        if cur and n >= SECTION_WORDS and not p.get('h'):
+            out.append(cur); cur, n = [], 0
+        cur.append(p); n += len(p['w'])
+    if cur:
+        out.append(cur)
+    return out
+
+
+def write(kind, id_, meta, paras):
+    d = OUT / kind / id_
+    d.mkdir(parents=True, exist_ok=True)
+    secs = sections(paras)
+    for i, s in enumerate(secs):
+        (d / f'{i}.json').write_text(json.dumps(s, ensure_ascii=False, separators=(',', ':')))
+    words = sum(len(p['w']) for p in paras)
+    full = {**meta, 'id': id_, 'kind': kind, 'words': words, 'sections': len(secs)}
+    (d / 'meta.json').write_text(json.dumps(full, ensure_ascii=False))
+    return full
+
+
+def main():
+    if OUT.exists():
+        shutil.rmtree(OUT)
+    cat = {x['ID']: x for x in csv.DictReader(open(RAW / 'pseudocatalogue.csv', encoding='utf-8'))}
+    books, articles = [], []
+
+    for f in sorted((RAW / 'books').glob('*.txt')):
+        row = cat[f.stem]
+        lines = [clean(l) for l in f.read_text().split('\n')]
+        lines = [l for l in lines if l]
+        paras = [paragraph(l, heading=is_heading(l)) for l in lines[1:]]
+        title = clean(row['title'])
+        meta = {'title': title, 'author': row['authors'].strip(),
+                'translator': row['translators'].strip() or None, 'credit': BYP_CREDIT,
+                'sourceUrl': f'https://benyehuda.org/read/{f.stem}'}
+        books.append(write('books', f.stem, meta, paras))
+
+    for f in sorted((RAW / 'articles').glob('*.json')):
+        d = json.loads(f.read_text())
+        paras = []
+        for line in (clean(l) for l in d['text'].split('\n')):
+            if not line:
+                continue
+            if is_heading(line) and line in HEADING_STOP:
+                break
+            paras.append(paragraph(line, heading=is_heading(line)))
+        meta = {'title': d['title'], 'author': None, 'translator': None,
+                'credit': {'name': 'Hebrew Wikipedia contributors',
+                           'url': f"https://he.wikipedia.org/?curid={d['pageid']}",
+                           'license': 'CC BY-SA 4.0'},
+                'sourceUrl': f"https://he.wikipedia.org/?curid={d['pageid']}"}
+        articles.append(write('articles', str(d['pageid']), meta, paras))
+
+    key = lambda m: {k: m[k] for k in ('id', 'kind', 'title', 'author', 'words', 'sections')}
+    (OUT / 'index.json').write_text(json.dumps(
+        {'books': [key(m) for m in books], 'articles': [key(m) for m in articles]},
+        ensure_ascii=False))
+    for m in books + articles:
+        print(f"{m['kind']:9} {m['id']:>8} {m['words']:>6} words {m['sections']:>3} sections  {m['title'][:36]}")
+
+
+main()

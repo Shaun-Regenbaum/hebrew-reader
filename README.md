@@ -2,7 +2,7 @@
 
 A reader for learning modern Hebrew. You read real texts, tap any word you don't know, and the app turns your lookups into flashcards.
 
-Status: just started. Right now the repo holds the starter texts and the plan. There is no app yet.
+Status: just started. Right now the repo holds the starter texts, the script that prepares them, and the plan. There is no app yet.
 
 ## The idea
 
@@ -16,6 +16,7 @@ Status: just started. Right now the repo holds the starter texts and the plan. T
 - `data/raw/articles/` holds 11 Hebrew Wikipedia articles.
 - `data/raw/pseudocatalogue.csv` lists about 26,000 more Ben-Yehuda works we can add.
 - `scripts/fetch.py` downloads all of it again.
+- `scripts/build_texts.py` turns it into the JSON the reader loads (`public/texts/`, not committed).
 - `docs/plan.md` has the build plan.
 - `DATA.md` has the licenses and credits for the texts.
 
