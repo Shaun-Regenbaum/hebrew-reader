@@ -1,0 +1,140 @@
+"""Builds docs/design/options-v2.html: direction A refined, light and dark, five screens each.
+Run: python3 -I docs/design/make_v2.py"""
+from pathlib import Path
+
+CSS = r"""
+:root{--bg:#FAF8F3;--surface:#FFFFFF;--ink:#17150F;--ink2:#5E594E;--ink3:#6F6A5E;--line:rgba(23,21,15,.10);--accent:#8F2D1A;--tint:rgba(143,45,26,.10);--hl:rgba(143,45,26,.17);--glass:rgba(255,255,255,.82);--shadow:0 18px 50px rgba(23,21,15,.16),0 2px 6px rgba(23,21,15,.06);--onink:#FAF8F3}
+.dark{--bg:#121110;--surface:#1B1A18;--ink:#F2EEE6;--ink2:#B5AFA3;--ink3:#9A9488;--line:rgba(242,238,230,.10);--accent:#E8957A;--tint:rgba(232,149,122,.13);--hl:rgba(232,149,122,.24);--glass:rgba(34,32,29,.80);--shadow:0 18px 50px rgba(0,0,0,.55),0 2px 6px rgba(0,0,0,.4);--onink:#121110}
+*{box-sizing:border-box}
+body{margin:0;padding:32px;background:#DAD7D0;font-family:Inter,system-ui,sans-serif;color:#222}
+h1{font:500 26px Newsreader,serif;margin:0 0 6px} p.note{margin:0 0 8px;max-width:760px;line-height:1.5;font-size:14px}
+h2{font:600 13px Inter;letter-spacing:.08em;text-transform:uppercase;margin:34px 0 14px;color:#555}
+.row{display:flex;gap:28px;flex-wrap:wrap}
+figure{margin:0} figcaption{font-size:12px;color:#555;margin-bottom:8px}
+.frame{width:390px;height:844px;border-radius:44px;overflow:hidden;border:7px solid #0E0E0E;box-sizing:content-box;box-shadow:0 10px 34px rgba(0,0,0,.25)}
+.s{position:relative;width:390px;height:844px;overflow:hidden;background:var(--bg);color:var(--ink);font-family:Inter,sans-serif;-webkit-font-smoothing:antialiased}
+.he{font-family:'Noto Serif Hebrew',serif;direction:rtl}
+.serif{font-family:Newsreader,serif}
+.cap{font:600 11px Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)}
+.hair{height:1px;background:var(--line)}
+.nav{position:absolute;left:50%;transform:translateX(-50%);bottom:26px;display:flex;gap:4px;padding:5px;border-radius:30px;background:var(--glass);backdrop-filter:blur(16px);border:1px solid var(--line);box-shadow:var(--shadow)}
+.nav div{white-space:nowrap;padding:11px 20px;border-radius:24px;font:500 14px Inter;color:var(--ink2)}
+.nav .on{background:var(--ink);color:var(--onink)}
+.nav b{display:inline-block;margin-left:6px;font:600 11px Inter;background:var(--accent);color:var(--bg);border-radius:9px;padding:1px 6px}
+.top{display:flex;align-items:center;justify-content:space-between;padding:22px 24px 0}
+.ic{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.read{padding:30px 28px 0;font-size:25px;line-height:2.05;font-weight:400}
+.read p{margin:0 0 20px}
+.seen{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:1.5px;text-underline-offset:9px;text-decoration-style:solid;opacity:1}
+.tap{background:var(--hl);border-radius:7px;padding:2px 5px;margin:0 -1px}
+.sent{background:var(--tint);border-radius:7px;padding:2px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.sheet{position:absolute;left:10px;right:10px;bottom:12px;border-radius:30px;background:var(--glass);backdrop-filter:blur(22px);border:1px solid var(--line);box-shadow:var(--shadow);padding:10px 22px 20px}
+.grab{width:36px;height:4px;border-radius:2px;background:var(--line);margin:0 auto 16px;filter:contrast(2)}
+.btn{white-space:nowrap;height:44px;border-radius:22px;padding:0 13px;display:inline-flex;align-items:center;gap:6px;font:500 13.5px Inter;border:0}
+.btn.q{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.p{background:var(--ink);color:var(--onink)}
+.btn.t{background:var(--tint);color:var(--accent)}
+.sp{width:42px;height:42px;border-radius:21px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;background:var(--surface)}
+.sp svg{width:18px;height:18px;stroke:var(--accent);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.tabs{display:flex;gap:26px;padding:0 24px;border-bottom:1px solid var(--line)}
+.tabs div{padding:14px 0;font:500 15px Inter;color:var(--ink3)} .tabs .on{color:var(--ink);border-bottom:2px solid var(--ink);margin-bottom:-1px}
+.book{display:flex;align-items:center;justify-content:space-between;padding:19px 24px;border-bottom:1px solid var(--line)}
+.book .m{font:400 13px Inter;color:var(--ink3);margin-top:3px}
+.bar{height:3px;border-radius:2px;background:var(--line);overflow:hidden} .bar i{display:block;height:3px;background:var(--accent)}
+.grade{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;position:absolute;left:20px;right:20px;bottom:30px}
+.grade div{height:62px;border-radius:20px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;font:500 15px Inter;color:var(--ink)}
+.grade small{font:400 11.5px Inter;color:var(--ink3);margin-top:2px}
+.grade .g{background:var(--ink);color:var(--onink);border-color:var(--ink)} .grade .g small{color:var(--onink);opacity:.7}
+.wrow{display:grid;grid-template-columns:90px 1fr 74px;align-items:center;gap:12px;padding:15px 24px;border-bottom:1px solid var(--line)}
+.chk{width:22px;height:22px;border-radius:11px;border:1.5px solid var(--line);justify-self:end;filter:contrast(2)}
+.chk.on{background:var(--accent);border-color:var(--accent);position:relative}
+"""
+
+SPK = '<svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16.5 8.5a5 5 0 010 7"/></svg>'
+BACK = '<svg class="ic" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>'
+X = '<svg class="ic" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>'
+CHECK = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>'
+ARROW = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
+
+
+def nav(on):
+    names = [('Read', ''), ('Review', '<b>12</b>'), ('Words', '')]
+    return '<div class="nav">' + ''.join(f'<div class="{"on" if n == on else ""}">{n}{b}</div>' for n, b in names) + '</div>'
+
+
+def home():
+    books = [('המתיאש', 'Peretz', '803'), ('שלמה המלך והדבורה', 'Bialik', '936'), ('רבי דוב', 'Sholem Aleichem', '4,645'),
+             ('מסעות בנימין השלישי', 'Mendele', '24,482')]
+    rows = ''.join(f'<div class="book"><div><div style="font:500 15px Inter">{a}</div><div class="m">{w} words</div></div>'
+                   f'<div class="he" style="font-size:25px;font-weight:500;max-width:200px;line-height:1.3">{t}</div></div>' for t, a, w in books)
+    return f'''<div class="top"><div class="serif" style="font-size:24px;font-weight:500">Read Hebrew</div><div class="cap">12 words due</div></div>
+<div style="padding:34px 24px 30px"><div class="cap" style="color:var(--accent)">Continue reading</div>
+<div class="he" style="font-size:54px;font-weight:500;line-height:1.15;margin-top:14px;text-align:right">המתיאש</div>
+<div style="display:flex;justify-content:space-between;margin-top:14px;font:400 14px Inter;color:var(--ink3)"><span>Peretz</span><span>35% read</span></div>
+<div class="bar" style="margin-top:10px"><i style="width:35%"></i></div></div>
+<div class="tabs"><div class="on">Books</div><div>Articles</div></div>{rows}{nav("Read")}'''
+
+
+def reader(sentence=False):
+    tapped = '' if sentence else '<span class="tap">החמישי</span>'
+    last = 'החמישי' if sentence else tapped
+    q = f'– מה היה לך יעקב? – שאלו חבריו – איזה יום אתה חסר, השני או {last}?'
+    if sentence:
+        q = f'<span class="sent">{q}</span>'
+    else:
+        q = q.replace('שאלו', '<span class="seen">שאלו</span>')
+    body = f'''<div style="height:2px;background:var(--line)"><i style="display:block;width:35%;height:2px;background:var(--accent)"></i></div>
+<div class="top" style="padding-top:18px">{BACK}<div class="he" style="font-size:15px;color:var(--ink2)">המתיאש</div><div class="serif" style="font-size:20px;color:var(--ink2)">Aa</div></div>
+<div class="he read" style="padding-top:16px"><p>– "בעל כרחך אתה <span class="seen">חי</span>!" – זהו האסון.</p><p>{q}</p><p>והמתיאש הורה באצבע על הספר, אשר דחה, ויאמר בלעג מר:</p><p>– חפץ הוא, שאאמין כי הנני כתר הבריאה ושהכל נברא בשבילי.</p></div>'''
+    if sentence:
+        sheet = f'''<div class="sheet"><div class="grab"></div><div class="cap">Translation</div>
+<div class="serif" style="font-size:25px;line-height:1.35;margin-top:10px;font-weight:400">“What happened to you, Jacob?” his friends asked. “Which day are you missing, the second or the fifth?”</div>
+<div style="display:flex;gap:10px;margin-top:20px;align-items:center"><span class="btn q">Tap any word for its meaning</span></div></div>'''
+    else:
+        sheet = f'''<div class="sheet"><div class="grab"></div>
+<div style="display:flex;justify-content:space-between;align-items:flex-start">
+<div><div class="cap">Adjective · root <span class="he" style="letter-spacing:0;font-size:14px;font-weight:500">חמש</span></div>
+<div class="serif" style="font-size:36px;line-height:1.1;margin-top:8px;font-weight:400">the fifth</div></div>
+<div style="text-align:right"><div class="he" style="font-size:42px;font-weight:500;line-height:1.1">חמישי</div><div style="display:flex;align-items:center;justify-content:flex-end;gap:8px;margin-top:6px"><span style="font-size:13px;color:var(--ink3)">chamishi</span><span class="sp" style="width:34px;height:34px;border-radius:17px">{SPK}</span></div></div></div>
+<div style="font-size:15px;line-height:1.5;color:var(--ink2);margin-top:12px">Here: the fifth day, Thursday.</div>
+<div style="display:flex;gap:10px;margin-top:18px;align-items:center"><span class="btn q">Translate sentence {ARROW}</span><span style="flex:1"></span><span class="btn t">{CHECK} In your cards</span></div></div>'''
+    return body + sheet
+
+
+def review():
+    return f'''<div style="height:2px;background:var(--line)"><i style="display:block;width:25%;height:2px;background:var(--accent)"></i></div>
+<div class="top" style="padding-top:18px">{X}<div class="cap">3 of 12</div><div style="width:22px"></div></div>
+<div style="padding:46px 28px 0"><div class="he" style="font-size:27px;line-height:2;text-align:center;font-weight:400">– מה היה לך יעקב? – שאלו חבריו – איזה יום אתה חסר, השני או <span class="tap">החמישי</span>?</div>
+<div class="hair" style="margin:34px 40px"></div>
+<div style="text-align:center"><div class="he" style="font-size:52px;font-weight:500;line-height:1.1">חמישי</div>
+<div class="serif" style="font-size:34px;margin-top:14px">the fifth</div>
+<div style="font-size:15px;color:var(--ink2);margin-top:10px">Here: the fifth day, Thursday.</div>
+<div class="cap" style="margin-top:22px">Adjective · root <span class="he" style="letter-spacing:0;font-size:14px;font-weight:500">חמש</span> · chamishi</div></div></div>
+<div class="grade"><div>Again<small>1 min</small></div><div>Hard<small>1 day</small></div><div class="g">Good<small>3 days</small></div><div>Easy<small>8 days</small></div></div>'''
+
+
+def words():
+    data = [('חמישי', 'the fifth', 5), ('מזיק', 'harmful being', 4), ('לחש', 'spell, incantation', 3), ('שכור', 'drunk', 3),
+            ('התגולל', 'to wallow', 2), ('פקח', 'to open (eyes)', 2), ('עצל', 'lazy', 1)]
+    rows = ''.join(f'<div class="wrow"><div class="he" style="font-size:24px;font-weight:500;text-align:left;direction:rtl;justify-self:start">{h}</div>'
+                   f'<div><div style="font:400 15px Inter">{e}</div><div class="bar" style="margin-top:9px;height:5px"><i style="width:{n*20}%;height:5px;border-radius:3px"></i></div></div>'
+                   f'<div class="chk {"on" if i == 6 else ""}"></div></div>' for i, (h, e, n) in enumerate(data))
+    return f'''<div class="top"><div class="serif" style="font-size:28px;font-weight:500">My words</div><div class="cap">7 words</div></div>
+<div class="tabs" style="margin-top:22px"><div class="on">Most looked up</div><div>By book</div><div>Known</div></div>
+<div style="display:grid;grid-template-columns:90px 1fr 74px;gap:12px;padding:12px 24px 4px"><div class="cap">Word</div><div class="cap">Meaning</div><div class="cap" style="text-align:right">Known</div></div>{rows}{nav("Words")}'''
+
+
+SCREENS = [('Home', home()), ('Reader, word tapped', reader()), ('Reader, sentence translated', reader(True)),
+           ('Review', review()), ('My words', words())]
+out = []
+for label, theme in [('Light', ''), ('Dark', ' dark')]:
+    figs = ''.join(f'<figure><figcaption>{n}</figcaption><div class="frame"><div class="s{theme}">{h}</div></div></figure>' for n, h in SCREENS)
+    out.append(f'<h2>{label}</h2><div class="row">{figs}</div>')
+html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hebrew Reader: direction A, refined</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Noto+Serif+Hebrew:wght@400;500;600&display=swap" rel="stylesheet">
+<style>{CSS}</style></head><body>
+<h1>Direction A, refined</h1>
+<p class="note">The Hebrew text, the lookup for החמישי and the sentence translation are real model output. The counts, progress, review intervals, the word list's counts and the "chamishi" spelling are placeholders.</p>
+{"".join(out)}</body></html>'''
+Path(__file__).with_name('options-v2.html').write_text(html)
