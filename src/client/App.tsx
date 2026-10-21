@@ -1,14 +1,18 @@
 import { createMemo, createSignal, Match, onCleanup, Switch } from 'solid-js';
 import type { TextKind } from '../lib/types.ts';
+import { Account } from './Account.tsx';
 import { Browse } from './Browse.tsx';
 import { Home } from './Home.tsx';
 import { Reader } from './Reader.tsx';
 import { Review } from './Review.tsx';
+import { SignIn } from './SignIn.tsx';
 import { Words } from './Words.tsx';
 
 type Route =
   | { name: 'home' }
   | { name: 'words' }
+  | { name: 'account' }
+  | { name: 'signin'; token: string }
   | { name: 'browse'; topic: string | null }
   | { name: 'review' }
   | { name: 'read'; kind: TextKind; id: string; section: number; end: boolean };
@@ -25,6 +29,8 @@ function parse(hash: string): Route {
     };
   }
   if (p[0] === 'words') return { name: 'words' };
+  if (p[0] === 'account') return { name: 'account' };
+  if (p[0] === 'signin' && p[1]) return { name: 'signin', token: p[1] };
   if (p[0] === 'all') return { name: 'browse', topic: null };
   if (p[0] === 'topic' && p[1]) return { name: 'browse', topic: p[1] };
   if (p[0] === 'review') return { name: 'review' };
@@ -37,6 +43,10 @@ export function App() {
     setRoute(parse(location.hash));
     window.scrollTo(0, 0);
   };
+  const signinRoute = createMemo(() => {
+    const r = route();
+    return r.name === 'signin' ? r : undefined;
+  });
   const browseRoute = createMemo(() => {
     const r = route();
     return r.name === 'browse' ? r : undefined;
@@ -55,6 +65,10 @@ export function App() {
           <Home />
         </Match>
         <Match when={browseRoute()}>{(r) => <Browse topic={r().topic} />}</Match>
+        <Match when={signinRoute()}>{(r) => <SignIn token={r().token} />}</Match>
+        <Match when={route().name === 'account'}>
+          <Account />
+        </Match>
         <Match when={route().name === 'words'}>
           <Words />
         </Match>

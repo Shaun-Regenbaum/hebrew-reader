@@ -55,22 +55,21 @@ Then:
 
 ## Accounts
 
-The app works with no account, and that stays true. Everything lives on the device.
+Built and live. The app works with no account, and everything stays on the device.
 
-What an account would add, and only that:
-- **Your data on every device.** Words, progress and settings follow you from phone to laptop.
-- **Things that cost us money,** which need a person we can rate-limit: adding your own texts, and a bigger library.
+- **Sign in by email link,** no password. The link works once for 15 minutes and opens a page that asks for one click, so a mail scanner that opens it cannot use it up. Sessions last 90 days. Sending goes through Cloudflare Email Service from `login@402.network`, a domain that was already set up for sending. Moving to a `402.app` sender means enabling sending on that domain, which adds DNS records.
+- **Sync.** One document per learner (lookups, known words, reading progress), stored gzipped in D1. The browser fetches the server copy, merges it with its own, keeps the merge and saves it back. If another device saved first the server answers 409 and the browser merges again. The merge rules are in `src/lib/sync.ts` and tested. Known-word marks carry a time, so unmarking on one device wins over an older mark on another.
+- **Backup file.** Download your data as a file, or load one. Loading adds to what is here, it never erases it.
+- **Anonymous word counts.** When a reader looks a word up for the first time, the server adds one to a count for that word and text. No account and no device id. `GET /api/stats/words` lists the words readers look up most, overall or per text. Nothing uses the counts yet.
 
-How I would build it:
-1. **Export and import now.** A button saves your data to a file and loads it back. No server. This already gives people a way to keep their data safe.
-2. **Sign in with an email link,** no password. Sync merges instead of overwriting: lookups are combined by id, read sections are combined, and settings take the newest.
-3. **Your own texts** (paste or a link), then the larger Ben-Yehuda catalogue.
+Not built: your own texts (paste or a link), and the larger Ben-Yehuda catalogue behind an account. Settings (text size, view) do not sync yet.
 
-Counting which words readers look up is separate. It is anonymous, has no account, and runs on the server.
+Limits to know: a learner's document may not exceed about 1.9 MB gzipped, which is tens of thousands of lookups. The per-address limiter on sign-in requests is per server instance, and a per-email limit (3 an hour) and a daily cap (300) back it up.
 
 ## Decisions for Shaun
 
 - Decided: translation stays on demand and cached, not done ahead of time.
 - Decided: anonymous lookup counts are fine, with no note or opt-out, counted on the server.
-- Open: sign in by email link, or another way? And what should "more materials" mean first: your own texts, or the bigger catalogue?
+- Decided: sign in by email link through Cloudflare.
+- Open: what "more materials" should mean first: your own texts, or the bigger catalogue?
 - Open: should we start with goals and achievements (step 2)?

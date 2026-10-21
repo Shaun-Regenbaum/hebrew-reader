@@ -1,5 +1,6 @@
 import { createEffect, createResource, createSignal, Show } from 'solid-js';
-import { saveLookup } from '../lib/store.ts';
+import { normalizeWord } from '../lib/sentence.ts';
+import { saveLookup, seenWords } from '../lib/store.ts';
 import type { Lookup, TextKind } from '../lib/types.ts';
 
 export interface SheetState {
@@ -70,6 +71,8 @@ export function WordSheet(props: {
     );
   void startTranslation();
 
+  // Is this the first time this reader looks the word up? The server counts only those, anonymously.
+  const firstTime = !seenWords().has(normalizeWord(props.sheet.word));
   const [lookup] = createResource(
     () => attempt(),
     async () =>
@@ -79,6 +82,8 @@ export function WordSheet(props: {
           sentence: props.sheet.sentence.text,
           context: props.sheet.context,
           title: props.text.title,
+          first: firstTime,
+          textKey: `${props.text.kind}/${props.text.id}`,
         })
       ).lookup,
   );

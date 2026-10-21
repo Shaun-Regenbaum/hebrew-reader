@@ -4,8 +4,10 @@ A reader for learning modern Hebrew. You read real texts, tap any word you don't
 
 Status: first working version, live at https://learning.402.app
 
-Done: a guided home (up next, a five-stage path, topics), measured difficulty for every text, the reader with a scroll view and a page view, tap a word for its meaning, translate a sentence with an English word over each Hebrew word, saved lookups, reading progress, and My words with a Known toggle.
+Done: a guided home (up next, a five-stage path, topics), measured difficulty for every text, the reader with a scroll view and a page view, tap a word for its meaning, translate a sentence with an English word over each Hebrew word, saved lookups, reading progress, My words with a Known toggle, optional sign-in by email link with sync across devices, and backup files.
 Stubbed: Review (flashcards), the quiz, and the landing page. Lookups are already saved for them.
+
+The Worker needs a D1 database (`wrangler d1 migrations apply hebrew-reader`), a KV namespace for the answer cache, and a `send_email` binding. For local sign-in tests, add `DEV_SHOW_LINK=1` to `.dev.vars`: the server then returns the link instead of emailing it.
 
 ## The idea
 

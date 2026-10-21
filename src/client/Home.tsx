@@ -1,4 +1,5 @@
 import { createMemo, createResource, createSignal, For, Show } from 'solid-js';
+import { email } from '../lib/account.ts';
 import { authorName } from '../lib/authors.ts';
 import {
   allTexts,
@@ -53,6 +54,15 @@ export function Home() {
         <div class="serif" style={{ 'font-size': '24px', 'font-weight': '500' }}>
           Read Hebrew
         </div>
+        <a
+          href="#/account"
+          class="signin-link"
+          aria-label={email() ? 'Your account' : 'Sign in to keep your words on every device'}
+        >
+          <Show when={email()} fallback="Sign in">
+            <span class="avatar">{(email() ?? '?').slice(0, 1).toUpperCase()}</span>
+          </Show>
+        </a>
       </div>
       <Show when={index.error}>
         <div class="empty">

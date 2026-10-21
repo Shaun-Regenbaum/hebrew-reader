@@ -14,11 +14,24 @@
   "account_id": "ddf8edfc3dfd489567fe3c5b28b51aca",
   "routes": [{ "pattern": "learning.402.app", "custom_domain": true }],
   "kv_namespaces": [{ "binding": "CACHE", "id": "61b3e9fad5d747d38fc4150ed47d4e32" }],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "hebrew-reader",
+      "database_id": "515e7414-f14a-4cc5-87f8-b40c0ae6cc86",
+      "migrations_dir": "migrations"
+    }
+  ],
+  // Sign-in emails go out through Cloudflare Email Service, from a domain onboarded for sending.
+  "send_email": [{ "name": "EMAIL" }],
   "observability": { "enabled": true },
   "vars": {
     "LOOKUP_MODEL": "google/gemini-3.7-flash",
     "TRANSLATE_MODEL": "google/gemini-3.1-flash-lite",
-    "DAILY_MODEL_CALLS": "6000"
+    "DAILY_MODEL_CALLS": "6000",
+    "EMAIL_FROM": "login@402.network",
+    "PUBLIC_URL": "https://learning.402.app",
+    "EMAILS_PER_DAY": "300"
   }
   // Secret: OPENROUTER_API_KEY (local: .dev.vars; deployed: wrangler secret put).
 }

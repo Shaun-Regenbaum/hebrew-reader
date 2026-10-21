@@ -1,4 +1,5 @@
 import { createMemo, createSignal, For, Show } from 'solid-js';
+import { email } from '../lib/account.ts';
 import { known, lookups, toggleKnown } from '../lib/store.ts';
 import { Nav } from './Nav.tsx';
 
@@ -81,6 +82,12 @@ export function Words() {
           {rows().length} {rows().length === 1 ? 'word' : 'words'}
         </div>
       </div>
+      <Show when={rows().length > 0 && !email()}>
+        <a class="nudge" href="#/account">
+          <b>Your words are only on this device.</b> Sign in to keep them on every device, or save a backup
+          file.
+        </a>
+      </Show>
       <div class="tabs" style={{ 'margin-top': '22px' }}>
         <button type="button" classList={{ on: tab() === 'top' }} onClick={() => setTab('top')}>
           Most looked up
