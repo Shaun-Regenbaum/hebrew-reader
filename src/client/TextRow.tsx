@@ -4,7 +4,11 @@ import { isDone, keyOf, sectionsRead } from '../lib/path.ts';
 import { progress } from '../lib/store.ts';
 import type { Style, TextSummary } from '../lib/types.ts';
 
-export const STYLE_LABEL: Record<Style, string> = { modern: 'Modern', literary: 'Literary', biblical: 'Biblical style' };
+export const STYLE_LABEL: Record<Style, string> = {
+  modern: 'Modern',
+  literary: 'Literary',
+  biblical: 'Biblical style',
+};
 
 export function LevelBars(props: { level: number }) {
   return (
@@ -33,14 +37,36 @@ export function TextRow(props: { text: TextSummary; current?: boolean }) {
   return (
     <a class="trow" classList={{ cur: props.current }} href={`#/read/${t().kind}/${t().id}/${section()}`}>
       <div class="ttop">
-        <span class="mark" classList={{ done: done(), part: !done() && read() > 0 }} aria-label={done() ? 'Finished' : read() > 0 ? 'In progress' : undefined}>
-          <Show when={done()}>
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10" /></svg>
+        <span class="mark" classList={{ done: done(), part: !done() && read() > 0 }}>
+          <Show
+            when={done()}
+            fallback={
+              <Show when={read() > 0}>
+                <span class="sr">In progress</span>
+              </Show>
+            }
+          >
+            <span class="sr">Finished</span>
+            <svg
+              aria-hidden="true"
+              width="13"
+              height="13"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12l5 5 9-10" />
+            </svg>
           </Show>
         </span>
         <span class="he ttitle">{t().title}</span>
       </div>
-      <Show when={t().blurb}><div class="tblurb">{t().blurb}</div></Show>
+      <Show when={t().blurb}>
+        <div class="tblurb">{t().blurb}</div>
+      </Show>
       <div class="tchips">
         <LevelBars level={t().level} />
         <span>{readingTime(t().minutes)}</span>
@@ -48,7 +74,9 @@ export function TextRow(props: { text: TextSummary; current?: boolean }) {
         <span>{t().kind === 'articles' ? 'Article' : authorName(t().author)}</span>
       </div>
       <Show when={!done() && read() > 0 && t().sections > 1}>
-        <div class="bar" style={{ 'margin-top': '10px' }}><i style={{ width: `${(read() / t().sections) * 100}%` }} /></div>
+        <div class="bar" style={{ 'margin-top': '10px' }}>
+          <i style={{ width: `${(read() / t().sections) * 100}%` }} />
+        </div>
       </Show>
     </a>
   );

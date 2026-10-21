@@ -16,7 +16,13 @@ type Route =
 function parse(hash: string): Route {
   const p = hash.replace(/^#\/?/, '').split('/');
   if (p[0] === 'read' && (p[1] === 'books' || p[1] === 'articles') && p[2]) {
-    return { name: 'read', kind: p[1], id: p[2], section: Math.max(0, Number(p[3]) || 0), end: p[4] === 'end' };
+    return {
+      name: 'read',
+      kind: p[1],
+      id: p[2],
+      section: Math.max(0, Number(p[3]) || 0),
+      end: p[4] === 'end',
+    };
   }
   if (p[0] === 'words') return { name: 'words' };
   if (p[0] === 'all') return { name: 'browse', topic: null };
@@ -55,7 +61,9 @@ export function App() {
         <Match when={route().name === 'review'}>
           <Review />
         </Match>
-        <Match when={readRoute()}>{(r) => <Reader kind={r().kind} id={r().id} section={r().section} end={r().end} />}</Match>
+        <Match when={readRoute()}>
+          {(r) => <Reader kind={r().kind} id={r().id} section={r().section} end={r().end} />}
+        </Match>
       </Switch>
     </div>
   );

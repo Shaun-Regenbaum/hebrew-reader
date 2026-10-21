@@ -17,6 +17,7 @@
     "solid-js": "^1.9.15"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.5.15",
     "@cloudflare/vite-plugin": "^1.54.9",
     "@cloudflare/workers-types": "^5.20260914.1",
     "typescript": "^5.7.0",

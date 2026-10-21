@@ -1,16 +1,36 @@
 import { get, set } from 'idb-keyval';
 import { createMemo, createSignal, untrack } from 'solid-js';
-import { normalizeWord } from './sentence.ts';
 import type { ProgressMap } from './path.ts';
+import { readJson, writeJson } from './prefs.ts';
+import { normalizeWord } from './sentence.ts';
 import type { SavedLookup, TextKind } from './types.ts';
 
 /** Everything the learner has looked up, newest first. Kept in IndexedDB. */
 const [lookups, setLookups] = createSignal<SavedLookup[]>([]);
 const [known, setKnown] = createSignal<string[]>([]);
+
 export { known, lookups };
 
 /** Words (by surface form, no nikud) the learner has already looked up: the reader underlines them. */
 export const seenWords = createMemo(() => new Set(lookups().map((l) => normalizeWord(l.word))));
+
+/** What the learner has already met, for the quiet hints above words: by exact spot, and by spelling. */
+export const hintMeanings = createMemo(() => {
+  const byId = new Map<string, string>();
+  const byWord = new Map<string, string>();
+  for (const l of lookups()) {
+    // lookups are newest first, so the first one we see for a spelling is the latest
+    if (!byId.has(l.id)) byId.set(l.id, l.meaning);
+    const w = normalizeWord(l.word);
+    if (!byWord.has(w)) byWord.set(w, l.meaning);
+  }
+  return { byId, byWord };
+});
+
+/** The first short phrase of a meaning: "fifth / Thursday" becomes "fifth". */
+export function shortMeaning(m: string): string {
+  return (m.split(/[;,/(]/)[0] ?? m).trim();
+}
 
 async function read<T>(key: string, fallback: T): Promise<T> {
   try {
@@ -49,24 +69,13 @@ export function toggleKnown(lemma: string): void {
 }
 
 /** Reading progress per text, kept in localStorage (it is small, and the home screen needs it at once). */
-function readProgress(): ProgressMap {
-  try {
-    const v = JSON.parse(localStorage.getItem('hr:progress') ?? '{}') as ProgressMap;
-    return v && typeof v === 'object' ? v : {};
-  } catch {
-    return {};
-  }
-}
-const [progress, setProgress] = createSignal<ProgressMap>(readProgress());
+const [progress, setProgress] = createSignal<ProgressMap>(readJson<ProgressMap>('hr:progress', {}));
+
 export { progress };
 
 function saveProgress(next: ProgressMap): void {
   setProgress(next);
-  try {
-    localStorage.setItem('hr:progress', JSON.stringify(next));
-  } catch {
-    /* ignore */
-  }
+  writeJson('hr:progress', next);
 }
 
 /** The learner is in this section: remember where, and when. */

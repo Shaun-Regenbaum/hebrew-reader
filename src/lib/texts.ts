@@ -17,4 +17,5 @@ function getJson<T>(url: string): Promise<T> {
 
 export const getIndex = () => getJson<LibraryIndex>('/texts/index.json');
 export const getMeta = (kind: TextKind, id: string) => getJson<TextMeta>(`/texts/${kind}/${id}/meta.json`);
-export const getSection = (kind: TextKind, id: string, n: number) => getJson<Para[]>(`/texts/${kind}/${id}/${n}.json`);
+export const getSection = (kind: TextKind, id: string, n: number) =>
+  getJson<Para[]>(`/texts/${kind}/${id}/${n}.json`);

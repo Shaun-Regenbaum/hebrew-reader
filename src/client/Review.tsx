@@ -4,7 +4,11 @@ import { Nav } from './Nav.tsx';
 export function Review() {
   return (
     <>
-      <div class="top"><div class="serif" style={{ 'font-size': '28px', 'font-weight': '500' }}>Review</div></div>
+      <div class="top">
+        <div class="serif" style={{ 'font-size': '28px', 'font-weight': '500' }}>
+          Review
+        </div>
+      </div>
       <div class="empty">
         <div class="serif">Flashcards are coming next</div>
         Every word you look up is already saved. They will turn into cards here.

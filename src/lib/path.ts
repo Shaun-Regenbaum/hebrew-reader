@@ -19,7 +19,8 @@ export const allTexts = (i: LibraryIndex): TextSummary[] => [...i.books, ...i.ar
 
 export const isDone = (t: TextSummary, pm: ProgressMap) => (pm[keyOf(t)]?.read.length ?? 0) >= t.sections;
 export const isStarted = (t: TextSummary, pm: ProgressMap) => !!pm[keyOf(t)];
-export const sectionsRead = (t: TextSummary, pm: ProgressMap) => Math.min(t.sections, pm[keyOf(t)]?.read.length ?? 0);
+export const sectionsRead = (t: TextSummary, pm: ProgressMap) =>
+  Math.min(t.sections, pm[keyOf(t)]?.read.length ?? 0);
 
 /** Texts in the order a learner should meet them: easier first, and within a level shorter first. */
 export function pathItems(i: LibraryIndex): TextSummary[] {

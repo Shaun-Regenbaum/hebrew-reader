@@ -12,23 +12,14 @@ TEXTS, OUT = ROOT / 'public' / 'texts', ROOT / 'data' / 'meta' / 'topics.json'
 KEY = dict(l.strip().split('=', 1) for l in open(ROOT / '.dev.vars') if '=' in l)['OPENROUTER_API_KEY']
 MODEL = 'google/gemini-3.7-flash'
 
-TOPICS = {
-    'animals-nature': 'Animals and nature',
-    'food-drink': 'Food and drink',
-    'science-space': 'Science and space',
-    'history-places': 'History and places',
-    'folktales': 'Folktales and legends',
-    'jewish-life': 'Jewish life and tradition',
-    'adventure': 'Adventure and travel',
-    'love-family': 'Love and family',
-    'ideas-society': 'Ideas and society',
-    'humor': 'Humor and satire',
-}
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from taxonomy import TOPICS
 
 SYSTEM = (
     'You help organize a library for people learning Hebrew. You get a text title, author, and its opening. '
     'Reply with ONLY a JSON object: {"topics": [...], "blurb": "..."}. '
-    '"topics": one or two keys from this list that best fit what the text is about: '
+    '"topics": the key from this list that best fits what the text is about. Give a second key only if the text is clearly about both, for example a biography of a scientist. Most texts need just one: '
     + ', '.join(f'{k} ({v})' for k, v in TOPICS.items())
     + '. "blurb": one plain English sentence of at most 22 words saying what the text is about or what happens in it. '
     'Do not invent details that are not in the opening or obvious from the title.'

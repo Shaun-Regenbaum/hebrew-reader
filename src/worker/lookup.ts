@@ -47,13 +47,29 @@ export function parseTranslation(raw: string, words: number): Translation | null
 }
 
 const BINYAN: Record<string, string> = {
-  qal: 'qal', paal: 'qal', "pa'al": 'qal', קל: 'qal', פעל: 'qal',
-  nifal: 'nifal', "nif'al": 'nifal', נפעל: 'nifal',
-  piel: 'piel', "pi'el": 'piel', פיעל: 'piel',
-  pual: 'pual', "pu'al": 'pual', פועל: 'pual',
-  hifil: 'hifil', "hif'il": 'hifil', הפעיל: 'hifil',
-  hufal: 'hufal', "huf'al": 'hufal', הופעל: 'hufal',
-  hitpael: 'hitpael', "hitpa'el": 'hitpael', התפעל: 'hitpael',
+  qal: 'qal',
+  paal: 'qal',
+  "pa'al": 'qal',
+  קל: 'qal',
+  פעל: 'qal',
+  nifal: 'nifal',
+  "nif'al": 'nifal',
+  נפעל: 'nifal',
+  piel: 'piel',
+  "pi'el": 'piel',
+  פיעל: 'piel',
+  pual: 'pual',
+  "pu'al": 'pual',
+  פועל: 'pual',
+  hifil: 'hifil',
+  "hif'il": 'hifil',
+  הפעיל: 'hifil',
+  hufal: 'hufal',
+  "huf'al": 'hufal',
+  הופעל: 'hufal',
+  hitpael: 'hitpael',
+  "hitpa'el": 'hitpael',
+  התפעל: 'hitpael',
 };
 
 const str = (v: unknown): string | null => (typeof v === 'string' && v.trim() ? v.trim() : null);

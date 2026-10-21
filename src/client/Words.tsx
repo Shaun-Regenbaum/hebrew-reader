@@ -24,7 +24,9 @@ export function Words() {
     return [...by.values()].sort((a, b) => b.count - a.count);
   });
   const isKnown = (lemma: string) => known().includes(lemma);
-  const shown = createMemo(() => (tab() === 'known' ? rows().filter((r) => isKnown(r.lemma)) : rows().filter((r) => !isKnown(r.lemma))));
+  const shown = createMemo(() =>
+    tab() === 'known' ? rows().filter((r) => isKnown(r.lemma)) : rows().filter((r) => !isKnown(r.lemma)),
+  );
   const max = createMemo(() => Math.max(1, ...rows().map((r) => r.count)));
   const groups = createMemo(() => {
     const g = new Map<string, Row[]>();
@@ -42,9 +44,28 @@ export function Words() {
         </div>
         <div class="s">{r.count === 1 ? 'Looked up once' : `Looked up ${r.count} times`}</div>
       </div>
-      <button class="chk" classList={{ on: isKnown(r.lemma) }} aria-label={isKnown(r.lemma) ? 'Mark as not known' : 'Mark as known'} aria-pressed={isKnown(r.lemma)} onClick={() => toggleKnown(r.lemma)}>
+      <button
+        type="button"
+        class="chk"
+        classList={{ on: isKnown(r.lemma) }}
+        aria-label={isKnown(r.lemma) ? 'Mark as not known' : 'Mark as known'}
+        aria-pressed={isKnown(r.lemma)}
+        onClick={() => toggleKnown(r.lemma)}
+      >
         <Show when={isKnown(r.lemma)}>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10" /></svg>
+          <svg
+            aria-hidden="true"
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12l5 5 9-10" />
+          </svg>
         </Show>
       </button>
     </div>
@@ -53,16 +74,47 @@ export function Words() {
   return (
     <>
       <div class="top">
-        <div class="serif" style={{ 'font-size': '28px', 'font-weight': '500' }}>My words</div>
-        <div class="cap">{rows().length} {rows().length === 1 ? 'word' : 'words'}</div>
+        <div class="serif" style={{ 'font-size': '28px', 'font-weight': '500' }}>
+          My words
+        </div>
+        <div class="cap">
+          {rows().length} {rows().length === 1 ? 'word' : 'words'}
+        </div>
       </div>
       <div class="tabs" style={{ 'margin-top': '22px' }}>
-        <button classList={{ on: tab() === 'top' }} onClick={() => setTab('top')}>Most looked up</button>
-        <button classList={{ on: tab() === 'book' }} onClick={() => setTab('book')}>By book</button>
-        <button classList={{ on: tab() === 'known' }} onClick={() => setTab('known')}>Known</button>
+        <button type="button" classList={{ on: tab() === 'top' }} onClick={() => setTab('top')}>
+          Most looked up
+        </button>
+        <button type="button" classList={{ on: tab() === 'book' }} onClick={() => setTab('book')}>
+          By book
+        </button>
+        <button type="button" classList={{ on: tab() === 'known' }} onClick={() => setTab('known')}>
+          Known
+        </button>
       </div>
-      <Show when={rows().length > 0} fallback={<div class="empty"><div class="serif">Nothing here yet</div>Tap a word while you read. It will show up here.</div>}>
-        <Show when={tab() !== 'book'} fallback={<For each={groups()}>{([title, rs]) => (<><div class="group cap he" style={{ 'text-align': 'left' }}>{title}</div><For each={rs}>{RowView}</For></>)}</For>}>
+      <Show
+        when={rows().length > 0}
+        fallback={
+          <div class="empty">
+            <div class="serif">Nothing here yet</div>Tap a word while you read. It will show up here.
+          </div>
+        }
+      >
+        <Show
+          when={tab() !== 'book'}
+          fallback={
+            <For each={groups()}>
+              {([title, rs]) => (
+                <>
+                  <div class="group cap he" style={{ 'text-align': 'left' }}>
+                    {title}
+                  </div>
+                  <For each={rs}>{RowView}</For>
+                </>
+              )}
+            </For>
+          }
+        >
           <For each={shown()}>{RowView}</For>
         </Show>
       </Show>

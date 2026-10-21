@@ -35,7 +35,7 @@ An installable phone app (a PWA, added to the home screen). It also works on a l
 7. **Quiz.** The 10 words looked up most in a chapter become a 5-question quiz.
 8. **Landing page and deploy.** One line explaining the idea and a Start reading button. Put a rate limit and a spend cap on the public translate route.
 
-Steps 1 to 4 plus a deploy make the first working version.
+Steps 1 to 4 plus a deploy make the first working version. All of that is live. The next pieces are in `roadmap.md`, and the market is in `competitors.md`.
 
 ## Open questions
 

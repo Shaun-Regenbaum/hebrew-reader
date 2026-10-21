@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { normalizeWord, sentenceAt } from '../src/lib/sentence.ts';
+import { normalizeWord, sentenceAt, wordsInSentence } from '../src/lib/sentence.ts';
 
 const P = '– מה היה לך יעקב? – שאלו חבריו – איזה יום אתה חסר, השני או החמישי? והמתיאש הורה באצבע.';
 
@@ -22,5 +22,21 @@ describe('sentenceAt', () => {
 describe('normalizeWord', () => {
   it('drops nikud', () => {
     expect(normalizeWord('שׁוֹקוֹלָד')).toBe('שוקולד');
+  });
+});
+
+describe('wordsInSentence', () => {
+  it('lists the words that sit inside the sentence', () => {
+    const words: [number, number][] = [
+      [0, 3],
+      [4, 8],
+      [10, 14],
+      [15, 20],
+    ];
+    expect(wordsInSentence(words, { start: 9, end: 21 })).toEqual([2, 3]);
+    expect(wordsInSentence(words, { start: 0, end: 9 })).toEqual([0, 1]);
+  });
+  it('skips a word the sentence only partly covers', () => {
+    expect(wordsInSentence([[0, 5]], { start: 2, end: 9 })).toEqual([]);
   });
 });

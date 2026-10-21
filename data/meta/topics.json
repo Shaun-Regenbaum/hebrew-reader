@@ -103,13 +103,6 @@
   ],
   "blurb": "Set in ancient Jerusalem during King Ahaz's reign, rivalries, love, and deceit unfold among prominent families."
  },
- "articles/1820": {
-  "topics": [
-   "animals-nature",
-   "science-space"
-  ],
-  "blurb": "An encyclopedic overview of the domestic cat, exploring its biology, global spread, etymology, and evolutionary history."
- },
  "books/7260": {
   "topics": [
    "ideas-society",
@@ -124,71 +117,451 @@
   ],
   "blurb": "A gloomy young man tells his friends he is sick of life, and mocks the idea that the world was made for him."
  },
- "articles/24714": {
+ "articles/12173": {
   "topics": [
-   "food-drink",
-   "history-places"
+   "food-drink"
   ],
-  "blurb": "An overview of pizza, exploring its Italian origins, history, etymology, various styles, toppings, and halakhic status."
+  "blurb": "An overview of hummus, exploring its culinary history, etymology, cultural significance in the Middle East, preparation methods, and nutritional value."
  },
- "articles/24454": {
+ "articles/13857": {
   "topics": [
-   "food-drink",
-   "history-places"
+   "food-drink"
   ],
-  "blurb": "An overview of chocolate, covering its etymology, ancient Mesoamerican origins, introduction to Europe, and modern industrial production."
+  "blurb": "An overview of falafel, exploring its Middle Eastern origins, preparation, cultural significance, and status as an iconic Israeli street food."
  },
- "articles/249": {
+ "articles/108": {
+  "topics": [
+   "technology"
+  ],
+  "blurb": "An overview of the internet, covering its origins, global societal impact, and various communication and multimedia services."
+ },
+ "articles/13144": {
   "topics": [
    "science-space"
   ],
-  "blurb": "An informative article exploring the Moon's physical characteristics, formation, orbit, phases, and human exploration history."
+  "blurb": "An overview of DNA, explaining its double-helix structure, nucleotide bases, genetic function, and the processes of transcription and translation."
+ },
+ "articles/1090758": {
+  "topics": [
+   "animals-nature",
+   "science-space"
+  ],
+  "blurb": "An overview of how eyes function, their diverse structures across different animal species, and their evolutionary history."
+ },
+ "articles/1141": {
+  "topics": [
+   "animals-nature"
+  ],
+  "blurb": "An overview of elephants, exploring their species, anatomy, unique physical adaptations such as trunks and tusks, and their natural lifespan."
+ },
+ "articles/143429": {
+  "topics": [
+   "earth-weather"
+  ],
+  "blurb": "An overview of volcanoes, exploring the geological processes behind them, historical theories, and Earth's internal structure."
+ },
+ "articles/158": {
+  "topics": [
+   "science-space"
+  ],
+  "blurb": "An overview of the Solar System, detailing its planets, celestial bodies, physical laws, and cosmic classification."
+ },
+ "articles/160": {
+  "topics": [
+   "science-space"
+  ],
+  "blurb": "An overview of Mars, covering its physical characteristics, geological history, atmosphere, and exploration."
+ },
+ "articles/1501": {
+  "topics": [
+   "science-space"
+  ],
+  "blurb": "An introduction to the atom, detailing its structure, subatomic particles, atomic orbitals, and history in chemistry and physics."
+ },
+ "articles/157230": {
+  "topics": [
+   "body-health",
+   "animals-nature"
+  ],
+  "blurb": "An overview of the heart's function, evolutionary development, and diverse anatomical structures across various animal species and humans."
+ },
+ "articles/17022": {
+  "topics": [
+   "history-places"
+  ],
+  "blurb": "An overview of ancient Egyptian civilization, exploring its history, geography along the Nile, dynasties, culture, and achievements."
+ },
+ "articles/1737": {
+  "topics": [
+   "sports-games"
+  ],
+  "blurb": "An overview of basketball, detailing its history, rules, gameplay, and court dimensions."
+ },
+ "articles/17210": {
+  "topics": [
+   "technology",
+   "history-places"
+  ],
+  "blurb": "An overview of bicycles, detailing their technological evolution, history, uses in transportation and sports, and broader economic impact."
+ },
+ "articles/179828": {
+  "topics": [
+   "technology"
+  ],
+  "blurb": "An overview of smartphones, detailing their history, technological evolution, major operating systems, and leading manufacturers."
+ },
+ "articles/1820": {
+  "topics": [
+   "animals-nature"
+  ],
+  "blurb": "An overview of the domestic cat, covering its biology, global presence, linguistic origins across languages, and evolutionary history."
+ },
+ "articles/18374": {
+  "topics": [
+   "body-health",
+   "food-drink"
+  ],
+  "blurb": "An overview of vitamins, covering their discovery, essential biological functions, health impacts, and common dietary sources."
+ },
+ "articles/1865": {
+  "topics": [
+   "animals-nature"
+  ],
+  "blurb": "An informative overview of penguins, detailing their physical adaptations, diet, habitat, reproduction, and the environmental threats they face."
  },
  "articles/19949": {
   "topics": [
    "food-drink",
    "history-places"
   ],
-  "blurb": "An overview of coffee, detailing its origins, etymology, historical spread from Ethiopia and Yemen, and global popularization."
+  "blurb": "An overview of coffee, detailing its origins in Ethiopia, history, cultural significance, and spread around the world."
+ },
+ "articles/1984": {
+  "topics": [
+   "music-art"
+  ],
+  "blurb": "An informative overview of the piano, detailing its history, internal mechanisms, acoustic design, pedals, and prominent manufacturers."
+ },
+ "articles/2314": {
+  "topics": [
+   "technology"
+  ],
+  "blurb": "An overview of cameras, covering their history, components, photographic principles like focus and exposure, and modern digital sensors."
+ },
+ "articles/2243": {
+  "topics": [
+   "science-space",
+   "animals-nature"
+  ],
+  "blurb": "An overview of photosynthesis, detailing its biological mechanism, evolutionary history, and crucial role in supporting life on Earth."
+ },
+ "articles/23340": {
+  "topics": [
+   "animals-nature"
+  ],
+  "blurb": "An overview of dolphins, detailing their biology, intelligence, evolution, behavior, and relationship with humans."
+ },
+ "articles/24159": {
+  "topics": [
+   "food-drink",
+   "history-places"
+  ],
+  "blurb": "An overview of cheese, explaining how different varieties are produced and exploring its ancient history."
+ },
+ "articles/207": {
+  "topics": [
+   "science-space"
+  ],
+  "blurb": "An overview of black holes, explaining their extreme gravitational pull, formation from collapsing stars, and the history of scientific research."
+ },
+ "articles/24454": {
+  "topics": [
+   "food-drink",
+   "history-places"
+  ],
+  "blurb": "An overview of chocolate, covering its botanical origins, ancient Mesoamerican history, spread to Europe, and modern industrial production."
+ },
+ "articles/24714": {
+  "topics": [
+   "food-drink"
+  ],
+  "blurb": "An overview of pizza, covering its origins in Italy, global evolution, popular varieties, toppings, and cultural significance."
+ },
+ "articles/250": {
+  "topics": [
+   "earth-weather",
+   "science-space"
+  ],
+  "blurb": "An overview of planet Earth, covering its physical characteristics, astronomical movements, formation, and geological history across different eras."
+ },
+ "articles/249": {
+  "topics": [
+   "science-space"
+  ],
+  "blurb": "An overview of Earth's Moon, detailing its origin, orbit, phases, physical characteristics, and history of human exploration."
  },
  "articles/25046": {
   "topics": [
    "history-places"
   ],
-  "blurb": "An overview of the famous British passenger liner Titanic, including its construction, luxury features, safety design, and tragic sinking in 1912."
+  "blurb": "An overview of the RMS Titanic, its luxurious design, advanced engineering, and tragic sinking on its maiden voyage in 1912."
+ },
+ "articles/27377": {
+  "topics": [
+   "food-drink",
+   "animals-nature"
+  ],
+  "blurb": "An overview of honey, detailing its production by bees and other insects, historical background, chemical composition, and physical properties."
+ },
+ "articles/252": {
+  "topics": [
+   "science-space"
+  ],
+  "blurb": "An overview of planets, their scientific definitions, celestial characteristics, and how our understanding of them evolved throughout astronomical history."
+ },
+ "articles/283495": {
+  "topics": [
+   "technology"
+  ],
+  "blurb": "An overview of computers, explaining their definition, functions, role in modern life, and the history of their development."
  },
  "articles/29104": {
   "topics": [
-   "animals-nature",
-   "science-space"
+   "animals-nature"
   ],
-  "blurb": "An informative overview of the honey bee, detailing its anatomy, social hierarchy, reproduction, and ecological importance."
+  "blurb": "An informative overview of the honey bee, covering its subspecies, anatomy, social hierarchy, and reproductive life cycle."
  },
  "articles/29290": {
   "topics": [
-   "animals-nature",
+   "animals-nature"
+  ],
+  "blurb": "An overview of ants, detailing their diversity, ecological impact, species found in Israel, and unique physical anatomy."
+ },
+ "articles/324": {
+  "topics": [
+   "science-space",
+   "animals-nature"
+  ],
+  "blurb": "An overview of the scientific theory of evolution by natural selection, its biological evidence, impact, and history."
+ },
+ "articles/3286": {
+  "topics": [
+   "technology",
+   "history-places"
+  ],
+  "blurb": "An overview of trains, exploring their propulsion methods, various types, historical development, and the railway system in Israel."
+ },
+ "articles/359779": {
+  "topics": [
+   "history-places"
+  ],
+  "blurb": "An overview of Rome's rich history, cultural significance, and status as the capital of Italy and center of Catholicism."
+ },
+ "articles/3287": {
+  "topics": [
+   "technology"
+  ],
+  "blurb": "An overview of airplanes, covering their definition, history, Hebrew terminology, uses, structure, and flight principles."
+ },
+ "articles/325": {
+  "topics": [
+   "history-places",
+   "jewish-life"
+  ],
+  "blurb": "An overview of Jerusalem, detailing its status as Israel's capital, its religious significance, rich history, and the etymology of its names."
+ },
+ "articles/360": {
+  "topics": [
+   "people",
+   "history-places"
+  ],
+  "blurb": "A biographical overview of David Ben-Gurion, Israel's first prime minister, detailing his leadership, early life in Poland, and Zionist activism."
+ },
+ "articles/42682": {
+  "topics": [
+   "earth-weather",
    "science-space"
   ],
-  "blurb": "An overview of ants, covering their global distribution, ecological success, social structure, diverse species, and unique anatomy."
+  "blurb": "An explanation of the optical and atmospheric phenomenon of rainbows, including how light refraction, dispersion, and reflection create their colors."
+ },
+ "articles/47364": {
+  "topics": [
+   "body-health"
+  ],
+  "blurb": "An overview of vaccination, its history, and how the human immune system uses antibodies and memory cells to fight diseases."
+ },
+ "articles/48619": {
+  "topics": [
+   "music-art"
+  ],
+  "blurb": "An overview of painting as an art form, exploring its techniques, aesthetic theories, and historical development across various cultures."
+ },
+ "articles/47624": {
+  "topics": [
+   "food-drink"
+  ],
+  "blurb": "An informative overview of tea, including its preparation, etymology, cultivation, plant varieties, and different processing methods."
+ },
+ "articles/481394": {
+  "topics": [
+   "sports-games"
+  ],
+  "blurb": "An overview of association football, explaining its global popularity, basic rules, positions, tactics, and physical demands."
+ },
+ "articles/50": {
+  "topics": [
+   "music-art",
+   "history-places"
+  ],
+  "blurb": "An overview of music as an art form and its historical development from prehistoric times through modern eras."
+ },
+ "articles/5158": {
+  "topics": [
+   "earth-weather"
+  ],
+  "blurb": "An overview of earthquakes, explaining their geological causes, seismic waves, measurement scales, and associated phenomena such as tsunamis and soil liquefaction."
+ },
+ "articles/5347": {
+  "topics": [
+   "history-places"
+  ],
+  "blurb": "An overview of Athens, Greece's capital, exploring its ancient history, cultural significance, modern development, and geography."
+ },
+ "articles/600": {
+  "topics": [
+   "science-space",
+   "people"
+  ],
+  "blurb": "A biography of Marie Curie, detailing her early life, pioneering scientific discoveries in radioactivity, and groundbreaking Nobel Prize achievements."
+ },
+ "articles/56395": {
+  "topics": [
+   "animals-nature"
+  ],
+  "blurb": "An overview of the owl genus Asio, detailing its physical anatomy, nocturnal hunting habits, species, and cultural significance."
+ },
+ "articles/5957": {
+  "topics": [
+   "people",
+   "music-art"
+  ],
+  "blurb": "A biographical overview of Leonardo da Vinci's early life, childhood experiences, and his artistic apprenticeship in Florence."
+ },
+ "articles/614": {
+  "topics": [
+   "science-space"
+  ],
+  "blurb": "An overview of electricity, explaining its physical principles, electromagnetism, and the history of scientific discoveries surrounding it."
+ },
+ "articles/639474": {
+  "topics": [
+   "earth-weather",
+   "science-space"
+  ],
+  "blurb": "An overview of lightning, explaining how atmospheric electrical discharges form, cause thunder, strike the ground, and impact technology and safety."
+ },
+ "articles/6559": {
+  "topics": [
+   "sports-games"
+  ],
+  "blurb": "An overview of tennis, detailing its history, rules, scoring system, and evolution from a medieval diversion to an Olympic sport."
+ },
+ "articles/70": {
+  "topics": [
+   "science-space",
+   "people"
+  ],
+  "blurb": "A biographical overview of Isaac Newton, detailing his groundbreaking scientific discoveries, revolutionary laws of physics, and early life."
  },
  "articles/7041": {
   "topics": [
-   "animals-nature",
+   "earth-weather",
    "history-places"
   ],
-  "blurb": "An overview of the Dead Sea, covering its geography, unique hypersaline waters, environmental challenges, and historical and industrial importance."
+  "blurb": "An overview of the Dead Sea, covering its unique geography, shrinking water levels, industrial uses, and tourism significance."
  },
- "articles/9108": {
+ "articles/6874": {
+  "topics": [
+   "technology"
+  ],
+  "blurb": "An overview of robots, exploring the origins of the word and their diverse applications across modern industries and daily life."
+ },
+ "articles/710386": {
+  "topics": [
+   "animals-nature"
+  ],
+  "blurb": "An overview of the lion, detailing its physical characteristics, subspecies, evolution, geographic distribution, and social behavior."
+ },
+ "articles/704558": {
+  "topics": [
+   "music-art"
+  ],
+  "blurb": "An overview of the guitar, exploring its historical origins, structure, and wide variety of acoustic and specialized types."
+ },
+ "articles/73": {
   "topics": [
    "science-space"
   ],
-  "blurb": "An overview of sleep, its biological functions, stages including REM and slow-wave sleep, and circadian rhythms in humans and animals."
+  "blurb": "An overview of gravity, exploring theoretical models from Aristotle and Galileo to Newton and Einstein, alongside its natural effects."
+ },
+ "articles/776": {
+  "topics": [
+   "earth-weather"
+  ],
+  "blurb": "An overview of clouds, explaining their formation, microphysics, condensation nuclei, precipitation processes, electrical charges, and classification."
+ },
+ "articles/7779": {
+  "topics": [
+   "history-places"
+  ],
+  "blurb": "An overview of Tel Aviv-Yafo, exploring its geography, cultural and economic importance, origin of its name, and history."
+ },
+ "articles/8234": {
+  "topics": [
+   "body-health",
+   "animals-nature"
+  ],
+  "blurb": "An overview of teeth, detailing their structure, functions across various animals, and human dental anatomy and development."
  },
  "articles/83": {
   "topics": [
-   "science-space",
+   "people",
+   "science-space"
+  ],
+  "blurb": "A biographical article about Albert Einstein, exploring his groundbreaking physics theories, early life, and global impact."
+ },
+ "articles/8556": {
+  "topics": [
+   "people",
+   "technology"
+  ],
+  "blurb": "A biographical overview of Thomas Edison's life, career, and groundbreaking technological inventions, including the phonograph and the lightbulb."
+ },
+ "articles/841": {
+  "topics": [
+   "body-health",
+   "science-space"
+  ],
+  "blurb": "An overview of the brain, explaining how neural systems process sensory information and regulate biological functions across various animal species."
+ },
+ "articles/9108": {
+  "topics": [
+   "body-health",
+   "science-space"
+  ],
+  "blurb": "An overview of sleep, its physiological stages, biological importance, and the brain activity associated with resting and dreaming."
+ },
+ "articles/9430": {
+  "topics": [
+   "food-drink"
+  ],
+  "blurb": "An overview of bread, detailing its primary ingredients, baking and leavening processes, history, and various regional varieties."
+ },
+ "articles/969": {
+  "topics": [
+   "sports-games",
    "history-places"
   ],
-  "blurb": "A biographical overview of Albert Einstein, his groundbreaking scientific theories, Nobel Prize, and major events of his life."
+  "blurb": "An overview of chess, exploring its nature as a strategic board game and tracing its historical origins and global evolution."
  }
 }

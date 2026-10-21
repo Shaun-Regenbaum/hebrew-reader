@@ -13,6 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import measure as M
+from taxonomy import TOPICS
 RAW, OUT = ROOT / 'data' / 'raw', ROOT / 'public' / 'texts'
 SECTION_WORDS = 1200
 
@@ -52,12 +53,7 @@ def sections(paras):
 
 
 TOPICS_FILE = ROOT / 'data' / 'meta' / 'topics.json'
-TOPIC_LABELS = {
-    'animals-nature': 'Animals and nature', 'food-drink': 'Food and drink', 'science-space': 'Science and space',
-    'history-places': 'History and places', 'folktales': 'Folktales and legends', 'jewish-life': 'Jewish life and tradition',
-    'adventure': 'Adventure and travel', 'love-family': 'Love and family', 'ideas-society': 'Ideas and society',
-    'humor': 'Humor and satire',
-}
+TOPIC_LABELS = TOPICS
 
 
 def facts(kind, id_, paras):

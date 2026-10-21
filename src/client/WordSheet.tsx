@@ -21,7 +21,11 @@ export interface SheetText {
 }
 
 async function post<T>(url: string, body: unknown): Promise<T> {
-  const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
   const j = (await res.json().catch(() => ({}))) as T & { error?: string };
   if (!res.ok) throw new Error(j.error ?? `Request failed (${res.status})`);
   return j;
@@ -48,7 +52,11 @@ export function WordSheet(props: {
 }) {
   const [attempt, setAttempt] = createSignal(0);
   const [view, setView] = createSignal<'word' | 'sentence'>('word');
-  const [tr, setTr] = createSignal<{ state: 'loading' | 'done' | 'error'; text: string; glosses?: string[] | null }>({ state: 'loading', text: '' });
+  const [tr, setTr] = createSignal<{
+    state: 'loading' | 'done' | 'error';
+    text: string;
+    glosses?: string[] | null;
+  }>({ state: 'loading', text: '' });
   // Start translating the sentence right away, so it is usually ready by the time the learner asks.
   const startTranslation = () =>
     post<{ translation: string; glosses: string[] | null }>('/api/translate', {
@@ -64,13 +72,30 @@ export function WordSheet(props: {
 
   const [lookup] = createResource(
     () => attempt(),
-    async () => (await post<{ lookup: Lookup }>('/api/lookup', { word: props.sheet.word, sentence: props.sheet.sentence.text, context: props.sheet.context, title: props.text.title })).lookup,
+    async () =>
+      (
+        await post<{ lookup: Lookup }>('/api/lookup', {
+          word: props.sheet.word,
+          sentence: props.sheet.sentence.text,
+          context: props.sheet.context,
+          title: props.text.title,
+        })
+      ).lookup,
   );
 
   createEffect(() => {
     const l = lookup();
     if (!l) return;
-    saveLookup({ ...l, id: props.sheet.id, word: props.sheet.word, sentence: props.sheet.sentence.text, textId: props.text.id, textKind: props.text.kind, textTitle: props.text.title, at: Date.now() });
+    saveLookup({
+      ...l,
+      id: props.sheet.id,
+      word: props.sheet.word,
+      sentence: props.sheet.sentence.text,
+      textId: props.text.id,
+      textKind: props.text.kind,
+      textTitle: props.text.title,
+      at: Date.now(),
+    });
   });
 
   // Show the English words above the sentence once it is translated; take them away when it is not.
@@ -97,30 +122,98 @@ export function WordSheet(props: {
 
   return (
     <div class="sheet" role="dialog" aria-label="Word meaning">
-      <button class="grab" style={{ display: 'block', border: 0, padding: 0 }} aria-label="Close" onClick={props.onClose} />
+      <button
+        type="button"
+        class="grab"
+        style={{ display: 'block', border: 0, padding: 0 }}
+        aria-label="Close"
+        onClick={props.onClose}
+      />
       <Show when={view() === 'word'}>
-        <Show when={!lookup.error} fallback={<><div class="he hw">{props.sheet.word}</div><div class="err">{(lookup.error as Error).message}</div><div class="acts"><button class="btn p" onClick={() => setAttempt((a) => a + 1)}>Try again</button></div></>}>
-          <Show when={lookup()} fallback={<><div class="he hw">{props.sheet.word}</div><div class="skel" style={{ width: '60%' }} /><div class="skel" style={{ width: '85%' }} /><div class="skel" style={{ width: '40%' }} /></>}>
+        <Show
+          when={!lookup.error}
+          fallback={
+            <>
+              <div class="he hw">{props.sheet.word}</div>
+              <div class="err">{(lookup.error as Error).message}</div>
+              <div class="acts">
+                <button type="button" class="btn p" onClick={() => setAttempt((a) => a + 1)}>
+                  Try again
+                </button>
+              </div>
+            </>
+          }
+        >
+          <Show
+            when={lookup()}
+            fallback={
+              <>
+                <div class="he hw">{props.sheet.word}</div>
+                <div class="skel" style={{ width: '60%' }} />
+                <div class="skel" style={{ width: '85%' }} />
+                <div class="skel" style={{ width: '40%' }} />
+              </>
+            }
+          >
             {(l) => (
               <>
-                <div style={{ display: 'flex', 'justify-content': 'space-between', 'align-items': 'flex-start', gap: '12px' }}>
+                <div
+                  style={{
+                    display: 'flex',
+                    'justify-content': 'space-between',
+                    'align-items': 'flex-start',
+                    gap: '12px',
+                  }}
+                >
                   <div style={{ 'min-width': 0 }}>
-                    <div class="cap">{l().pos}{l().binyan ? ` · ${l().binyan}` : ''}<Show when={l().root}>{' · root '}<span class="he" style={{ 'letter-spacing': 0, 'font-size': '14px', 'font-weight': 500 }}>{l().root}</span></Show></div>
+                    <div class="cap">
+                      {l().pos}
+                      {l().binyan ? ` · ${l().binyan}` : ''}
+                      <Show when={l().root}>
+                        {' · root '}
+                        <span
+                          class="he"
+                          style={{ 'letter-spacing': 0, 'font-size': '14px', 'font-weight': 500 }}
+                        >
+                          {l().root}
+                        </span>
+                      </Show>
+                    </div>
                     <div class="serif big">{l().meaning}</div>
                   </div>
                   <div style={{ 'text-align': 'right', 'flex-shrink': 0 }}>
                     <div class="he hw">{l().lemma}</div>
-                    <div style={{ display: 'flex', 'align-items': 'center', 'justify-content': 'flex-end', gap: '8px', 'margin-top': '6px' }}>
+                    <div
+                      style={{
+                        display: 'flex',
+                        'align-items': 'center',
+                        'justify-content': 'flex-end',
+                        gap: '8px',
+                        'margin-top': '6px',
+                      }}
+                    >
                       <span style={{ 'font-size': '13px', color: 'var(--ink3)' }}>{l().say}</span>
-                      <button class="sp" aria-label="Hear it" onClick={() => speak(props.sheet.word)}>
-                        <svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z" /><path d="M16.5 8.5a5 5 0 010 7" /></svg>
+                      <button
+                        type="button"
+                        class="sp"
+                        aria-label="Hear it"
+                        onClick={() => speak(props.sheet.word)}
+                      >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M4 9v6h4l5 4V5L8 9H4z" />
+                          <path d="M16.5 8.5a5 5 0 010 7" />
+                        </svg>
                       </button>
                     </div>
                   </div>
                 </div>
-                <Show when={l().note}><div class="sub">{l().note}</div></Show>
+                <Show when={l().note}>
+                  <div class="sub">{l().note}</div>
+                </Show>
                 <div class="acts">
-                  <button class="btn" onClick={translate}>Translate sentence →</button>
+                  <button type="button" class="btn" onClick={translate}>
+                    Translate sentence →
+                  </button>
                   <span class="spacer" />
                   <span class="btn t">✓ Saved</span>
                 </div>
@@ -131,12 +224,35 @@ export function WordSheet(props: {
       </Show>
       <Show when={view() === 'sentence'}>
         <div class="cap">Translation</div>
-        <Show when={tr().state !== 'loading'} fallback={<><div class="skel" style={{ width: '90%' }} /><div class="skel" style={{ width: '70%' }} /></>}>
-          <div classList={{ serif: tr().state === 'done', err: tr().state === 'error' }} style={tr().state === 'done' ? { 'font-size': '24px', 'line-height': 1.35, 'margin-top': '10px' } : undefined}>{tr().text}</div>
+        <Show
+          when={tr().state !== 'loading'}
+          fallback={
+            <>
+              <div class="skel" style={{ width: '90%' }} />
+              <div class="skel" style={{ width: '70%' }} />
+            </>
+          }
+        >
+          <div
+            classList={{ serif: tr().state === 'done', err: tr().state === 'error' }}
+            style={
+              tr().state === 'done'
+                ? { 'font-size': '24px', 'line-height': 1.35, 'margin-top': '10px' }
+                : undefined
+            }
+          >
+            {tr().text}
+          </div>
         </Show>
         <div class="acts">
-          <button class="btn" onClick={backToWord}>← Back to word</button>
-          <Show when={tr().state === 'error'}><button class="btn p" onClick={translate}>Try again</button></Show>
+          <button type="button" class="btn" onClick={backToWord}>
+            ← Back to word
+          </button>
+          <Show when={tr().state === 'error'}>
+            <button type="button" class="btn p" onClick={translate}>
+              Try again
+            </button>
+          </Show>
         </div>
       </Show>
     </div>

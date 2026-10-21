@@ -21,3 +21,15 @@ export function sentenceAt(text: string, offset: number): { start: number; end: 
 export function normalizeWord(w: string): string {
   return w.replace(/[֑-ׇ]/g, '');
 }
+
+/** Positions of the words that fall inside a sentence, given every word's [start, end) in the paragraph. */
+export function wordsInSentence(
+  words: [number, number][],
+  sentence: { start: number; end: number },
+): number[] {
+  const out: number[] = [];
+  words.forEach(([s, e], i) => {
+    if (s >= sentence.start && e <= sentence.end) out.push(i);
+  });
+  return out;
+}

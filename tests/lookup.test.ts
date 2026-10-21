@@ -3,15 +3,27 @@ import { parseLookup, parseTranslation } from '../src/worker/lookup.ts';
 
 describe('parseLookup', () => {
   it('reads a clean answer', () => {
-    const r = parseLookup('{"lemma":"חמישי","meaning":"the fifth","root":"חמש","pos":"adjective","binyan":null,"say":"khamiSHI","note":null}');
-    expect(r).toMatchObject({ lemma: 'חמישי', meaning: 'the fifth', root: 'חמש', pos: 'adjective', binyan: null });
+    const r = parseLookup(
+      '{"lemma":"חמישי","meaning":"the fifth","root":"חמש","pos":"adjective","binyan":null,"say":"khamiSHI","note":null}',
+    );
+    expect(r).toMatchObject({
+      lemma: 'חמישי',
+      meaning: 'the fifth',
+      root: 'חמש',
+      pos: 'adjective',
+      binyan: null,
+    });
   });
   it('strips a code fence and surrounding text', () => {
-    const r = parseLookup('Here you go:\n```json\n{"lemma":"פקח","meaning":"opened","root":"פקח","pos":"verb","binyan":"pa\'al","say":"paKHA"}\n```');
+    const r = parseLookup(
+      'Here you go:\n```json\n{"lemma":"פקח","meaning":"opened","root":"פקח","pos":"verb","binyan":"pa\'al","say":"paKHA"}\n```',
+    );
     expect(r?.binyan).toBe('qal');
   });
   it('maps Hebrew and misspelled binyan names', () => {
-    expect(parseLookup('{"lemma":"התגולל","meaning":"wallow","pos":"verb","binyan":"hitpa\'el"}')?.binyan).toBe('hitpael');
+    expect(
+      parseLookup('{"lemma":"התגולל","meaning":"wallow","pos":"verb","binyan":"hitpa\'el"}')?.binyan,
+    ).toBe('hitpael');
     expect(parseLookup('{"lemma":"שכח","meaning":"forgot","pos":"verb","binyan":"פעל"}')?.binyan).toBe('qal');
   });
   it('drops binyan on non-verbs', () => {
@@ -34,7 +46,10 @@ describe('parseTranslation', () => {
     expect(r).toEqual({ translation: 'his friends asked', glosses: null });
   });
   it('accepts a plain-text reply with no glosses', () => {
-    expect(parseTranslation('"His friends asked."', 2)).toEqual({ translation: 'His friends asked.', glosses: null });
+    expect(parseTranslation('"His friends asked."', 2)).toEqual({
+      translation: 'His friends asked.',
+      glosses: null,
+    });
   });
   it('allows empty glosses for particles', () => {
     expect(parseTranslation('{"translation":"x","glosses":["","book"]}', 2)?.glosses).toEqual(['', 'book']);

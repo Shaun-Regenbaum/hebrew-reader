@@ -7,7 +7,13 @@
  */
 import { Hono } from 'hono';
 import type { Lookup } from '../lib/types.ts';
-import { LOOKUP_SYSTEM, parseLookup, parseTranslation, TRANSLATE_SYSTEM, type Translation } from './lookup.ts';
+import {
+  LOOKUP_SYSTEM,
+  parseLookup,
+  parseTranslation,
+  TRANSLATE_SYSTEM,
+  type Translation,
+} from './lookup.ts';
 
 interface Env {
   ASSETS: Fetcher;
@@ -84,7 +90,8 @@ const clean = (v: unknown, max: number): string | null =>
   typeof v === 'string' && v.trim() && v.length <= max ? v.trim() : null;
 
 app.post('/api/lookup', async (c) => {
-  if (tooMany(c.req.header('cf-connecting-ip') ?? 'local')) return c.json({ error: 'Too many requests' }, 429);
+  if (tooMany(c.req.header('cf-connecting-ip') ?? 'local'))
+    return c.json({ error: 'Too many requests' }, 429);
   const body = await c.req.json().catch(() => null);
   const word = clean(body?.word, MAX_WORD);
   const sentence = clean(body?.sentence, MAX_TEXT);
@@ -96,9 +103,15 @@ app.post('/api/lookup', async (c) => {
   const hit = await c.env.CACHE?.get(key, 'json');
   if (hit) return c.json({ lookup: hit as Lookup, cached: true });
 
-  if (!(await withinDailyCap(c.env))) return c.json({ error: 'The daily limit for lookups is used up. Try again tomorrow.' }, 429);
+  if (!(await withinDailyCap(c.env)))
+    return c.json({ error: 'The daily limit for lookups is used up. Try again tomorrow.' }, 429);
   try {
-    const raw = await askModel(c.env, c.env.LOOKUP_MODEL, LOOKUP_SYSTEM, `Word: ${word}\nSentence: ${sentence}\nPassage: ${context}\nFrom: ${title}`);
+    const raw = await askModel(
+      c.env,
+      c.env.LOOKUP_MODEL,
+      LOOKUP_SYSTEM,
+      `Word: ${word}\nSentence: ${sentence}\nPassage: ${context}\nFrom: ${title}`,
+    );
     const lookup = parseLookup(raw);
     if (!lookup) return c.json({ error: 'The model gave an answer we could not read' }, 502);
     await c.env.CACHE?.put(key, JSON.stringify(lookup));
@@ -109,12 +122,17 @@ app.post('/api/lookup', async (c) => {
 });
 
 app.post('/api/translate', async (c) => {
-  if (tooMany(c.req.header('cf-connecting-ip') ?? 'local')) return c.json({ error: 'Too many requests' }, 429);
+  if (tooMany(c.req.header('cf-connecting-ip') ?? 'local'))
+    return c.json({ error: 'Too many requests' }, 429);
   const body = await c.req.json().catch(() => null);
   const text = clean(body?.text, MAX_TEXT);
   const context = clean(body?.context, MAX_TEXT) ?? text;
   const title = clean(body?.title, MAX_TITLE) ?? '';
-  const words: string[] = Array.isArray(body?.words) ? body.words.filter((w: unknown): w is string => typeof w === 'string' && w.length <= MAX_WORD).slice(0, MAX_WORDS) : [];
+  const words: string[] = Array.isArray(body?.words)
+    ? body.words
+        .filter((w: unknown): w is string => typeof w === 'string' && w.length <= MAX_WORD)
+        .slice(0, MAX_WORDS)
+    : [];
   if (!text) return c.json({ error: 'text is required' }, 400);
 
   const model = c.env.TRANSLATE_MODEL || c.env.LOOKUP_MODEL;
@@ -122,10 +140,16 @@ app.post('/api/translate', async (c) => {
   const hit = await c.env.CACHE?.get(key, 'json');
   if (hit) return c.json({ ...(hit as Translation), cached: true });
 
-  if (!(await withinDailyCap(c.env))) return c.json({ error: 'The daily limit for translations is used up. Try again tomorrow.' }, 429);
+  if (!(await withinDailyCap(c.env)))
+    return c.json({ error: 'The daily limit for translations is used up. Try again tomorrow.' }, 429);
   try {
     const numbered = words.map((w, i) => `${i + 1}. ${w}`).join('\n');
-    const raw = await askModel(c.env, model, TRANSLATE_SYSTEM, `From: ${title}\nPassage: ${context}\nSentence: ${text}\nWords:\n${numbered}`);
+    const raw = await askModel(
+      c.env,
+      model,
+      TRANSLATE_SYSTEM,
+      `From: ${title}\nPassage: ${context}\nSentence: ${text}\nWords:\n${numbered}`,
+    );
     const out = parseTranslation(raw, words.length);
     if (!out) return c.json({ error: 'The model gave an answer we could not read' }, 502);
     await c.env.CACHE?.put(key, JSON.stringify(out));

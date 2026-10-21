@@ -53,8 +53,24 @@ Then:
 - Sign in so your words and goals follow you between phone and laptop.
 - This can wait. Until then, everything lives on the device.
 
+## Accounts
+
+The app works with no account, and that stays true. Everything lives on the device.
+
+What an account would add, and only that:
+- **Your data on every device.** Words, progress and settings follow you from phone to laptop.
+- **Things that cost us money,** which need a person we can rate-limit: adding your own texts, and a bigger library.
+
+How I would build it:
+1. **Export and import now.** A button saves your data to a file and loads it back. No server. This already gives people a way to keep their data safe.
+2. **Sign in with an email link,** no password. Sync merges instead of overwriting: lookups are combined by id, read sections are combined, and settings take the newest.
+3. **Your own texts** (paste or a link), then the larger Ben-Yehuda catalogue.
+
+Counting which words readers look up is separate. It is anonymous, has no account, and runs on the server.
+
 ## Decisions for Shaun
 
-- Do we translate the whole library ahead of time? It is cheap and makes the app feel instant.
-- Are anonymous lookup counts from readers fine, with a short privacy note and an opt-out? Or do we wait for accounts first?
-- Should we start with goals and achievements (step 2), since they work without any other readers?
+- Decided: translation stays on demand and cached, not done ahead of time.
+- Decided: anonymous lookup counts are fine, with no note or opt-out, counted on the server.
+- Open: sign in by email link, or another way? And what should "more materials" mean first: your own texts, or the bigger catalogue?
+- Open: should we start with goals and achievements (step 2)?
