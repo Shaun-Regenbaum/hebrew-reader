@@ -1,6 +1,6 @@
 import { type Accessor, createEffect, createMemo, createResource, createSignal, For, on, onCleanup, onMount, Show } from 'solid-js';
 import { normalizeWord, sentenceAt } from '../lib/sentence.ts';
-import { rememberPosition, seenWords } from '../lib/store.ts';
+import { markSectionRead, seenWords, touchText } from '../lib/store.ts';
 import { getMeta, getSection } from '../lib/texts.ts';
 import type { Para, TextKind } from '../lib/types.ts';
 import { type SheetState, WordSheet } from './WordSheet.tsx';
@@ -135,7 +135,17 @@ export function Reader(props: { kind: TextKind; id: string; section: number; end
   }
   createEffect(on(() => [props.id, props.section], close, { defer: true }));
   createEffect(() => {
-    if (data()) rememberPosition({ kind: props.kind, id: props.id, section: props.section });
+    if (data()) touchText(props.kind, props.id, props.section);
+  });
+  // Work out the scroll position once the text is on screen: a short section has nothing to scroll.
+  createEffect(() => {
+    if (data()) requestAnimationFrame(() => onScroll());
+  });
+  // A section counts as read once the learner reaches its end.
+  createEffect(() => {
+    if (!data()) return;
+    const atEnd = view() === 'page' ? pages() > 0 && page() >= pages() - 1 && colW() > 0 : frac() >= 0.9;
+    if (atEnd) markSectionRead(props.kind, props.id, props.section);
   });
 
   // ---- page view: lay the text out in columns as wide as the screen, then slide between them ----
@@ -203,7 +213,7 @@ export function Reader(props: { kind: TextKind; id: string; section: number; end
   // ---- scroll view progress ----
   const onScroll = () => {
     const max = document.documentElement.scrollHeight - window.innerHeight;
-    setFrac(max > 0 ? Math.min(1, window.scrollY / max) : 0);
+    setFrac(max > 8 ? Math.min(1, window.scrollY / max) : 1);
   };
 
   // ---- taps ----

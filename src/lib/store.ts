@@ -1,6 +1,7 @@
 import { get, set } from 'idb-keyval';
-import { createMemo, createSignal } from 'solid-js';
+import { createMemo, createSignal, untrack } from 'solid-js';
 import { normalizeWord } from './sentence.ts';
+import type { ProgressMap } from './path.ts';
 import type { SavedLookup, TextKind } from './types.ts';
 
 /** Everything the learner has looked up, newest first. Kept in IndexedDB. */
@@ -47,25 +48,39 @@ export function toggleKnown(lemma: string): void {
   void write('known', next);
 }
 
-export interface Position {
-  kind: TextKind;
-  id: string;
-  section: number;
-}
-
-export function lastPosition(): Position | null {
+/** Reading progress per text, kept in localStorage (it is small, and the home screen needs it at once). */
+function readProgress(): ProgressMap {
   try {
-    const v = JSON.parse(localStorage.getItem('hr:pos') ?? 'null') as Position | null;
-    return v && typeof v.id === 'string' ? v : null;
+    const v = JSON.parse(localStorage.getItem('hr:progress') ?? '{}') as ProgressMap;
+    return v && typeof v === 'object' ? v : {};
   } catch {
-    return null;
+    return {};
   }
 }
+const [progress, setProgress] = createSignal<ProgressMap>(readProgress());
+export { progress };
 
-export function rememberPosition(p: Position): void {
+function saveProgress(next: ProgressMap): void {
+  setProgress(next);
   try {
-    localStorage.setItem('hr:pos', JSON.stringify(p));
+    localStorage.setItem('hr:progress', JSON.stringify(next));
   } catch {
     /* ignore */
   }
+}
+
+/** The learner is in this section: remember where, and when. */
+export function touchText(kind: TextKind, id: string, section: number): void {
+  const k = `${kind}/${id}`;
+  // untrack: these run inside effects, and reading what they then write would loop forever
+  const all = untrack(progress);
+  saveProgress({ ...all, [k]: { read: all[k]?.read ?? [], last: section, at: Date.now() } });
+}
+
+/** The learner reached the end of this section. */
+export function markSectionRead(kind: TextKind, id: string, section: number): void {
+  const k = `${kind}/${id}`;
+  const all = untrack(progress);
+  if (all[k]?.read.includes(section)) return;
+  saveProgress({ ...all, [k]: { read: [...(all[k]?.read ?? []), section], last: section, at: Date.now() } });
 }

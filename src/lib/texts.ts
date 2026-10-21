@@ -1,4 +1,4 @@
-import type { Para, TextKind, TextMeta, TextSummary } from './types.ts';
+import type { LibraryIndex, Para, TextKind, TextMeta } from './types.ts';
 
 const cache = new Map<string, Promise<unknown>>();
 
@@ -15,6 +15,6 @@ function getJson<T>(url: string): Promise<T> {
   return p;
 }
 
-export const getIndex = () => getJson<{ books: TextSummary[]; articles: TextSummary[] }>('/texts/index.json');
+export const getIndex = () => getJson<LibraryIndex>('/texts/index.json');
 export const getMeta = (kind: TextKind, id: string) => getJson<TextMeta>(`/texts/${kind}/${id}/meta.json`);
 export const getSection = (kind: TextKind, id: string, n: number) => getJson<Para[]>(`/texts/${kind}/${id}/${n}.json`);

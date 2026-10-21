@@ -4,7 +4,7 @@ A reader for learning modern Hebrew. You read real texts, tap any word you don't
 
 Status: first working version, live at https://learning.402.app
 
-Done: the library (Books and Articles), the reader, tap a word for its meaning, translate a sentence, saved lookups, and My words with a Known toggle.
+Done: a guided home (up next, a five-stage path, topics), measured difficulty for every text, the reader with a scroll view and a page view, tap a word for its meaning, translate a sentence with an English word over each Hebrew word, saved lookups, reading progress, and My words with a Known toggle.
 Stubbed: Review (flashcards), the quiz, and the landing page. Lookups are already saved for them.
 
 ## The idea
@@ -19,7 +19,9 @@ Stubbed: Review (flashcards), the quiz, and the landing page. Lookups are alread
 - `data/raw/articles/` holds 11 Hebrew Wikipedia articles.
 - `data/raw/pseudocatalogue.csv` lists about 26,000 more Ben-Yehuda works we can add.
 - `scripts/fetch.py` downloads all of it again.
-- `scripts/build_texts.py` turns it into the JSON the reader loads (`public/texts/`, not committed).
+- `scripts/build_texts.py` turns it into the JSON the reader loads (`public/texts/`, not committed). It also adds each text's level, style, reading time, topics and description.
+- `scripts/measure.py` rates difficulty from word frequency (`python3 -I scripts/measure.py` prints a table).
+- `scripts/tag_topics.py` asks the model for each text's topics and one-line description. Results are in `data/meta/topics.json`, reviewed by hand.
 - `docs/plan.md` has the build plan.
 - `DATA.md` has the licenses and credits for the texts.
 

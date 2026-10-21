@@ -1,0 +1,194 @@
+{
+ "books/1002": {
+  "topics": [
+   "love-family",
+   "folktales"
+  ],
+  "blurb": "A man professes his love to a woman, and the two exchange allegorical parables about desire, cost, and courtship."
+ },
+ "books/1126": {
+  "topics": [
+   "folktales",
+   "jewish-life"
+  ],
+  "blurb": "Before descending to Earth, a soul destined to become a Hebrew poet chooses precious stones of sorrow as inspiration."
+ },
+ "books/1005": {
+  "topics": [
+   "animals-nature",
+   "folktales"
+  ],
+  "blurb": "An allegorical meeting between departing summer and arriving winter as the seasons change and winter freezes the earth."
+ },
+ "books/113": {
+  "topics": [
+   "jewish-life",
+   "ideas-society"
+  ],
+  "blurb": "During a harsh, lingering winter and a deadly plague among children, a local doctor is called to help a sick mute woman."
+ },
+ "books/1364": {
+  "topics": [
+   "jewish-life",
+   "ideas-society"
+  ],
+  "blurb": "As a deadly plague approaches a Jewish town, fear and piety spread among residents, though two people unexpectedly welcome it."
+ },
+ "books/11873": {
+  "topics": [
+   "folktales"
+  ],
+  "blurb": "Fairy tales for children after Andersen, Grimm and others, retold in Hebrew."
+ },
+ "books/181": {
+  "topics": [
+   "folktales",
+   "animals-nature"
+  ],
+  "blurb": "King Solomon spares a little bee that stung his nose, and she later repays his mercy by helping him solve a riddle."
+ },
+ "books/208": {
+  "topics": [
+   "jewish-life",
+   "humor"
+  ],
+  "blurb": "Rabbi Lipa rushes on a short winter Friday to attend a circumcision ceremony in a nearby village before Sabbath begins."
+ },
+ "books/1386": {
+  "topics": [
+   "jewish-life",
+   "folktales"
+  ],
+  "blurb": "A poor woodchopper discovers a magical flame leading to treasure on Shabbat and faces the test of observing sacred laws."
+ },
+ "books/1385": {
+  "topics": [
+   "jewish-life",
+   "folktales"
+  ],
+  "blurb": "A synagogue warden takes pride in renovating the house of study, unaware that barring poor travelers from sleeping there brings divine judgment."
+ },
+ "books/420": {
+  "topics": [
+   "animals-nature",
+   "humor"
+  ],
+  "blurb": "A Jewish mill lessee in the forest receives a captured bear cub as an unexpected gift from his wealthy landlord."
+ },
+ "books/5277": {
+  "topics": [
+   "folktales",
+   "jewish-life"
+  ],
+  "blurb": "King Solomon uses a clever moral riddle to identify a thief among three merchants traveling to Jerusalem."
+ },
+ "books/6408": {
+  "topics": [
+   "humor",
+   "adventure"
+  ],
+  "blurb": "Mendele Mocher Sforim introduces the satirical adventures of Benjamin the Third, a simple Polish Jew setting out on a grand journey."
+ },
+ "books/6309": {
+  "topics": [
+   "jewish-life",
+   "history-places"
+  ],
+  "blurb": "A poem fragment: a tailor looks back on the terrible years when Jewish children were snatched for the army."
+ },
+ "books/957": {
+  "topics": [
+   "love-family",
+   "history-places"
+  ],
+  "blurb": "Set in ancient Jerusalem during King Ahaz's reign, rivalries, love, and deceit unfold among prominent families."
+ },
+ "articles/1820": {
+  "topics": [
+   "animals-nature",
+   "science-space"
+  ],
+  "blurb": "An encyclopedic overview of the domestic cat, exploring its biology, global spread, etymology, and evolutionary history."
+ },
+ "books/7260": {
+  "topics": [
+   "ideas-society",
+   "jewish-life"
+  ],
+  "blurb": "Grieving the loss of his close friends, an educated young Jewish lawyer reflects on his purposeless life in Vienna."
+ },
+ "books/665": {
+  "topics": [
+   "jewish-life",
+   "ideas-society"
+  ],
+  "blurb": "A gloomy young man tells his friends he is sick of life, and mocks the idea that the world was made for him."
+ },
+ "articles/24714": {
+  "topics": [
+   "food-drink",
+   "history-places"
+  ],
+  "blurb": "An overview of pizza, exploring its Italian origins, history, etymology, various styles, toppings, and halakhic status."
+ },
+ "articles/24454": {
+  "topics": [
+   "food-drink",
+   "history-places"
+  ],
+  "blurb": "An overview of chocolate, covering its etymology, ancient Mesoamerican origins, introduction to Europe, and modern industrial production."
+ },
+ "articles/249": {
+  "topics": [
+   "science-space"
+  ],
+  "blurb": "An informative article exploring the Moon's physical characteristics, formation, orbit, phases, and human exploration history."
+ },
+ "articles/19949": {
+  "topics": [
+   "food-drink",
+   "history-places"
+  ],
+  "blurb": "An overview of coffee, detailing its origins, etymology, historical spread from Ethiopia and Yemen, and global popularization."
+ },
+ "articles/25046": {
+  "topics": [
+   "history-places"
+  ],
+  "blurb": "An overview of the famous British passenger liner Titanic, including its construction, luxury features, safety design, and tragic sinking in 1912."
+ },
+ "articles/29104": {
+  "topics": [
+   "animals-nature",
+   "science-space"
+  ],
+  "blurb": "An informative overview of the honey bee, detailing its anatomy, social hierarchy, reproduction, and ecological importance."
+ },
+ "articles/29290": {
+  "topics": [
+   "animals-nature",
+   "science-space"
+  ],
+  "blurb": "An overview of ants, covering their global distribution, ecological success, social structure, diverse species, and unique anatomy."
+ },
+ "articles/7041": {
+  "topics": [
+   "animals-nature",
+   "history-places"
+  ],
+  "blurb": "An overview of the Dead Sea, covering its geography, unique hypersaline waters, environmental challenges, and historical and industrial importance."
+ },
+ "articles/9108": {
+  "topics": [
+   "science-space"
+  ],
+  "blurb": "An overview of sleep, its biological functions, stages including REM and slow-wave sleep, and circadian rhythms in humans and animals."
+ },
+ "articles/83": {
+  "topics": [
+   "science-space",
+   "history-places"
+  ],
+  "blurb": "A biographical overview of Albert Einstein, his groundbreaking scientific theories, Nobel Prize, and major events of his life."
+ }
+}
