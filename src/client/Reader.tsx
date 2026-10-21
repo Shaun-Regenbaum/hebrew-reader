@@ -9,7 +9,8 @@ interface Range { p: number; start: number; end: number }
 interface Seg { word: boolean; text: string; start: number; end: number; wi: number }
 type View = 'scroll' | 'page';
 
-const SIZES = [21, 23, 25, 28];
+/** Type sizes by view. The page view is a book page with small type; the scroll view is large and zoomed in. */
+const SIZES: Record<View, number[]> = { scroll: [21, 24, 27, 30], page: [14, 16, 18, 20] };
 /** Room the open sheet takes at the bottom of the screen, so the tapped word can be kept above it. */
 const SHEET_ROOM = 300;
 
@@ -25,29 +26,37 @@ function segments(para: Para): Seg[] {
   return out;
 }
 
-function ParaView(props: { para: Para; pi: number; tap: Accessor<{ p: number; wi: number } | null>; range: Accessor<Range | null> }) {
+function ParaView(props: { para: Para; pi: number; tap: Accessor<{ p: number; wi: number } | null>; range: Accessor<Range | null>; glosses: Accessor<Map<string, string>> }) {
   const segs = createMemo(() => segments(props.para));
   const inRange = (s: Seg) => {
     const r = props.range();
     return !!r && r.p === props.pi && s.start >= r.start && s.end <= r.end;
   };
+  const wordClasses = (s: Seg) => ({
+    seen: seenWords().has(normalizeWord(s.text)),
+    tap: props.tap()?.p === props.pi && props.tap()?.wi === s.wi,
+    sent: inRange(s),
+  });
   return (
     <p classList={{ hd: !!props.para.h }}>
       <For each={segs()}>
         {(s) =>
           s.word ? (
-            <span
-              class="w"
-              data-p={props.pi}
-              data-i={s.wi}
-              classList={{
-                seen: seenWords().has(normalizeWord(s.text)),
-                tap: props.tap()?.p === props.pi && props.tap()?.wi === s.wi,
-                sent: inRange(s),
-              }}
+            <Show
+              when={props.glosses().get(`${props.pi}:${s.wi}`)}
+              fallback={
+                <span class="w" data-p={props.pi} data-i={s.wi} classList={wordClasses(s)}>
+                  {s.text}
+                </span>
+              }
             >
-              {s.text}
-            </span>
+              {(g) => (
+                <ruby class="w" data-p={props.pi} data-i={s.wi} classList={wordClasses(s)}>
+                  {s.text}
+                  <rt>{g()}</rt>
+                </ruby>
+              )}
+            </Show>
           ) : (
             <span classList={{ sent: inRange(s) }}>{s.text}</span>
           )
@@ -88,8 +97,9 @@ export function Reader(props: { kind: TextKind; id: string; section: number; end
   const [tap, setTap] = createSignal<{ p: number; wi: number } | null>(null);
   const [sheet, setSheet] = createSignal<SheetState | null>(null);
   const [range, setRange] = createSignal<Range | null>(null);
+  const [glosses, setGlosses] = createSignal<Map<string, string>>(new Map());
   const [frac, setFrac] = createSignal(0);
-  const [size, setSize] = createSignal(Math.max(0, SIZES.indexOf(Number(stored('hr:size', ['21', '23', '25', '28'], '23')))));
+  const [size, setSize] = createSignal(Number(stored('hr:sz', ['0', '1', '2', '3'], '1')));
   const [view, setView] = createSignal<View>(stored<View>('hr:view', ['scroll', 'page'], 'scroll'));
 
   // page view state
@@ -102,9 +112,9 @@ export function Reader(props: { kind: TextKind; id: string; section: number; end
   let colsEl: HTMLDivElement | undefined;
 
   const cycleSize = () => {
-    const n = (size() + 1) % SIZES.length;
+    const n = (size() + 1) % 4;
     setSize(n);
-    store('hr:size', String(SIZES[n]));
+    store('hr:sz', String(n));
   };
   const toggleView = () => {
     const v: View = view() === 'scroll' ? 'page' : 'scroll';
@@ -120,6 +130,7 @@ export function Reader(props: { kind: TextKind; id: string; section: number; end
     setTap(null);
     setRange(null);
     setShiftY(0);
+    setGlosses(new Map());
     window.getSelection()?.removeAllRanges();
   }
   createEffect(on(() => [props.id, props.section], close, { defer: true }));
@@ -130,12 +141,12 @@ export function Reader(props: { kind: TextKind; id: string; section: number; end
   // ---- page view: lay the text out in columns as wide as the screen, then slide between them ----
   const measure = () => {
     if (view() !== 'page' || !clipEl || !colsEl) return;
-    const w = clipEl.clientWidth;
+    const w = clipEl.clientWidth - 16;
     if (w <= 0) return;
     setColW(w);
     requestAnimationFrame(() => {
       if (!colsEl) return;
-      setPages(Math.max(1, Math.round(colsEl.scrollWidth / w)));
+      setPages(Math.max(1, Math.round((colsEl.scrollWidth + 16) / (w + 16))));
       setPage((p) => Math.min(p, pages() - 1));
     });
   };
@@ -208,10 +219,13 @@ export function Reader(props: { kind: TextKind; id: string; section: number; end
 
   const onClick = (e: MouseEvent) => {
     if (suppressClick) return;
-    const t = e.target as HTMLElement;
+    // Read the click's path now: a button that redraws itself is already detached by the time we look,
+    // and a detached button looks like "clicked outside".
+    const path = e.composedPath().filter((n): n is HTMLElement => n instanceof HTMLElement);
+    const inside = (sel: string) => path.find((n) => n.matches(sel));
     // the sheet, the top bar and the footer handle their own clicks
-    if (t.closest('.sheet, .rtop, .pfoot, .endnav, .credit a')) return;
-    const el = t.closest<HTMLElement>('.w');
+    if (inside('.sheet, .rtop, .pfoot, .endnav, .credit a')) return;
+    const el = inside('.w') ?? null;
     const para = el ? data()?.paras[Number(el.dataset.p)] : undefined;
     if (el && para) {
       const p = Number(el.dataset.p);
@@ -219,7 +233,18 @@ export function Reader(props: { kind: TextKind; id: string; section: number; end
       const [s, e2] = para.w[wi] as [number, number];
       setTap({ p, wi });
       setRange(null);
-      setSheet({ id: `${props.kind}:${props.id}:${props.section}:${p}:${s}`, word: para.t.slice(s, e2), p, sentence: sentenceAt(para.t, s) });
+      const sentence = sentenceAt(para.t, s);
+      const wis: number[] = [];
+      para.w.forEach(([ws, we], i) => { if (ws >= sentence.start && we <= sentence.end) wis.push(i); });
+      setSheet({
+        id: `${props.kind}:${props.id}:${props.section}:${p}:${s}`,
+        word: para.t.slice(s, e2),
+        p,
+        sentence,
+        context: para.t.slice(0, 1400),
+        words: wis.map((i) => para.t.slice(para.w[i]![0], para.w[i]![1])),
+        wis,
+      });
       keepVisible(el);
       return;
     }
@@ -273,10 +298,15 @@ export function Reader(props: { kind: TextKind; id: string; section: number; end
     </div>
   );
 
-  const Paras = (d: { paras: Para[] }) => <For each={d.paras}>{(para, pi) => <ParaView para={para} pi={pi()} tap={tap} range={range} />}</For>;
+  const onGloss = (g: { p: number; wis: number[]; glosses: string[] } | null) => {
+    const m = new Map<string, string>();
+    if (g) g.wis.forEach((wi, i) => { if (g.glosses[i]) m.set(`${g.p}:${wi}`, g.glosses[i] as string); });
+    setGlosses(m);
+  };
+  const Paras = (d: { paras: Para[] }) => <For each={d.paras}>{(para, pi) => <ParaView para={para} pi={pi()} tap={tap} range={range} glosses={glosses} />}</For>;
 
   return (
-    <div style={{ '--read': `${SIZES[size()]}px` }}>
+    <div style={{ '--read': `${SIZES[view()][size()]}px` }}>
       <div class="progress"><i style={{ width: `${progress()}%` }} /></div>
       <Show when={data.error}><Header /><div class="empty">Could not load this text.</div></Show>
       <Show when={data()}>
@@ -310,7 +340,7 @@ export function Reader(props: { kind: TextKind; id: string; section: number; end
                   style={{
                     width: colW() ? `${colW()}px` : undefined,
                     'column-width': colW() ? `${colW()}px` : undefined,
-                    transform: `translate(${page() * colW()}px, ${-shiftY()}px)`,
+                    transform: `translate(${page() * (colW() + 16)}px, ${-shiftY()}px)`,
                   }}
                 >
                   <Paras paras={d().paras} />
@@ -331,7 +361,7 @@ export function Reader(props: { kind: TextKind; id: string; section: number; end
         )}
       </Show>
       <Show when={sheet()} keyed>
-        {(s) => <WordSheet sheet={s} text={{ kind: props.kind, id: props.id, title: data()?.meta.title ?? '' }} onRange={setRange} onClose={close} />}
+        {(s) => <WordSheet sheet={s} text={{ kind: props.kind, id: props.id, title: data()?.meta.title ?? '' }} onRange={setRange} onGloss={onGloss} onClose={close} />}
       </Show>
     </div>
   );

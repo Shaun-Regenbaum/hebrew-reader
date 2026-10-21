@@ -7,6 +7,11 @@ export interface SheetState {
   word: string;
   p: number;
   sentence: { start: number; end: number; text: string };
+  /** The whole paragraph, so the model can read the sentence in context. */
+  context: string;
+  /** The words of the sentence in order, and their positions in the paragraph. */
+  words: string[];
+  wis: number[];
 }
 
 export interface SheetText {
@@ -37,28 +42,43 @@ export function WordSheet(props: {
   sheet: SheetState;
   text: SheetText;
   onRange: (r: { p: number; start: number; end: number } | null) => void;
+  /** English words to show above the sentence's Hebrew words; null clears them. */
+  onGloss: (g: { p: number; wis: number[]; glosses: string[] } | null) => void;
   onClose: () => void;
 }) {
   const [attempt, setAttempt] = createSignal(0);
   const [view, setView] = createSignal<'word' | 'sentence'>('word');
-  const [tr, setTr] = createSignal<{ state: 'loading' | 'done' | 'error'; text: string }>({ state: 'loading', text: '' });
+  const [tr, setTr] = createSignal<{ state: 'loading' | 'done' | 'error'; text: string; glosses?: string[] | null }>({ state: 'loading', text: '' });
   // Start translating the sentence right away, so it is usually ready by the time the learner asks.
   const startTranslation = () =>
-    post<{ translation: string }>('/api/translate', { text: props.sheet.sentence.text }).then(
-      (r) => setTr({ state: 'done', text: r.translation }),
+    post<{ translation: string; glosses: string[] | null }>('/api/translate', {
+      text: props.sheet.sentence.text,
+      context: props.sheet.context,
+      words: props.sheet.words,
+      title: props.text.title,
+    }).then(
+      (r) => setTr({ state: 'done', text: r.translation, glosses: r.glosses }),
       (e) => setTr({ state: 'error', text: e instanceof Error ? e.message : 'Translation failed' }),
     );
   void startTranslation();
 
   const [lookup] = createResource(
     () => attempt(),
-    async () => (await post<{ lookup: Lookup }>('/api/lookup', { word: props.sheet.word, sentence: props.sheet.sentence.text, title: props.text.title })).lookup,
+    async () => (await post<{ lookup: Lookup }>('/api/lookup', { word: props.sheet.word, sentence: props.sheet.sentence.text, context: props.sheet.context, title: props.text.title })).lookup,
   );
 
   createEffect(() => {
     const l = lookup();
     if (!l) return;
     saveLookup({ ...l, id: props.sheet.id, word: props.sheet.word, sentence: props.sheet.sentence.text, textId: props.text.id, textKind: props.text.kind, textTitle: props.text.title, at: Date.now() });
+  });
+
+  // Show the English words above the sentence once it is translated; take them away when it is not.
+  createEffect(() => {
+    const t = tr();
+    if (view() === 'sentence' && t.state === 'done' && t.glosses) {
+      props.onGloss({ p: props.sheet.p, wis: props.sheet.wis, glosses: t.glosses });
+    } else props.onGloss(null);
   });
 
   async function translate() {

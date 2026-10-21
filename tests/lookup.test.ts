@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { parseLookup } from '../src/worker/lookup.ts';
+import { parseLookup, parseTranslation } from '../src/worker/lookup.ts';
 
 describe('parseLookup', () => {
   it('reads a clean answer', () => {
@@ -21,5 +21,27 @@ describe('parseLookup', () => {
     expect(parseLookup('{"lemma":"עין"}')).toBeNull();
     expect(parseLookup('sorry, no')).toBeNull();
     expect(parseLookup('')).toBeNull();
+  });
+});
+
+describe('parseTranslation', () => {
+  it('reads a translation with one gloss per word', () => {
+    const r = parseTranslation('{"translation":"his friends asked","glosses":["asked","his friends"]}', 2);
+    expect(r).toEqual({ translation: 'his friends asked', glosses: ['asked', 'his friends'] });
+  });
+  it('keeps the translation but drops glosses that do not line up', () => {
+    const r = parseTranslation('{"translation":"his friends asked","glosses":["asked"]}', 2);
+    expect(r).toEqual({ translation: 'his friends asked', glosses: null });
+  });
+  it('accepts a plain-text reply with no glosses', () => {
+    expect(parseTranslation('"His friends asked."', 2)).toEqual({ translation: 'His friends asked.', glosses: null });
+  });
+  it('allows empty glosses for particles', () => {
+    expect(parseTranslation('{"translation":"x","glosses":["","book"]}', 2)?.glosses).toEqual(['', 'book']);
+  });
+  it('rejects empty and broken replies', () => {
+    expect(parseTranslation('', 2)).toBeNull();
+    expect(parseTranslation('{"glosses":[]}', 0)).toBeNull();
+    expect(parseTranslation('{"translation":', 2)).toBeNull();
   });
 });

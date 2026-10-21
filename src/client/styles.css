@@ -103,9 +103,10 @@ a { color: inherit; text-decoration: none; }
 .pagemode { height: 100dvh; display: flex; flex-direction: column; overflow: hidden; }
 .pagemode .rtop { position: static; }
 .pview { flex: 1; min-height: 0; position: relative; padding: 6px 28px 0; }
-.pclip { height: 100%; overflow: hidden; }
-.pcols { height: 100%; column-fill: auto; column-gap: 0; font-size: var(--read); line-height: 2.05; transition: transform 0.28s ease; }
-.pcols p { margin: 0 0 20px; }
+.pclip { height: 100%; overflow: hidden; margin: 0 -8px; padding: 0 8px; }
+.pcols { height: 100%; column-fill: auto; column-gap: 16px; font-size: var(--read); line-height: 1.8; transition: transform 0.28s ease; }
+.pcols p { margin: 0 0 0.7em; }
+.pcols p.hd { margin-top: 0.9em; }
 .pfoot { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 14px calc(12px + env(safe-area-inset-bottom)); font: 400 12.5px Inter; color: var(--ink3); }
 .pfoot .mid { flex: 1; text-align: center; line-height: 1.5; font-size: 12px; }
 .pfoot .mid a { text-decoration: underline; }
@@ -113,3 +114,8 @@ a { color: inherit; text-decoration: none; }
 .pfoot button[disabled] { opacity: 0.25; }
 .rtop .tools { display: flex; align-items: center; gap: 4px; }
 .rtop .tools .iconbtn { padding: 6px; margin: 0; }
+
+/* English words above the Hebrew, shown for a translated sentence */
+ruby.w { ruby-position: over; ruby-align: center; }
+ruby.w rt { font: 500 11.5px/1 Inter, sans-serif; letter-spacing: 0; color: var(--accent); direction: ltr; padding-bottom: 2px; }
+.pview { padding-top: 10px; }

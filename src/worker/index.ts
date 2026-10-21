@@ -7,7 +7,7 @@
  */
 import { Hono } from 'hono';
 import type { Lookup } from '../lib/types.ts';
-import { LOOKUP_SYSTEM, parseLookup, TRANSLATE_SYSTEM } from './lookup.ts';
+import { LOOKUP_SYSTEM, parseLookup, parseTranslation, TRANSLATE_SYSTEM, type Translation } from './lookup.ts';
 
 interface Env {
   ASSETS: Fetcher;
@@ -23,6 +23,7 @@ interface Env {
 const MAX_WORD = 40;
 const MAX_TEXT = 1500;
 const MAX_TITLE = 200;
+const MAX_WORDS = 80;
 const PER_MINUTE = 40;
 
 const app = new Hono<{ Bindings: Env }>();
@@ -88,6 +89,7 @@ app.post('/api/lookup', async (c) => {
   const word = clean(body?.word, MAX_WORD);
   const sentence = clean(body?.sentence, MAX_TEXT);
   const title = clean(body?.title, MAX_TITLE) ?? '';
+  const context = clean(body?.context, MAX_TEXT) ?? sentence;
   if (!word || !sentence) return c.json({ error: 'word and sentence are required' }, 400);
 
   const key = `lookup:v1:${c.env.LOOKUP_MODEL}:${await sha(`${word}|${sentence}`)}`;
@@ -96,7 +98,7 @@ app.post('/api/lookup', async (c) => {
 
   if (!(await withinDailyCap(c.env))) return c.json({ error: 'The daily limit for lookups is used up. Try again tomorrow.' }, 429);
   try {
-    const raw = await askModel(c.env, c.env.LOOKUP_MODEL, LOOKUP_SYSTEM, `Word: ${word}\nSentence: ${sentence}\nFrom: ${title}`);
+    const raw = await askModel(c.env, c.env.LOOKUP_MODEL, LOOKUP_SYSTEM, `Word: ${word}\nSentence: ${sentence}\nPassage: ${context}\nFrom: ${title}`);
     const lookup = parseLookup(raw);
     if (!lookup) return c.json({ error: 'The model gave an answer we could not read' }, 502);
     await c.env.CACHE?.put(key, JSON.stringify(lookup));
@@ -110,19 +112,24 @@ app.post('/api/translate', async (c) => {
   if (tooMany(c.req.header('cf-connecting-ip') ?? 'local')) return c.json({ error: 'Too many requests' }, 429);
   const body = await c.req.json().catch(() => null);
   const text = clean(body?.text, MAX_TEXT);
+  const context = clean(body?.context, MAX_TEXT) ?? text;
+  const title = clean(body?.title, MAX_TITLE) ?? '';
+  const words: string[] = Array.isArray(body?.words) ? body.words.filter((w: unknown): w is string => typeof w === 'string' && w.length <= MAX_WORD).slice(0, MAX_WORDS) : [];
   if (!text) return c.json({ error: 'text is required' }, 400);
 
   const model = c.env.TRANSLATE_MODEL || c.env.LOOKUP_MODEL;
-  const key = `translate:v1:${model}:${await sha(text)}`;
-  const hit = await c.env.CACHE?.get(key);
-  if (hit) return c.json({ translation: hit, cached: true });
+  const key = `translate:v2:${model}:${await sha(`${text}|${words.join(' ')}`)}`;
+  const hit = await c.env.CACHE?.get(key, 'json');
+  if (hit) return c.json({ ...(hit as Translation), cached: true });
 
   if (!(await withinDailyCap(c.env))) return c.json({ error: 'The daily limit for translations is used up. Try again tomorrow.' }, 429);
   try {
-    const translation = await askModel(c.env, model, TRANSLATE_SYSTEM, text);
-    if (!translation) return c.json({ error: 'Empty translation' }, 502);
-    await c.env.CACHE?.put(key, translation);
-    return c.json({ translation, cached: false });
+    const numbered = words.map((w, i) => `${i + 1}. ${w}`).join('\n');
+    const raw = await askModel(c.env, model, TRANSLATE_SYSTEM, `From: ${title}\nPassage: ${context}\nSentence: ${text}\nWords:\n${numbered}`);
+    const out = parseTranslation(raw, words.length);
+    if (!out) return c.json({ error: 'The model gave an answer we could not read' }, 502);
+    await c.env.CACHE?.put(key, JSON.stringify(out));
+    return c.json({ ...out, cached: false });
   } catch {
     return c.json({ error: 'Translation failed. Try again.' }, 502);
   }
