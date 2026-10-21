@@ -10,7 +10,7 @@ export interface TextSummary {
   author: string | null;
   words: number;
   sections: number;
-  /** 1 (easiest in this library) to 5 (hardest). Measured, see scripts/measure.py. */
+  /** 1 (easiest in this library) to 6 (hardest). Measured, see scripts/measure.py. */
   level: number;
   /** Percent of words outside the 2,000 most common word forms. */
   uncommon: number;

@@ -2,7 +2,8 @@ import type { LibraryIndex, TextSummary } from './types.ts';
 
 /** Texts longer than this are "long reads": novels you take in sections, not steps on the path. */
 export const LONG_READ_WORDS = 12000;
-export const STAGE_NAMES = ['Easiest', 'Easy', 'Medium', 'Hard', 'Hardest'];
+export const STAGE_NAMES = ['First steps', 'Easiest', 'Easy', 'Medium', 'Hard', 'Hardest'];
+export const LEVEL_COUNT = STAGE_NAMES.length;
 
 export interface Progress {
   /** Sections the learner has read to the end. */
@@ -47,7 +48,7 @@ export interface Stage {
 
 export function stages(items: TextSummary[], pm: ProgressMap): Stage[] {
   const out: Stage[] = [];
-  for (let level = 1; level <= STAGE_NAMES.length; level++) {
+  for (let level = 1; level <= LEVEL_COUNT; level++) {
     const its = items.filter((t) => t.level === level);
     if (!its.length) continue;
     const u = its.map((t) => t.uncommon);

@@ -75,7 +75,8 @@ def fetch_article(title):
 
 def main():
     cat = {x['ID']: x for x in csv.DictReader(open(sys.argv[1], encoding='utf-8'))}
-    for i in BOOK_IDS:
+    beginner = json.load(open('data/meta/beginner.json'))
+    for i in BOOK_IDS + [t['id'] for t in beginner['texts']] + beginner['longReads']:
         t = urllib.request.urlopen(BASE + cat[i]['path'] + '.txt', timeout=60).read().decode()
         open(f'data/raw/books/{i}.txt', 'w').write(t)
     have = {json.load(open(f))['title'] for f in glob.glob('data/raw/articles/*.json')}

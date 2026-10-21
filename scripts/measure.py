@@ -18,8 +18,8 @@ BIBLICAL_FORMS = set('''ויאמר ויהי ויבא ויען ויקח וישב 
 ותבא ותלך ותקח וייקץ ויקרב ויחר ויעל וירד וידע ויעמד ויבך וישמע ויסף ותען ותרא ותשב ותקם ותצא ויברך ויפל ויאהב ויבחר
 ויעבור וימת ויכן ויהיו ויבאו ויאמרו ויעשו וילכו וישבו ויקומו ויקחו ויענו ויצאו וישאו ויפלו'''.split())
 STYLE_COST = {'modern': 0, 'literary': 5, 'biblical': 10}
-# Level cut-offs on the difficulty score (see score()). Relative to this library, not to Hebrew as a whole.
-LEVEL_CUTS = [48, 52, 56, 60]
+# Level cut-offs on the difficulty score (see score()), giving six levels. Relative to this library, not to Hebrew as a whole.
+LEVEL_CUTS = [41, 48, 52, 56, 60]
 WORDS_PER_MINUTE = 60  # a learner reading with lookups
 
 _rank = None

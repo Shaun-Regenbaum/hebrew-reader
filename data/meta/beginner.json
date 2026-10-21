@@ -1,0 +1,479 @@
+{
+ "texts": [
+  {
+   "id": "52741",
+   "title": "פחד שוא",
+   "author": "יצחק קצנלסון",
+   "words": 157,
+   "score": 34,
+   "sentenceLen": 4.2
+  },
+  {
+   "id": "11505",
+   "title": "חברים",
+   "author": "ישראל דושמן",
+   "words": 561,
+   "score": 34,
+   "sentenceLen": 6.6
+  },
+  {
+   "id": "11483",
+   "title": "מעשים טובים",
+   "author": "ישראל דושמן",
+   "words": 251,
+   "score": 35,
+   "sentenceLen": 6.0
+  },
+  {
+   "id": "11511",
+   "title": "לילי והשוטר",
+   "author": "ישראל דושמן",
+   "words": 534,
+   "score": 35,
+   "sentenceLen": 6.8
+  },
+  {
+   "id": "59105",
+   "title": "דן הפקח",
+   "author": "וילהלם גרים; יעקב גרים",
+   "words": 654,
+   "score": 36,
+   "sentenceLen": 6.4
+  },
+  {
+   "id": "11485",
+   "title": "החידה",
+   "author": "ישראל דושמן",
+   "words": 544,
+   "score": 37,
+   "sentenceLen": 5.8
+  },
+  {
+   "id": "11475",
+   "title": "הילדה התועה",
+   "author": "ישראל דושמן",
+   "words": 210,
+   "score": 39,
+   "sentenceLen": 5.8
+  },
+  {
+   "id": "11499",
+   "title": "השבת אבדה",
+   "author": "ישראל דושמן",
+   "words": 573,
+   "score": 39,
+   "sentenceLen": 6.4
+  },
+  {
+   "id": "11517",
+   "title": "שנוי השם",
+   "author": "ישראל דושמן",
+   "words": 1471,
+   "score": 39,
+   "sentenceLen": 6.9
+  },
+  {
+   "id": "11495",
+   "title": "תכי מגלה סוד",
+   "author": "ישראל דושמן",
+   "words": 253,
+   "score": 39,
+   "sentenceLen": 7.9
+  },
+  {
+   "id": "24302",
+   "title": "הבבה של תמר",
+   "author": "פניה ברגשטיין",
+   "words": 387,
+   "score": 40,
+   "sentenceLen": 4.7
+  },
+  {
+   "id": "41669",
+   "title": "האדם",
+   "author": "יצחק קצנלסון",
+   "words": 1878,
+   "score": 40,
+   "sentenceLen": 5.9
+  },
+  {
+   "id": "52755",
+   "title": "האדם (אגדה)",
+   "author": "יצחק קצנלסון",
+   "words": 1881,
+   "score": 40,
+   "sentenceLen": 6.0
+  },
+  {
+   "id": "11472",
+   "title": "נורית אוהבת ספורים",
+   "author": "ישראל דושמן",
+   "words": 286,
+   "score": 40,
+   "sentenceLen": 6.8
+  },
+  {
+   "id": "24307",
+   "title": "עמוס",
+   "author": "פניה ברגשטיין",
+   "words": 1375,
+   "score": 41,
+   "sentenceLen": 5.2
+  },
+  {
+   "id": "11478",
+   "title": "עפרה והבבה שלה",
+   "author": "ישראל דושמן",
+   "words": 736,
+   "score": 41,
+   "sentenceLen": 5.5
+  },
+  {
+   "id": "11504",
+   "title": "לכבוד רבי שמעון בר יוחאי",
+   "author": "ישראל דושמן",
+   "words": 760,
+   "score": 41,
+   "sentenceLen": 6.2
+  },
+  {
+   "id": "11477",
+   "title": "תשומת-לב",
+   "author": "ישראל דושמן",
+   "words": 427,
+   "score": 41,
+   "sentenceLen": 6.7
+  },
+  {
+   "id": "41866",
+   "title": "יום השבת והסמבטיון",
+   "author": "יצחק קצנלסון",
+   "words": 175,
+   "score": 41,
+   "sentenceLen": 6.7
+  },
+  {
+   "id": "11506",
+   "title": "ללה",
+   "author": "ישראל דושמן",
+   "words": 558,
+   "score": 41,
+   "sentenceLen": 6.8
+  },
+  {
+   "id": "42380",
+   "title": "לקיש הגזלן",
+   "author": "יצחק קצנלסון",
+   "words": 2899,
+   "score": 41,
+   "sentenceLen": 6.9
+  },
+  {
+   "id": "11484",
+   "title": "הצלת נפש",
+   "author": "ישראל דושמן",
+   "words": 279,
+   "score": 41,
+   "sentenceLen": 7.0
+  },
+  {
+   "id": "52747",
+   "title": "לקיש הגזלן (מעשיה)",
+   "author": "יצחק קצנלסון",
+   "words": 2881,
+   "score": 41,
+   "sentenceLen": 7.3
+  },
+  {
+   "id": "24306",
+   "title": "הקוקיה",
+   "author": "פניה ברגשטיין",
+   "words": 2566,
+   "score": 42,
+   "sentenceLen": 5.3
+  },
+  {
+   "id": "24309",
+   "title": "ברוזיהזהב של דני",
+   "author": "פניה ברגשטיין",
+   "words": 3140,
+   "score": 42,
+   "sentenceLen": 5.5
+  },
+  {
+   "id": "11503",
+   "title": "סבלנות",
+   "author": "ישראל דושמן",
+   "words": 658,
+   "score": 42,
+   "sentenceLen": 6.0
+  },
+  {
+   "id": "11473",
+   "title": "שולה ודג הזהב",
+   "author": "ישראל דושמן",
+   "words": 231,
+   "score": 43,
+   "sentenceLen": 6.4
+  },
+  {
+   "id": "42219",
+   "title": "חברים",
+   "author": "יצחק קצנלסון",
+   "words": 2837,
+   "score": 43,
+   "sentenceLen": 6.8
+  },
+  {
+   "id": "11493",
+   "title": "לקח טוב",
+   "author": "ישראל דושמן",
+   "words": 269,
+   "score": 43,
+   "sentenceLen": 7.5
+  },
+  {
+   "id": "40606",
+   "title": "הנשיקה",
+   "author": "יצחק קצנלסון",
+   "words": 176,
+   "score": 43,
+   "sentenceLen": 8.8
+  },
+  {
+   "id": "52738",
+   "title": "מכירת יוסף",
+   "author": "יצחק קצנלסון",
+   "words": 194,
+   "score": 44,
+   "sentenceLen": 4.1
+  },
+  {
+   "id": "24304",
+   "title": "צבי",
+   "author": "פניה ברגשטיין",
+   "words": 406,
+   "score": 44,
+   "sentenceLen": 6.0
+  },
+  {
+   "id": "11497",
+   "title": "השמשה השבורה",
+   "author": "ישראל דושמן",
+   "words": 350,
+   "score": 44,
+   "sentenceLen": 7.1
+  },
+  {
+   "id": "11507",
+   "title": "גדי כותב את שמו",
+   "author": "ישראל דושמן",
+   "words": 389,
+   "score": 44,
+   "sentenceLen": 7.3
+  },
+  {
+   "id": "52737",
+   "title": "מעשיה",
+   "author": "יצחק קצנלסון",
+   "words": 162,
+   "score": 45,
+   "sentenceLen": 4.9
+  },
+  {
+   "id": "41865",
+   "title": "שמחת תורה",
+   "author": "יצחק קצנלסון",
+   "words": 275,
+   "score": 45,
+   "sentenceLen": 5.6
+  },
+  {
+   "id": "24308",
+   "title": "אילנה",
+   "author": "פניה ברגשטיין",
+   "words": 1581,
+   "score": 45,
+   "sentenceLen": 5.7
+  },
+  {
+   "id": "24318",
+   "title": "אל אבא בהרי ירושלים",
+   "author": "פניה ברגשטיין",
+   "words": 1594,
+   "score": 45,
+   "sentenceLen": 5.8
+  },
+  {
+   "id": "63371",
+   "title": "חמשה בשק אחד",
+   "author": "יצחק קצנלסון",
+   "words": 220,
+   "score": 45,
+   "sentenceLen": 5.9
+  },
+  {
+   "id": "11501",
+   "title": "מחול הפרפרים",
+   "author": "ישראל דושמן",
+   "words": 569,
+   "score": 45,
+   "sentenceLen": 6.1
+  },
+  {
+   "id": "11508",
+   "title": "גם היא רוצה לשחק",
+   "author": "ישראל דושמן",
+   "words": 287,
+   "score": 45,
+   "sentenceLen": 6.1
+  },
+  {
+   "id": "11474",
+   "title": "דני ויורם",
+   "author": "ישראל דושמן",
+   "words": 235,
+   "score": 45,
+   "sentenceLen": 6.4
+  },
+  {
+   "id": "11488",
+   "title": "בשדרות רוטשילד",
+   "author": "ישראל דושמן",
+   "words": 248,
+   "score": 45,
+   "sentenceLen": 6.4
+  },
+  {
+   "id": "11519",
+   "title": "במחלקה",
+   "author": "ישראל דושמן",
+   "words": 920,
+   "score": 45,
+   "sentenceLen": 6.7
+  },
+  {
+   "id": "11491",
+   "title": "מעשה בקלפת בננה",
+   "author": "ישראל דושמן",
+   "words": 261,
+   "score": 45,
+   "sentenceLen": 6.9
+  },
+  {
+   "id": "11496",
+   "title": "חסר זהירות",
+   "author": "ישראל דושמן",
+   "words": 243,
+   "score": 45,
+   "sentenceLen": 6.9
+  },
+  {
+   "id": "11492",
+   "title": "תרופת הדוד",
+   "author": "ישראל דושמן",
+   "words": 258,
+   "score": 45,
+   "sentenceLen": 7.0
+  },
+  {
+   "id": "44010",
+   "title": "מעשה בחיט עני",
+   "author": "יצחק קצנלסון",
+   "words": 1008,
+   "score": 45,
+   "sentenceLen": 7.0
+  },
+  {
+   "id": "11476",
+   "title": "בקר טוב!",
+   "author": "ישראל דושמן",
+   "words": 293,
+   "score": 46,
+   "sentenceLen": 6.2
+  },
+  {
+   "id": "11494",
+   "title": "רמי וכלבו",
+   "author": "ישראל דושמן",
+   "words": 220,
+   "score": 46,
+   "sentenceLen": 6.3
+  },
+  {
+   "id": "11479",
+   "title": "נעמי \"לב זהב\"",
+   "author": "ישראל דושמן",
+   "words": 216,
+   "score": 46,
+   "sentenceLen": 6.5
+  },
+  {
+   "id": "11502",
+   "title": "בערב פסח",
+   "author": "ישראל דושמן",
+   "words": 1028,
+   "score": 46,
+   "sentenceLen": 6.9
+  },
+  {
+   "id": "11516",
+   "title": "חד גדיא",
+   "author": "ישראל דושמן",
+   "words": 861,
+   "score": 46,
+   "sentenceLen": 6.9
+  },
+  {
+   "id": "24317",
+   "title": "המפית המשבצת",
+   "author": "פניה ברגשטיין",
+   "words": 1629,
+   "score": 47,
+   "sentenceLen": 5.7
+  },
+  {
+   "id": "11513",
+   "title": "תאבונה של נעמי הקטנה",
+   "author": "ישראל דושמן",
+   "words": 858,
+   "score": 47,
+   "sentenceLen": 6.5
+  },
+  {
+   "id": "24305",
+   "title": "פנינה קרלי",
+   "author": "פניה ברגשטיין",
+   "words": 1134,
+   "score": 48,
+   "sentenceLen": 4.2
+  },
+  {
+   "id": "11486",
+   "title": "הצפור הפצועה",
+   "author": "ישראל דושמן",
+   "words": 268,
+   "score": 48,
+   "sentenceLen": 6.1
+  },
+  {
+   "id": "24311",
+   "title": "האם הזקנה ובניה",
+   "author": "פניה ברגשטיין",
+   "words": 1460,
+   "score": 48,
+   "sentenceLen": 6.3
+  },
+  {
+   "id": "57306",
+   "title": "רחלי",
+   "author": "פניה ברגשטיין",
+   "words": 1803,
+   "score": 48,
+   "sentenceLen": 6.6
+  }
+ ],
+ "longReads": [
+  "11440"
+ ]
+}

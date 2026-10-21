@@ -5,6 +5,11 @@ const EN: Record<string, string> = {
   'מנדלי מוכר ספרים': 'Mendele',
   'אברהם מאפו': 'Abraham Mapu',
   'בנימין זאב הרצל': 'Theodor Herzl',
+  'יצחק קצנלסון': 'Yitzhak Katznelson',
+  'ישראל דושמן': 'Yisrael Dushman',
+  'פניה ברגשטיין': 'Fania Bergstein',
+  'וילהלם גרים; יעקב גרים': 'Brothers Grimm',
+  'קרלו קולודי': 'Carlo Collodi',
 };
 
 /** The author as the English UI shows them; unknown names stay as they are. */

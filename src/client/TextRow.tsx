@@ -1,6 +1,6 @@
 import { Show } from 'solid-js';
 import { authorName } from '../lib/authors.ts';
-import { isDone, keyOf, sectionsRead } from '../lib/path.ts';
+import { isDone, keyOf, LEVEL_COUNT, sectionsRead } from '../lib/path.ts';
 import { progress } from '../lib/store.ts';
 import type { Style, TextSummary } from '../lib/types.ts';
 
@@ -12,10 +12,10 @@ export const STYLE_LABEL: Record<Style, string> = {
 
 export function LevelBars(props: { level: number }) {
   return (
-    <span class="lvl" role="img" aria-label={`Level ${props.level} of 5`}>
+    <span class="lvl" role="img" aria-label={`Level ${props.level} of ${LEVEL_COUNT}`}>
       <span class="bars">
-        {[1, 2, 3, 4, 5].map((n) => (
-          <i classList={{ on: n <= props.level }} style={{ height: `${5 + n * 2}px` }} />
+        {Array.from({ length: LEVEL_COUNT }, (_, k) => k + 1).map((n) => (
+          <i classList={{ on: n <= props.level }} style={{ height: `${4 + n * 2}px` }} />
         ))}
       </span>
       Level {props.level}

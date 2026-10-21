@@ -1,5 +1,6 @@
 """The topics a text can have. One list, used by the tagger and the build."""
 TOPICS = {
+    'childrens': 'Stories for children',
     'science-space': 'Science and space',
     'earth-weather': 'Earth and weather',
     'animals-nature': 'Animals and nature',
