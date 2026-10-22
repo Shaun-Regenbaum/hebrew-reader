@@ -26,6 +26,8 @@ export interface Env {
   DAILY_MODEL_CALLS?: string;
   /** The site's address, used in sign-in links. Ignored on localhost. */
   PUBLIC_URL?: string;
+  /** Lets scripts/warm.ts fill the cache without the per-visitor rate limit. Send it as the x-warm header. */
+  WARM_TOKEN?: string;
   /** Set only in .dev.vars: return the sign-in link in the response instead of relying on email. */
   DEV_SHOW_LINK?: string;
 }

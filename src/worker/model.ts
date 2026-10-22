@@ -4,7 +4,7 @@
  *   POST /api/translate  { text, context, words, title }     -> a natural English translation, and a gloss per word
  * Answers are cached in KV, so a repeat tap costs nothing.
  */
-import { Hono } from 'hono';
+import { type Context, Hono } from 'hono';
 import type { Lookup } from '../lib/types.ts';
 import type { AppEnv, Env } from './env.ts';
 import {
@@ -49,12 +49,15 @@ async function askModel(env: Env, model: string, system: string, user: string): 
   return j.choices?.[0]?.message?.content?.trim() ?? '';
 }
 
+/** True for our own warm-up script, which presents the secret token. */
+const isWarmup = (c: Context<AppEnv>) => !!c.env.WARM_TOKEN && c.req.header('x-warm') === c.env.WARM_TOKEN;
+
 const dailyCap = (env: Env) => withinDailyCap(env, 'model', Number(env.DAILY_MODEL_CALLS) || 6000);
 
 export const model = new Hono<AppEnv>();
 
 model.post('/lookup', async (c) => {
-  if (tooMany(clientIp(c), PER_MINUTE)) return c.json({ error: 'Too many requests' }, 429);
+  if (!isWarmup(c) && tooMany(clientIp(c), PER_MINUTE)) return c.json({ error: 'Too many requests' }, 429);
   const body = await c.req.json().catch(() => null);
   const word = clean(body?.word, MAX_WORD);
   const sentence = clean(body?.sentence, MAX_TEXT);
@@ -95,7 +98,7 @@ model.post('/lookup', async (c) => {
 });
 
 model.post('/translate', async (c) => {
-  if (tooMany(clientIp(c), PER_MINUTE)) return c.json({ error: 'Too many requests' }, 429);
+  if (!isWarmup(c) && tooMany(clientIp(c), PER_MINUTE)) return c.json({ error: 'Too many requests' }, 429);
   const body = await c.req.json().catch(() => null);
   const text = clean(body?.text, MAX_TEXT);
   const context = clean(body?.context, MAX_TEXT) ?? text;
