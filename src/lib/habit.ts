@@ -1,11 +1,19 @@
 import { createSignal } from 'solid-js';
+import { markChanged } from './changes.ts';
 import { addSeconds, type DayMap, dayKey, prune } from './daily.ts';
 import { readJson, writeJson } from './prefs.ts';
+import type { HabitDoc } from './sync.ts';
 
 /**
  * The daily habit, on this device: the reading goal, the chosen topics, minutes read each day, and which
- * first-visit hints have been shown. These do not sync between devices yet.
+ * first-visit hints have been shown. Goal, topics and minutes sync with the rest of the learner's data; the
+ * hints do not, because each device is new to the app once.
  */
+
+/** When the goal and the topics were last chosen (ms), so the newest choice wins when devices are combined. */
+const [stamps, setStamps] = createSignal<{ goal: number; topics: number }>(
+  readJson('hr:stamps', { goal: 0, topics: 0 }),
+);
 
 /** One-time things: hints already shown, and the day the "done for today" screen last appeared. */
 interface Flags {
@@ -30,14 +38,46 @@ const [goalReached, setGoalReached] = createSignal(false);
 
 export { days, flags, goal, goalReached, topics };
 
+function stamp(which: 'goal' | 'topics'): void {
+  const next = { ...stamps(), [which]: Date.now() };
+  setStamps(next);
+  writeJson('hr:stamps', next);
+}
+
 export function setGoal(minutes: number): void {
   setGoalSignal(minutes);
   writeJson('hr:goal', minutes);
+  stamp('goal');
+  markChanged();
 }
 
 export function setTopics(keys: string[]): void {
   setTopicsSignal(keys);
   writeJson('hr:topics', keys);
+  stamp('topics');
+  markChanged();
+}
+
+/** The habit as one piece of the synced document. */
+export const habitSnapshot = (): HabitDoc => ({
+  goal: goal(),
+  goalAt: stamps().goal,
+  topics: topics(),
+  topicsAt: stamps().topics,
+  days: days(),
+});
+
+/** Take a merged copy from sync. This is not a change the learner made, so it does not trigger a sync. */
+export function applyHabit(h: HabitDoc): void {
+  setGoalSignal(h.goal);
+  writeJson('hr:goal', h.goal);
+  setTopicsSignal(h.topics);
+  writeJson('hr:topics', h.topics);
+  const st = { goal: h.goalAt, topics: h.topicsAt };
+  setStamps(st);
+  writeJson('hr:stamps', st);
+  setDays(h.days);
+  writeJson('hr:days', h.days);
 }
 
 export function setFlag(key: Exclude<keyof Flags, 'doneDay'>): void {
@@ -55,6 +95,9 @@ export function addReading(seconds: number, now = new Date()): void {
   const next = prune(r.days, now);
   setDays(next);
   writeJson('hr:days', next);
+  // sync about every half minute of reading, and the moment the goal is met
+  const secs = next[dayKey(now)]?.s ?? 0;
+  if (r.reached || secs % 30 === 0) markChanged();
   if (r.reached && flags().doneDay !== dayKey(now)) {
     const f = { ...flags(), doneDay: dayKey(now) };
     setFlags(f);

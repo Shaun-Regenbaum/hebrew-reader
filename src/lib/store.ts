@@ -1,5 +1,7 @@
 import { get, set } from 'idb-keyval';
 import { createMemo, createSignal, untrack } from 'solid-js';
+import { localVersion, markChanged } from './changes.ts';
+import { applyHabit, habitSnapshot } from './habit.ts';
 import type { ProgressMap } from './path.ts';
 import { readJson, writeJson } from './prefs.ts';
 import type { CardMap, StoredCard } from './review.ts';
@@ -30,12 +32,9 @@ export const known = createMemo(() =>
     .map(([lemma]) => lemma),
 );
 
-/** Goes up whenever the learner changes something. Sync watches it; applying a synced copy does not move it. */
-const [localVersion, setLocalVersion] = createSignal(0);
+export { localVersion, markChanged };
 
-export { localVersion };
-
-const changed = () => setLocalVersion((v) => v + 1);
+const changed = markChanged;
 
 /** Words (by surface form, no nikud) the learner has already looked up: the reader underlines them. */
 export const seenWords = createMemo(() => new Set(lookups().map((l) => normalizeWord(l.word))));
@@ -135,7 +134,14 @@ export function markSectionRead(kind: TextKind, id: string, section: number): vo
 
 /** All of the learner's data as one document. */
 export function snapshot(): SyncDoc {
-  return { v: 1, lookups: lookups(), known: knownMap(), progress: progress(), cards: cards() };
+  return {
+    v: 1,
+    lookups: lookups(),
+    known: knownMap(),
+    progress: progress(),
+    cards: cards(),
+    habit: habitSnapshot(),
+  };
 }
 
 /** Replace what is on this device with a merged copy. This is not a change the learner made, so it does not trigger a sync. */
@@ -144,11 +150,9 @@ export function applyDoc(doc: SyncDoc): void {
   setKnownMap(doc.known);
   setProgress(doc.progress);
   setCards(doc.cards);
+  applyHabit(doc.habit);
   void write('cards', doc.cards);
   void write('lookups', doc.lookups);
   void write('known', doc.known);
   writeJson('hr:progress', doc.progress);
 }
-
-/** Make a change the learner caused (such as loading a backup) count, so it syncs. */
-export const markChanged = changed;

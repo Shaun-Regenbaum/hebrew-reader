@@ -1,3 +1,4 @@
+import type { DayMap } from './daily.ts';
 import type { ProgressMap } from './path.ts';
 import type { CardMap, StoredCard } from './review.ts';
 import type { SavedLookup, TextKind } from './types.ts';
@@ -11,6 +12,16 @@ export interface SyncDoc {
   progress: ProgressMap;
   /** One flashcard per dictionary form. */
   cards: CardMap;
+  /** The daily goal, chosen topics and minutes read each day. */
+  habit: HabitDoc;
+}
+/** Each choice carries the time it was made, so the newest choice wins when devices are combined. */
+export interface HabitDoc {
+  goal: number | null;
+  goalAt: number;
+  topics: string[] | null;
+  topicsAt: number;
+  days: DayMap;
 }
 export interface KnownEntry {
   on: boolean;
@@ -21,13 +32,48 @@ export const MAX_LOOKUPS = 20000;
 const MAX_KNOWN = 50000;
 const MAX_TEXTS = 5000;
 const MAX_CARDS = 50000;
+const MAX_DAYS = 70;
+const DAY_KEY = /^\d{4}-\d{2}-\d{2}$/;
 const MAX_STR = 2000;
 
-export const emptyDoc = (): SyncDoc => ({ v: 1, lookups: [], known: {}, progress: {}, cards: {} });
+export const emptyHabit = (): HabitDoc => ({ goal: null, goalAt: 0, topics: null, topicsAt: 0, days: {} });
+export const emptyDoc = (): SyncDoc => ({
+  v: 1,
+  lookups: [],
+  known: {},
+  progress: {},
+  cards: {},
+  habit: emptyHabit(),
+});
+
+/** The newer of two choices. At the same time, the larger one, so the answer does not depend on the order. */
+function newer<T>(a: { v: T; at: number }, b: { v: T; at: number }): { v: T; at: number } {
+  if (a.at !== b.at) return a.at > b.at ? a : b;
+  return JSON.stringify(a.v) >= JSON.stringify(b.v) ? a : b;
+}
+
+function mergeHabit(a: HabitDoc, b: HabitDoc): HabitDoc {
+  const goal = newer({ v: a.goal, at: a.goalAt }, { v: b.goal, at: b.goalAt });
+  const topics = newer({ v: a.topics, at: a.topicsAt }, { v: b.topics, at: b.topicsAt });
+  const days: DayMap = { ...a.days };
+  for (const [k, d] of Object.entries(b.days)) {
+    const cur = days[k];
+    days[k] = cur ? { s: Math.max(cur.s, d.s), m: cur.m || d.m } : d;
+  }
+  const keep = Object.keys(days).sort().slice(-MAX_DAYS);
+  return {
+    goal: goal.v,
+    goalAt: goal.at,
+    topics: topics.v,
+    topicsAt: topics.at,
+    days: Object.fromEntries(keep.map((k) => [k, days[k] as DayMap[string]])),
+  };
+}
 
 /**
  * Combine two copies of a learner's data without losing either. Lookups are united by id, known words take the
- * newest mark per word, sections read are united per text, and a card keeps the copy that was reviewed last.
+ * newest mark per word, sections read are united per text, a card keeps the copy that was reviewed last, and
+ * for each day the longer reading time wins.
  */
 export function mergeDocs(a: SyncDoc, b: SyncDoc): SyncDoc {
   const byId = new Map<string, SavedLookup>();
@@ -63,7 +109,7 @@ export function mergeDocs(a: SyncDoc, b: SyncDoc): SyncDoc {
     const cur = cards[lemma];
     if (!cur || c.lr > cur.lr || (c.lr === cur.lr && c.r > cur.r)) cards[lemma] = c;
   }
-  return { v: 1, lookups, known, progress, cards };
+  return { v: 1, lookups, known, progress, cards, habit: mergeHabit(a.habit, b.habit) };
 }
 
 const isStr = (v: unknown, max = MAX_STR): v is string => typeof v === 'string' && v.length <= max;
@@ -120,6 +166,27 @@ function parseCard(x: unknown): StoredCard | null {
   };
 }
 
+function parseHabit(x: unknown): HabitDoc {
+  const out = emptyHabit();
+  const o = x as Record<string, unknown> | null;
+  if (!o || typeof o !== 'object') return out;
+  if (isNum(o.goal) && o.goal >= 1 && o.goal <= 180) out.goal = o.goal;
+  if (isNum(o.goalAt)) out.goalAt = o.goalAt;
+  if (Array.isArray(o.topics) && o.topics.length <= 8 && o.topics.every((t) => isStr(t, 40))) {
+    out.topics = o.topics as string[];
+  }
+  if (isNum(o.topicsAt)) out.topicsAt = o.topicsAt;
+  if (o.days && typeof o.days === 'object') {
+    for (const [k, v] of Object.entries(o.days as Record<string, unknown>).slice(0, MAX_DAYS * 2)) {
+      const d = v as { s?: unknown; m?: unknown } | null;
+      if (DAY_KEY.test(k) && d && isNum(d.s) && d.s >= 0 && d.s <= 86400 && typeof d.m === 'boolean') {
+        out.days[k] = { s: d.s, m: d.m };
+      }
+    }
+  }
+  return out;
+}
+
 /** Check data that came from a file or the network, and keep only what is well formed. Returns null if it is not ours at all. */
 export function parseDoc(raw: unknown): SyncDoc | null {
   const o = raw as Record<string, unknown> | null;
@@ -154,6 +221,7 @@ export function parseDoc(raw: unknown): SyncDoc | null {
       if (lemma.length <= 100 && c) doc.cards[lemma] = c;
     }
   }
+  doc.habit = parseHabit(o.habit);
   return doc;
 }
 

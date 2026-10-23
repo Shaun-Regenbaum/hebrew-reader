@@ -135,3 +135,67 @@ describe('flashcards in a synced document', () => {
     expect(sameDoc(doc({ cards: { x: card(1) } }), emptyDoc())).toBe(false);
   });
 });
+
+describe('the daily habit in a synced document', () => {
+  const habit = (p: Partial<SyncDoc['habit']>): SyncDoc['habit'] => ({ ...emptyDoc().habit, ...p });
+  it('keeps the newest goal and the newest topics', () => {
+    const a = doc({ habit: habit({ goal: 5, goalAt: 10, topics: ['x', 'y', 'z'], topicsAt: 1 }) });
+    const b = doc({ habit: habit({ goal: 10, goalAt: 20, topics: ['p', 'q', 'r'], topicsAt: 0 }) });
+    const m = mergeDocs(a, b).habit;
+    expect(m.goal).toBe(10);
+    expect(m.topics).toEqual(['x', 'y', 'z']);
+  });
+  it('does not lose a goal to a device that never chose one', () => {
+    const a = doc({ habit: habit({ goal: 5, goalAt: 10 }) });
+    expect(mergeDocs(a, emptyDoc()).habit.goal).toBe(5);
+    expect(mergeDocs(emptyDoc(), a).habit.goal).toBe(5);
+  });
+  it('takes the longer reading time for each day, and keeps a met goal', () => {
+    const a = doc({
+      habit: habit({ days: { '2026-10-22': { s: 100, m: false }, '2026-10-23': { s: 400, m: true } } }),
+    });
+    const b = doc({
+      habit: habit({ days: { '2026-10-22': { s: 320, m: true }, '2026-10-21': { s: 60, m: false } } }),
+    });
+    const m = mergeDocs(a, b).habit.days;
+    expect(m['2026-10-22']).toEqual({ s: 320, m: true });
+    expect(m['2026-10-23']).toEqual({ s: 400, m: true });
+    expect(m['2026-10-21']).toEqual({ s: 60, m: false });
+  });
+  it('gives the same result in either order, even for a tie', () => {
+    const a = doc({ habit: habit({ goal: 5, goalAt: 7, days: { '2026-10-23': { s: 1, m: false } } }) });
+    const b = doc({ habit: habit({ goal: 10, goalAt: 7, days: { '2026-10-23': { s: 2, m: true } } }) });
+    expect(mergeDocs(a, b)).toEqual(mergeDocs(b, a));
+  });
+  it('keeps only the last ten weeks of days', () => {
+    const days: Record<string, { s: number; m: boolean }> = {};
+    for (let i = 0; i < 100; i++)
+      days[
+        `2026-${String(1 + Math.floor(i / 28)).padStart(2, '0')}-${String(1 + (i % 28)).padStart(2, '0')}`
+      ] = { s: 1, m: false };
+    expect(Object.keys(mergeDocs(doc({ habit: habit({ days }) }), emptyDoc()).habit.days)).toHaveLength(70);
+  });
+  it('reads the habit back, and drops values that are out of range or malformed', () => {
+    const parsed = parseDoc({
+      v: 1,
+      habit: {
+        goal: 5,
+        goalAt: 3,
+        topics: ['a', 'b', 'c'],
+        topicsAt: 4,
+        days: {
+          '2026-10-23': { s: 300, m: true },
+          'bad-key': { s: 1, m: true },
+          '2026-10-22': { s: -5, m: true },
+        },
+      },
+    });
+    expect(parsed?.habit.goal).toBe(5);
+    expect(parsed?.habit.topics).toEqual(['a', 'b', 'c']);
+    expect(Object.keys(parsed?.habit.days ?? {})).toEqual(['2026-10-23']);
+    expect(parseDoc({ v: 1, habit: { goal: 9999, topics: [1, 2] } })?.habit).toEqual(emptyDoc().habit);
+  });
+  it('reads an older document that has no habit', () => {
+    expect(parseDoc({ v: 1, lookups: [] })?.habit).toEqual(emptyDoc().habit);
+  });
+});
