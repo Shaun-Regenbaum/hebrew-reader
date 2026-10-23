@@ -38,7 +38,36 @@ def paragraph(text, heading=False):
 
 
 def is_heading(line):
-    return len(line.split()) <= 6 and not re.search(r'[.:?!,;]$', line)
+    # a short line that ends in a quote or starts with a dash or quote is speech, not a heading
+    return (len(line.split()) <= 6 and not re.search(r'[.:?!,;"”\']$', line)
+            and not line.startswith(('–', '-', '"', '“')))
+
+
+def wrapped(block):
+    """Is this block of lines ordinary prose that the source file cut at a fixed width?
+    Lines that stop at arbitrary words (not at a comma or full stop) and are long enough to be cut by width."""
+    body = block[:-1]
+    if not body or any(len(l) < 28 for l in body):
+        return False
+    stops = sum(1 for l in body if re.search(r'[.,;:?!]$', l))
+    return stops / len(body) <= 0.35
+
+
+def unwrap(lines):
+    """Group lines by blank lines. A block that was cut at a fixed width becomes one paragraph.
+    Yields (text, was_joined)."""
+    block = []
+    for l in lines + ['']:
+        if l:
+            block.append(l)
+            continue
+        if block:
+            if wrapped(block):
+                yield ' '.join(block), True
+            else:
+                for b in block:
+                    yield b, False
+        block = []
 
 
 def sections(paras):
@@ -92,8 +121,10 @@ def main():
         row = cat[f.stem]
         lines = [clean(l) for l in f.read_text().split('\n')]
         # Ben-Yehuda texts keep the names of their picture files as stray lines: drop them.
-        lines = [l for l in lines if l and not IMAGE_LINE.match(l)]
-        paras = [paragraph(l, heading=is_heading(l)) for l in lines[1:]]
+        lines = [l for l in lines if not IMAGE_LINE.match(l)]
+        first = next(i for i, l in enumerate(lines) if l)
+        paras = [paragraph(l, heading=is_heading(l) and not joined)
+                 for l, joined in unwrap(lines[first + 1:])]
         title = clean(row['title'])
         meta = {'title': title, 'author': row['authors'].strip(),
                 'translator': row['translators'].strip() or None, 'credit': BYP_CREDIT,
