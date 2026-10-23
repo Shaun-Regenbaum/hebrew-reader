@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import type { StoredCard } from '../src/lib/review.ts';
 import { emptyDoc, MAX_LOOKUPS, mergeDocs, parseDoc, type SyncDoc, sameDoc } from '../src/lib/sync.ts';
 import type { SavedLookup } from '../src/lib/types.ts';
 
@@ -17,6 +18,18 @@ const look = (id: string, at: number, meaning = 'm'): SavedLookup => ({
   textKind: 'books',
   textTitle: 't',
   at,
+});
+const card = (lr: number, r = 1): StoredCard => ({
+  d: 1,
+  s: 2,
+  df: 3,
+  st: 2,
+  r,
+  l: 0,
+  sd: 1,
+  ls: 0,
+  lr,
+  fr: 1,
 });
 const doc = (p: Partial<SyncDoc>): SyncDoc => ({ ...emptyDoc(), ...p });
 
@@ -95,5 +108,30 @@ describe('sameDoc', () => {
     const b = doc({ lookups: [look('b', 2), look('a', 1)] });
     expect(sameDoc(a, b)).toBe(true);
     expect(sameDoc(a, doc({ lookups: [look('a', 1)] }))).toBe(false);
+  });
+});
+
+describe('flashcards in a synced document', () => {
+  it('keeps the copy of a card that was reviewed last', () => {
+    const a = doc({ cards: { x: card(5), y: card(9) } });
+    const b = doc({ cards: { x: card(8), z: card(1) } });
+    const m = mergeDocs(a, b);
+    expect(m.cards.x?.lr).toBe(8);
+    expect(Object.keys(m.cards).sort()).toEqual(['x', 'y', 'z']);
+    expect(mergeDocs(a, b)).toEqual(mergeDocs(b, a));
+  });
+  it('reads cards back from a saved document, and drops malformed ones', () => {
+    const raw = {
+      v: 1,
+      cards: { good: card(3), bad: { d: 'soon' }, worse: { ...card(3), st: 9 } },
+    };
+    const parsed = parseDoc(raw);
+    expect(Object.keys(parsed?.cards ?? {})).toEqual(['good']);
+  });
+  it('reads an older document that has no cards', () => {
+    expect(parseDoc({ v: 1, lookups: [], known: {}, progress: {} })?.cards).toEqual({});
+  });
+  it('counts a card as a change', () => {
+    expect(sameDoc(doc({ cards: { x: card(1) } }), emptyDoc())).toBe(false);
   });
 });

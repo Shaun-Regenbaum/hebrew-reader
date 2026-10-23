@@ -30,7 +30,7 @@ An installable phone app (a PWA, added to the home screen). It also works on a l
 2. **Reader.** DONE. Right-to-left view, font size, mobile layout, Books and Articles shelves.
 3. **Tap a word.** DONE, saves to IndexedDB. Popup backed by the API route and a cache. Each lookup saves to localStorage with the word, sentence, text and time.
 4. **Translate a selection.** DONE, as a Translate sentence button in the word sheet. Select a sentence or paragraph and get natural English.
-5. **Flashcards.** Cards come from lookups. Review uses the SM-2 schedule.
+5. **Flashcards.** Built. Cards come from lookups, one per dictionary form. Review uses FSRS (see above). A card shows the sentence the word was met in, then the meaning.
 6. **My words.** DONE (list, bars, Known toggle). Lookups by how often and by text. Mark a word as known.
 7. **Quiz.** The 10 words looked up most in a chapter become a 5-question quiz.
 8. **Landing page and deploy.** One line explaining the idea and a Start reading button. Put a rate limit and a spend cap on the public translate route.

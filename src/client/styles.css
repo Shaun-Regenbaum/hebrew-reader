@@ -1463,3 +1463,182 @@ ruby.w rt {
     sans-serif;
   color: var(--accent);
 }
+
+/* flashcards */
+.badge {
+  display: inline-block;
+  min-width: 18px;
+  height: 18px;
+  margin-left: 7px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: var(--accent);
+  color: var(--surface);
+  font:
+    600 11px / 18px Inter,
+    sans-serif;
+  text-align: center;
+}
+.nav a.on .badge {
+  display: none;
+}
+.revcta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  background: var(--tint);
+}
+.revcta b {
+  display: block;
+  font-size: 22px;
+  font-weight: 500;
+}
+.revcta small {
+  font:
+    400 13px Inter,
+    sans-serif;
+  color: var(--ink3);
+}
+.revcta .go {
+  color: var(--accent);
+  font:
+    600 14px Inter,
+    sans-serif;
+  white-space: nowrap;
+}
+.rvempty {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 24px;
+}
+.rv {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+.rvtop {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: calc(18px + env(safe-area-inset-top)) 24px 8px;
+}
+.rvn {
+  font:
+    500 13px Inter,
+    sans-serif;
+  color: var(--ink3);
+  white-space: nowrap;
+}
+.rvbody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 24px 0;
+}
+.rvcard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.rvsent {
+  font-size: 28px;
+  line-height: 2;
+  margin: 8px 0;
+  text-align: right;
+}
+.rvsent mark {
+  background: var(--hl);
+  color: inherit;
+  border-radius: 4px;
+  padding: 0 4px;
+  box-shadow: 0 1.5px 0 var(--accent);
+}
+.rvans {
+  border-top: 4px double var(--rule);
+  padding-top: 16px;
+}
+.rvrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+}
+.rvmean {
+  font-size: 32px;
+}
+.rvlem {
+  text-align: right;
+  flex-shrink: 0;
+}
+.rvsay {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 6px;
+  font:
+    italic 400 14px Newsreader,
+    serif;
+  color: var(--ink3);
+}
+.rvfoot {
+  position: sticky;
+  bottom: 0;
+  padding: 14px 0 calc(20px + env(safe-area-inset-bottom));
+  background: linear-gradient(transparent, var(--bg) 24%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.grades {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.grade {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 12px 4px;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--ink);
+}
+.grade b {
+  font:
+    600 15px Inter,
+    sans-serif;
+}
+.grade span {
+  font:
+    400 12px Inter,
+    sans-serif;
+  color: var(--ink3);
+}
+.grade.good {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--surface);
+}
+.grade.good span {
+  color: var(--surface);
+  opacity: 0.85;
+}
+.rvdone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  padding: 40px 24px 0;
+}

@@ -2,6 +2,7 @@ import { get, set } from 'idb-keyval';
 import { createMemo, createSignal, untrack } from 'solid-js';
 import type { ProgressMap } from './path.ts';
 import { readJson, writeJson } from './prefs.ts';
+import type { CardMap, StoredCard } from './review.ts';
 import { normalizeWord } from './sentence.ts';
 import type { KnownEntry, SyncDoc } from './sync.ts';
 import type { SavedLookup, TextKind } from './types.ts';
@@ -9,16 +10,18 @@ import type { SavedLookup, TextKind } from './types.ts';
 /**
  * Everything the learner keeps, on this device: lookups and known words in IndexedDB, reading progress in
  * localStorage (it is small, and the home screen needs it at once). `snapshot` and `applyDoc` move all of it
- * in and out as one document, for sync and backups.
+ * in and out as one document, for sync and backups. Flashcards are kept in IndexedDB too.
  */
 
 /** Everything the learner has looked up, newest first. */
 const [lookups, setLookups] = createSignal<SavedLookup[]>([]);
 /** Each known-word mark carries a time, so the newest choice wins when devices are combined. */
 const [knownMap, setKnownMap] = createSignal<Record<string, KnownEntry>>({});
+/** One flashcard per dictionary form, keyed by it. */
+const [cards, setCards] = createSignal<CardMap>({});
 const [progress, setProgress] = createSignal<ProgressMap>(readJson<ProgressMap>('hr:progress', {}));
 
-export { lookups, progress };
+export { cards, lookups, progress };
 
 /** Dictionary forms the learner marked as known. */
 export const known = createMemo(() =>
@@ -80,6 +83,7 @@ export async function loadStore(): Promise<void> {
       ? Object.fromEntries((stored as string[]).map((lemma) => [lemma, { on: true, at: 0 }]))
       : (stored as Record<string, KnownEntry>),
   );
+  setCards(await read<CardMap>('cards', {}));
   // Ask the browser not to clear our data when space is low.
   navigator.storage?.persist?.().catch(() => {});
 }
@@ -96,6 +100,14 @@ export function toggleKnown(lemma: string): void {
   const next = { ...knownMap(), [lemma]: { on: !knownMap()[lemma]?.on, at: Date.now() } };
   setKnownMap(next);
   void write('known', next);
+  changed();
+}
+
+/** The learner answered a card. */
+export function saveCard(lemma: string, card: StoredCard): void {
+  const next = { ...cards(), [lemma]: card };
+  setCards(next);
+  void write('cards', next);
   changed();
 }
 
@@ -123,7 +135,7 @@ export function markSectionRead(kind: TextKind, id: string, section: number): vo
 
 /** All of the learner's data as one document. */
 export function snapshot(): SyncDoc {
-  return { v: 1, lookups: lookups(), known: knownMap(), progress: progress() };
+  return { v: 1, lookups: lookups(), known: knownMap(), progress: progress(), cards: cards() };
 }
 
 /** Replace what is on this device with a merged copy. This is not a change the learner made, so it does not trigger a sync. */
@@ -131,6 +143,8 @@ export function applyDoc(doc: SyncDoc): void {
   setLookups(doc.lookups);
   setKnownMap(doc.known);
   setProgress(doc.progress);
+  setCards(doc.cards);
+  void write('cards', doc.cards);
   void write('lookups', doc.lookups);
   void write('known', doc.known);
   writeJson('hr:progress', doc.progress);

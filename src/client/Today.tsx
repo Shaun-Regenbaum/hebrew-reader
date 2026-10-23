@@ -4,7 +4,8 @@ import { authorName } from '../lib/authors.ts';
 import { dayKey, GOAL_CHOICES, minutesRead, streak, week } from '../lib/daily.ts';
 import { days, goal, setGoal, topics } from '../lib/habit.ts';
 import { keyOf, nextUp, STAGE_NAMES, upNextByTopics } from '../lib/path.ts';
-import { lookups, progress } from '../lib/store.ts';
+import { buildQueue } from '../lib/review.ts';
+import { cards, known, lookups, progress } from '../lib/store.ts';
 import { getIndex } from '../lib/texts.ts';
 import { Nav } from './Nav.tsx';
 import { LevelBars, readingTime } from './TextRow.tsx';
@@ -24,6 +25,7 @@ export function Today() {
     return g ? Math.min(100, (seconds() / (g * 60)) * 100) : 0;
   };
   const words = () => new Set(lookups().map((l) => l.lemma)).size;
+  const toReview = createMemo(() => buildQueue(lookups(), known(), cards()).items.length);
   const up = createMemo(() => (index() ? nextUp(index()!, progress()) : null));
   const topicLabel = (key: string) => index()?.topics.find((t) => t.key === key)?.label ?? key;
   const byTopic = createMemo(() => {
@@ -107,6 +109,18 @@ export function Today() {
             <span>{words() === 1 ? 'word saved' : 'words saved'}</span>
           </div>
         </div>
+
+        <Show when={toReview() > 0}>
+          <a class="revcta" href="#/review">
+            <span>
+              <b class="serif">
+                {toReview()} {toReview() === 1 ? 'word' : 'words'} to review
+              </b>
+              <small>About {Math.max(1, Math.round(toReview() / 3))} min</small>
+            </span>
+            <span class="go">Review →</span>
+          </a>
+        </Show>
 
         <Show when={up()}>
           {(u) => (

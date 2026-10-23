@@ -1,13 +1,16 @@
 import type { ProgressMap } from './path.ts';
+import type { CardMap, StoredCard } from './review.ts';
 import type { SavedLookup, TextKind } from './types.ts';
 
-/** What a learner keeps: their lookups, the words they marked known, and how far they have read. */
+/** What a learner keeps: their lookups, the words they marked known, how far they have read, and their flashcards. */
 export interface SyncDoc {
   v: 1;
   lookups: SavedLookup[];
   /** Per dictionary form, with a time, so unmarking a word on one device wins over an older "known" on another. */
   known: Record<string, KnownEntry>;
   progress: ProgressMap;
+  /** One flashcard per dictionary form. */
+  cards: CardMap;
 }
 export interface KnownEntry {
   on: boolean;
@@ -17,13 +20,14 @@ export interface KnownEntry {
 export const MAX_LOOKUPS = 20000;
 const MAX_KNOWN = 50000;
 const MAX_TEXTS = 5000;
+const MAX_CARDS = 50000;
 const MAX_STR = 2000;
 
-export const emptyDoc = (): SyncDoc => ({ v: 1, lookups: [], known: {}, progress: {} });
+export const emptyDoc = (): SyncDoc => ({ v: 1, lookups: [], known: {}, progress: {}, cards: {} });
 
 /**
  * Combine two copies of a learner's data without losing either. Lookups are united by id, known words take the
- * newest mark per word, and sections read are united per text.
+ * newest mark per word, sections read are united per text, and a card keeps the copy that was reviewed last.
  */
 export function mergeDocs(a: SyncDoc, b: SyncDoc): SyncDoc {
   const byId = new Map<string, SavedLookup>();
@@ -53,7 +57,13 @@ export function mergeDocs(a: SyncDoc, b: SyncDoc): SyncDoc {
       at: newer.at,
     };
   }
-  return { v: 1, lookups, known, progress };
+
+  const cards: CardMap = { ...a.cards };
+  for (const [lemma, c] of Object.entries(b.cards)) {
+    const cur = cards[lemma];
+    if (!cur || c.lr > cur.lr || (c.lr === cur.lr && c.r > cur.r)) cards[lemma] = c;
+  }
+  return { v: 1, lookups, known, progress, cards };
 }
 
 const isStr = (v: unknown, max = MAX_STR): v is string => typeof v === 'string' && v.length <= max;
@@ -91,6 +101,25 @@ function parseLookup(x: unknown): SavedLookup | null {
   };
 }
 
+function parseCard(x: unknown): StoredCard | null {
+  const o = x as Record<string, unknown> | null;
+  if (!o || typeof o !== 'object') return null;
+  const nums = [o.d, o.s, o.df, o.st, o.r, o.l, o.sd, o.ls, o.lr, o.fr];
+  if (!nums.every(isNum) || (o.st as number) < 0 || (o.st as number) > 3) return null;
+  return {
+    d: o.d as number,
+    s: o.s as number,
+    df: o.df as number,
+    st: o.st as number,
+    r: o.r as number,
+    l: o.l as number,
+    sd: o.sd as number,
+    ls: o.ls as number,
+    lr: o.lr as number,
+    fr: o.fr as number,
+  };
+}
+
 /** Check data that came from a file or the network, and keep only what is well formed. Returns null if it is not ours at all. */
 export function parseDoc(raw: unknown): SyncDoc | null {
   const o = raw as Record<string, unknown> | null;
@@ -117,6 +146,12 @@ export function parseDoc(raw: unknown): SyncDoc | null {
         ...new Set(p.read.filter((n): n is number => Number.isInteger(n) && n >= 0 && n < 10000)),
       ].sort((x, y) => x - y);
       doc.progress[key] = { read, last: p.last, at: p.at };
+    }
+  }
+  if (o.cards && typeof o.cards === 'object') {
+    for (const [lemma, v] of Object.entries(o.cards as Record<string, unknown>).slice(0, MAX_CARDS)) {
+      const c = parseCard(v);
+      if (lemma.length <= 100 && c) doc.cards[lemma] = c;
     }
   }
   return doc;
