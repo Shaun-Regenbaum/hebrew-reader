@@ -84,3 +84,45 @@ export function nextUp(i: LibraryIndex, pm: ProgressMap): NextUp | null {
   const long = longs.find((t) => !isDone(t, pm));
   return long ? { text: long, mode: 'long' } : null;
 }
+
+/** The text a first-time visitor opens: short and gentle, and its first screen is answered ahead of time. */
+export const FIRST_TEXT = { kind: 'books', id: '11483' } as const;
+
+/** The level the learner is reading at now: that of the text they touched last. */
+export function learnerLevel(i: LibraryIndex, pm: ProgressMap): number {
+  const last = allTexts(i)
+    .filter((t) => isStarted(t, pm))
+    .sort((a, b) => (pm[keyOf(b)]?.at ?? 0) - (pm[keyOf(a)]?.at ?? 0))[0];
+  return last ? last.level : 1;
+}
+
+/**
+ * One unfinished text for each chosen topic, closest to the learner's level, shortest first.
+ * `skip` is a text already shown elsewhere (the one to continue).
+ */
+export function upNextByTopics(
+  i: LibraryIndex,
+  pm: ProgressMap,
+  topics: string[],
+  skip?: string,
+  max = 3,
+): { topic: string; text: TextSummary }[] {
+  const level = learnerLevel(i, pm);
+  const pool = pathItems(i).filter((t) => !isDone(t, pm) && keyOf(t) !== skip);
+  const taken = new Set<string>();
+  const out: { topic: string; text: TextSummary }[] = [];
+  for (const topic of topics) {
+    const best = pool
+      .filter((t) => t.topics.includes(topic) && !taken.has(keyOf(t)))
+      .sort(
+        (a, b) =>
+          Math.abs(a.level - level) - Math.abs(b.level - level) || a.level - b.level || a.minutes - b.minutes,
+      )[0];
+    if (best) {
+      taken.add(keyOf(best));
+      out.push({ topic, text: best });
+    }
+    if (out.length >= max) break;
+  }
+  return out;
+}

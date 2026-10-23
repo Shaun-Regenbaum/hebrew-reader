@@ -1,14 +1,35 @@
 import { createEffect, createResource, createSignal, For, on, onCleanup, onMount, Show } from 'solid-js';
+import { authorName } from '../lib/authors.ts';
+import { flags, goal, goalReached, setFlag, startReadingClock, topics } from '../lib/habit.ts';
+import { STAGE_NAMES } from '../lib/path.ts';
 import { getPref, setPref } from '../lib/prefs.ts';
 import { sentenceAt, wordsInSentence } from '../lib/sentence.ts';
 import { markSectionRead, touchText } from '../lib/store.ts';
 import { getMeta, getSection } from '../lib/texts.ts';
-import type { Para, TextKind } from '../lib/types.ts';
+import type { Para, TextKind, TextMeta } from '../lib/types.ts';
+import { DoneScreen } from './DoneScreen.tsx';
+import { GoalPrompt } from './GoalPrompt.tsx';
 import { ParaView, type Range, type Tap } from './ParaView.tsx';
 import { createPager } from './pager.ts';
 import { ReaderBar } from './ReaderBar.tsx';
 import { SHEET_ROOM, SIZES, type View } from './reader-view.ts';
 import { type SheetState, WordSheet } from './WordSheet.tsx';
+
+/** The title page at the start of a text, like the opening of a printed book. */
+function Opening(props: { meta: TextMeta }) {
+  return (
+    <div class="opening">
+      <h1 class="he oti">{props.meta.title}</h1>
+      <div class="cap oau">
+        {props.meta.kind === 'articles' ? 'Hebrew Wikipedia' : authorName(props.meta.author)} ·{' '}
+        {STAGE_NAMES[props.meta.level - 1]}
+      </div>
+      <div class="orn" aria-hidden="true">
+        <i />
+      </div>
+    </div>
+  );
+}
 
 export function Reader(props: { kind: TextKind; id: string; section: number; end: boolean }) {
   const [data] = createResource(
@@ -29,6 +50,7 @@ export function Reader(props: { kind: TextKind; id: string; section: number; end
   const [sheet, setSheet] = createSignal<SheetState | null>(null);
   const [range, setRange] = createSignal<Range | null>(null);
   const [glosses, setGlosses] = createSignal<Map<string, string>>(new Map());
+  const [asking, setAsking] = createSignal(false);
 
   const pager = createPager({
     active: () => view() === 'page',
@@ -51,6 +73,16 @@ export function Reader(props: { kind: TextKind; id: string; section: number; end
     window.getSelection()?.removeAllRanges();
   }
   createEffect(on(() => [props.id, props.section], close, { defer: true }));
+
+  /** The learner closed a lookup. On the first visit, now is the moment to ask for a daily goal. */
+  function closeSheet() {
+    const had = !!sheet();
+    close();
+    if (had && !flags().goalAsked && goal() === null) {
+      setFlag('goalAsked');
+      window.setTimeout(() => setAsking(true), 300);
+    }
+  }
 
   const toggleHints = () => {
     setHints(!hints());
@@ -95,6 +127,7 @@ export function Reader(props: { kind: TextKind; id: string; section: number; end
     const atEnd = view() === 'page' ? pager.atEnd() : scrolled() >= 0.9;
     if (atEnd) markSectionRead(props.kind, props.id, props.section);
   });
+  const minutesLeft = () => Math.ceil((data()?.meta.minutes ?? 0) * (1 - progress() / 100));
   const progress = () => {
     const within = view() === 'page' ? pager.fraction() : scrolled();
     return ((props.section + within) / sections()) * 100;
@@ -112,6 +145,7 @@ export function Reader(props: { kind: TextKind; id: string; section: number; end
   }
 
   function openWord(el: HTMLElement, para: Para) {
+    setFlag('tapped');
     const p = Number(el.dataset.p);
     const wi = Number(el.dataset.i);
     const [start, end] = para.w[wi] as [number, number];
@@ -145,13 +179,13 @@ export function Reader(props: { kind: TextKind; id: string; section: number; end
       openWord(word, para);
     } else if (sheet()) {
       // anywhere else, with a lookup open: close it and do nothing more
-      close();
+      closeSheet();
     } else if (view() === 'page') {
       pager.tapZone(e.clientX);
     }
   };
   const onKey = (e: KeyboardEvent) => {
-    if (e.key === 'Escape') close();
+    if (e.key === 'Escape') closeSheet();
     else if (view() === 'page' && e.key === 'ArrowLeft') pager.next();
     else if (view() === 'page' && e.key === 'ArrowRight') pager.prev();
   };
@@ -159,7 +193,9 @@ export function Reader(props: { kind: TextKind; id: string; section: number; end
     document.addEventListener('click', onClick);
     document.addEventListener('keydown', onKey);
     window.addEventListener('scroll', onScroll, { passive: true });
+    const stopClock = startReadingClock();
     onCleanup(() => {
+      stopClock();
       document.removeEventListener('click', onClick);
       document.removeEventListener('keydown', onKey);
       window.removeEventListener('scroll', onScroll);
@@ -211,6 +247,9 @@ export function Reader(props: { kind: TextKind; id: string; section: number; end
                 <>
                   <Bar />
                   <div class="he read" lang="he" dir="rtl">
+                    <Show when={props.section === 0}>
+                      <Opening meta={d().meta} />
+                    </Show>
                     <Paras paras={d().paras} />
                   </div>
                   <div class="endnav">
@@ -233,6 +272,11 @@ export function Reader(props: { kind: TextKind; id: string; section: number; end
                     · {credit.license}
                   </div>
                   <div style={{ height: sheet() ? '320px' : '60px' }} />
+                  <div class="folio" aria-hidden="true">
+                    <span>
+                      {minutesLeft() > 0 ? `${minutesLeft()} min left in this story` : 'You reached the end'}
+                    </span>
+                  </div>
                 </>
               }
             >
@@ -292,6 +336,22 @@ export function Reader(props: { kind: TextKind; id: string; section: number; end
           );
         }}
       </Show>
+      <Show when={!flags().tapped && !sheet() && data()}>
+        <div class="firsthint">
+          <span>Tap any word.</span>
+        </div>
+      </Show>
+      <Show when={asking()}>
+        <GoalPrompt
+          onDone={(set) => {
+            setAsking(false);
+            if (set && topics() === null) location.hash = '#/topics';
+          }}
+        />
+      </Show>
+      <Show when={goalReached()}>
+        <DoneScreen />
+      </Show>
       <Show when={sheet()} keyed>
         {(s) => (
           <WordSheet
@@ -299,7 +359,7 @@ export function Reader(props: { kind: TextKind; id: string; section: number; end
             text={{ kind: props.kind, id: props.id, title: data()?.meta.title ?? '' }}
             onRange={setRange}
             onGloss={onGloss}
-            onClose={close}
+            onClose={closeSheet}
           />
         )}
       </Show>

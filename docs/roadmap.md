@@ -34,8 +34,8 @@ Then:
 - Needs: the library translated ahead of time.
 
 **2. Reading goals and achievements (all on the phone).**
-- A daily minimum: for example, finish one page or read for five minutes.
-- Streaks, and a few badges (first word, 100 words, a finished text, a week in a row).
+- Built: a daily goal of 2, 5 or 10 minutes, counted while the reader is open and the learner is active. A Today screen with the goal bar, a week row in Hebrew day letters, the streak, and a "done for today" screen. New visitors open straight into a story, are asked for a goal after their first tap, then for three topics. Up next follows those topics. The goal, topics and daily minutes stay on the device for now and do not sync.
+- Still to do: badges (first word, 100 words, a finished text, a week in a row).
 - Needs: a small record of what you read each day. No server.
 
 **3. Learning from many readers.**

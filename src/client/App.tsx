@@ -2,15 +2,19 @@ import { createMemo, createSignal, Match, onCleanup, Switch } from 'solid-js';
 import type { TextKind } from '../lib/types.ts';
 import { Account } from './Account.tsx';
 import { Browse } from './Browse.tsx';
-import { Home } from './Home.tsx';
+import { Front } from './Front.tsx';
+import { Library } from './Library.tsx';
 import { Reader } from './Reader.tsx';
 import { Review } from './Review.tsx';
 import { SignIn } from './SignIn.tsx';
+import { Topics } from './Topics.tsx';
 import { Words } from './Words.tsx';
 
 type Route =
   | { name: 'home' }
   | { name: 'words' }
+  | { name: 'library' }
+  | { name: 'topics' }
   | { name: 'account' }
   | { name: 'signin'; token: string }
   | { name: 'browse'; topic: string | null }
@@ -29,6 +33,8 @@ function parse(hash: string): Route {
     };
   }
   if (p[0] === 'words') return { name: 'words' };
+  if (p[0] === 'library') return { name: 'library' };
+  if (p[0] === 'topics') return { name: 'topics' };
   if (p[0] === 'account') return { name: 'account' };
   if (p[0] === 'signin' && p[1]) return { name: 'signin', token: p[1] };
   if (p[0] === 'all') return { name: 'browse', topic: null };
@@ -62,7 +68,13 @@ export function App() {
     <div class="app">
       <Switch>
         <Match when={route().name === 'home'}>
-          <Home />
+          <Front />
+        </Match>
+        <Match when={route().name === 'library'}>
+          <Library />
+        </Match>
+        <Match when={route().name === 'topics'}>
+          <Topics />
         </Match>
         <Match when={browseRoute()}>{(r) => <Browse topic={r().topic} />}</Match>
         <Match when={signinRoute()}>{(r) => <SignIn token={r().token} />}</Match>

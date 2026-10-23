@@ -16,7 +16,7 @@ import { getIndex } from '../lib/texts.ts';
 import { Nav } from './Nav.tsx';
 import { LevelBars, readingTime, STYLE_LABEL, TextRow } from './TextRow.tsx';
 
-export function Home() {
+export function Library() {
   const [index] = createResource(getIndex);
   const [explain, setExplain] = createSignal(false);
   const [openStage, setOpenStage] = createSignal<number | null>(null);
@@ -51,8 +51,11 @@ export function Home() {
   return (
     <>
       <div class="top">
+        <a href="#/" class="signin-link">
+          ‹ Today
+        </a>
         <div class="serif" style={{ 'font-size': '24px', 'font-weight': '500' }}>
-          Read Hebrew
+          Library
         </div>
         <a
           href="#/account"

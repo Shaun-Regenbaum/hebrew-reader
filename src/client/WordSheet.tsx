@@ -1,4 +1,5 @@
 import { createEffect, createResource, createSignal, Show } from 'solid-js';
+import { flags, setFlag } from '../lib/habit.ts';
 import { normalizeWord } from '../lib/sentence.ts';
 import { saveLookup, seenWords } from '../lib/store.ts';
 import type { Lookup, TextKind } from '../lib/types.ts';
@@ -112,6 +113,7 @@ export function WordSheet(props: {
   });
 
   async function translate() {
+    setFlag('translated');
     setView('sentence');
     props.onRange({ p: props.sheet.p, start: props.sheet.sentence.start, end: props.sheet.sentence.end });
     if (tr().state === 'error') {
@@ -127,13 +129,9 @@ export function WordSheet(props: {
 
   return (
     <div class="sheet" role="dialog" aria-label="Word meaning">
-      <button
-        type="button"
-        class="grab"
-        style={{ display: 'block', border: 0, padding: 0 }}
-        aria-label="Close"
-        onClick={props.onClose}
-      />
+      <button type="button" class="sr" onClick={props.onClose}>
+        Close
+      </button>
       <Show when={view() === 'word'}>
         <Show
           when={!lookup.error}
@@ -215,12 +213,15 @@ export function WordSheet(props: {
                 <Show when={l().note}>
                   <div class="sub">{l().note}</div>
                 </Show>
+                <Show when={!flags().translated}>
+                  <div class="coach">Now tap Translate sentence to see the whole line.</div>
+                </Show>
                 <div class="acts">
                   <button type="button" class="btn" onClick={translate}>
                     Translate sentence →
                   </button>
                   <span class="spacer" />
-                  <span class="btn t">✓ Saved</span>
+                  <span class="saved">✓ Added to your words</span>
                 </div>
               </>
             )}
