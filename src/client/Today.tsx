@@ -175,6 +175,9 @@ export function Today() {
         <a class="linkbtn" href="#/library">
           Browse the whole library →
         </a>
+        <a class="linkbtn" href="#/about" style={{ 'margin-top': '-10px' }}>
+          About this app
+        </a>
       </div>
       <div class="pad-nav" />
       <Nav on="read" />
