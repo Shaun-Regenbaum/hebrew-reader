@@ -21,7 +21,8 @@ function Opening(props: { meta: TextMeta }) {
     <div class="opening">
       <h1 class="he oti">{props.meta.title}</h1>
       <div class="cap oau">
-        {props.meta.kind === 'articles' ? 'Hebrew Wikipedia' : authorName(props.meta.author)} ·{' '}
+        {props.meta.kind === 'articles' ? 'Hebrew Wikipedia' : authorName(props.meta.author)}
+        {props.meta.translator ? ` · translated by ${authorName(props.meta.translator)}` : ''} ·{' '}
         {STAGE_NAMES[props.meta.level - 1]}
       </div>
       <div class="orn" aria-hidden="true">

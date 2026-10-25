@@ -10,6 +10,7 @@ const EN: Record<string, string> = {
   'פניה ברגשטיין': 'Fania Bergstein',
   'וילהלם גרים; יעקב גרים': 'Brothers Grimm',
   'קרלו קולודי': 'Carlo Collodi',
+  'דוד פרישמן': 'David Frishman',
 };
 
 /** The author as the English UI shows them; unknown names stay as they are. */

@@ -51,6 +51,9 @@ def paragraph(text, heading=False):
 
 
 def is_heading(line):
+    # a chapter title, such as "פרק ראשון: ...", can be long and carry a colon
+    if re.match(r'^פרק\s', line) and len(line.split()) <= 30:
+        return True
     # a short line that ends in a quote or starts with a dash or quote is speech, not a heading
     return (len(line.split()) <= 6 and not re.search(r'[.:?!,;"”\']$', line)
             and not line.startswith(('–', '-', '"', '“')))
@@ -130,22 +133,31 @@ def split_long(text, soft=600, hard=900):
 
 
 def unwrap(lines):
-    """Group lines by blank lines. A block that was cut at a fixed width becomes one paragraph.
-    Yields (text, was_joined)."""
+    """Group lines by blank lines. A block that was cut at a fixed width becomes one paragraph. A chapter line
+    always stands on its own, even when the source gives it no blank line. Yields (text, was_joined)."""
     block = []
+
+    def flush():
+        if not block:
+            return
+        if wrapped(block):
+            for part in split_dialogue(block):
+                for piece in split_long(part):
+                    yield piece, True
+        else:
+            for b in block:
+                yield b, False
+
     for l in lines + ['']:
-        if l:
+        if not l:
+            yield from flush()
+            block = []
+        elif re.match(r'^פרק\s', l):
+            yield from flush()
+            block = []
+            yield l, False
+        else:
             block.append(l)
-            continue
-        if block:
-            if wrapped(block):
-                for part in split_dialogue(block):
-                    for piece in split_long(part):
-                        yield piece, True
-            else:
-                for b in block:
-                    yield b, False
-        block = []
 
 
 def sections(paras):
