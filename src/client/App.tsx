@@ -3,7 +3,7 @@ import type { TextKind } from '../lib/types.ts';
 import { About } from './About.tsx';
 import { Account } from './Account.tsx';
 import { Browse } from './Browse.tsx';
-import { Front } from './Front.tsx';
+import { Demo, Front } from './Front.tsx';
 import { Library } from './Library.tsx';
 import { Reader } from './Reader.tsx';
 import { Review } from './Review.tsx';
@@ -16,6 +16,7 @@ type Route =
   | { name: 'words' }
   | { name: 'library' }
   | { name: 'about' }
+  | { name: 'demo' }
   | { name: 'topics' }
   | { name: 'account' }
   | { name: 'signin'; token: string }
@@ -37,6 +38,7 @@ function parse(hash: string): Route {
   if (p[0] === 'words') return { name: 'words' };
   if (p[0] === 'library') return { name: 'library' };
   if (p[0] === 'about') return { name: 'about' };
+  if (p[0] === 'demo') return { name: 'demo' };
   if (p[0] === 'topics') return { name: 'topics' };
   if (p[0] === 'account') return { name: 'account' };
   if (p[0] === 'signin' && p[1]) return { name: 'signin', token: p[1] };
@@ -72,6 +74,9 @@ export function App() {
       <Switch>
         <Match when={route().name === 'home'}>
           <Front />
+        </Match>
+        <Match when={route().name === 'demo'}>
+          <Demo />
         </Match>
         <Match when={route().name === 'about'}>
           <About />

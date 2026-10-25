@@ -18,3 +18,13 @@ export function Front() {
     </Show>
   );
 }
+
+/** A link to share: straight into the first story with no setup questions, only the reading. */
+export function Demo() {
+  onMount(() => {
+    setFlag('started');
+    setFlag('goalAsked');
+    location.replace(`#/read/${FIRST_TEXT.kind}/${FIRST_TEXT.id}/0`);
+  });
+  return null;
+}
