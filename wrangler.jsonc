@@ -29,7 +29,7 @@
     "LOOKUP_MODEL": "google/gemini-3.7-flash",
     "TRANSLATE_MODEL": "google/gemini-3.1-flash-lite",
     "DAILY_MODEL_CALLS": "6000",
-    "EMAIL_FROM": "login@402.network",
+    "EMAIL_FROM": "login@402.app",
     "PUBLIC_URL": "https://learning.402.app",
     "EMAILS_PER_DAY": "300"
   }

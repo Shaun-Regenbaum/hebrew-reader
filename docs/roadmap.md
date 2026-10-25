@@ -57,7 +57,7 @@ Then:
 
 Built and live. The app works with no account, and everything stays on the device.
 
-- **Sign in by email link,** no password. The link works once for 15 minutes and opens a page that asks for one click, so a mail scanner that opens it cannot use it up. Sessions last 90 days. Sending goes through Cloudflare Email Service from `login@402.network`, a domain that was already set up for sending. Moving to a `402.app` sender means enabling sending on that domain, which adds DNS records.
+- **Sign in by email link,** no password. The link works once for 15 minutes and opens a page that asks for one click, so a mail scanner that opens it cannot use it up. Sessions last 90 days. Sending goes through Cloudflare Email Service from `login@402.app`. Enabling sending on that domain added records under `cf-bounce.402.app`, a signing key, and a DMARC rule (`p=reject`) for the whole domain.
 - **Sync.** One document per learner (lookups, known words, reading progress), stored gzipped in D1. The browser fetches the server copy, merges it with its own, keeps the merge and saves it back. If another device saved first the server answers 409 and the browser merges again. The merge rules are in `src/lib/sync.ts` and tested. Known-word marks carry a time, so unmarking on one device wins over an older mark on another.
 - **Backup file.** Download your data as a file, or load one. Loading adds to what is here, it never erases it.
 - **Anonymous word counts.** When a reader looks a word up for the first time, the server adds one to a count for that word and text. No account and no device id. `GET /api/stats/words` lists the words readers look up most, overall or per text. Nothing uses the counts yet.
