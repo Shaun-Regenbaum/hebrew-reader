@@ -1,10 +1,14 @@
 import { createMemo, createSignal, For, onCleanup, onMount, Show } from 'solid-js';
+import { getPref, setPref } from '../lib/prefs.ts';
 import {
   ANSWERS,
   type Answer,
   answer,
   buildQueue,
+  type Choices,
+  choices,
   isLearned,
+  latestPerLemma,
   nextDue,
   previews,
   type ReviewItem,
@@ -49,8 +53,31 @@ export function Review() {
   const [shown, setShown] = createSignal(false);
   const [missed, setMissed] = createSignal(0);
   const [answered, setAnswered] = createSignal(0);
-
   const current = () => session()?.[pos()];
+  const [mode, setMode] = createSignal<'flip' | 'choose'>(getPref('hr:rvmode', ['flip', 'choose'], 'flip'));
+  /** Which option the learner chose, in multiple-choice mode. */
+  const [picked, setPicked] = createSignal<number | null>(null);
+  const pool = createMemo(() => latestPerLemma(lookups()));
+  const options = createMemo<Choices | null>(() => {
+    const it = current();
+    return it && mode() === 'choose' ? choices(it, pool(), `${it.lemma}:${answered()}`) : null;
+  });
+  /** In multiple choice, the right option counts as Good and a wrong one as Again. */
+  const result = (): Answer | null => {
+    const o = options();
+    const p = picked();
+    return o && p !== null ? (p === o.correct ? 'good' : 'again') : null;
+  };
+  const chooseMode = (m: 'flip' | 'choose') => {
+    setMode(m);
+    setPref('hr:rvmode', m);
+  };
+  function pick(i: number) {
+    if (!options() || picked() !== null) return;
+    setPicked(i);
+    setShown(true);
+  }
+
   const finished = () => !!session() && pos() >= (session()?.length ?? 0);
   const minutes = (n: number) => Math.max(1, Math.round(n / 3));
   const learned = createMemo(() => Object.values(cards()).filter(isLearned).length);
@@ -62,6 +89,7 @@ export function Review() {
     setShown(false);
     setMissed(0);
     setAnswered(0);
+    setPicked(null);
   }
 
   function grade(how: Answer) {
@@ -78,6 +106,7 @@ export function Review() {
     }
     setPos(pos() + 1);
     setShown(false);
+    setPicked(null);
   }
 
   function skipKnown() {
@@ -86,11 +115,18 @@ export function Review() {
     toggleKnown(item.lemma);
     setPos(pos() + 1);
     setShown(false);
+    setPicked(null);
   }
 
   const onKey = (e: KeyboardEvent) => {
     if (!session() || finished()) return;
-    if (!shown() && (e.key === ' ' || e.key === 'Enter')) {
+    if (options()) {
+      if (!shown() && e.key >= '1' && e.key <= '4') pick(Number(e.key) - 1);
+      else if (shown() && (e.key === ' ' || e.key === 'Enter')) {
+        e.preventDefault();
+        grade(result() ?? 'good');
+      }
+    } else if (!shown() && (e.key === ' ' || e.key === 'Enter')) {
       e.preventDefault();
       setShown(true);
     } else if (shown() && e.key >= '1' && e.key <= '4') {
@@ -158,6 +194,23 @@ export function Review() {
                     {minutes(queue().items.length)} min.
                   </p>
                 </div>
+                <div class="seg" role="group" aria-label="Review style">
+                  <button type="button" aria-pressed={mode() === 'flip'} onClick={() => chooseMode('flip')}>
+                    Flip cards
+                  </button>
+                  <button
+                    type="button"
+                    aria-pressed={mode() === 'choose'}
+                    onClick={() => chooseMode('choose')}
+                  >
+                    Choose the meaning
+                  </button>
+                </div>
+                <Show when={mode() === 'choose' && pool().length < 4}>
+                  <p class="msub" style={{ margin: 0 }}>
+                    This needs four different words. Until then, cards flip.
+                  </p>
+                </Show>
                 <button type="button" class="btn p wide" onClick={start}>
                   Start
                 </button>
@@ -227,8 +280,31 @@ export function Review() {
             {(item) => (
               <div class="rvbody">
                 <div class="rvcard">
-                  <div class="cap">{shown() ? 'Meaning' : 'What does this word mean?'}</div>
+                  <div class="cap">{shown() && !options() ? 'Meaning' : 'What does this word mean?'}</div>
                   <Sentence sentence={item.lookup.sentence} word={item.lookup.word} />
+                  <Show when={options()}>
+                    {(o) => (
+                      <div class="choices" role="group" aria-label="Choose the meaning">
+                        <For each={o().options}>
+                          {(text, i) => (
+                            <button
+                              type="button"
+                              class="choice"
+                              classList={{
+                                right: shown() && i() === o().correct,
+                                wrong: picked() === i() && i() !== o().correct,
+                              }}
+                              disabled={shown()}
+                              onClick={() => pick(i())}
+                            >
+                              <span class="k">{i() + 1}</span>
+                              <span>{text}</span>
+                            </button>
+                          )}
+                        </For>
+                      </div>
+                    )}
+                  </Show>
                   <Show when={shown()}>
                     <div class="rvans">
                       <div class="rvrow">
@@ -268,28 +344,45 @@ export function Review() {
                 </div>
                 <div class="rvfoot">
                   <Show
-                    when={shown()}
+                    when={options()}
                     fallback={
-                      <button type="button" class="btn p wide" onClick={() => setShown(true)}>
-                        Show meaning
-                      </button>
+                      <Show
+                        when={shown()}
+                        fallback={
+                          <button type="button" class="btn p wide" onClick={() => setShown(true)}>
+                            Show meaning
+                          </button>
+                        }
+                      >
+                        <div class="grades">
+                          <For each={ANSWERS}>
+                            {(how) => (
+                              <button
+                                type="button"
+                                class="grade"
+                                classList={{ good: how === 'good' }}
+                                onClick={() => grade(how)}
+                              >
+                                <b>{LABEL[how]}</b>
+                                <span>{previews(item.card)[how]}</span>
+                              </button>
+                            )}
+                          </For>
+                        </div>
+                        <button type="button" class="linkbtn" onClick={skipKnown}>
+                          I already know this word
+                        </button>
+                      </Show>
                     }
                   >
-                    <div class="grades">
-                      <For each={ANSWERS}>
-                        {(how) => (
-                          <button
-                            type="button"
-                            class="grade"
-                            classList={{ good: how === 'good' }}
-                            onClick={() => grade(how)}
-                          >
-                            <b>{LABEL[how]}</b>
-                            <span>{previews(item.card)[how]}</span>
-                          </button>
-                        )}
-                      </For>
-                    </div>
+                    <Show when={shown()}>
+                      <p class="rvres" classList={{ bad: result() === 'again' }}>
+                        {result() === 'good' ? 'Correct.' : 'Not quite. This card comes back soon.'}
+                      </p>
+                      <button type="button" class="btn p wide" onClick={() => grade(result() ?? 'good')}>
+                        Continue
+                      </button>
+                    </Show>
                     <button type="button" class="linkbtn" onClick={skipKnown}>
                       I already know this word
                     </button>

@@ -3,11 +3,14 @@ import {
   answer,
   buildQueue,
   type CardMap,
+  choices,
+  latestPerLemma,
   NEW_PER_DAY,
   nextDue,
   previews,
   SESSION_MAX,
   type StoredCard,
+  shortMeaning,
   wait,
 } from '../src/lib/review.ts';
 import type { SavedLookup } from '../src/lib/types.ts';
@@ -130,5 +133,60 @@ describe('nextDue', () => {
     const cards: CardMap = { a: card({ d: 500 }), b: card({ d: 300 }), c: card({ d: 100 }) };
     expect(nextDue(cards, ['c'])).toBe(300);
     expect(nextDue({}, [])).toBeNull();
+  });
+});
+
+describe('multiple choice', () => {
+  const word = (lemma: string, meaning: string, pos = 'noun', at = 1): SavedLookup => ({
+    ...look(lemma, at),
+    meaning,
+    pos,
+  });
+  const pool = [
+    word('a', 'the grandfather'),
+    word('b', 'a window'),
+    word('c', 'to ask', 'verb'),
+    word('d', 'a dog'),
+    word('e', 'happy', 'adjective'),
+    word('f', 'the afternoon / noon'),
+  ];
+  const item = (lemma: string) => {
+    const lookup = pool.find((l) => l.lemma === lemma) as SavedLookup;
+    return { lemma, lookup, card: undefined };
+  };
+
+  it('keeps the first short phrase of a meaning', () => {
+    expect(shortMeaning('fifth / Thursday')).toBe('fifth');
+    expect(shortMeaning('to ask (a question)')).toBe('to ask');
+  });
+  it('gives four different options with the right one in the stated place', () => {
+    const c = choices(item('a'), pool, 'seed1');
+    expect(c?.options).toHaveLength(4);
+    expect(new Set(c?.options).size).toBe(4);
+    expect(c?.options[c.correct]).toBe('the grandfather');
+  });
+  it('shows the same options for the same seed, and can differ for another', () => {
+    expect(choices(item('a'), pool, 's')).toEqual(choices(item('a'), pool, 's'));
+    const seeds = ['1', '2', '3', '4', '5', '6'].map((x) => JSON.stringify(choices(item('a'), pool, x)));
+    expect(new Set(seeds).size).toBeGreaterThan(1);
+  });
+  it('prefers wrong answers of the same kind of word', () => {
+    const c = choices(item('a'), pool, 'x');
+    const wrong = c?.options.filter((_, i) => i !== c.correct) ?? [];
+    // three other nouns exist, so none of the verb or adjective should appear
+    expect(wrong).not.toContain('to ask');
+    expect(wrong).not.toContain('happy');
+  });
+  it('never offers the right answer twice, even when another word means the same', () => {
+    const dup = [...pool, word('g', 'grandfather')];
+    const c = choices(item('a'), dup, 'x');
+    expect(c?.options.filter((o) => o.includes('grandfather'))).toHaveLength(1);
+  });
+  it('gives up when you have not met enough different words', () => {
+    expect(choices(item('a'), pool.slice(0, 3), 'x')).toBeNull();
+  });
+  it('keeps one lookup per word, the newest', () => {
+    const many = [word('a', 'new', 'noun', 9), word('a', 'old', 'noun', 1), word('b', 'x')];
+    expect(latestPerLemma(many).map((l) => l.meaning)).toEqual(['new', 'x']);
   });
 });

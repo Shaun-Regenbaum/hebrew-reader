@@ -12,6 +12,7 @@
   --onink: #faf8f3;
   --shadow: 0 18px 50px rgba(23, 21, 15, 0.16), 0 2px 6px rgba(23, 21, 15, 0.06);
   --rule: #b9afa0;
+  --ok: #2f6b4a;
   --read: 24px;
   color-scheme: light;
 }
@@ -29,6 +30,7 @@
     --glass: rgba(34, 32, 29, 0.82);
     --onink: #121110;
     --rule: #5a5348;
+    --ok: #7cc49a;
     --shadow: 0 18px 50px rgba(0, 0, 0, 0.55), 0 2px 6px rgba(0, 0, 0, 0.4);
     color-scheme: dark;
   }
@@ -1667,4 +1669,92 @@ ruby.w rt {
 .lk {
   color: var(--accent);
   text-decoration: underline;
+}
+
+/* multiple choice in review */
+.seg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.seg button {
+  border: 0;
+  background: transparent;
+  padding: 11px 8px;
+  font:
+    500 14px Inter,
+    sans-serif;
+  color: var(--ink2);
+}
+.seg button + button {
+  border-left: 1px solid var(--rule);
+}
+.seg button[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--onink);
+}
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+.choice {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  padding: 14px 16px;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--ink);
+  font:
+    400 19px Newsreader,
+    serif;
+}
+.choice .k {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font:
+    500 12px Inter,
+    sans-serif;
+  color: var(--ink3);
+}
+.choice:disabled {
+  opacity: 1;
+}
+.choice.right {
+  border: 2px solid var(--ok);
+  padding: 13px 15px;
+  background: color-mix(in srgb, var(--ok) 10%, var(--surface));
+}
+.choice.right .k {
+  background: var(--ok);
+  border-color: var(--ok);
+  color: var(--surface);
+}
+.choice.wrong {
+  border: 2px solid var(--accent);
+  padding: 13px 15px;
+  background: var(--tint);
+  text-decoration: line-through;
+  text-decoration-color: var(--accent);
+}
+.rvres {
+  margin: 0;
+  font:
+    italic 400 16px Newsreader,
+    serif;
+  color: var(--ok);
+}
+.rvres.bad {
+  color: var(--accent);
 }

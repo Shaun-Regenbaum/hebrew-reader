@@ -52,10 +52,7 @@ export const hintMeanings = createMemo(() => {
   return { byId, byWord };
 });
 
-/** The first short phrase of a meaning: "fifth / Thursday" becomes "fifth". */
-export function shortMeaning(m: string): string {
-  return (m.split(/[;,/(]/)[0] ?? m).trim();
-}
+export { shortMeaning } from './review.ts';
 
 async function read<T>(key: string, fallback: T): Promise<T> {
   try {

@@ -160,3 +160,62 @@ export function nextDue(cards: CardMap, known: string[]): number | null {
 
 /** Whether a card has been learned well enough to count as "learned": it came back after a day or more. */
 export const isLearned = (c: StoredCard) => c.st === State.Review && c.sd >= 1;
+
+/** The newest lookup of each word the learner has met, one per dictionary form. `lookups` is newest first. */
+export function latestPerLemma(lookups: SavedLookup[]): SavedLookup[] {
+  const seen = new Map<string, SavedLookup>();
+  for (const l of lookups) if (!seen.has(l.lemma)) seen.set(l.lemma, l);
+  return [...seen.values()];
+}
+
+/** The first short phrase of a meaning: "fifth / Thursday" becomes "fifth". */
+export function shortMeaning(m: string): string {
+  return (m.split(/[;,/(]/)[0] ?? m).trim();
+}
+
+/** A small number generator that gives the same sequence for the same seed, so a card shows the same options. */
+function seeded(seed: string): () => number {
+  let h = 2166136261;
+  for (const ch of seed) h = Math.imul(h ^ ch.charCodeAt(0), 16777619);
+  return () => {
+    h = Math.imul(h ^ (h >>> 15), 2246822507);
+    h = Math.imul(h ^ (h >>> 13), 3266489909);
+    h ^= h >>> 16;
+    return (h >>> 0) / 4294967296;
+  };
+}
+
+export interface Choices {
+  options: string[];
+  /** Position of the right answer in `options`. */
+  correct: number;
+}
+
+/**
+ * Four meanings to choose from: the right one and three that other words you have met mean. Wrong options
+ * prefer the same kind of word (a noun among nouns), and never repeat the right answer. Returns null when you
+ * have not met enough different words yet.
+ */
+export function choices(item: ReviewItem, pool: SavedLookup[], seed: string, count = 4): Choices | null {
+  const right = shortMeaning(item.lookup.meaning);
+  const key = (m: string) => m.toLowerCase().replace(/^(the|a|an|to) /, '');
+  const taken = new Set([key(right)]);
+  const rand = seeded(seed);
+  const others = pool
+    .filter((l) => l.lemma !== item.lemma)
+    .map((l) => ({ meaning: shortMeaning(l.meaning), same: l.pos === item.lookup.pos }))
+    .filter((o) => o.meaning && o.meaning.length <= 40)
+    .sort((a, b) => Number(b.same) - Number(a.same) || rand() - 0.5);
+  const wrong: string[] = [];
+  for (const o of others) {
+    if (taken.has(key(o.meaning))) continue;
+    taken.add(key(o.meaning));
+    wrong.push(o.meaning);
+    if (wrong.length === count - 1) break;
+  }
+  if (wrong.length < count - 1) return null;
+  const options = [...wrong];
+  const correct = Math.floor(rand() * count);
+  options.splice(correct, 0, right);
+  return { options, correct };
+}
