@@ -1,6 +1,7 @@
 """Turn data/raw into the JSON the reader loads, in public/texts.
 
-Run: python3 -I scripts/build_texts.py
+Run: python3 -I scripts/build_texts.py          builds the texts listed in data/meta/curated.json
+     python3 -I scripts/build_texts.py --all    builds every text in data/raw
 
 Output:
   public/texts/index.json            the two shelves (books, articles)
@@ -111,13 +112,24 @@ def write(kind, id_, meta, paras):
     return full
 
 
+def curated():
+    """The (kind, id) pairs the app shows, or None to build everything."""
+    f = ROOT / 'data' / 'meta' / 'curated.json'
+    if '--all' in sys.argv or not f.exists():
+        return None
+    return {(t['kind'], t['id']) for t in json.loads(f.read_text())['texts']}
+
+
 def main():
+    shown = curated()
     if OUT.exists():
         shutil.rmtree(OUT)
     cat = {x['ID']: x for x in csv.DictReader(open(RAW / 'pseudocatalogue.csv', encoding='utf-8'))}
     books, articles = [], []
 
     for f in sorted((RAW / 'books').glob('*.txt')):
+        if shown is not None and ('books', f.stem) not in shown:
+            continue
         row = cat[f.stem]
         lines = [clean(l) for l in f.read_text().split('\n')]
         # Ben-Yehuda texts keep the names of their picture files as stray lines: drop them.
@@ -133,6 +145,8 @@ def main():
 
     for f in sorted((RAW / 'articles').glob('*.json')):
         d = json.loads(f.read_text())
+        if shown is not None and ('articles', str(d['pageid'])) not in shown:
+            continue
         paras = []
         for line in (clean(l) for l in d['text'].split('\n')):
             if not line:

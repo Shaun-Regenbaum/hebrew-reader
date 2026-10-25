@@ -1,0 +1,230 @@
+{
+ "note": "Texts shown in the app. Edit this list, then run build_texts.py. Run it with --all to build every text in data/raw.",
+ "texts": [
+  {
+   "kind": "books",
+   "id": "52741",
+   "title": "פחד שוא"
+  },
+  {
+   "kind": "books",
+   "id": "41866",
+   "title": "יום השבת והסמבטיון"
+  },
+  {
+   "kind": "books",
+   "id": "11475",
+   "title": "הילדה התועה"
+  },
+  {
+   "kind": "books",
+   "id": "11483",
+   "title": "מעשים טובים"
+  },
+  {
+   "kind": "books",
+   "id": "11495",
+   "title": "תכי מגלה סוד"
+  },
+  {
+   "kind": "books",
+   "id": "11484",
+   "title": "הצלת נפש"
+  },
+  {
+   "kind": "books",
+   "id": "11477",
+   "title": "תשומת-לב"
+  },
+  {
+   "kind": "books",
+   "id": "11485",
+   "title": "החידה"
+  },
+  {
+   "kind": "books",
+   "id": "59105",
+   "title": "דן הפקח"
+  },
+  {
+   "kind": "books",
+   "id": "11517",
+   "title": "שנוי השם"
+  },
+  {
+   "kind": "books",
+   "id": "52737",
+   "title": "מעשיה"
+  },
+  {
+   "kind": "books",
+   "id": "63371",
+   "title": "חמשה בשק אחד"
+  },
+  {
+   "kind": "books",
+   "id": "11494",
+   "title": "רמי וכלבו"
+  },
+  {
+   "kind": "books",
+   "id": "11497",
+   "title": "השמשה השבורה"
+  },
+  {
+   "kind": "books",
+   "id": "44010",
+   "title": "מעשה בחיט עני"
+  },
+  {
+   "kind": "books",
+   "id": "11502",
+   "title": "בערב פסח"
+  },
+  {
+   "kind": "books",
+   "id": "41865",
+   "title": "שמחת תורה"
+  },
+  {
+   "kind": "books",
+   "id": "1386",
+   "title": "האוצר"
+  },
+  {
+   "kind": "books",
+   "id": "11440",
+   "title": "פינוקיו: קורותיו של ילד-עץ"
+  },
+  {
+   "kind": "articles",
+   "id": "207",
+   "title": "חור שחור"
+  },
+  {
+   "kind": "articles",
+   "id": "249",
+   "title": "הירח"
+  },
+  {
+   "kind": "articles",
+   "id": "1141",
+   "title": "פיל"
+  },
+  {
+   "kind": "articles",
+   "id": "1865",
+   "title": "פינגוויניים"
+  },
+  {
+   "kind": "articles",
+   "id": "1820",
+   "title": "חתול הבית"
+  },
+  {
+   "kind": "articles",
+   "id": "23340",
+   "title": "דולפין"
+  },
+  {
+   "kind": "articles",
+   "id": "157230",
+   "title": "לב"
+  },
+  {
+   "kind": "articles",
+   "id": "283495",
+   "title": "מחשב"
+  },
+  {
+   "kind": "articles",
+   "id": "3287",
+   "title": "מטוס"
+  },
+  {
+   "kind": "articles",
+   "id": "179828",
+   "title": "טלפון חכם"
+  },
+  {
+   "kind": "articles",
+   "id": "965",
+   "title": "בינה מלאכותית"
+  },
+  {
+   "kind": "articles",
+   "id": "19949",
+   "title": "קפה"
+  },
+  {
+   "kind": "articles",
+   "id": "13857",
+   "title": "פלאפל"
+  },
+  {
+   "kind": "articles",
+   "id": "12173",
+   "title": "חומוס"
+  },
+  {
+   "kind": "articles",
+   "id": "24454",
+   "title": "שוקולד"
+  },
+  {
+   "kind": "articles",
+   "id": "25046",
+   "title": "טיטניק"
+  },
+  {
+   "kind": "articles",
+   "id": "325",
+   "title": "ירושלים"
+  },
+  {
+   "kind": "articles",
+   "id": "7779",
+   "title": "תל אביב-יפו"
+  },
+  {
+   "kind": "articles",
+   "id": "7041",
+   "title": "ים המלח"
+  },
+  {
+   "kind": "articles",
+   "id": "481394",
+   "title": "כדורגל"
+  },
+  {
+   "kind": "articles",
+   "id": "969",
+   "title": "שחמט"
+  },
+  {
+   "kind": "articles",
+   "id": "42682",
+   "title": "קשת בענן"
+  },
+  {
+   "kind": "articles",
+   "id": "5158",
+   "title": "רעידת אדמה"
+  },
+  {
+   "kind": "articles",
+   "id": "360",
+   "title": "דוד בן-גוריון"
+  },
+  {
+   "kind": "articles",
+   "id": "83",
+   "title": "אלברט איינשטיין"
+  },
+  {
+   "kind": "articles",
+   "id": "1984",
+   "title": "פסנתר"
+  }
+ ]
+}

@@ -11,14 +11,14 @@
 import { readFileSync } from 'node:fs';
 import { sentenceAt, wordsInSentence } from '../src/lib/sentence.ts';
 
-/** The demo set: the six shortest First steps stories, then Pinocchio, an article on black holes and one on elephants. */
+/** The demo set: six short First steps stories, then Pinocchio, an article on black holes and one on elephants. */
 const DEMO: [kind: string, id: string][] = [
   ['books', '52741'],
   ['books', '41866'],
   ['books', '11483'],
   ['books', '11495'],
   ['books', '11484'],
-  ['books', '11472'],
+  ['books', '11475'],
   ['books', '11440'],
   ['articles', '207'],
   ['articles', '1141'],
